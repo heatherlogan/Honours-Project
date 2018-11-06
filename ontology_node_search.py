@@ -16,7 +16,7 @@ leaf_nodes = get_leaf_nodes()
 
 def build_ancestry_main(major):
 
-    print("\n", major.label)
+    print("\n", '\033[1m'+ (major.label).upper())
 
     def build_ancestry(node, count):
 
@@ -39,7 +39,7 @@ def build_ancestry_main(major):
             for child in children:
                 string = '\t' * count
                 child = get_node(re.sub('asdpto.', '', str(child)))
-                print(string, child.label)
+                print(string, '\033[1m * ' + child.label.upper())
 
                 # get info
 
