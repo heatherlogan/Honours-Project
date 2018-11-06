@@ -16,8 +16,7 @@ class Article:
 
 
 def format_article(url):
-    obj = []
-    article_title=""
+    article_title = ""
 
     # grab page
     q = Request(url)
@@ -44,8 +43,9 @@ def format_article(url):
         paragraphs = section.find_all("p")
         para_text = []
         for para in paragraphs:
-            para_text.append((para.text))
-            p = para.text
+            if para.text not in para_text:
+                para_text.append((para.text))
+                para_text.append("\n")
         article_text.append(' '.join(para_text))
 
     return Article(pmcid, article_title, ' '.join(article_text))
@@ -55,11 +55,16 @@ def build_corpus():
 
     url_file = open('files/url_list.txt', 'r').read()
     urls = url_file.split('\n')
-    corp = open('files/corpus.txt', 'w')
-
+    corp = open('files/test_corpus.txt', 'w')
     count = 0
 
-    for url in urls:
+    pmcids_test = ["6085491", "3909616", "6063861", "5386295", "4449965"]
+    test_urls = []
+
+    for id in pmcids_test:
+        test_urls.append("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email=heather_logan@live.co.uk".format(id))
+
+    for url in test_urls:
         obj = format_article(url)
 
         id = "PMC_ID: {}\n".format(obj.pmcid)
@@ -103,7 +108,6 @@ def find_name(id):
         article_title = all[0]
 
     return article_title
-
 
 if __name__=="__main__":
 

@@ -5,6 +5,7 @@ from stemming.porter2 import stem
 
 stopwords = list(set(stopwords.words('english')))
 
+
 class Article:
 
     def __init__(self, id, headline, text):
@@ -13,10 +14,9 @@ class Article:
         self.text = text
 
 
-def reload_corpus():
+def reload_corpus(file):
 
     print("\nloading corpus..")
-    file = open('files/corpus.txt', 'r').readlines()
 
     id_indexes = [i for i, x in enumerate(file) if re.match("PMC_ID: ", x)]
     end_indexes = [i for i, x in enumerate(file) if re.match(":PMC_ENDTEXT", x)]
@@ -54,6 +54,9 @@ def reload_corpus():
         count += 1
 
     print("corpus loaded")
+
+    #returns article objects
+
     return articles
 
 
@@ -115,7 +118,7 @@ def build_index(article_objects):
 
     # Format and save to index file
 
-    f = open('files/corpus_index.txt', 'w')
+    f = open('files/test_index.txt', 'w')
 
     for word, positions in inv_index:
         string_word = "{}:\n".format(''.join(word))
@@ -141,5 +144,6 @@ def build_index(article_objects):
 
 if __name__=="__main__":
 
-    articles = reload_corpus()
+    file = open('files/test_corpus.txt', 'r').readlines()
+    articles = reload_corpus(file)
     build_index(articles)

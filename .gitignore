@@ -1,2 +1,5 @@
 files/*
+venv/*
+.idea/*
+__pycache__/*
 *.txt
