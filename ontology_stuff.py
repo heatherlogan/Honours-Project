@@ -22,17 +22,16 @@ class Node:
 def get_queries():
 
     query_list = []
-    count = 0
+    class_num = 0
 
     for c in onto.classes():
 
         iri = onto.base_iri + c.name
-        label = str(IRIS[iri].label)
-        definition = str(IRIS[iri].definition)
+        label = (re.sub('([^\s\w]|_)+', '', str(IRIS[iri].label))).strip()
+        definition = (re.sub('([^\s\w]|_)+', '', str(IRIS[iri].definition))).strip()
 
         string = (label + "\n" + definition)
-        count += 1
-        query = str(count) + " " + string
+        query = c.name + ": " + string
         query_list.append(query)
 
     return query_list
@@ -81,6 +80,9 @@ def search_ontology(name):
 if __name__=='__main__':
 
     # queries = get_queries()
-    print(len(get_leaf_nodes()))
+    queries = get_queries()
 
-    # query_idx(queries)
+    for query in queries:
+        print(query)
+
+    query_idx(queries)

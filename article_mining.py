@@ -2,7 +2,6 @@ from collections import defaultdict, Counter
 from indexer import *
 import re
 
-
 def sort_hgnc():
 
     # {Approved Symbol: [All synonyms]}
@@ -15,17 +14,15 @@ def sort_hgnc():
         line = line.replace('"', '')
         line = line.split(',')
         hgnc_genes[line[0]] = list(filter(None, line))
-
     return hgnc_genes
 
-
-def search_genes():
+def write_mentioned_genes():
 
     # writes all genes mentioned in paper to a txt file.
 
     f = open('files/genes_per_paper.txt', 'w')
 
-    article_file = open("files/test_corpus.txt", 'r').readlines()
+    article_file = open("files/corpus.txt", 'r').readlines()
     articles = reload_corpus(article_file)
     genes = sort_hgnc()
 
@@ -50,10 +47,10 @@ def search_genes():
         genelist = list((dict(gene_count)).keys())
         genelist = ', '.join(genelist)
         string = "{}: {}\n".format(art.id, genelist)
+        print(art.id)
         f.write(string)
 
     f.close()
-
 
 def get_genes_from_papers():
 
@@ -102,21 +99,12 @@ def match_genes_to_sfari():
 
 def group_genes_to_families():
 
-
     # Sort gene families to {family: [genes]}
     # create new dict for {gene_family: [papers]}
     # special treatment for pseudogenes?
     # leave genes with no family alone
-
     pass
-
 
 if __name__=='__main__':
 
-    genes = get_genes_from_papers()
-    count = 0
-    for gene, papers in genes.items():
-        if len(papers) > 1:
-            count +=1
-            print(gene, papers)
-    print(count)
+    write_mentioned_genes()

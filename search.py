@@ -7,7 +7,7 @@ from stemming.porter2 import stem
 from Bio import Entrez
 from make_corpus import find_name
 
-indexed_file = open('files/corpus_index.txt', 'r').readlines()
+indexed_file = open('files/test_index.txt', 'r').readlines()
 
 docnumbers = []
 
@@ -35,7 +35,6 @@ def format_txt_file():
             index[term] = position
             index_list.append(index)
     return index_list
-
 
 # load index
 inverted_index = format_txt_file()
@@ -101,10 +100,9 @@ def rankedir_search(query):
                     tfidfs[doc] = newval
     return tfidfs
 
-
 # Query in list format, preprocesses
 
-def parsequery(queryno, query):
+def parsequery(query):
 
     results = rankedir_search(query)
     results_c = results.copy()
@@ -118,27 +116,17 @@ def parsequery(queryno, query):
 
 def query_idx(query_file):
 
-    f = open('files/ontology_results.txt', 'w')
+    f = open('files/ontology_paper_results.txt', 'w')
 
     for query in query_file:
-        queryno = int(query.split()[0])
-        query = query.lstrip(digits).strip()
-        headline, description = (query.split('\n'))
-        results = parsequery(queryno, query)
-
-        str1 = '{}\nLABEL: {}\nDESCRIPTION: {}\nTOP 5 RELEVANT PAPERS:'.format(queryno, "".join(headline.strip()), (description.strip()))
-
-        print(str1)
-        f.write(str1 + "\n")
-
-        for (id, score) in results:
-
-            url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email=heather_logan@live.co.uk".format(id)
-            headline = find_name(id)
-            str2 = '\tPMC ID: {}\n\tHEADLINE: {}\n\tLINK: {}\n\tTFIDF SCORE: {}\n\t*********'.format(id, headline, url, round(score, 3))
-
-            print(str2)
-            f.write(str2 + "\n")
+        query = query.split(': ')
+        classnum, query = query[0], query[1]
+        results = parsequery(query)
+        r = []
+        for id, score in results:
+            r.append(str(id))
+        strn = classnum + ": " + ','.join(r) + "\n"
+        f.write(strn)
 
     f.close()
 
