@@ -1,12 +1,11 @@
 from owlready2 import *
-from search import *
+from nltk.corpus import stopwords
 
 # owlready doc: https://media.readthedocs.org/pdf/owlready2/latest/owlready2.pdf
 
-# uses ontology no
-
 onto = get_ontology("file:///Users/heatherlogan/PycharmProjects/Honours_Proj/files/asdpto.owl").load()
 
+stopwords = list(set(stopwords.words('english')))
 
 class Node:
 
@@ -19,31 +18,12 @@ class Node:
         self.descendants = descendants
 
 
-def get_queries():
-
-    query_list = []
-    class_num = 0
-
-    for c in onto.classes():
-
-        iri = onto.base_iri + c.name
-        label = (re.sub('([^\s\w]|_)+', '', str(IRIS[iri].label))).strip()
-        definition = (re.sub('([^\s\w]|_)+', '', str(IRIS[iri].definition))).strip()
-
-        string = (label + "\n" + definition)
-        query = c.name + ": " + string
-        query_list.append(query)
-
-    return query_list
-
-
 def build_onto_objects():
 
     onto_objects = []
 
     for c in onto.classes():
 
-        descendants = []
         ancestors = []
 
         iri = onto.base_iri + c.name
@@ -73,16 +53,36 @@ def get_leaf_nodes():
     return leaf_nodes
 
 
-def search_ontology(name):
-    pass
+def preprocess_query(query):
+
+    preprocessed = []
+
+    tokenized_text = list(filter(None, re.split('[\W]', query)))
+    for word in tokenized_text:
+        word = word.lower()
+        if word not in stopwords:
+            preprocessed.append(word)
+
+    return " ".join(preprocessed)
+
+
+
+def get_queries():
+
+    query_list = []
+
+    for node in get_leaf_nodes():
+
+        query = preprocess_query(node.label + " " + node.definition)
+
+        query_list.append(node.classnum + ": " + query)
+
+    return query_list
+
 
 
 if __name__=='__main__':
 
-    # queries = get_queries()
     queries = get_queries()
 
-    for query in queries:
-        print(query)
 
-    query_idx(queries)

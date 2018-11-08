@@ -1,18 +1,15 @@
 import numpy as np
-import sys
-from itertools import chain
-from string import digits
-from indexer import *
 from stemming.porter2 import stem
 from Bio import Entrez
-from make_corpus import find_name
+from ontology_stuff import *
 
-indexed_file = open('files/test_index.txt', 'r').readlines()
+indexed_file = open('files/corpus_index.txt', 'r').readlines()
 
 docnumbers = []
 
-
 def format_txt_file():
+
+    print('formatting index file')
 
     # Loads indexed file back into a list of dictionary items [{term: {document:[positions]}}...]
 
@@ -34,18 +31,18 @@ def format_txt_file():
         if len(position)>0:
             index[term] = position
             index_list.append(index)
+
+    print('index loaded')
     return index_list
 
 # load index
 inverted_index = format_txt_file()
-
 
 def preprocess_term(term):
     return re.sub(r'\W+', '', stem(term.lower()))
 
 
 def getpositions(term):
-
     # For a term, retrieves a list of all positions from the inverted index.
     position_list = []
     for index in inverted_index:
@@ -110,15 +107,14 @@ def parsequery(query):
         if score == 0.0:
             results.pop(doc)
     results = (sorted(results.items(), key=lambda kv: kv[1], reverse=True))
-
     return results[:5]
 
 
 def query_idx(query_file):
 
-    f = open('files/ontology_paper_results.txt', 'w')
+    f = open('files/ontology_paper_results2.txt', 'w')
 
-    for query in query_file:
+    for query in query_file[105:]:
         query = query.split(': ')
         classnum, query = query[0], query[1]
         results = parsequery(query)
@@ -126,12 +122,12 @@ def query_idx(query_file):
         for id, score in results:
             r.append(str(id))
         strn = classnum + ": " + ','.join(r) + "\n"
+        print(strn)
         f.write(strn)
-
     f.close()
 
 
 if __name__=='__main__':
 
-    query_file = open(sys.argv[1], 'r').readlines()
+    query_file = get_queries()
     query_idx(query_file)

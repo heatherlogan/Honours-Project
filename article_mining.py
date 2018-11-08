@@ -2,6 +2,7 @@ from collections import defaultdict, Counter
 from indexer import *
 import re
 
+
 def sort_hgnc():
 
     # {Approved Symbol: [All synonyms]}
@@ -9,48 +10,56 @@ def sort_hgnc():
 
     file = open('files/hgnc.csv', 'r').readlines()
 
+    # ignore pseudogenes(?)
+
     for line in file:
-        line = line.replace('\n', '')
-        line = line.replace('"', '')
-        line = line.split(',')
-        hgnc_genes[line[0]] = list(filter(None, line))
+        if 'pseudogene' in line:
+            pass
+        else:
+            line = line.replace('\n', '').replace('"', '')
+            line = line.split(',')
+            hgnc_genes[line[0]] = list(filter(None, line))
+
     return hgnc_genes
+
 
 def write_mentioned_genes():
 
     # writes all genes mentioned in paper to a txt file.
 
-    f = open('files/genes_per_paper.txt', 'w')
+    f = open('files/genes_per_paper2.txt', 'w')
 
     article_file = open("files/corpus.txt", 'r').readlines()
     articles = reload_corpus(article_file)
     genes = sort_hgnc()
 
-    for art in articles:
+    count = 107
+
+    for art in articles[107:]:
         text = re.sub('PMC_TEXT: ', '', art.text)
         tokenized_text = re.split("[\W]", text)
-        tokenized_text = filter(None, tokenized_text)
+        tokenized_text = list(filter(None, tokenized_text))
 
-        gene_count = Counter()
-        processed_text = []
-
-        for word in tokenized_text:
-            word = word.lower()
-            if word not in stopwords and not word.isdigit():
-                processed_text.append((word))
-
-        for gene, synonyms in genes.items():
-            for name in synonyms:
-                if (name.lower().strip()) in processed_text:
-                    gene_count[gene] += 1
-
-        genelist = list((dict(gene_count)).keys())
-        genelist = ', '.join(genelist)
-        string = "{}: {}\n".format(art.id, genelist)
         print(art.id)
-        f.write(string)
+
+        if len(tokenized_text) < 20000:
+
+            gene_count = Counter()
+
+            for gene, synonyms in genes.items():
+                for name in synonyms:
+                    if (name.lower().strip()) in tokenized_text:
+                        gene_count[gene] += 1
+
+            genelist = list((dict(gene_count)).keys())
+            genelist = ', '.join(genelist)
+            string = "{}: {}\n".format(art.id, genelist)
+            print("\t", count, string)
+            f.write(string)
+            count += 1
 
     f.close()
+
 
 def get_genes_from_papers():
 
@@ -81,6 +90,7 @@ def get_genes_from_papers():
                 genes_vs_papers[gene] = papers
 
     return genes_vs_papers
+
 
 def match_genes_to_sfari():
 

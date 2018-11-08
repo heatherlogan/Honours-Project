@@ -73,7 +73,6 @@ def build_index(article_objects):
         pattern = "(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})"
 
         text = re.sub(r'\[.*?\]', '', article.text)
-        text = re.sub(r'\(.*?\)', '', text)
         text = re.sub(r'{}'.format(pattern), '', text)
 
         tokenized_text = re.split("[\W]", text)
@@ -118,7 +117,7 @@ def build_index(article_objects):
 
     # Format and save to index file
 
-    f = open('files/test_index.txt', 'w')
+    f = open('files/corpus_index.txt', 'w')
 
     for word, positions in inv_index:
         string_word = "{}:\n".format(''.join(word))
@@ -144,6 +143,6 @@ def build_index(article_objects):
 
 if __name__=="__main__":
 
-    file = open('files/test_corpus.txt', 'r').readlines()
+    file = open('files/corpus.txt', 'r').readlines()
     articles = reload_corpus(file)
     build_index(articles)
