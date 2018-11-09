@@ -2,6 +2,19 @@ from collections import defaultdict, Counter
 from indexer import *
 import re
 
+def load_relevant_papers():
+
+    relevant_papers = {}
+
+    file = open('files/relevant_papers.txt', 'r').readlines()
+
+    for line in file:
+        classnum, list = line.split(': ')
+        papers = (list.strip()).split(',')
+        relevant_papers[classnum] = papers
+
+    return relevant_papers
+
 
 def sort_hgnc():
 
@@ -19,102 +32,162 @@ def sort_hgnc():
             line = line.replace('\n', '').replace('"', '')
             line = line.split(',')
             hgnc_genes[line[0]] = list(filter(None, line))
-
     return hgnc_genes
 
 
 def write_mentioned_genes():
 
+    hgnc_genes = sort_hgnc()
+
     # writes all genes mentioned in paper to a txt file.
 
-    f = open('files/genes_per_paper2.txt', 'w')
+    f = open('files/genes_counts_per_paper.txt', 'w')
 
     article_file = open("files/corpus.txt", 'r').readlines()
     articles = reload_corpus(article_file)
-    genes = sort_hgnc()
 
-    count = 107
+    for art in articles:
 
-    for art in articles[107:]:
+        gene_count = Counter()
+
         text = re.sub('PMC_TEXT: ', '', art.text)
         tokenized_text = re.split("[\W]", text)
         tokenized_text = list(filter(None, tokenized_text))
-
-        print(art.id)
+        joined = " ".join([word.lower() for word in tokenized_text])
 
         if len(tokenized_text) < 20000:
 
-            gene_count = Counter()
-
-            for gene, synonyms in genes.items():
+            for gene, synonyms in hgnc_genes.items():
                 for name in synonyms:
-                    if (name.lower().strip()) in tokenized_text:
+                    if name.lower().strip() in joined:
                         gene_count[gene] += 1
 
-            genelist = list((dict(gene_count)).keys())
-            genelist = ', '.join(genelist)
-            string = "{}: {}\n".format(art.id, genelist)
-            print("\t", count, string)
-            f.write(string)
-            count += 1
+            temp = []
+            for gene, int in gene_count.items():
+                temp.append("{}:{}".format(gene, int))
+
+            string_genecount = str(art.id) + "--" + ', '.join(temp) + "\n"
+
+            f.write(string_genecount)
+            print(art.id)
 
     f.close()
 
 
-def get_genes_from_papers():
+def genecounts_from_paper(pmcid):
 
-    # reloads txt file and finds genes mentioned in multiple papers.
+    article_file = open("files/corpus.txt", 'r').readlines()
+    articles = reload_corpus(article_file)
 
-    f = open('files/genes_per_paper.txt', 'r').readlines()
+    # for getting the gene counts from a single paper based on id (dont need atm)
+    hgnc_genes = sort_hgnc()
+    gene_count = Counter()
 
-    mentioned_genes = {}
+    art = next((x for x in articles if x.id == int(pmcid)), None)
 
-    for line in f:
-        line = line.strip().split(': ')
-        paper = line[0]
-        genes = line[1].split(', ')
-        mentioned_genes[paper] = genes
+    text = re.sub('PMC_TEXT: ', '', art.text)
+    tokenized_text = re.split("[\W]", text)
+    tokenized_text = list(filter(None, tokenized_text))
+    joined = " ".join([word.lower() for word in tokenized_text])
 
-    all_genes = []
-    genes_vs_papers = {}
+    for gene, synonyms in hgnc_genes.items():
+        for name in synonyms:
+            if name.lower().strip() in joined:
+                gene_count[gene] += 1
 
-    for paper, genes in mentioned_genes.items():
-        all_genes.extend(genes)
-
-    for gene in all_genes:
-        papers = []
-        for paper, genes in mentioned_genes.items():
-            if gene in genes:
-                if paper not in papers:
-                    papers.append(paper)
-                genes_vs_papers[gene] = papers
-
-    return genes_vs_papers
+    print(pmcid, ":", gene_count)
+    return gene_count
 
 
-def match_genes_to_sfari():
+def load_gene_families():
+
+    # loads list of gene families from txt file as dictionary
+
+    file = open('files/gene_families.txt', 'r').readlines()
+
+    gene_families = {}
+    for line in file:
+        family, gene = line.split('\t')
+        gene_families[gene.strip()] = family
+
+    return gene_families
+
+
+def load_genes_per_paper():
+
+    print('loading genes per paper')
+
+    # loads mentioned genes from the text file into form {paper { gene: count}}
+    file = open('files/genes_in_papers.txt', 'r').readlines()
+
+    genes_per_paper = {}
+
+    for line in file:
+        line = line.strip()
+        gene_counts = {}
+        paper, genecounts = line.split('--')
+        genecounts = genecounts.split(',')
+        for item in genecounts:
+            item = item.strip()
+            if len(item)>0:
+                gene, count = item.split(':')
+                gene_counts[gene.strip()] = int(count)
+        genes_per_paper[paper.strip()] = gene_counts
+    return genes_per_paper
+
+genes_per_paper = load_genes_per_paper()
+
+def get_getjoinedcounts(paper_list):
+
+    # gets the total counts of all genes mentioned per paper
+
+    joinedcounts = Counter()
+
+    for paper in paper_list:
+        counts = genes_per_paper.get(paper)
+        if counts != None:
+            for gene, count in counts.items():
+                joinedcounts[gene] += count
+
+    return joinedcounts
+
+
+def match_families(joined_counts):
+
+    # matches the list of gene counts to their families and saves with count
+
+    gene_fams = load_gene_families()
+    gene_family_counts = Counter()
+    no_family = []
+
+    for gene, count in joined_counts.items():
+
+        family = gene_fams.get(gene)
+        if family == None:
+            no_family.append(gene)
+        else:
+            gene_family_counts[family] += count
+
+    return gene_family_counts
+
+
+def match_genes_to_sfari(gene_list):
 
     sfari_file = open('files/SFARI_file.csv', 'r').readlines()
     sfari_genes = []
-    genes_paper = get_genes_from_papers()
+    mentioned_genes= []
 
     for line in sfari_file:
         line = line.split(',')
         sfari_genes.append(line[1])
 
-    for gene, papers in genes_paper.items():
+    for gene in gene_list:
         if gene in sfari_genes:
-            print(gene, list(set(papers)))
+            mentioned_genes.append(gene)
+
+    return mentioned_genes
 
 
-def group_genes_to_families():
+if __name__=="__main__":
 
-    # Sort gene families to {family: [genes]}
-    # create new dict for {gene_family: [papers]}
-    # special treatment for pseudogenes?
-    # leave genes with no family alone
     pass
-
-if __name__=='__main__':
-
-    write_mentioned_genes()

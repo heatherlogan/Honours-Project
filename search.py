@@ -72,7 +72,6 @@ def get_docs(position_list):
 def rankedir_search(query):
 
     # gets list of positions for each term in the query and calculates tfidf score for each document
-
     query = query.split(' ')
     N = len(list(set(docnumbers)))
     tfidfs = {} # Dictionary to store {docnumber: tfidf score}
@@ -114,7 +113,7 @@ def query_idx(query_file):
 
     f = open('files/ontology_paper_results2.txt', 'w')
 
-    for query in query_file[105:]:
+    for query in query_file[175:]:
         query = query.split(': ')
         classnum, query = query[0], query[1]
         results = parsequery(query)
