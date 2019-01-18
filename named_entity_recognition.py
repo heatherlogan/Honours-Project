@@ -94,28 +94,21 @@ def entity_extract(text, pattern):
             string = []
             if type(chunk) != tuple:
                 [string.append(term.lower()) for term, tag in chunk]
-
             if string:
+
+                if string[-1].endswith(",") or string[-1].endswith("."):
+                    string[-1] = string[-1][:-1]
+
                 ascii_string = []
                 for term in string:
-                    term = "".join([t for t in term if ord(t)<128])
+                    term = "".join([t for t in term if ord(t) < 128])
+
                     ascii_string.append(term)
+
                 string = " ".join(ascii_string)
+                named_ents[string.strip()] = []
 
-                if string.endswith(".") or string.endswith(','):
-                    string = string[:-1]
-
-                if string.lower() not in stopwords:
-                    for x in [';', ',', ':', ]:
-                        if x in string:
-                            strs = string.split(x)
-                            for s in strs:
-                                s = re.sub('[,.;:]', '', s)
-                                named_ents[s.strip()] = []
-                            break
-                        else:
-                            string = re.sub('[,.;:]', '', string)
-                            named_ents[string.strip()] = []
+    named_ents = {k: v for k, v in named_ents.items() if k is not ''}
 
     return named_ents
 
@@ -231,24 +224,17 @@ def process_text(text):
 
 if __name__=="__main__":
 
-
-    test_sentences = "Very recently, homozygous variations within ALDH1A3 have been associated with autosomal recessive microphthalmia with or without cysts or coloboma." \
-                     "Two missense novel SNVs were found in the same child: ALDH1A3 (RefSeq NM_000693: c.1514T>C (p.I505T)) and FOXN1 (RefSeq NM_003593: c.146C>T (p.S49L)). " \
-                     "A bimodal age of onset was established and the best-fitting cut-off score between early and late age of onset was 20 years (early age of onset ≤19 years)." \
-                     "Participants with AS showed difficulties in identifying the awkward elements of everyday social scenarios, and they were also impaired in generating problem solutions but not in judging alternative solutions on the social problem fluency and resolution tasks." \
-                     "The present study examined whether adults with high functioning autism (HFA) showed greater difficulties in (1) their self-reported ability to empathise with others and/or (2) their ability to read mental states in others’ eyes than adults with Asperger syndrome (AS)."
-
-
-
     hgnc = load_hgnc()
 
 
     abstract_file = open('files/abstracts.txt', 'r').readlines()
-    writefile = open('files/output_NER.txt', 'w')
+    writefile = open('files/output_NER2.txt', 'w')
 
     abstracts = reload_corpus(abstract_file)
 
-    for ab in abstracts:
+    for i, ab in enumerate(abstracts):
+
+        writefile.write("*Paper {}*".format(i+1))
 
         text = ab.abstract
 
