@@ -1,16 +1,15 @@
 import re
 import itertools
 from nltk.corpus import stopwords
-from stemming.porter2 import stem
 
 stopwords = list(set(stopwords.words('english')))
 
-
 class Article:
 
-    def __init__(self, id, headline, text):
+    def __init__(self, id, headline, abstract, text):
         self.id = id
         self.headline = headline
+        self.abstract = abstract
         self.text = text
 
 
@@ -35,23 +34,47 @@ def reload_corpus(file):
     for article in article_list:
         id = ""
         headline = ""
+        abstract = []
         text = []
+        idx_a = 0
+
         for line in article:
+
             if re.match('PMC_ID: ', line):
                 id = re.sub('PMC_ID: ', '', line)
                 id = id.strip()
             if re.match('PMC_HEADLINE: ', line):
                 headline = re.sub('PMC_HEADLINE: ', '', line)
+            if re.match('PMC_ABSTRACT: ', line):
+                idx_a = article.index(line)
             if re.match('PMC_TEXT: ', line):
                 idx1 = article.index(line)
+        if idx_a != 0:
+            for line in article[idx_a:idx1]:
+                abstract.append(line)
+        else:
+            abstract = ""
 
         for line in article[idx1:]:
             text.append(line)
 
-        text = (list(itertools.chain(text)))
-        new_article = Article(int(id), headline, " ".join(text))
-        articles.append(new_article)
-        count += 1
+        if abstract:
+            abstract = " ".join(abstract)
+            abstract = re.sub("PMC_ABSTRACT: ", "", abstract)
+
+        if len(text) == 0:
+            count += 1
+        else:
+            text = (list(itertools.chain(text)))
+            text = " ".join(text)
+            text = re.sub("PMC_TEXT: ", "", text)
+            text = re.sub("\n", '', text)
+
+            if len(text) == 1:
+                count += 1
+            else:
+                new_article = Article(int(id), headline, abstract, text.strip())
+                articles.append(new_article)
 
     print("corpus loaded")
 
@@ -83,7 +106,7 @@ def build_index(article_objects):
         for word in tokenized_text:
             word = word.lower()
             if word not in stopwords and not word.isdigit():
-                processed_text.append(stem(word))
+                processed_text.append((word))
 
         index_per_article = []
         word_count = 0
@@ -117,7 +140,7 @@ def build_index(article_objects):
 
     # Format and save to index file
 
-    f = open('files/corpus_index.txt', 'w')
+    f = open('files/index.txt', 'w')
 
     for word, positions in inv_index:
         string_word = "{}:\n".format(''.join(word))
@@ -141,8 +164,40 @@ def build_index(article_objects):
     f2.close()
 
 
-if __name__=="__main__":
+def clean_corpus(): #removes failed articles with no text
 
     file = open('files/corpus.txt', 'r').readlines()
+    cleaned = open('files/corpus_cleaned.txt', 'w')
+    failed_ids = open('files/failed_ids.txt', 'w')
+    articles = reload_corpus(file)
+    # build_index(articles)
+
+    count = 0
+    for article in articles:
+        if article.text == "" or article.text == "\n" or article.text == None:
+            str = "{}\t{}\n".format(article.id, article.text)
+            failed_ids.write(str)
+        else:
+            id = "PMC_ID: {}\n".format(article.id)
+            head = "PMC_HEADLINE: {}\n".format(article.headline)
+            if article.abstract:
+                abstract = "PMC_ABSTRACT: {}:\n".format(article.abstract)
+
+            body = "PMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(article.text)
+
+            cleaned.write(id)
+            cleaned.write(head)
+            if article.abstract:
+                cleaned.write(abstract)
+            cleaned.write(body)
+            count += 1
+
+    print(count)
+
+
+if __name__=="__main__":
+
+    file = open('files/corpus_cleaned.txt', 'r').readlines()
     articles = reload_corpus(file)
     build_index(articles)
+

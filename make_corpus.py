@@ -1,17 +1,13 @@
-from pubmed_parse import *
-from itertools import chain
 from urllib.request import urlopen, Request
 from bs4 import BeautifulSoup as soup
-import re
-from xml.dom import minidom
-import os
-import sys
+
 
 class Article:
 
-    def __init__(self, pmcid, title, text):
+    def __init__(self, pmcid, title, abstract, text):
         self.pmcid = pmcid
         self.title = title
+        self.abstract = abstract
         self.text = text
 
 
@@ -23,56 +19,78 @@ def format_article(url):
     uclient = urlopen(q)
     page_html = uclient.read()
     uclient.close()
-
+    try:
     # html parsing
-    page_soup = soup(page_html, "html.parser")
-    pmcid = page_soup.find("article-id", {"pub-id-type":"pmc"})
-    pmcid = pmcid.text
-    title = page_soup.find_all("title-group")
+        page_soup = soup(page_html, "html.parser")
+        pmcid = page_soup.find("article-id", {"pub-id-type":"pmc"})
+        pmcid = pmcid.text
+        title = page_soup.find_all("title-group")
 
-    for t in title:
-        t2 = t.find_all("article-title")
-        all = []
-        for t3 in t2:
-            all.append(t3.text)
-        article_title = all[0]
+        for t in title:
+            t2 = t.find_all("article-title")
+            all = []
+            for t3 in t2:
+                all.append(t3.text)
+            article_title = all[0]
 
-    sections = page_soup.find_all("sec")
-    article_text = []
-    for section in sections:
-        paragraphs = section.find_all("p")
-        para_text = []
-        for para in paragraphs:
-            if para.text not in para_text:
-                para_text.append((para.text))
-                para_text.append("\n")
-        article_text.append(' '.join(para_text))
+        abstract = page_soup.find("abstract").text
+        body = page_soup.find("body")
+        sections = body.find_all("sec")
 
-    return Article(pmcid, article_title, ' '.join(article_text))
+        article_text = []
+
+        for section in sections:
+
+            # sec_id = [section.get('id') if section.get('id') is not None else section.get('sec-type')]
+            # #print("\n", sec_id, "\n")
+            #
+            # #     # remove figures and tables (?)
+            # # [s.decompose() for s in section('fig')]
+            # [s.decompose() for s in section('table-wrap')]
+
+            # Prevents duplicates for nested sections
+            if section.find('sec') is not None:
+                para = section.find('p') # only finds first p (fix later)
+                # [s.extract() for s in para.find_all('sup')]
+                # [s.decompose() for s in para('xref')]  # removing references
+                article_text.append(para.text)
+
+            else:
+                paragraphs = section.find_all("p")
+                for para in paragraphs:
+                    # [s.extract() for s in para.find_all('sup')]
+                    # [s.decompose() for s in para('xref')] # removing references
+                    article_text.append(para.text)
+
+    except AttributeError:
+
+        abstract = ""
+        article_text = ""
+
+    return Article(pmcid, article_title, abstract, ' '.join(article_text))
 
 
 def build_corpus():
 
     url_file = open('files/url_list.txt', 'r').read()
     urls = url_file.split('\n')
-    corp = open('files/test_corpus.txt', 'w')
+    corp = open('files/corpus4.txt', 'w')
     count = 0
 
-    pmcids_test = ["6085491", "3909616", "6063861", "5386295", "4449965"]
-    test_urls = []
+    for url in urls:
 
-    for id in pmcids_test:
-        test_urls.append("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email=heather_logan@live.co.uk".format(id))
-
-    for url in test_urls:
         obj = format_article(url)
 
         id = "PMC_ID: {}\n".format(obj.pmcid)
         head = "PMC_HEADLINE: {}\n".format(obj.title)
+        if obj.abstract:
+            abstract = "PMC_ABSTRACT: {}:\n".format(obj.abstract)
         body = "PMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(obj.text)
 
         corp.write(id)
         corp.write(head)
+        if obj.abstract:
+            corp.write(abstract)
         corp.write(body)
 
         count += 1
@@ -109,6 +127,19 @@ def find_name(id):
 
     return article_title
 
+
+
+def remove_blanks():
+    pass
+    # remove articles that dont have
+
+
+
+
 if __name__=="__main__":
 
     build_corpus()
+
+
+
+

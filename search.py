@@ -1,11 +1,9 @@
 import numpy as np
 from stemming.porter2 import stem
-from Bio import Entrez
 from ontology_stuff import *
 
-indexed_file = open('files/corpus_index.txt', 'r').readlines()
+# for TFIDF queries on corpus index
 
-docnumbers = []
 
 def format_txt_file():
 
@@ -35,8 +33,6 @@ def format_txt_file():
     print('index loaded')
     return index_list
 
-# load index
-inverted_index = format_txt_file()
 
 def preprocess_term(term):
     return re.sub(r'\W+', '', stem(term.lower()))
@@ -127,6 +123,9 @@ def query_idx(query_file):
 
 
 if __name__=='__main__':
+    indexed_file = open('files/corpus_index.txt', 'r').readlines()
+    docnumbers = []
+    inverted_index = format_txt_file()
 
     query_file = get_queries()
     query_idx(query_file)

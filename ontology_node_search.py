@@ -1,10 +1,6 @@
-from itertools import chain
 from ontology_stuff import *
-from article_mining import *
-
 onto_objects = build_onto_objects()
 leaf_nodes = get_leaf_nodes()
-relevant_papers = load_relevant_papers()
 # search ontology node
 
 # shows each child
@@ -54,19 +50,15 @@ def build_ancestry_main(major):
                 child = get_node(re.sub('asdpto.', '', str(child)))
 
                 print(string + color.BOLD + color.BLUE + child.label.upper() + color.END)
-                papers = relevant_papers.get(child.classnum)
+                # papers = relevant_papers.get(child.classnum)
 
-                if papers != None:
+                print(string + child.definition)
+                #if papers != None:
 
-                    print(string + "\t\tMost Relevant Papers: ", papers)
 
-                    all_genes = get_getjoinedcounts(papers)
-                    top_genes = all_genes.most_common(20)
-                    found_fams = match_families(all_genes)
-                    top_families = found_fams.most_common(10)
-
-                    print(string + "\t\tMost Mentioned Genes: ", [a for a, b in top_genes])
-                    print(string + "\t\tMost Mentioned Families:", [a for a, b in top_families])
+            #print(string + "\t\tMost Relevant Papers: ", papers)
+                    #print(string + "\t\tMost Mentioned Genes: ", [a for a, b in top_genes])
+                    #print(string + "\t\tMost Mentioned Families:", [a for a, b in top_families])
 
                 build_ancestry(child, count)
 
@@ -76,8 +68,8 @@ def build_ancestry_main(major):
 
 if __name__=='__main__':
 
-    name = "Motor Skills"
-    node = next((x for x in onto_objects if x.label == name or x.classnum == name), None)
+    name = "Autism Phenotype"
+    node = next((x for x in onto_objects if x.label.lower() == name.lower() or x.classnum.lower() == name.lower()), None)
 
     if node == None:
         print('Invalid Node')
