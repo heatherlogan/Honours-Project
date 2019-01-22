@@ -1,9 +1,3 @@
-
-
-# reads gold standard file to tuples of ('phrase'; 'concept')
-
-
-# reads NER output to same tuples
 import itertools
 from difflib import SequenceMatcher
 
@@ -15,9 +9,15 @@ def load_gold():
     gold_annotations = []
 
     for line in file:
-        if "***END" not in line:
-            phrase, semtype = line.strip().split(':')
-            gold_annotations.append((phrase.strip(), semtype.strip()))
+        line = line.strip()
+
+        if "***STOP" not in line:
+            if "**END" not in line:
+                if "*PMC" in line:
+                    id = line.replace('*', '').strip()
+                elif line != "":
+                    phrase, semtype = line.split(':')
+                    gold_annotations.append((id, phrase.strip(), semtype.strip()))
         else:
             break
 
@@ -25,24 +25,30 @@ def load_gold():
 
 
 def load_output():
-    file = open('files/output_NER.txt', 'r').readlines()
 
-    output_NER = []
-    doc = 0
+    file = open("files/output_NER.txt", 'r').readlines()
+
+    system_annotations = []
 
     for line in file:
-        if "*" in line:
-            doc += 1;
+        line = line.strip()
+
+        if "***STOP" not in line:
+            if "**END" not in line:
+                if "*PMC" in line:
+                    id = line.replace('*', '').strip()
+                elif line != "":
+                    phrase, semtype = line.split(':')
+                    system_annotations.append((id, phrase.strip().lower(), semtype.strip()))
         else:
-            phrase, semtype = line.strip().split(':')
-            output_NER.append((doc, phrase.strip(), semtype.strip()))
+            break
 
-    return output_NER
+    return system_annotations
 
-#
-#
-# # Correct = correct string and correct label
-# incorrect = similar/correct string and incorrect label
+
+
+# Correct = correct string and correct label
+# Incorrect = similar/correct string and incorrect label
 # partial = similar string and correct label
 # missing = golden annotation is missed
 # spirius = system returns annotation not in golden
@@ -63,64 +69,84 @@ def is_similar(gold, system):
     else:
         return False
 
+
 def identify_matches(gold, system):
+
     correct = 0
     partial = 0
     incorrect = 0
-
-    cor = []
-    par = []
-    incor = []
-
-
+    evaluated = []
 
     for (gold_phrase, gold_type) in gold:
         for (system_phrase, system_type) in system:
             if gold_phrase == system_phrase:
                 if gold_type == system_type:
                     correct += 1
-                    cor.append(((gold_phrase, gold_type), (system_phrase, system_type)))
+                    evaluated.append((gold_phrase, gold_type))
                 else:
                     incorrect += 1
-                    incor.append(((gold_phrase, gold_type), (system_phrase, system_type)))
-
+                    evaluated.append((gold_phrase, gold_type))
+                    evaluated.append((system_phrase, system_type))
             else:
                 if is_similar(gold_phrase, system_phrase):
                     if gold_type == system_type:
-                        par.append(((gold_phrase, gold_type), (system_phrase, system_type)))
                         partial += 1
+                        evaluated.append((gold_phrase, gold_type))
+                        evaluated.append((system_phrase, system_type))
                     else:
-                        incor.append(((gold_phrase, gold_type), (system_phrase, system_type)))
                         incorrect += 1
+                        evaluated.append((gold_phrase, gold_type))
+                        evaluated.append((system_phrase, system_type))
 
-    print(correct, partial, incorrect)
-    #
-    #
-    # not_eval_gold = [x for x in gold if x not in evaluated]
-    #
-    # not_eval_system = [x for x in system if x not in evaluated]
-    #
-    # for n in not_eval_gold:
-    #     print(n)
-    # print('\n')
-    #
-    # for n in not_eval_system:
-    #     print(n)
+    missing = len([x for x in gold if x not in sorted(list(set(evaluated)))])
+    spirius = len([x for x in system if x not in sorted(list(set(evaluated)))])
 
-    for i in incor:
-        print(i)
+    # print(correct, partial, incorrect, missing, spirius)
+
+    return correct, partial, incorrect, missing, spirius
+
+
+def calculate_metrics(correct, partial, incorrect, missing, spirius):
+
+    TP = correct + incorrect
+    FP = partial + spirius
+    FN = partial + missing
+    possible = TP + FN
+    actual = TP + FP
+
+    precision_exact = (correct/actual)
+    recall_exact = (correct/possible)
+
+    precision_partial = (correct + (0.5 * partial))/actual
+    recall_partial = (correct + (0.5 * partial))/possible
+
+    return precision_exact, recall_exact, precision_partial, recall_partial
+
+
 
 if __name__=="__main__":
 
     gold_annotations = load_gold()
-    output = load_output()
 
-    output.sort(key=lambda x: x[1])
+    system_out = load_output()
+
+    system_out.sort(key=lambda x: x[1])
     gold_annotations.sort()
 
-    temp_output = [(p,t) for (i, p, t) in output if i==1]
-
-    identify_matches(gold_annotations, temp_output)
+    pmcds = list(set([x for x, y, z in (gold_annotations)]))
 
 
+    string_list = []
+    strn = "Paper ID\tExact Precision\tExact Recall\tExact F1\tPartial Precision\tPartial Recall\tPatrial F1"
+    print(strn)
 
+    for i, p in enumerate(pmcds):
+
+        golds = [(g[1], g[2]) for g in gold_annotations if g[0] == p]
+        output = [(o[1], o[2]) for o in system_out if o[0] == p]
+
+        cor, par, incor, mis, spir = identify_matches(golds, output)
+        pre_ex, rec_ex, pre_par, rec_par = calculate_metrics(cor, par, incor, mis, spir)
+        f1_ex = 2 * ((pre_ex * rec_ex)/(pre_ex + rec_ex))
+        f1_par =2 * ((pre_par * rec_par)/(pre_par + rec_par))
+        print("{}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t".format(p, pre_ex, rec_ex, pre_par, f1_ex, rec_par, f1_par))

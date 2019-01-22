@@ -2,7 +2,6 @@ import itertools
 import re
 from difflib import SequenceMatcher
 import nltk
-
 from pymetamap import MetaMap
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
