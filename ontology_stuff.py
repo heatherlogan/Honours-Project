@@ -123,23 +123,24 @@ def extract_autism_entities():
     onto_objects = build_onto_objects()
 
     medical_entities = []
+    onto_titles = []
     #
     #
-    for onto in onto_objects:
+    return [onto.label.replace("'", "") for onto in onto_objects]
+    # #
+    # #     [medical_entities.append(onto) for a in onto.ancestors for  i in a if str(i) == "asdpto.Class_154"]
+    # #
+    #     entities = entity_extract2(onto.definition, 'default')
+    #     entities = filter(None, entities)
     #
-    #     [medical_entities.append(onto) for a in onto.ancestors for  i in a if str(i) == "asdpto.Class_154"]
+    #     file.write("{}\n".format(re.sub("'", '', "".join([o.lower() for o in onto.label]))))
     #
-        entities = entity_extract2(onto.definition, 'default')
-        entities = filter(None, entities)
-
-        file.write("{}\n".format(re.sub("'", '', "".join([o.lower() for o in onto.label]))))
-
-        for entity in entities:
-            entity = re.sub(r'([^\s\w]|_)+',' ',  entity)
-            file.write("{}\n".format(entity.lower().strip()))
-        file.write("\n")
-
-    file.close()
+    #     for entity in entities:
+    #         entity = re.sub(r'([^\s\w]|_)+',' ',  entity)
+    #         file.write("{}\n".format(entity.lower().strip()))
+    #     file.write("\n")
+    #
+    # file.close()
 
 if __name__=="__main__":
 

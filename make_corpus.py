@@ -129,10 +129,6 @@ def find_name(id):
 
 
 
-def remove_blanks():
-    pass
-    # remove articles that dont have
-
 
 
 

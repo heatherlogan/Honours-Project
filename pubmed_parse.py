@@ -225,7 +225,8 @@ def get_pmcids(gene):
         for g in synonyms[:len(synonyms)-1]:
             string += "{}[TW] OR ".format(g)
 
-        query = "{}{}[TW]) AND Autism Spectrum Disorders[majr] AND free full text[sb]".format(string, synonyms[len(synonyms)-1])
+        query = "{}{}[TW]) AND Autism Spectrum Disorders[majr] AND free full text[sb]"\
+            .format(string, synonyms[len(synonyms)-1])
         results = get_PMC_from_pubmed(query)
 
     return results

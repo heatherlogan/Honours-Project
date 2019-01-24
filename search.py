@@ -102,7 +102,8 @@ def parsequery(query):
         if score == 0.0:
             results.pop(doc)
     results = (sorted(results.items(), key=lambda kv: kv[1], reverse=True))
-    return results[:5]
+    # return results[:5]
+    print(results[:5])
 
 
 def query_idx(query_file):
@@ -123,9 +124,16 @@ def query_idx(query_file):
 
 
 if __name__=='__main__':
-    indexed_file = open('files/corpus_index.txt', 'r').readlines()
+    indexed_file = open('files/index.txt', 'r').readlines()
     docnumbers = []
+
     inverted_index = format_txt_file()
 
-    query_file = get_queries()
-    query_idx(query_file)
+    q = "Cardiovascular Diseases. Pathological conditions involving the cardiovascular system including the heart, the blood vessels, or the pericardium."
+    query = preprocess_query(q)
+
+    parsequery(query)
+
+    # query_file = get_queries()
+    # query_idx(query_file)
+

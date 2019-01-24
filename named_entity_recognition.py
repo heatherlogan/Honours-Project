@@ -5,6 +5,8 @@ import nltk
 from pymetamap import MetaMap
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from nltk.stem.porter import PorterStemmer
+from nltk.stem import WordNetLemmatizer
 
 from indexer import reload_corpus
 
@@ -221,59 +223,89 @@ def process_text(text):
 
     return text
 
-if __name__=="__main__":
 
-    hgnc = load_hgnc()
+def load_gold_annotations():
 
+    file=open('files/gold_most_common_entities.txt', 'r').readlines()
+    gold_annotations = {}
+
+    for line in file:
+        term, label = line.split(': ')
+        gold_annotations[term.strip()] = label.strip()
+
+    return gold_annotations
+
+
+def similar_gold(term):
+
+    def similar(a, b):
+        return SequenceMatcher(None, a, b).ratio()
+
+    label = ""
+    max = 0
+
+    # checks if a  gold annotations for
+
+    for k, v in gold_annotations.items():
+        sim = similar(term, k)
+        if sim > 0.85 and sim > max:
+            max = sim
+            label = v
+
+    if label:
+        return label
+    else:
+        return ""
+
+
+def annotate_abstracts():
 
     abstract_file = open('files/abstracts.txt', 'r').readlines()
-    writefile = open('files/output_NER2.txt', 'w')
-
+    writefile = open('files/output_latest.txt', 'w')
     abstracts = reload_corpus(abstract_file)
 
     for i, ab in enumerate(abstracts):
 
-        writefile.write("*Paper {}*".format(i+1))
+        writefile.write("*PMC{}*\n".format(ab.id))
 
         text = ab.abstract
-
-        found_genes = get_genes(text)
+        found_genes = [g.lower() for g in get_genes(text)]
         mutations = mutation_search(text)
         entities = entity_extract(process_text(text), 'default')
-        new = {**entities, **found_genes, **mutations}
-        #
+        entities = {**entities, **mutations}
         id_entity = {}
 
-        unknown = []
-
-        for k, v in new.items():
+        for k, v in entities.items():
             if k not in stopwords:
-                if k not in mutations.keys():
-                    lst = meta_ner(k)
+                if k in mutations.keys():
+                    id_entity[k] = '[comd]'
+                elif k in gold_annotations.keys():
+                    print(k, "in golden")
+                    id_entity[k] = gold_annotations.get(k)
+                elif lem.lemmatize(k) in gold_annotations.keys():
+                    print(k, "in golder")
+                    id_entity[k] = gold_annotations.get(lem.lemmatize(k))
+                elif k in found_genes:
+                    id_entity[k] = '[gngm]'
                 else:
-                    lst = ['[comd]']
-                id_entity[k] = lst
+                    semtypes = meta_ner(k)
+                    if len(semtypes)>0:
+                        id_entity[k] = semtypes[0]
+                    elif is_gene(k):
+                        id_entity[k] = '[gngm]'
+                    elif similar_gold(k) != "":
+                        id_entity[k] = similar_gold(k)
 
-        for k2, v2 in id_entity.items():
-            if len(v2)>0:
-                txt = "{}: {}\n".format(k2, v2[0])
-                print(k2, v2[0])
-                writefile.write(txt)
-            else:
-                if k2 in mutations.keys():
-                    txt = "{}: [comd]\n".format(k2)
-                    writefile.write(txt)
-                    print(k2, '[comd]')
-                elif is_gene(k2):
-                    txt = "{}: [gngm]\n".format(k2)
-                    writefile.write(txt)
-                    print(k2, '[gngm]')
-                else:
-                    # search more dictionaries
-                    unknown.append(k2)
-        writefile.write("\n")
-        print(unknown)
+
+        for k, v in id_entity.items():
+            writefile.write("{}: {}\n".format(k, v))
+
     writefile.close()
 
+if __name__=="__main__":
+
+    hgnc = load_hgnc()
+
+    gold_annotations = load_gold_annotations()
 
 

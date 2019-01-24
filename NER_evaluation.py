@@ -26,11 +26,13 @@ def load_gold():
 
 def load_output():
 
-    file = open("files/output_NER.txt", 'r').readlines()
+
+    file = open("files/output_latest.txt", 'r').readlines()
 
     system_annotations = []
 
     for line in file:
+        print(line)
         line = line.strip()
 
         if "***STOP" not in line:
@@ -64,7 +66,7 @@ def is_similar(gold, system):
     def similar(a, b):
         return SequenceMatcher(None, a, b).ratio()
 
-    if similar(gold, system)>0.8:
+    if similar(gold, system) > 0.8:
         return True
     else:
         return False
@@ -135,10 +137,16 @@ if __name__=="__main__":
 
     pmcds = list(set([x for x, y, z in (gold_annotations)]))
 
-
     string_list = []
     strn = "Paper ID\tExact Precision\tExact Recall\tExact F1\tPartial Precision\tPartial Recall\tPatrial F1"
     print(strn)
+
+    avg_ex_p = 0
+    avg_ex_r = 0
+    avg_ex_f1 = 0
+    avg_par_p = 0
+    avg_par_r = 0
+    avg_par_f1 = 0
 
     for i, p in enumerate(pmcds):
 
@@ -150,3 +158,16 @@ if __name__=="__main__":
         f1_ex = 2 * ((pre_ex * rec_ex)/(pre_ex + rec_ex))
         f1_par =2 * ((pre_par * rec_par)/(pre_par + rec_par))
         print("{}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t".format(p, pre_ex, rec_ex, pre_par, f1_ex, rec_par, f1_par))
+
+        avg_ex_p += pre_ex
+        avg_ex_r += pre_ex
+        avg_ex_f1 += f1_ex
+        avg_par_p += pre_par
+        avg_par_r += rec_par
+        avg_par_f1 += f1_par
+
+    i = len(pmcds)
+
+    print("Average:\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t{:.3f}\t"
+          .format(avg_ex_p/i, avg_ex_r/i, avg_ex_f1/i,
+                  avg_par_p/i, avg_par_r/i, avg_par_f1/i))

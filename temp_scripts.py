@@ -1,9 +1,10 @@
-import itertools
-import random
-import re
-from collections import defaultdict
-from indexer import reload_corpus
+from collections import defaultdict, Counter
 from named_entity_recognition import *
+from nltk.stem.porter import PorterStemmer
+from nltk.stem import WordNetLemmatizer
+from nltk import bigrams, ngrams
+from nltk.corpus import wordnet as wn
+from ontology_stuff import extract_autism_entities
 
 def sort_gene_families():
 
@@ -17,7 +18,6 @@ def sort_gene_families():
         gene_families[family] = gene
 
     return gene_families
-
 
 
 def sort_hgnc():
@@ -55,89 +55,132 @@ def sort_diseases():
         r_file.write(disease + "\n")
 
 
-def write_abstracts():
+def write_entities():
 
     file = open('files/corpus_cleaned.txt', 'r').readlines()
+
+    write_file = open('files/abstract_common_entities.txt', 'w')
+
     articles = reload_corpus(file)
 
-    abstracts = []
+    abstracts = [a.abstract for a in articles if a.abstract]
 
-    for article in articles:
+    all_entites = []
 
-        if article.abstract != "" and len(article.abstract) > 1000 and len(article.abstract) < 1500:
+    for i, abs in enumerate(abstracts):
 
-            abstracts.append(article)
+        print(i)
+        all_entites.append([k.lower() for k, v in entity_extract(abs, 'default').items()])
 
-    random.shuffle(abstracts)
+    counter = Counter()
+    all_entites = list(itertools.chain.from_iterable(all_entites))
 
-    return abstracts[:30]
+    for ent in all_entites:
+        counter[ent] += 1
 
+    lst = [c[0] for c in counter.most_common(500)]
 
-def clean_ent(entity):
+    print(sorted(lst))
 
-    cleaned = re.sub(r'[^a-zA-Z0-9\-._/\s]', '',entity)
-    return cleaned.strip().lower()
+    for l in sorted(lst):
+        write_file.write("{}\n".format(l))
 
+    # 60675 all entities
+    # 32187 corpus entities
 
-def corpus_entities():
-
-    hgnc_genes = load_hgnc()
-
-    softTFIDF = sm.SoftTfIdf()
-
-    file = open('files/corpus_cleaned.txt', 'r').readlines()
-    articles = reload_corpus(file)
-
-    all_ents = []
-
-    for i, article in enumerate(articles):
-
-            text = article.abstract.strip() + article.text.strip()
-            entities = entity_extract(text, 'default')
-            entities2 = [clean_ent(entity) for entity in entities if not all(x.isalpha() for x in entity)]
-            print(entities2)
-            print('\t', i,  len(entities), len(entities2))
-            all_ents.append(entities2)
-
-    all_ents = list(nltk.chain.from_iterable(all_ents))
-    common_ents = list(set(all_ents))
-
-    print(len(all_ents), len(common_ents))
-
-    file2 = open("files/corpus_entities.txt", 'w')
-
-    common_ents = sorted(common_ents)
-
-    for ent in common_ents:
-        file2.write("{}\n".format(ent))
+    write_file.close()
 
 
+def condense_entities():
 
-def clean_corpus_entities():
+    stemmer = PorterStemmer()
+    lemmatizer = WordNetLemmatizer()
 
-    file = open('files/corpus_entities.txt', 'r')
-    file2 = open("files/corpus_entities.txt", 'w')
     entities = []
+    stemmed = []
+    lemmatized = []
+
+    file = open('files/abstract_common_entities.txt', 'r')
+
     for line in file:
-        entities.append(line.strip())
-    cleaned_ents = []
-    for entity in entities:
+        ent = line.strip()
+        entities.append(ent)
+        stemmed.append(stemmer.stem(ent))
+        lemmatized.append(lemmatizer.lemmatize(ent))
 
-        if any([x in entity for x in ['www.', '.nih', '.gov', '.ca', '.net', '.co.uk', '.com', '.edu', '.org', '.ac.uk']]):
-            pass
-        else:
-            if any([entity.startswith(x) for x in ['-', '/', '//', '-', '.']]):
-                entity = entity[1:]
-            cleaned_ents.append(entity.strip())
-    print(cleaned_ents)
-    print(len(list(set(cleaned_ents))))
+    stemmed_file = open('files/entities_stemmed.txt', 'w')
+    lemmatized_file = open('files/entities_lemmatized.txt', 'w' )
 
-    for c in sorted(cleaned_ents):
+    for ent in sorted(list(set(stemmed))):
+        print(ent)
+        stemmed_file.write("{}\n".format(ent))
 
-        file2.write("{}\n".format(c))
+    print(" ")
+
+    for ent in sorted(list(set(lemmatized))):
+        print(ent)
+        lemmatized_file.write("{}\n".format(ent))
+
+
+    stemmed_file.close()
+    lemmatized_file.close()
+
+
+def autism_terms():
+
+    onto_labels = extract_autism_entities()
+    terms = []
+
+    for o in onto_labels:
+        o = o.lower()
+        fltr = [word for word in o.split() if word not in stopwords]
+        bi = list(bigrams(fltr))
+        terms.append(o)
+        for o1 in fltr:
+            terms.append(o1)
+        for b in bi:
+            terms.append(' '.join(b))
+
+    return sorted(list(set(terms)))
+
+
+def similar(a, b):
+    return SequenceMatcher(None, a, b).ratio()
+
 
 if __name__=="__main__":
 
-    clean_corpus_entities()
+    lemmatiz = WordNetLemmatizer()
+    stemmer = PorterStemmer()
 
+    asd_terms = autism_terms()
 
+    stemmed_terms = []
+
+    file = open("files/asd_terms.txt", 'w')
+
+    for term in asd_terms:
+        stemmed = ""
+        for word in term.split():
+            stem = lemmatiz.lemmatize(word)
+            stemmed += stem + " "
+        stemmed_terms.append(stemmed)
+
+    stemmed_terms = sorted(list(set(stemmed_terms)))
+
+    for stem in stemmed_terms:
+        print(stem)
+        file.write("{}\n".format(stem))
+    file.close()
+
+    #
+    # test_terms = ["ASD", "poor social skills", "conceptual empathy", "socially awkward", "fragile-X syndrome", "social ability", "aggressiveness"]
+    #
+    #
+    # for term in test_terms:
+    #     stemmed = ""
+    #     for word in term.split():
+    #         stem = stemmer.stem(word)
+    #         stemmed += stem + " "
+    #
+    #     print(term, "\t", stemmed)
