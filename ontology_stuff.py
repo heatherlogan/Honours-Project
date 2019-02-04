@@ -3,6 +3,7 @@ from owlready2 import *
 from nltk.corpus import stopwords, wordnet
 from nltk.stem import snowball, WordNetLemmatizer
 from named_entity_recognition import *
+from nltk import ngrams
 from pymedtermino.all import *
 from pymedtermino import *
 from pymedtermino.snomedct import *
@@ -13,6 +14,7 @@ onto = get_ontology("file:///Users/heatherlogan/PycharmProjects/Honours_Proj/fil
 
 pymedtermino.LANGUAGE = "en"
 pymedtermino.REMOVE_SUPPRESSED_CONCEPTS = True
+lemmatiz = WordNetLemmatizer()
 
 class Node:
 
@@ -28,19 +30,24 @@ class Node:
 def build_onto_objects():
 
     onto_objects = []
+    seen_classes = []
 
     for c in onto.classes():
 
-        ancestors = []
+        if c not in seen_classes:
 
-        iri = onto.base_iri + c.name
-        label = (re.sub('[][]', '', str(IRIS[iri].label))).strip()
-        definition = (re.sub('[][]', '', str(IRIS[iri].definition))).strip()
-        ancestors.append([a for a in c.ancestors()])
-        parent = c.is_a
+            ancestors = []
 
-        node = Node(c.name, label, definition, parent, ancestors, c.descendants)
-        onto_objects.append(node)
+            iri = onto.base_iri + c.name
+            label = (re.sub('[][]', '', str(IRIS[iri].label))).strip()
+            definition = (re.sub('[][]', '', str(IRIS[iri].definition))).strip()
+            ancestors.append([a for a in c.ancestors()])
+            parent = c.is_a
+
+            node = Node(c.name, label, definition, parent, ancestors, c.descendants)
+            onto_objects.append(node)
+
+        seen_classes.append(c)
 
     return onto_objects
 
@@ -81,78 +88,84 @@ def get_queries():
     for node in get_leaf_nodes():
 
         parent = next(x for x in objs if x.classnum == re.sub("asdpto.","", str(node.parent[0])))
-
         query = preprocess_query(parent.label + " " + node.label + " " + node.definition)
-
         query_list[node.label] = (query)
 
     return query_list
-
-def entity_extract2(sentence, pattern):
-
-    if pattern=='default':
-        pattern = r""" Ents: {[0-9]*<JJ>*(<NN>|<NNS>|<NNP>)+}"""
-
-    named_ents = {}
-
-    r = sentence.split()
-    pos_s = nltk.pos_tag(r)
-    chunkParser = nltk.RegexpParser(pattern)
-    chunked = chunkParser.parse(pos_s)
-
-    for chunk in chunked:
-        string = []
-        if type(chunk) != tuple:
-            [string.append(term) for term, tag in chunk]
-        if string:
-            string = " ".join(string)
-            if ',' in string:
-                strs = string.split(',')
-                for s in strs:
-                    named_ents[s.strip()] = []
-            else:
-                named_ents[string.strip()] = []
-
-    return named_ents
 
 
 def extract_autism_entities():
 
     file = open("files/asdpto_ents.txt", 'w')
 
-    onto_objects = build_onto_objects()
+    onto_objects = list(set(build_onto_objects()))
+    for object in onto_objects:
+        keywords = []
+        phrases = []
+        label = re.sub(r'([^\s\w]|_)+', '', object.label.lower())
+        phrases.append(label)
+        label2 = [o for o in label.split() if o not in stopwords]
+        bigram_label = ngrams(label2, 2)
+        ents = [k for k,v  in entity_extract(object.definition.lower(), 'default').items()]
+        def2 = ([re.sub(r'([^\s\w]|_)+','', o) for o in object.definition.lower().split() if o not in stopwords])
+        bigram_desc = ngrams(def2, 2)
+        pos_tags = nltk.pos_tag(ents)
+        keyword_POS = ('NN', "NNS")
 
-    medical_entities = []
-    onto_titles = []
-    #
-    #
-    return [onto.label.replace("'", "") for onto in onto_objects]
-    # #
-    # #     [medical_entities.append(onto) for a in onto.ancestors for  i in a if str(i) == "asdpto.Class_154"]
-    # #
-    #     entities = entity_extract2(onto.definition, 'default')
-    #     entities = filter(None, entities)
-    #
-    #     file.write("{}\n".format(re.sub("'", '', "".join([o.lower() for o in onto.label]))))
-    #
-    #     for entity in entities:
-    #         entity = re.sub(r'([^\s\w]|_)+',' ',  entity)
-    #         file.write("{}\n".format(entity.lower().strip()))
-    #     file.write("\n")
-    #
-    # file.close()
+        for p in pos_tags:
+            if p[1] in keyword_POS:
+                keywords.append(p[0].strip())
+
+        for b in bigram_label:
+            ptag = nltk.pos_tag([' '.join(b).strip()])
+            if ptag[0][1] in keyword_POS:
+                phrases.append(ptag[0][0].strip())
+
+        file.write("{}\n{}\n".format(object.classnum, object.label))
+
+        for k in sorted(keywords):
+            file.write("\t{}\n".format(k))
+
+        for ph in sorted(list(set(phrases))):
+            file.write('\t{}\n'.format(ph))
+
+        file.write('\n')
+    file.close()
+
+
+def load_asd_terms():
+
+    file1 = open('files/asdpto_ents.txt', 'r').readlines()
+    asd_terms = defaultdict(list)
+    for line in file1:
+        if line.startswith('Class_'):
+            classno= line.strip()
+        elif line.startswith("\t"):
+            asd_terms[classno].append(line.strip())
+    return asd_terms
+
+
+def load_entities():
+
+    file = open('files/manually_annotated.txt', 'r').readlines()
+
+    ents = defaultdict(list)
+
+    for line in file:
+        if line.startswith("*PMC"):
+            pmcid = line.strip().replace("*", "*")
+        elif ("**") not in line and line != "":
+            ents[pmcid].append(line.strip())
+
+
+    for i, k in ents.items():
+        print(i, k )
+
 
 if __name__=="__main__":
 
-    file = open('files/asdpto_ents.txt', 'r').readlines()
-    file2 = open('files/asdpto_ents2.txt', 'w')
+    ents = load_entities()
+    asd_terms = load_asd_terms()
 
-    autism_ents = []
-    autism_ents.append([x.strip() for x in file])
-
-    autism_ents = sorted(list(set(filter(None, autism_ents[0]))))
-
-    for ent in autism_ents:
-        file2.write('{}\n'.format(ent))
 
 

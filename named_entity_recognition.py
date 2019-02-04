@@ -96,7 +96,6 @@ def entity_extract(text, pattern):
             if type(chunk) != tuple:
                 [string.append(term.lower()) for term, tag in chunk]
             if string:
-
                 if string[-1].endswith(",") or string[-1].endswith("."):
                     string[-1] = string[-1][:-1]
 
@@ -111,7 +110,19 @@ def entity_extract(text, pattern):
 
     named_ents = {k: v for k, v in named_ents.items() if k is not ''}
 
-    return named_ents
+    # splitting on comma, refactor later
+
+    fixed_named_ents = {}
+
+    for k, v in named_ents.items():
+        if ',' in k:
+            new_k = k.split(',')
+            for k2 in new_k:
+                fixed_named_ents[k2] = []
+        else:
+            fixed_named_ents[k] = v
+
+    return fixed_named_ents
 
 
 def meta_map_chunked(entities):
@@ -301,6 +312,11 @@ def annotate_abstracts():
             writefile.write("{}: {}\n".format(k, v))
 
     writefile.close()
+
+def temp_annotate():
+
+    test_sent = ""
+
 
 if __name__=="__main__":
 
