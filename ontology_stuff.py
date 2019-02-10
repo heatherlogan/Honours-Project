@@ -1,19 +1,11 @@
-import pymedtermino
 from owlready2 import *
-from nltk.corpus import stopwords, wordnet
-from nltk.stem import snowball, WordNetLemmatizer
 from named_entity_recognition import *
 from nltk import ngrams
-from pymedtermino.all import *
-from pymedtermino import *
-from pymedtermino.snomedct import *
-
+from nltk.stem import PorterStemmer
 # owlready doc: https://media.readthedocs.org/pdf/owlready2/latest/owlready2.pdf
 
 onto = get_ontology("file:///Users/heatherlogan/PycharmProjects/Honours_Proj/files/asdpto.owl").load()
 
-pymedtermino.LANGUAGE = "en"
-pymedtermino.REMOVE_SUPPRESSED_CONCEPTS = True
 lemmatiz = WordNetLemmatizer()
 
 class Node:
@@ -108,7 +100,6 @@ def extract_autism_entities():
         bigram_label = ngrams(label2, 2)
         ents = [k for k,v  in entity_extract(object.definition.lower(), 'default').items()]
         def2 = ([re.sub(r'([^\s\w]|_)+','', o) for o in object.definition.lower().split() if o not in stopwords])
-        bigram_desc = ngrams(def2, 2)
         pos_tags = nltk.pos_tag(ents)
         keyword_POS = ('NN', "NNS")
 
@@ -133,39 +124,18 @@ def extract_autism_entities():
     file.close()
 
 
-def load_asd_terms():
-
-    file1 = open('files/asdpto_ents.txt', 'r').readlines()
-    asd_terms = defaultdict(list)
-    for line in file1:
-        if line.startswith('Class_'):
-            classno= line.strip()
-        elif line.startswith("\t"):
-            asd_terms[classno].append(line.strip())
-    return asd_terms
-
-
-def load_entities():
-
-    file = open('files/manually_annotated.txt', 'r').readlines()
-
-    ents = defaultdict(list)
-
-    for line in file:
-        if line.startswith("*PMC"):
-            pmcid = line.strip().replace("*", "*")
-        elif ("**") not in line and line != "":
-            ents[pmcid].append(line.strip())
-
-
-    for i, k in ents.items():
-        print(i, k )
-
 
 if __name__=="__main__":
 
-    ents = load_entities()
-    asd_terms = load_asd_terms()
+    file = open("files/autism_terms/social_sub_ents.txt", 'w')
 
+    onto_objects = build_onto_objects()
+    social_ents = []
 
+    for onto in onto_objects:
 
+        [social_ents.append(onto) for a in onto.ancestors for i in a if str(i) == "asdpto.Class_153"]
+
+    for m in social_ents:
+        file.write('{}: {}\n{}\n\n\n\n'.format(m.classnum, m.label, m.definition))
+        print(m.classnum, m.label)

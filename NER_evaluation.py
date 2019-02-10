@@ -27,7 +27,7 @@ def load_gold():
 def load_output():
 
 
-    file = open("files/output_latest.txt", 'r').readlines()
+    file = open("files/output_latest2.txt", 'r').readlines()
 
     system_annotations = []
 

@@ -3,7 +3,6 @@ from named_entity_recognition import *
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk import bigrams, ngrams
-from nltk.corpus import wordnet as wn
 from ontology_stuff import extract_autism_entities
 
 def sort_gene_families():

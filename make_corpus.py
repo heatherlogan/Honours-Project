@@ -70,11 +70,10 @@ def format_article(url):
     return Article(pmcid, article_title, abstract, ' '.join(article_text))
 
 
-def build_corpus():
+def build_corpus(url_file):
 
-    url_file = open('files/url_list.txt', 'r').read()
     urls = url_file.split('\n')
-    corp = open('files/corpus4.txt', 'w')
+    corp = open('files/papers/include_papers.txt', 'w')
     count = 0
 
     for url in urls:
@@ -131,10 +130,10 @@ def find_name(id):
 
 
 
-
 if __name__=="__main__":
 
-    build_corpus()
+    url_file = open('files/papers/include_urls.txt', 'r').read()
+    build_corpus(url_file)
 
 
 

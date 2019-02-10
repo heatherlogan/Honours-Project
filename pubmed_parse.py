@@ -304,11 +304,17 @@ def check_papers():
 
 
 if __name__=="__main__":
-    hgnc = sort_hgnc()
 
-    makeurls()
+    file = open('files/papers/exclude_list.txt', 'r').readlines()
+    include_urls = open('files/papers/exclude_urls.txt', 'w')
 
-
-
-
-
+    for i, line in enumerate(file):
+        print(i)
+        line = line.strip()
+        if len(line)>0:
+            pubmedid = line
+            pmcid = get_PMC_from_pubmed(pubmedid)
+            if len(pmcid)>0:
+                url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email=heather_logan@live.co.uk".format(pmcid)
+                include_urls.write("{}\n".format(url))
+    include_urls.close()

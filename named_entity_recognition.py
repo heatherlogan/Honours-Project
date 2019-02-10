@@ -54,7 +54,7 @@ def acronym_search(text):
 
 def load_hgnc():
 
-    file = open('files/hgnc_sorted.txt', 'r').readlines()
+    file = open('files/genes_etc/hgnc_sorted.txt', 'r').readlines()
     genes = {}
 
     for line in file:
@@ -67,7 +67,7 @@ def load_hgnc():
 
 def load_amino_acids():
 
-    file = open('files/amino_acids.csv', 'r').readlines()
+    file = open('files/genes_etc/amino_acids.csv', 'r').readlines()
     amino_acids = []
 
     for line in file[1:]:
@@ -269,16 +269,15 @@ def similar_gold(term):
         return ""
 
 
-def annotate_abstracts():
+def annotate_abstracts(filename):
 
-    abstract_file = open('files/abstracts.txt', 'r').readlines()
-    writefile = open('files/output_latest.txt', 'w')
+    abstract_file = open('files/papers/{}'.format(filename), 'r').readlines()
+    writefile = open('files/NER_outputs/ner_output_{}'.format(filename), 'w')
     abstracts = reload_corpus(abstract_file)
 
     for i, ab in enumerate(abstracts):
 
         writefile.write("*PMC{}*\n".format(ab.id))
-
         text = ab.abstract
         found_genes = [g.lower() for g in get_genes(text)]
         mutations = mutation_search(text)
@@ -309,19 +308,15 @@ def annotate_abstracts():
 
 
         for k, v in id_entity.items():
-            writefile.write("{}: {}\n".format(k, v))
+            writefile.write("{}: {}\n".format(k.strip(), v))
 
     writefile.close()
 
-def temp_annotate():
-
-    test_sent = ""
 
 
 if __name__=="__main__":
 
     hgnc = load_hgnc()
-
     gold_annotations = load_gold_annotations()
 
-
+    annotate_abstracts("include_papers.txt")

@@ -197,7 +197,9 @@ def clean_corpus(): #removes failed articles with no text
 
 if __name__=="__main__":
 
-    file = open('files/corpus_cleaned.txt', 'r').readlines()
+    file = open('files/papers/include_papers.txt', 'r').readlines()
     articles = reload_corpus(file)
-    build_index(articles)
+
+    for article in articles:
+        print(article.headline)
 
