@@ -8,9 +8,9 @@ models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-02-27-m
 
 def build_paths(tree):
 
-    # relations are edges
-    for edge in tree:
-        print(edge)
+    # # relations are edges
+    # for edge in tree:
+    #     print(edge)
 
     def build(start):
         trace = [start]
@@ -26,13 +26,25 @@ def build_paths(tree):
     possible_start = [edge[1] for edge in tree if edge[2] in subject_labels]
     # nodes with outgoing edges as nsubj, subjpass or dobj
     possible_relations = list(set([edge[0] for edge in tree if edge[2] in subject_labels or edge[2] in ['nmod', 'dobj']]))
+
+    print("Subject Entity", [node_lookup[i] for i in build(possible_start[0])])
+
+    for i in possible_relations.copy():
+        if not any([j for j in build(i) if pos_tagged[node_lookup[j]] in ['VB', 'VBD', 'VBG', 'VBZ', 'VBN', 'VBP']]):
+            possible_relations.remove(i)
+    print("Possible Relations:", [node_lookup[i] for i in possible_relations])
+
+
+    effector_labels = ['xcomp', 'dobj', 'nmod', 'amod']
     possible_effectees = []
+    for relation in possible_relations:
+        outgoing_edges = [edge[1] for edge in tree if edge[0]==relation and edge[2] in effector_labels]
+        possible_effectees.extend(outgoing_edges)
+        for new in outgoing_edges:
+            # possible other edges if conjunctions with others
+            possible_effectees.extend([edge[1] for edge in tree if edge[0]==new and edge[2]=='conj'])
 
-    startpath = build(possible_start[0])
-    print("Start", startpath)
-    for i in possible_relations:
-        print("Relation at:", i, build(i))
-
+    print("Effectors:", [build(i) for i in possible_effectees])
 
 
 if __name__=="__main__":
@@ -49,19 +61,18 @@ if __name__=="__main__":
             "inhabiting CHUNK and orientating to CHUNK in the CHUNK."
 
     dependency_parser = StanfordDependencyParser(path_to_jar=class_path, path_to_models_jar=models_path)
-
     result = dependency_parser.raw_parse(text6)
     dep = result.__next__()
 
     trips = list(dep.triples())
 
-    pos_tagged = []
     for trip in trips:
-        pos_tagged.append(trip[0])
-        pos_tagged.append(trip[2])
+        print(trip)
 
-    print(list(set(pos_tagged)))
-    print('\n\n')
+    pos_tagged = {}
+    for pos in trips:
+        pos_tagged[pos[0][0]] = pos[0][1]
+        pos_tagged[pos[2][0]] = pos[2][1]
 
     tree = str(dep.to_dot())
 
@@ -92,12 +103,16 @@ if __name__=="__main__":
             if split_indices.index(idx) == 0:
                 # print(tree_triples[0:split_indices[1]-1])
                 build_paths(tree_triples[0:split_indices[1]-1])
+                print("\n")
+
             elif split_indices.index(idx) != len(split_indices)-1:
                 # print(tree_triples[idx:split_indices[idx]])
                 build_paths(tree_triples[idx:split_indices[idx]])
+                print("\n")
             else:
                 # print(tree_triples[idx-1:len(tree_triples)])
                 build_paths(tree_triples[idx-1:len(tree_triples)])
+                print("\n")
     else:
         build_paths(tree_triples)
         print("Build relations as normal")
