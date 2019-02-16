@@ -6,43 +6,32 @@ class_path = "/Users/heatherlogan/Desktop/stanford-parser-full-2018-10-17/stanfo
 models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-02-27-models.jar"
 
 
-def sort_relations():
+def build_paths(tree):
 
-    file = open("files/semantics/semantic_network_relations.txt", 'r').readlines()
-    acronym_file = open('files/semantics/semantic_types.txt', 'r').readlines()
+    # relations are edges
+    for edge in tree:
+        print(edge)
 
-    acronym = {}
+    def build(start):
+        trace = [start]
+        def path(inc):
+            incoming = [edge[1] for edge in tree if edge[0] == inc]
+            if len(incoming)==1:
+                trace.append(incoming[0])
+                path(incoming[0])
+        path(start)
+        return trace
 
-    for line in acronym_file:
-        ac, code, full = line.strip().split("|")
-        acronym[full] = ac
+    # nodes with incoming edges as nsubj or nsubjpass are potential start points
+    possible_start = [edge[1] for edge in tree if edge[2] in subject_labels]
+    # nodes with outgoing edges as nsubj, subjpass or dobj
+    possible_relations = list(set([edge[0] for edge in tree if edge[2] in subject_labels or edge[2] in ['nmod', 'dobj']]))
+    possible_effectees = []
 
-    umls_relations = defaultdict(list)
-    term_rel = defaultdict(list)
-
-    for line in file:
-
-        line = line[:-2]
-        term1, relation, term2 = line.split('|')
-        umls_relations[relation].append((term1, term2))
-        term_rel[term1].append(relation)
-
-    for relation, tup_list in umls_relations.items():
-        term_relation = defaultdict(list)
-        for tup in tup_list:
-            term_relation[tup[0]].append(tup[1])
-
-        for key, val in term_relation.items():
-            # for v in val:
-            #     print(key, relation, v)
-            term_rel[key].append((relation, val))
-
-    for term, items in term_rel.items():
-        print("{}:  {}".format(term, acronym[term]))
-        for item in items:
-            if type(item)==tuple:
-                print('\t', item[0])
-                print('\t\t', item[1])
+    startpath = build(possible_start[0])
+    print("Start", startpath)
+    for i in possible_relations:
+        print("Relation at:", i, build(i))
 
 
 
@@ -51,45 +40,46 @@ if __name__=="__main__":
     # example sentences
 
     text = "CHUNK1 is caused by a CHUNK2 that involves CHUNK4, CHUNK5 and CHUNK6."
-    text2 = "Given that autism has been suggested to involve deficits in cognitive empathy"
+    text2 = "Given that CHUNK has been suggested to involve CHUNK in CHUNK "
     text1 = "Given that ENTITY1 has been suggested to involve ENTITY2 in ENTITY3"
     texts = "Research has linked Mirror-Touch Synaesthesia with enhanced empathy."
-    text5 = "The sigmaB-dependent promoter drives expression of yvyD under stress conditions and after glucose starvation whereas a singmaH-dependent promoter is responsible for yvyD transcription."
+    text5 = "Children with Autism may have difficulties with visual disengagement, that is, inhibiting current fixations " \
+            "and orientating to new stimuli in the periphery."
+    text6 = "CHUNK with CHUNK may have difficulties with CHUNK, that is, " \
+            "inhabiting CHUNK and orientating to CHUNK in the CHUNK."
 
     dependency_parser = StanfordDependencyParser(path_to_jar=class_path, path_to_models_jar=models_path)
 
-    result = dependency_parser.raw_parse(text5)
+    result = dependency_parser.raw_parse(text6)
     dep = result.__next__()
 
     trips = list(dep.triples())
 
-    for x in trips:
-        print(x)
-
-    tree = str(dep.to_dot())
-    print(tree)
-
-    print("\n\n")
-
-    entities = ['amod', 'compound', 'dobj']
-
-    tree_triples = []
-
-    relations = [node for node in tree.split('\n') if '->' in node]
-    for relation in relations:
-        path, label = relation.split('[label="')
-        start, end = path.split(' -> ')
-        relation = label.replace('"]', '').strip()
-        tree_triples.append((start, end, relation))
-
-    treestobeparsed = []
+    for trip in trips:
+        print(trip)
 
 
-    for t in tree_triples:
-        print(t)
 
     print('\n\n')
 
+    tree = str(dep.to_dot())
+
+    for i in tree.split("\n"):
+        print(i)
+
+    tree_split = list(filter(None, [line.strip() for line in tree.split("\n") if line != "\n"]))
+    node_lookup = {}
+    nodes = [node for node in tree_split if node[0].isdigit() and '->' not in node]
+    for node in nodes:
+        num, label = node.split(' [label="')
+        node_lookup[num] = label[label.find("(")+1:label.find(")")]
+    relations = [edge for edge in tree_split if '->' in edge]
+    tree_triples = []
+    for relation in relations:
+        path, label = relation.split(' [label="')
+        start, end = path.split(' -> ')
+        relation = label.replace('"]', '').strip()
+        tree_triples.append((start, end, relation))
     subject_labels = ['nsubj', 'nsubjpass']
     c = Counter(elem[2] for elem in tree_triples if elem[2] in subject_labels)
     if sum(c.values()) > 1:
@@ -99,12 +89,17 @@ if __name__=="__main__":
                 split_indices.append(tree_triples.index(triple))
         for idx in split_indices:
             if split_indices.index(idx) == 0:
-                print(tree_triples[0:split_indices[1]])
+                # print(tree_triples[0:split_indices[1]-1])
+                build_paths(tree_triples[0:split_indices[1]-1])
             elif split_indices.index(idx) != len(split_indices)-1:
-                print(tree_triples[idx-1:split_indices[idx]])
+                # print(tree_triples[idx:split_indices[idx]])
+                build_paths(tree_triples[idx:split_indices[idx]])
             else:
-                print(tree_triples[idx:len(tree_triples)-1])
+                # print(tree_triples[idx-1:len(tree_triples)])
+                build_paths(tree_triples[idx-1:len(tree_triples)])
     else:
+        build_paths(tree_triples)
         print("Build relations as normal")
 
 
+    dep.tree().draw()

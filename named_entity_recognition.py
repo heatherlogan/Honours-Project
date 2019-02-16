@@ -312,4 +312,6 @@ if __name__=="__main__":
     hgnc = load_hgnc()
     gold_annotations = load_gold_annotations()
 
-    annotate_abstracts('include_papers.txt')
+    text = "Children with Autism may have difficulties with visual disengagement, that is, inhabiting current fixation and orientating to new stimuli in the periphery. "
+
+    annotate(text)
