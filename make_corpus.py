@@ -40,21 +40,10 @@ def format_article(url):
         article_text = []
 
         for section in sections:
-
-            # sec_id = [section.get('id') if section.get('id') is not None else section.get('sec-type')]
-            # #print("\n", sec_id, "\n")
-            #
-            # #     # remove figures and tables (?)
-            # # [s.decompose() for s in section('fig')]
-            # [s.decompose() for s in section('table-wrap')]
-
             # Prevents duplicates for nested sections
             if section.find('sec') is not None:
                 para = section.find('p') # only finds first p (fix later)
-                # [s.extract() for s in para.find_all('sup')]
-                # [s.decompose() for s in para('xref')]  # removing references
                 article_text.append(para.text)
-
             else:
                 paragraphs = section.find_all("p")
                 for para in paragraphs:
@@ -101,8 +90,6 @@ def build_corpus(url_file):
 def find_name(id):
 
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email=heather_logan@live.co.uk".format(id)
-
-    obj = []
     article_title= ""
 
     # grab page
@@ -114,7 +101,6 @@ def find_name(id):
     # html parsing
     page_soup = soup(page_html, "html.parser")
     pmcid = page_soup.find("article-id", {"pub-id-type":"pmc"})
-    pmcid = pmcid.text
     title = page_soup.find_all("title-group")
 
     for t in title:

@@ -5,8 +5,6 @@ import nltk
 from pymetamap import MetaMap
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-from nltk.stem.porter import PorterStemmer
-from nltk.stem import WordNetLemmatizer
 
 from indexer import reload_corpus
 
@@ -21,6 +19,7 @@ def acronym_search(text):
     # looks at first letter of every word in preceeding areas or if a word begins with a portion of the acronym
 
     acronyms = {}
+
     lst = re.findall('\(.*?\)', text)
     text = re.sub('[.,?!]','',text)
     text = text.split()
@@ -48,6 +47,8 @@ def acronym_search(text):
                     pass
         except ValueError:
             pass
+
+    acronyms['ASD'] = 'Autism Spectrum Disorder'
 
     return acronyms
 
@@ -80,7 +81,7 @@ def load_amino_acids():
 def entity_extract(text, pattern):
 
     if pattern=='default':
-        pattern = r""" Ents: {[0-9]*<JJ>*(<NN>|<NNS>|<NNP>)+}"""
+        pattern = r""" Ents: {[0-9]*<JJ|VBN>*(<NN>|<NNS>|<NNP>)+}"""
 
     named_ents = {}
 
@@ -206,32 +207,27 @@ def process_text(text):
     # search and replace acronyms, remove remaining bracket items
 
     acs = acronym_search(text)
-    remove = []
-    keep = []
+    muts = mutation_search(text)
+    print(acs)
+
+    for acronym, fullword in acs.items():
+        text = re.sub(acronym, fullword, text)
 
     brackets = re.findall('\[.*?\]', text) + re.findall('\(.*?\)', text)
 
     for b in brackets:
         term = re.sub('[\[\]\(\)]', '', b)
-
-        if term in acs.keys():
-            keep.append(term)
-
-        # if only number then remove
-        elif all(x.isdigit() for x in term):
-            remove.append(b)
+        if term in acs.values():
+            text = text.replace(b, '')
         else:
-            remove.append(b)
+            terms = term.split()
+            for t in terms:
+                t = t.strip()
+                if t not in muts:
+                    text = text.replace(t, '')
 
-
-    for k in keep:
-        text = re.sub(k, acs.get(k), text)
-
-    for r in remove:
-        text = text.replace(r, '')
-
-    text = text.replace('(', ', ').replace(')', ',')
-
+    text = text.replace('  ', ' ').replace(" ( )", '')
+    print(text)
     return text
 
 
@@ -256,7 +252,6 @@ def similar_gold(term):
     max = 0
 
     # checks if a  gold annotations for
-
     for k, v in gold_annotations.items():
         sim = similar(term, k)
         if sim > 0.85 and sim > max:
@@ -268,50 +263,48 @@ def similar_gold(term):
     else:
         return ""
 
+def annotate(text):
+
+    found_genes = [g.lower() for g in get_genes(text)]
+    mutations = mutation_search(text)
+    entities = entity_extract(process_text(text), 'default')
+    entities = {**entities, **mutations}
+    id_entity = {}
+
+    for k, v in entities.items():
+        if k not in stopwords:
+            if k in mutations.keys():
+                id_entity[k] = '[comd]'
+            elif k in gold_annotations.keys():
+                print(k, "in golden")
+                id_entity[k] = gold_annotations.get(k)
+            elif lem.lemmatize(k) in gold_annotations.keys():
+                print(k, "in golder")
+                id_entity[k] = gold_annotations.get(lem.lemmatize(k))
+            elif k in found_genes:
+                id_entity[k] = '[gngm]'
+            else:
+                semtypes = meta_ner(k)
+                if len(semtypes) > 0:
+                    id_entity[k] = semtypes[0]
+                elif is_gene(k):
+                    id_entity[k] = '[gngm]'
+                elif similar_gold(k) != "":
+                    id_entity[k] = similar_gold(k)
+
+    for k, v in id_entity.items():
+        print("{}: {}\n".format(k.strip(), v))
+    return id_entity
 
 def annotate_abstracts(filename):
 
     abstract_file = open('files/papers/{}'.format(filename), 'r').readlines()
-    writefile = open('files/NER_outputs/ner_output_{}'.format(filename), 'w')
     abstracts = reload_corpus(abstract_file)
 
     for i, ab in enumerate(abstracts):
-
-        writefile.write("*PMC{}*\n".format(ab.id))
+        print("*PMC{}*\n".format(ab.id))
         text = ab.abstract
-        found_genes = [g.lower() for g in get_genes(text)]
-        mutations = mutation_search(text)
-        entities = entity_extract(process_text(text), 'default')
-        entities = {**entities, **mutations}
-        id_entity = {}
-
-        for k, v in entities.items():
-            if k not in stopwords:
-                if k in mutations.keys():
-                    id_entity[k] = '[comd]'
-                elif k in gold_annotations.keys():
-                    print(k, "in golden")
-                    id_entity[k] = gold_annotations.get(k)
-                elif lem.lemmatize(k) in gold_annotations.keys():
-                    print(k, "in golder")
-                    id_entity[k] = gold_annotations.get(lem.lemmatize(k))
-                elif k in found_genes:
-                    id_entity[k] = '[gngm]'
-                else:
-                    semtypes = meta_ner(k)
-                    if len(semtypes)>0:
-                        id_entity[k] = semtypes[0]
-                    elif is_gene(k):
-                        id_entity[k] = '[gngm]'
-                    elif similar_gold(k) != "":
-                        id_entity[k] = similar_gold(k)
-
-
-        for k, v in id_entity.items():
-            writefile.write("{}: {}\n".format(k.strip(), v))
-
-    writefile.close()
-
+        annotate(text)
 
 
 if __name__=="__main__":
@@ -319,4 +312,4 @@ if __name__=="__main__":
     hgnc = load_hgnc()
     gold_annotations = load_gold_annotations()
 
-    annotate_abstracts("include_papers.txt")
+    annotate_abstracts('include_papers.txt')

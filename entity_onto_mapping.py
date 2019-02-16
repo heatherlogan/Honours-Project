@@ -1,14 +1,13 @@
 from ontology_stuff import *
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
-import spacy
+import pandas as pd
 import numpy as np
 
 stemmer = PorterStemmer()
-nlp = spacy.load('en')
 
-def load_asd_terms (file):
 
+def load_asd_terms(file):
     terms = defaultdict(list)
 
     for line in file:
@@ -20,7 +19,6 @@ def load_asd_terms (file):
 
 
 def load_entities(filename):
-
     file = open('files/NER_outputs/{}'.format(filename), 'r').readlines()
 
     ents = defaultdict(list)
@@ -32,13 +30,12 @@ def load_entities(filename):
             ents[pmcid].append(line.strip())
     return ents
 
+
 def similar(a, b):
     return SequenceMatcher(None, a, b).ratio()
 
 
-
 def get_semtype_groups():
-
     semtype_file = open('files/semantics/semantic_types.txt', 'r').readlines()
     semgroup_file = open('files/semantics/semantic_groups.txt', 'r').readlines()
 
@@ -64,12 +61,9 @@ def get_semtype_groups():
     return semgroup_acronyms
 
 
-
-
 # change to general terms
 
 def map_asd_onto(entities):
-
     file_string = "files/autism_terms/medical_phrases.txt"
     file = open(file_string, 'r').readlines()
 
@@ -81,8 +75,6 @@ def map_asd_onto(entities):
         elif not line == "\n":
             terms[classno].append(line.strip())
 
-
-
     ent_keys = list(entities.keys())
     all_terms = ent_keys
 
@@ -93,10 +85,9 @@ def map_asd_onto(entities):
         for node, term_list in terms.items():
             for term in term_list:
                 sim = similar(entity, term)
-                if sim > max_ent and sim >0.5:
+                if sim > max_ent and sim > 0.5:
                     max_ent = sim
                     mappings[entity] = node
-
 
     class_terms = defaultdict(list)
 
@@ -108,12 +99,7 @@ def map_asd_onto(entities):
         print(t)
 
 
-
-
-
-
 def sort_asd_terms(ents):
-
     medfile = open('files/autism_terms/medical_keywords.txt', 'r').readlines()
     personalfile = open('files/autism_terms/personal_keywords.txt', 'r').readlines()
     socialfile = open('files/autism_terms/social_keywords.txt', 'r').readlines()
@@ -123,11 +109,12 @@ def sort_asd_terms(ents):
 
     semgroups = get_semtype_groups()
 
-    chem_semtypes = ['antb','orch','phsu','hops','vita', 'clnd', 'horm']
+    chem_semtypes = ['antb', 'orch', 'phsu', 'hops', 'vita', 'clnd', 'horm']
     personal_semtypes = ['orga', 'inbe', 'socb', 'patf', 'bhvr']
     medical_semtypes = (semgroups.get('ANAT') + semgroups.get('DISO') + chem_semtypes)
     medical_semtypes.remove('cell')
     medical_semtypes.remove('fndg')
+    medical_semtypes.remove('comd')
     social_semtypes = semgroups.get('ACTI')
 
     medical_ents = {}
@@ -138,10 +125,10 @@ def sort_asd_terms(ents):
     personal_terms = sorted(list(itertools.chain.from_iterable([v for k, v in personal_terms.items()])))
     social_terms = sorted(list(itertools.chain.from_iterable([v for k, v in social_terms.items()])))
 
-    generic_terms = ["autism", 'autism spectrum disorder', 'asd', 'autism disorder', ] # remove?
+    generic_terms = ["autism", 'autism spectrum disorder', 'asd', 'autism disorder', ]  # remove?
 
-    for ent, v in ents.items():
-        for v2 in v:
+    for v2 in ents:
+        try:
             term, label = v2.split(':')
             stemmed = [stemmer.stem(e) for e in term.split()]
             label = (label.replace('[', '').replace(']', ''))
@@ -162,35 +149,36 @@ def sort_asd_terms(ents):
                     personal_ents[term] = label[0].strip()
                 if l in social_semtypes:
                     social_ents[term] = label[0].strip()
+        except ValueError:
+            pass
 
 
     medical_ents = OrderedDict(sorted(medical_ents.items(), key=lambda t: t[0]))
     personal_ents = OrderedDict(sorted(personal_ents.items(), key=lambda t: t[0]))
     social_ents = OrderedDict(sorted(social_ents.items(), key=lambda t: t[0]))
 
-
     return medical_ents, personal_ents, social_ents
 
-if __name__=="__main__":
-
+if __name__ == "__main__":
     # change to some paper
 
-    file = "ner_include_list.txt"
+    file = "ner_output_include_papers.txt"
 
-    ents = load_entities(file)
+    all_ents = load_entities(file)
+    medical_ents, personal_ents, social_ents = sort_asd_terms(all_ents)
 
-    medical_ents, personal_ents, social_ents = sort_asd_terms(ents)
+    for pmc, ents in all_ents.items():
+        medical_ents, personal_ents, social_ents = sort_asd_terms(ents)
+        print(pmc, len(ents), len(medical_ents.keys()), len(personal_ents.keys()) , len(social_ents.keys()))
 
-    for k, v in medical_ents.items():
-        print(k, v)
-
-    print('\n\n')
-    for k, v in personal_ents.items():
-        print(k, v)
-    print('\n\n')
-    for k, v in social_ents.items():
-        print(k, v)
-    print('\n\n')
-
+        for k, v in medical_ents.items():
+            print(k,"[{}]".format(v))
+        print('\n\n')
+        for k, v in personal_ents.items():
+            print(k, "[{}]".format(v))
+        print('\n\n')
+        for k, v in social_ents.items():
+            print(k, "[{}]".format(v))
+        print('\n\n')
 
 

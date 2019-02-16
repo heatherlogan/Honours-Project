@@ -60,6 +60,13 @@ def reload_corpus(file):
 
         if abstract:
             abstract = " ".join(abstract)
+            abstract = re.sub("Background\n", "", abstract)
+            abstract = re.sub("Aim\n", "", abstract)
+            abstract = re.sub("Method\n", "", abstract)
+            abstract = re.sub("Results\n", "", abstract)
+            abstract = re.sub("Case Presentation\n", "", abstract)
+            abstract = re.sub("Limitations\n", "", abstract)
+            abstract = re.sub("Conclusions\n", "", abstract)
             abstract = re.sub("PMC_ABSTRACT: ", "", abstract)
 
         if len(text) == 0:
