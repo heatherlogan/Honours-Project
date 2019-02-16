@@ -55,11 +55,12 @@ if __name__=="__main__":
 
     trips = list(dep.triples())
 
+    pos_tagged = []
     for trip in trips:
-        print(trip)
+        pos_tagged.append(trip[0])
+        pos_tagged.append(trip[2])
 
-
-
+    print(list(set(pos_tagged)))
     print('\n\n')
 
     tree = str(dep.to_dot())
