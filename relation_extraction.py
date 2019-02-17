@@ -6,62 +6,125 @@ class_path = "/Users/heatherlogan/Desktop/stanford-parser-full-2018-10-17/stanfo
 models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-02-27-models.jar"
 
 
+def format_relations():
+    # takes in (subject, relation, possible effectors)
+    # calculates possible combinations based on incoming and outgoing edges
+    #
+
+    pass
+
+
 def build_paths(tree):
-
-    # # relations are edges
-    # for edge in tree:
-    #     print(edge)
-
     def build(start):
         trace = [start]
+
         def path(inc):
             incoming = [edge[1] for edge in tree if edge[0] == inc]
-            if len(incoming)==1:
+            if len(incoming) == 1:
                 trace.append(incoming[0])
                 path(incoming[0])
+
         path(start)
         return trace
 
+    for t in tree:
+        print(t)
+
+    def break_conjunctions(num, limit):
+        conjunctions = [edge[1] for edge in tree if edge[2] == 'conj'
+                        and int(num) <= int(edge[0]) <= int(limit)]
+        return conjunctions
+
+    def path_to_merge(num):
+        merge_path = [num]
+
+        def outgoings(n):
+            return [edge for edge in tree if edge[0] == n]
+
+        if outgoings(num):
+            for outgoing in outgoings(num):
+                if any([x for x in ['mod', 'aux', 'case', 'nummod', 'mark', 'acl'] if x in outgoing[2]]):
+                    merge_path.append(outgoing[1])
+                    path_to_merge(outgoing)
+        return merge_path
+
     # nodes with incoming edges as nsubj or nsubjpass are potential start points
-    possible_start = [edge[1] for edge in tree if edge[2] in subject_labels]
-    # nodes with outgoing edges as nsubj, subjpass or dobj
-    possible_relations = list(set([edge[0] for edge in tree if edge[2] in subject_labels or edge[2] in ['nmod', 'dobj']]))
 
-    print("Subject Entity", [node_lookup[i] for i in build(possible_start[0])])
+    start_subj = [edge[1] for edge in tree if 'subj' in edge[2]]
 
-    for i in possible_relations.copy():
-        if not any([j for j in build(i) if pos_tagged[node_lookup[j]] in ['VB', 'VBD', 'VBG', 'VBZ', 'VBN', 'VBP']]):
-            possible_relations.remove(i)
-    print("Possible Relations:", [node_lookup[i] for i in possible_relations])
+    if start_subj:
+
+        main_relation = [edge[0] for edge in tree if edge[1] == start_subj[0]]
+
+        outgoing_from_starts = start_subj + [edge[1] for edge in tree if edge[0] == start_subj[0]]
+
+        all_subjs = []
+
+        for effectee in outgoing_from_starts:
+            all_ent_starters = break_conjunctions(effectee, main_relation[0])
+            for start in start_subj + all_ent_starters:
+                mergepath = path_to_merge(start)
+                if mergepath not in all_subjs:
+                    all_subjs.append(mergepath)
+    else:
+        main_relation = [edge[1] for edge in tree if edge[2] == 'root']
 
 
-    effector_labels = ['xcomp', 'dobj', 'nmod', 'amod']
+    outgoing_relation = [edge for edge in tree if edge[0] == main_relation[0]]
+
     possible_effectees = []
-    for relation in possible_relations:
-        outgoing_edges = [edge[1] for edge in tree if edge[0]==relation and edge[2] in effector_labels]
-        possible_effectees.extend(outgoing_edges)
-        for new in outgoing_edges:
-            # possible other edges if conjunctions with others
-            possible_effectees.extend([edge[1] for edge in tree if edge[0]==new and edge[2]=='conj'])
 
-    print("Effectors:", [build(i) for i in possible_effectees])
+    for edge in outgoing_relation:
+        if edge[2] in ['aux', 'auxpass']:
+            # combine with relation
+            main_relation.append(edge[1])
+        if edge[2] in ['dobj', 'xcomp', 'nmod', 'amod', 'advcl', 'numod']:
+            possible_effectees.append(edge[1])
+
+    all_effectees = []
+    for effectee in possible_effectees:
+        all_ent_starters = break_conjunctions(effectee, len(node_lookup.keys()))
+        for start in [effectee] + all_ent_starters:
+            mergepath = path_to_merge(start)
+            all_effectees.append(mergepath)
 
 
-if __name__=="__main__":
+    # output = (subject, relation, entities)
+    if not start_subj:
+        all_subjs = []
 
-    # example sentences
+    print("Subject Entities:", [x for x in all_subjs])
+    print("Main Relation:", [i for i in main_relation])
+    print("Effectees:", [i for i in all_effectees])
 
-    text = "CHUNK1 is caused by a CHUNK2 that involves CHUNK4, CHUNK5 and CHUNK6."
-    text2 = "Given that CHUNK has been suggested to involve CHUNK in CHUNK "
-    text1 = "Given that ENTITY1 has been suggested to involve ENTITY2 in ENTITY3"
-    texts = "Research has linked Mirror-Touch Synaesthesia with enhanced empathy."
-    text5 = "Children with Autism may have difficulties with visual disengagement, that is, inhibiting current fixations " \
-            "and orientating to new stimuli in the periphery."
-    text6 = "CHUNK with CHUNK may have difficulties with CHUNK, that is, " \
-            "inhabiting CHUNK and orientating to CHUNK in the CHUNK."
+    return all_subjs, main_relation, all_effectees
+
+
+if __name__ == "__main__":
+
+    text = "Individuals with ASD showed reduced interpersonal interactions."
+    text2 = "Additionally, CHUNK1 of their own CHUNK2 may lead to CHUNK3 of CHUNK4 actions"
+    text3 = "Chunk's with Chunk2 showed reduced Chunk"
+    text5 = "Individuals with Autism Spectrum Conditions have difficulties in " \
+            "understanding and responding appropriately to others"
+    text6 = "Additionally, developmental experience of their own atypical " \
+            "kinematic progiles may lead to disrupted perception of others actions."
+
+    text7 = "Autism spectrum disorders are a range of complex neurodevelopmental conditions principally characterized by " \
+            "dysfunctions linked to mental development."
+
+    text8 = "CHUNK are a CHUNK2 of CHUNK3 principally characterized by " \
+            "CHUNK4 linked to CHUNK6"
+    text9 = "two missense novel SNVs were found in the same child: ALDH1A3 and FOXN1."
+
+    text10 = " Chromatin immunoprecipitation assay using Retinoid Acid Receptor B as the " \
+             "immunoprecipitation target suggests RA regulation of Aldh1a3 and Foxn1 in mice."
+    text11 = "CHUNK1 assay using CHUNK2 as the CHUNK3 suggests CHUNK4 of CHUNK5 and CHUNK6 in CHUNK7."
+    text12= "RA regulation of Aldh1a3 and Foxn1 in mice."
 
     dependency_parser = StanfordDependencyParser(path_to_jar=class_path, path_to_models_jar=models_path)
-    result = dependency_parser.raw_parse(text6)
+
+    result = dependency_parser.raw_parse(text10)
     dep = result.__next__()
 
     trips = list(dep.triples())
@@ -80,11 +143,13 @@ if __name__=="__main__":
         print(i)
 
     tree_split = list(filter(None, [line.strip() for line in tree.split("\n") if line != "\n"]))
+
     node_lookup = {}
     nodes = [node for node in tree_split if node[0].isdigit() and '->' not in node]
     for node in nodes:
         num, label = node.split(' [label="')
-        node_lookup[num] = label[label.find("(")+1:label.find(")")]
+        node_lookup[num] = label[label.find("(") + 1:label.find(")")]
+
     relations = [edge for edge in tree_split if '->' in edge]
     tree_triples = []
     for relation in relations:
@@ -93,29 +158,25 @@ if __name__=="__main__":
         relation = label.replace('"]', '').strip()
         tree_triples.append((start, end, relation))
     subject_labels = ['nsubj', 'nsubjpass']
+
     c = Counter(elem[2] for elem in tree_triples if elem[2] in subject_labels)
     if sum(c.values()) > 1:
-        split_indices =[]
+        split_indices = []
         for triple in tree_triples:
             if triple[2] in subject_labels:
                 split_indices.append(tree_triples.index(triple))
         for idx in split_indices:
             if split_indices.index(idx) == 0:
                 # print(tree_triples[0:split_indices[1]-1])
-                build_paths(tree_triples[0:split_indices[1]-1])
+                build_paths(tree_triples[0:split_indices[1] - 1])
                 print("\n")
-
-            elif split_indices.index(idx) != len(split_indices)-1:
-                # print(tree_triples[idx:split_indices[idx]])
+            elif split_indices.index(idx) != len(split_indices) - 1:
                 build_paths(tree_triples[idx:split_indices[idx]])
                 print("\n")
             else:
-                # print(tree_triples[idx-1:len(tree_triples)])
-                build_paths(tree_triples[idx-1:len(tree_triples)])
+                build_paths(tree_triples[idx - 1:len(tree_triples)])
                 print("\n")
     else:
         build_paths(tree_triples)
-        print("Build relations as normal")
-
 
     dep.tree().draw()

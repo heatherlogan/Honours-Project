@@ -293,7 +293,7 @@ def annotate(text):
                     id_entity[k] = similar_gold(k)
 
     for k, v in id_entity.items():
-        print("{}: {}\n".format(k.strip(), v))
+        print("{}: {}".format(k.strip(), v))
     return id_entity
 
 def annotate_abstracts(filename):
@@ -302,7 +302,7 @@ def annotate_abstracts(filename):
     abstracts = reload_corpus(abstract_file)
 
     for i, ab in enumerate(abstracts):
-        print("*PMC{}*\n".format(ab.id))
+        print("*PMC{}*".format(ab.id))
         text = ab.abstract
         annotate(text)
 
@@ -312,6 +312,9 @@ if __name__=="__main__":
     hgnc = load_hgnc()
     gold_annotations = load_gold_annotations()
 
-    text = "Children with Autism may have difficulties with visual disengagement, that is, inhabiting current fixation and orientating to new stimuli in the periphery. "
+    text = "Individuals with ASD showed reduced interpersonal interactions."
 
-    annotate(text)
+    text10=" Chromatin immunoprecipitation assay using Retinoid Acid Receptor B as the " \
+           "immunoprecipitation target suggests RA regulation of Aldh1a3 and Foxn1 in mice."
+
+    annotate(text10)
