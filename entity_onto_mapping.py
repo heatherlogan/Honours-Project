@@ -1,15 +1,10 @@
 from ontology_stuff import *
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity, linear_kernel
-import pandas as pd
-import numpy as np
 
 stemmer = PorterStemmer()
 
 
 def load_asd_terms(file):
     terms = defaultdict(list)
-
     for line in file:
         if line.startswith("Class_"):
             classno = line.strip()
@@ -159,26 +154,30 @@ def sort_asd_terms(ents):
 
     return medical_ents, personal_ents, social_ents
 
+
+def example_relations():
+
+    list = [('maternal obesity', 'increase', 'risk for adverse neurodevelopmental outcome'), # perinatal history, infant complications
+            ('maternal obseity', 'associated', 'positive screen for Autism'), # perinatal history,
+            ('maternal obesity', 'associated', 'lower composite language scores'), # perinatal histroy, language ability
+            ('maternal obesity', 'associated', 'adverse neurodevelopmental outcome at age 2'), #perinatal history, infant complications
+
+            ('autism spectrum disorder', 'affects', '1 in 6 children'), #
+            ('asd biomarker', 'may enable', 'early diagnosis'), # ?, early diagnosis
+            ('eleven proteins', 'found', 'together could confirm asd'), # diagnosis
+            ('thyroid stimulating protein','identified', 'putative biomarkers of asd'), # ?
+            ('interleuken-8', 'identified', 'putative biomarkers of asd '), # ?
+
+            ('noncoding polymorphisms on NLGN4X','associated','to autism'), # sfari gene
+            ('elevated mtDNA copy number in peripheral blood', 'associated', 'with autism'),
+            (),
+            ()
+
+            ]
+
+
+
+
 if __name__ == "__main__":
     # change to some paper
-
-    file = "ner_output_include_papers.txt"
-
-    all_ents = load_entities(file)
-    medical_ents, personal_ents, social_ents = sort_asd_terms(all_ents)
-
-    for pmc, ents in all_ents.items():
-        medical_ents, personal_ents, social_ents = sort_asd_terms(ents)
-        print(pmc, len(ents), len(medical_ents.keys()), len(personal_ents.keys()) , len(social_ents.keys()))
-
-        for k, v in medical_ents.items():
-            print(k,"[{}]".format(v))
-        print('\n\n')
-        for k, v in personal_ents.items():
-            print(k, "[{}]".format(v))
-        print('\n\n')
-        for k, v in social_ents.items():
-            print(k, "[{}]".format(v))
-        print('\n\n')
-
-
+    pass

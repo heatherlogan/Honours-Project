@@ -4,6 +4,7 @@ from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk import bigrams, ngrams
 from ontology_stuff import extract_autism_entities
+import nltk
 
 def sort_gene_families():
 
@@ -147,39 +148,17 @@ def similar(a, b):
     return SequenceMatcher(None, a, b).ratio()
 
 
+def is_anaphor():
+
+    examples = ["this", "that", "he", 'she', "they",
+                "Children with autism may have difficulties with visual disengagement that is, inhibiting current fixations and orienting to new stimuli in the periphery."]
+
+    for example in examples:
+        postag = nltk.pos_tag(example.split())
+        print(postag)
+
+
+
 if __name__=="__main__":
 
-    lemmatiz = WordNetLemmatizer()
-    stemmer = PorterStemmer()
-
-    asd_terms = autism_terms()
-
-    stemmed_terms = []
-
-    file = open("files/asd_terms.txt", 'w')
-
-    for term in asd_terms:
-        stemmed = ""
-        for word in term.split():
-            stem = lemmatiz.lemmatize(word)
-            stemmed += stem + " "
-        stemmed_terms.append(stemmed)
-
-    stemmed_terms = sorted(list(set(stemmed_terms)))
-
-    for stem in stemmed_terms:
-        print(stem)
-        file.write("{}\n".format(stem))
-    file.close()
-
-    #
-    # test_terms = ["ASD", "poor social skills", "conceptual empathy", "socially awkward", "fragile-X syndrome", "social ability", "aggressiveness"]
-    #
-    #
-    # for term in test_terms:
-    #     stemmed = ""
-    #     for word in term.split():
-    #         stem = stemmer.stem(word)
-    #         stemmed += stem + " "
-    #
-    #     print(term, "\t", stemmed)
+  is_anaphor()

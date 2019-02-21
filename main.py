@@ -1,5 +1,5 @@
 
-if __name__=="__main__":
+def main():
 
     # read input text
 
@@ -10,8 +10,8 @@ if __name__=="__main__":
     # chunk and transform the sentences
 
 
-
     # relation extraction from sentences. Returns relation(entity, entity2)
+
 
 
     # Named Entity Recognition of entities (joined)
@@ -20,11 +20,13 @@ if __name__=="__main__":
     # Map to ontology
 
 
+    # visualise
+    pass
 
-    # visualise with NEO4J
 
+if __name__=="__main__":
 
-
+    main()
 
 
 

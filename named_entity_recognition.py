@@ -1,5 +1,8 @@
+# -*- coding: utf-8 -*-
+
 import itertools
 import re
+import sre_constants
 from difflib import SequenceMatcher
 import nltk
 from pymetamap import MetaMap
@@ -11,6 +14,7 @@ from indexer import reload_corpus
 mm = MetaMap.get_instance('/Users/heatherlogan/Desktop/public_mm/bin/metamap16')
 stopwords = list(set(stopwords.words('english')))
 lem = WordNetLemmatizer()
+
 
 
 def acronym_search(text):
@@ -81,7 +85,7 @@ def load_amino_acids():
 def entity_extract(text, pattern):
 
     if pattern=='default':
-        pattern = r""" Ents: {[0-9]*<JJ|VBN>*(<NN>|<NNS>|<NNP>)+}"""
+        pattern = r""" Ents: {[0-9]*<JJ>*(<NN>|<NNS>|<NNP>)+}"""
 
     named_ents = {}
 
@@ -209,9 +213,13 @@ def process_text(text):
     acs = acronym_search(text)
     muts = mutation_search(text)
     print(acs)
+    print(muts)
 
     for acronym, fullword in acs.items():
-        text = re.sub(acronym, fullword, text)
+        try:
+            text = re.sub(acronym, fullword, text)
+        except sre_constants.error:
+            pass
 
     brackets = re.findall('\[.*?\]', text) + re.findall('\(.*?\)', text)
 
@@ -224,9 +232,12 @@ def process_text(text):
             for t in terms:
                 t = t.strip()
                 if t not in muts:
-                    text = text.replace(t, '')
+                    text = text.replace(b, '')
 
     text = text.replace('  ', ' ').replace(" ( )", '')
+
+    write_file = open('files/papers/example.txt', 'w')
+    write_file.write(text)
     print(text)
     return text
 
@@ -262,6 +273,7 @@ def similar_gold(term):
         return label
     else:
         return ""
+
 
 def annotate(text):
 
@@ -312,9 +324,9 @@ if __name__=="__main__":
     hgnc = load_hgnc()
     gold_annotations = load_gold_annotations()
 
-    text = "Individuals with ASD showed reduced interpersonal interactions."
+    text = "SHANK proteins are crucial for the formation and plasticity of excitatory synapses. Although mutations in all three SHANK genes are associated with autism spectrum disorder (ASD), SHANK3 appears to be the major ASD gene with a prevalence of approximately 0.5% for SHANK3 mutations in ASD, with higher rates in individuals with ASD and intellectual disability (ID). Interestingly, the most relevant mutations are typically de novo and often are frameshift or nonsense mutations resulting in a premature stop and a truncation of SHANK3 protein. We analyzed three different SHANK3 stop mutations that we identified in individuals with ASD and/or ID, one novel (c.5008A > T) and two that we recently described (c.1527G > A, c.2497delG). The mutations were inserted into the human SHANK3a sequence and analyzed for effects on subcellular localization and neuronal morphology when overexpressed in rat primary hippocampal neurons. Clinically, all three individuals harboring these mutations had global developmental delays and ID. In our in vitro assay, c.1527G > A and c.2497delG both result in proteins that lack most of the SHANK3a C-terminus and accumulate in the nucleus of transfected cells. Cells expressing these mutants exhibit converging morphological phenotypes including reduced complexity of the dendritic tree, less spines, and less excitatory, but not inhibitory synapses. In contrast, the truncated protein based on c.5008A > T, which lacks only a short part of the sterile alpha motif (SAM) domain in the very SHANK3a C-terminus, does not accumulate in the nucleus and has minor effects on neuronal morphology. In spite of the prevalence of SHANK3 disruptions in ASD and ID, only a few human mutations have been functionally characterized; here we characterize three additional mutations. Considering the transcriptional and functional complexity of SHANK3 in healthy neurons, we propose that any heterozygous stop mutation in SHANK3 will lead to a dysequilibrium of SHANK3 isoform expression and alterations in the stoichiometry of SHANK3 protein complexes, resulting in a distinct perturbation of neuronal morphology. This could explain why the clinical phenotype in all three individuals included in this study remains quite severe - regardless of whether there are disruptions in one or more SHANK3 interaction domains. "
+    text = text.encode('utf-8', 'ignore').decode('utf-8')
 
-    text10=" Chromatin immunoprecipitation assay using Retinoid Acid Receptor B as the " \
-           "immunoprecipitation target suggests RA regulation of Aldh1a3 and Foxn1 in mice."
+    process_text(text)
 
-    annotate(text10)
+    # annotate(text)
