@@ -120,7 +120,6 @@ def sort_asd_terms(ents):
     personal_terms = sorted(list(itertools.chain.from_iterable([v for k, v in personal_terms.items()])))
     social_terms = sorted(list(itertools.chain.from_iterable([v for k, v in social_terms.items()])))
 
-    generic_terms = ["autism", 'autism spectrum disorder', 'asd', 'autism disorder', ]  # remove?
 
     for v2 in ents:
         try:

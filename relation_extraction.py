@@ -8,7 +8,7 @@ models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-02-27-m
 
 def build_paths(tree):
 
-    print(tree)
+    # print(tree)
 
     output_relations = []
 
@@ -43,7 +43,6 @@ def build_paths(tree):
         output_relations.append((subject_text, relation_text, effector_text))
 
         print((subject_text, relation_text, effector_text))
-
         print("\t{}({}, {})".format(relation_text, subject_text, effector_text))
 
 
@@ -120,7 +119,7 @@ def build_paths(tree):
 
     # if there's no start subjects then all effectees are possible combinations of each
 
-    print("All subjs-{}\nMain relation-{}\nAll_effectees:{}\n".format(all_subjs, main_relation, all_effectees))
+    # print("All subjs-{}\nMain relation-{}\nAll_effectees:{}\n".format(all_subjs, main_relation, all_effectees))
 
     return sort_combinations(all_subjs, main_relation, all_effectees)
 
@@ -137,12 +136,11 @@ if __name__ == "__main__":
 
     shank_abs = "SHANK proteins are crucial for the formation and plasticity of excitatory synapses. Although mutations in all three SHANK genes are associated with autism spectrum disorder , SHANK3 appears to be the major Autism Spectrum Disorder gene with a prevalence of approximately 0.5% for SHANK3 mutations in Autism Spectrum Disorder, with higher rates in individuals with Autism Spectrum Disorder and intellectual disability . Interestingly, the most relevant mutations are typically de novo and often are frameshift or nonsense mutations resulting in a premature stop and a truncation of SHANK3 protein. We analyzed three different SHANK3 stop mutations that we identified in individuals with Autism Spectrum Disorder and/or intellectual disability, one novel and two that we recently described . The mutations were inserted into the human SHANK3a sequence and analyzed for effects on subcellular localization and neuronal morphology when overexpressed in rat primary hippocampal neurons. Clinically, all three individuals harboring these mutations had global developmental delays and intellectual disability. In our in vitro assay, c.1527G > A and c.2497delG both result in proteins that lack most of the SHANK3a C-terminus and accumulate in the nucleus of transfected cells. Cells expressing these mutants exhibit converging morphological phenotypes including reduced complexity of the dendritic tree, less spines, and less excitatory, but not inhibitory synapses. In contrast, the truncated protein based on c.5008A > T, which lacks only a short part of the sterile alpha motif domain in the very SHANK3a C-terminus, does not accumulate in the nucleus and has minor effects on neuronal morphology. In spite of the prevalence of SHANK3 disruptions in Autism Spectrum Disorder and intellectual disability, only a few human mutations have been functionally characterized; here we characterize three additional mutations. Considering the transcriptional and functional complexity of SHANK3 in healthy neurons, we propose that any heterozygous stop mutation in SHANK3 will lead to a dysequilibrium of SHANK3 isoform expression and alterations in the stoichiometry of SHANK3 protein complexes, resulting in a distinct perturbation of neuronal morphology. This could explain why the clinical phenotype in all three individuals included in this study remains quite severe - regardless of whether there are disruptions in one or more SHANK3 interaction domains."
 
-
     pers_abs = "Maintaining an appropriate distance from others is important for establishing effective communication and good interpersonal relations. Autism spectrum disorder is a developmental disorder associated with social difficulties, and it is thus worth examining whether individuals with ASD maintain typical or atypical degrees of social distance. Any atypicality of social distancing may impact daily social interactions. We measured the preferred distances when individuals with ASD and typically developing individuals approached other people and objects or when other people approached them. Individuals with ASD showed reduced interpersonal distances compared to TD individuals. The same tendency was found when participants judged their preferred distance from objects. In addition, when being approached by other people, both individuals with ASD and TD individuals maintained larger interpersonal distances when there was eye contact, compared to no eye contact. These results suggest that individuals with ASD have a relatively small personal space, and that this atypicality exists not only for persons but also for objects."
 
-    s = "In spite of the prevalence of SHANK3 disruptions in ASD and ID, only a few human mutations have been functionally characterized; here we characterize three additional mutations."
+    s = "WAGR syndrome is characterized by Wilm’s tumor, aniridia, genitourinary abnormalities and intellectual disabilities. WAGR is caused by a chromosomal deletion that includes the PAX6, WT1 and PRRG4 genes. PRRG4 is proposed to contribute to the autistic symptoms of WAGR syndrome, but the molecular function of PRRG4 genes remains unknown. The Drosophila commissurelessissureless gene encodes a short transmembrane protein characterized by PY motifs, features that are shared by the PRRG4 protein. Comm intercepts the Robo axon guidance receptor in the ER/Golgi and targets Robo for degradation, allowing commissurelessissural axons to cross the CNS midline. Expression of human Robo1 in the fly CNS increases midline crossing and this was enhanced by co-expression of PRRG4, but not CYYR, Shisa or the yeast Rcr genes. In cell culture experiments, PRRG4 could re-localize hRobo1 from the cell surface, suggesting that PRRG4 is a functional homologue of Comm. Comm is required for axon guidance and synapse formation in the fly, so PRRG4 could contribute to the autistic symptoms of WAGR by disturbing either of these processes in the developing human brain."
 
-    for sentence in nltk.sent_tokenize(pers_abs):
+    for sentence in nltk.sent_tokenize(s):
 
         output_relations = []
 

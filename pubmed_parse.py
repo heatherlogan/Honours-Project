@@ -1,7 +1,5 @@
-import re
 from collections import defaultdict
 from Bio import Entrez
-import csv
 
 emailstring = 'heather_logan@live.co.uk'
 
@@ -99,23 +97,18 @@ def write_urls():
     f = f.replace(' ', '')
     id_list = list(filter(None, f.split(',')))
 
-    f2 = open('files/url_list.txt', 'w')
-
     for id in id_list:
         url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email={}".format(id, emailstring)
         if url not in url_list:
             url_list.append(url)
-            f2.write(url + "\n")
-    f2.close()
-    print(len(url_list))
-
+    return url_list
 
 def sort_hgnc():
 
     # {Approved Symbol: [All synonyms]}
-    hgnc_genes = defaultdict(list)
+    hgnc_genes ={}
 
-    file = open('files/hgnc.txt', 'r').readlines()
+    file = open('files/genes_etc/hgnc_sorted.txt', 'r').readlines()
 
     # ignore pseudogenes(?)
 
@@ -123,15 +116,15 @@ def sort_hgnc():
         if 'pseudogene' in line:
             pass
         else:
-            line = line.replace('\n', '').replace('"', '')
-            line = line.split('\t')
-            hgnc_genes[line[0]].extend(list(filter(None, line)))
+            key, vals = line.strip().split(": ")
+            vals = vals.split(', ')
+            hgnc_genes[key] = [key] + vals
 
     return hgnc_genes
 
 
 def get_synonyms():
-    sfari= open('files/SFARI_file.csv', 'r')
+    sfari= open('files/genes_etc/SFARI_file.csv', 'r')
     hgnc = sort_hgnc()
 
     sfari_symbols = {}
@@ -149,8 +142,7 @@ def get_synonyms():
         else:
             all_synonyms[symbol] = [symbol, name]
         count += 1
-
-    return list(set(all_synonyms))
+    return all_synonyms
 
 
 def stuff():

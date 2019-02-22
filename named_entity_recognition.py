@@ -18,20 +18,19 @@ lem = WordNetLemmatizer()
 
 
 def acronym_search(text):
-
     # returns an acronym : term dictionary detected in text assuming acronyms are stated as Full Word (acronym)
     # looks at first letter of every word in preceeding areas or if a word begins with a portion of the acronym
 
     acronyms = {}
 
     lst = re.findall('\(.*?\)', text)
-    text = re.sub('[.,?!]','',text)
+    text = re.sub('[.,?!]', '', text)
     text = text.split()
     for ac in lst:
         try:
             i = text.index(ac)
             chars = [a.lower() for a in list(ac) if a.isalpha()]
-            start = i+2 - len(ac)
+            start = i + 2 - len(ac)
             j = [start if start >= 0 else 0][0]
             preceeding_words = text[j:i]
             ac = re.sub('[]()[]', '', ac)
@@ -42,9 +41,10 @@ def acronym_search(text):
             for i in preceeding_words:
                 output.append(i[0].lower())
             intersection = ([value for value in chars if value in output])
-            if len(intersection) >= len(chars)/2:
+            if len(intersection) >= len(chars) / 2:
                 try:
-                    first = [preceeding_words.index(i) for i in preceeding_words if i.lower().startswith(intersection[0])][0]
+                    first = \
+                    [preceeding_words.index(i) for i in preceeding_words if i.lower().startswith(intersection[0])][0]
                     ac = re.sub('[]()[]', '', ac)
                     acronyms[ac] = " ".join(preceeding_words[first:])
                 except IndexError:
@@ -58,7 +58,6 @@ def acronym_search(text):
 
 
 def load_hgnc():
-
     file = open('files/genes_etc/hgnc_sorted.txt', 'r').readlines()
     genes = {}
 
@@ -71,7 +70,6 @@ def load_hgnc():
 
 
 def load_amino_acids():
-
     file = open('files/genes_etc/amino_acids.csv', 'r').readlines()
     amino_acids = []
 
@@ -83,8 +81,7 @@ def load_amino_acids():
 
 
 def entity_extract(text, pattern):
-
-    if pattern=='default':
+    if pattern == 'default':
         pattern = r""" Ents: {[0-9]*<JJ>*(<NN>|<NNS>|<NNP>)+}"""
 
     named_ents = {}
@@ -137,8 +134,7 @@ def meta_map_chunked(entities):
 
 # returns possible semantic types for an entity
 def meta_ner(entity):
-
-    cs, error = mm.extract_concepts([entity],[1])
+    cs, error = mm.extract_concepts([entity], [1])
     semtypes_lst = []
     for c in cs:
         semtypes_lst.append(c.semtypes)
@@ -163,8 +159,8 @@ def is_gene(term):
 
     return is_similar
 
-def get_genes(text):
 
+def get_genes(text):
     text = nltk.word_tokenize(text)
 
     detected_genes = {}
@@ -177,24 +173,23 @@ def get_genes(text):
 
 
 def mutation_search(text):
-
     # split on whitespaces then sentence level
-    mutations = {}
+    mutations = []
     amino_acids = list(sum(load_amino_acids(), ()))
     variant_types = ['c', 'g', 'm', 'n', 'r', 'p']
     string_ors = ""
-    for acid in amino_acids[:len(amino_acids)-2]:
+    for acid in amino_acids[:len(amino_acids) - 2]:
         string_ors += ("{}|".format(acid))
-    string_ors += "{}".format((amino_acids[len(amino_acids)-1]))
+    string_ors += "{}".format((amino_acids[len(amino_acids) - 1]))
 
-    patterns = ["(\s)({})[0-9]+({})".format(string_ors, string_ors), # E45V
-                "({})\.[0-9]+(\s)*({})(\s)*>(\s)*({})".format(variant_types, string_ors, string_ors), #c.65A>V
-                "({})\.({})(\s)*[0-9]+(\s)*>(\s)*({})".format(variant_types, string_ors, string_ors), #c.A65>V
-                "({})\.({})[0-9]+({})".format(variant_types, string_ors, string_ors), #c.A43V
-                "({})\.[0-9]+_[0-9]+(\s)*ins(\s)*({})".format(variant_types, string_ors), # c.75_77insG insertion
-                "({})\.[0-9]+(\s)*del(\s)*({})".format(variant_types, string_ors), # c.75delA deletion
-                "({})\.({})(\s)*[0-9]+(\s)fs".format(variant_types, string_ors), # frameshift
-                "({})\.[0-9]+(\s)*dup(\s)*({})".format(variant_types, string_ors) ] # duplication
+    patterns = ["(\s)({})[0-9]+({})".format(string_ors, string_ors),  # E45V
+                "({})\.[0-9]+(\s)*({})(\s)*>(\s)*({})".format(variant_types, string_ors, string_ors),  # c.65A>V
+                "({})\.({})(\s)*[0-9]+(\s)*>(\s)*({})".format(variant_types, string_ors, string_ors),  # c.A65>V
+                "({})\.({})[0-9]+({})".format(variant_types, string_ors, string_ors),  # c.A43V
+                "({})\.[0-9]+_[0-9]+(\s)*ins(\s)*({})".format(variant_types, string_ors),  # c.75_77insG insertion
+                "({})\.[0-9]+(\s)*del(\s)*({})".format(variant_types, string_ors),  # c.75delA deletion
+                "({})\.({})(\s)*[0-9]+(\s)fs".format(variant_types, string_ors),  # frameshift
+                "({})\.[0-9]+(\s)*dup(\s)*({})".format(variant_types, string_ors)]  # duplication
 
     for pattern in patterns:
         f = re.finditer(pattern, text)
@@ -202,7 +197,7 @@ def mutation_search(text):
         for match in f:
             mut = match.group()
             mut = mut.encode('ascii', 'ignore').decode('ascii')
-            mutations[mut] = ['[comd]']
+            mutations.append(mut)
 
     return mutations
 
@@ -212,8 +207,7 @@ def process_text(text):
 
     acs = acronym_search(text)
     muts = mutation_search(text)
-    print(acs)
-    print(muts)
+
 
     for acronym, fullword in acs.items():
         try:
@@ -238,13 +232,11 @@ def process_text(text):
 
     write_file = open('files/papers/example.txt', 'w')
     write_file.write(text)
-    print(text)
     return text
 
 
 def load_gold_annotations():
-
-    file=open('files/gold_most_common_entities.txt', 'r').readlines()
+    file = open('files/gold_most_common_entities.txt', 'r').readlines()
     gold_annotations = {}
 
     for line in file:
@@ -255,7 +247,6 @@ def load_gold_annotations():
 
 
 def similar_gold(term):
-
     def similar(a, b):
         return SequenceMatcher(None, a, b).ratio()
 
@@ -277,39 +268,32 @@ def similar_gold(term):
 
 def annotate(text):
 
+    text = process_text(text)
+
     found_genes = [g.lower() for g in get_genes(text)]
-    mutations = mutation_search(text)
-    entities = entity_extract(process_text(text), 'default')
-    entities = {**entities, **mutations}
+    mutations = {}
+    for mutation in mutation_search(text):
+        mutations[mutation] = []
     id_entity = {}
 
-    for k, v in entities.items():
-        if k not in stopwords:
-            if k in mutations.keys():
-                id_entity[k] = '[comd]'
-            elif k in gold_annotations.keys():
-                print(k, "in golden")
-                id_entity[k] = gold_annotations.get(k)
-            elif lem.lemmatize(k) in gold_annotations.keys():
-                print(k, "in golder")
-                id_entity[k] = gold_annotations.get(lem.lemmatize(k))
-            elif k in found_genes:
-                id_entity[k] = '[gngm]'
-            else:
-                semtypes = meta_ner(k)
-                if len(semtypes) > 0:
-                    id_entity[k] = semtypes[0]
-                elif is_gene(k):
-                    id_entity[k] = '[gngm]'
-                elif similar_gold(k) != "":
-                    id_entity[k] = similar_gold(k)
+    if any([k for k in mutations.keys() if k in text]):
+        id_entity[text] = '[comd]'
+    elif text in found_genes:
+        id_entity[text] = '[gngm]'
+    else:
+        semtypes = meta_ner(text)
+        if len(semtypes) > 0:
+            id_entity[text] = semtypes[0]
+        elif is_gene(text):
+            id_entity[text] = '[gngm]'
+        else:
+            id_entity[text] = '[?]'
 
-    for k, v in id_entity.items():
-        print("{}: {}".format(k.strip(), v))
-    return id_entity
+    result = list(id_entity.values())[0]
+    return result
+
 
 def annotate_abstracts(filename):
-
     abstract_file = open('files/papers/{}'.format(filename), 'r').readlines()
     abstracts = reload_corpus(abstract_file)
 
@@ -319,14 +303,51 @@ def annotate_abstracts(filename):
         annotate(text)
 
 
-if __name__=="__main__":
+def relations():
+    relations_WAGR = [('WAGR syndrome', 'characterized by', "Wilm 's tumor"),
+                      ('WAGR syndrome', 'characterized by', 'andridia'),
+                      ('WAGR syndrome', 'characterized by', 'genitourinary abnormalities'),
+                      ('WAGR syndrome', 'characterized by', 'intellectual disabilities'),
+                      ('WAGR', 'caused by', 'chromosomal deletion'),
+                      ('chromosomal deletion', 'includes', 'PAX6'),
+                      ('chromosomal deletion', 'includes', 'WT1'),
+                      ('chromosomal deletion', 'includes', 'PRRG4 genes'),
+                      ('PRRG4', 'proposed_to', 'contribute to the autistic symptoms'),
+                      ('the molecular function of PRRG4 genes', 'remains', 'unknown'),
+                      ('Drosophila commissurelessissureless gene', 'encodes',
+                       'a short transmembrane protein characterized by PY motifs'),
+                      ('a short transmembrane protein characterized by PY motifs', 'shared', 'by the PRRG4 protein'),
+                      ('Comm', 'intercepts', 'the Robo axon guidance receptor in the ER/Golgi'),
+                      ('Comm', 'targets', 'Robo for degradation'),
+                      ('Expression of human Robo1', 'CNS', 'midline crossing'),
+                      ('midline crossing', 'enhanced by', 'co-expression of PRRG4'),
+                      ('midline crossing', 'not enhanced by', 'CYRR'),
+                      ('midline crossing', 'not enhanced by', 'Shisa'),
+                      ('midline crossing', 'not enhanced by', 'yeast Rcr genes'),
+                      ('PRRG4', 'could re-localize', 'hRobo1'),
+                      ('PRRG4', 'homologue', 'Comm'),
+                      ('Comm', 'required for ', 'axon guidance and synapse formation in the fly'),
+                      ('PRRG4', 'contribute to', 'autistic symptoms of WAGR'),
+                      ('PRRG4', 'contribute to', 'by disturbing either of these processes'),
+                      ]
 
-    hgnc = load_hgnc()
-    gold_annotations = load_gold_annotations()
+    return relations_WAGR
 
-    text = "SHANK proteins are crucial for the formation and plasticity of excitatory synapses. Although mutations in all three SHANK genes are associated with autism spectrum disorder (ASD), SHANK3 appears to be the major ASD gene with a prevalence of approximately 0.5% for SHANK3 mutations in ASD, with higher rates in individuals with ASD and intellectual disability (ID). Interestingly, the most relevant mutations are typically de novo and often are frameshift or nonsense mutations resulting in a premature stop and a truncation of SHANK3 protein. We analyzed three different SHANK3 stop mutations that we identified in individuals with ASD and/or ID, one novel (c.5008A > T) and two that we recently described (c.1527G > A, c.2497delG). The mutations were inserted into the human SHANK3a sequence and analyzed for effects on subcellular localization and neuronal morphology when overexpressed in rat primary hippocampal neurons. Clinically, all three individuals harboring these mutations had global developmental delays and ID. In our in vitro assay, c.1527G > A and c.2497delG both result in proteins that lack most of the SHANK3a C-terminus and accumulate in the nucleus of transfected cells. Cells expressing these mutants exhibit converging morphological phenotypes including reduced complexity of the dendritic tree, less spines, and less excitatory, but not inhibitory synapses. In contrast, the truncated protein based on c.5008A > T, which lacks only a short part of the sterile alpha motif (SAM) domain in the very SHANK3a C-terminus, does not accumulate in the nucleus and has minor effects on neuronal morphology. In spite of the prevalence of SHANK3 disruptions in ASD and ID, only a few human mutations have been functionally characterized; here we characterize three additional mutations. Considering the transcriptional and functional complexity of SHANK3 in healthy neurons, we propose that any heterozygous stop mutation in SHANK3 will lead to a dysequilibrium of SHANK3 isoform expression and alterations in the stoichiometry of SHANK3 protein complexes, resulting in a distinct perturbation of neuronal morphology. This could explain why the clinical phenotype in all three individuals included in this study remains quite severe - regardless of whether there are disruptions in one or more SHANK3 interaction domains. "
-    text = text.encode('utf-8', 'ignore').decode('utf-8')
+hgnc = load_hgnc()
+gold_annotations = load_gold_annotations()
 
-    process_text(text)
+if __name__ == "__main__":
+
+
+    results = {}
+
+    for relation in relations():
+        ent1, ent2 = relation[0], relation[2]
+        r1, r2 = annotate(relation[0]), annotate(relation[2])
+        results[ent1] = r1
+        results[ent2] = r2
+
+    for e, res in results.items():
+        print(e, res)
 
     # annotate(text)

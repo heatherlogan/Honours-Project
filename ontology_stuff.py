@@ -99,7 +99,6 @@ def extract_autism_entities():
         label2 = [o for o in label.split() if o not in stopwords]
         bigram_label = ngrams(label2, 2)
         ents = [k for k,v  in entity_extract(object.definition.lower(), 'default').items()]
-        def2 = ([re.sub(r'([^\s\w]|_)+','', o) for o in object.definition.lower().split() if o not in stopwords])
         pos_tags = nltk.pos_tag(ents)
         keyword_POS = ('NN', "NNS")
 
@@ -122,7 +121,6 @@ def extract_autism_entities():
 
         file.write('\n')
     file.close()
-
 
 
 if __name__=="__main__":

@@ -2,12 +2,9 @@ from ontology_stuff import *
 onto_objects = build_onto_objects()
 leaf_nodes = get_leaf_nodes()
 # search ontology node
-
 # shows each child
 # gets relevant paper ids.
-
 # shows list of genes mentioned (sorted by family?) with count
-
 # shows sfari genes mentioned, in order of confidence
 
 class color:
