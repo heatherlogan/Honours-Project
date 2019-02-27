@@ -1,11 +1,12 @@
 from nltk import PorterStemmer
-from named_entity_recognition import *
+from NER import *
 from pubmed_parse import get_synonyms, sort_hgnc
 from collections import defaultdict
 from ontology_stuff import build_onto_objects
 
 stemmer = PorterStemmer()
 
+# temp
 def example_relations():
 
     relations_SHANK = [('SHANK proteins', 'crucial for', 'formation of excitatory synapses'),
@@ -61,18 +62,15 @@ def example_relations():
 def load_onto_terms():
 
     def format_terms(file):
-
         terms = defaultdict(list)
 
         for line in file:
             if line.startswith("Class_"):
                 classno, name = line.strip().split(": ")
             elif not line == "\n":
-                semtypes = []
                 if line.startswith('semtypes:'):
                     semtypes = re.findall('\[.*?\]', line)
                     terms[classno].append(semtypes)
-
                 else:
                     stemmed_line = " ".join([stemmer.stem(x) for x in line.strip().split()])
                     terms[classno].append(stemmed_line)
@@ -80,7 +78,6 @@ def load_onto_terms():
 
     file = open('files/autism_terms/asdpto_terms.txt', 'r').readlines()
     terms = format_terms(file)
-
     return terms
 
 def relevant_terms():
@@ -93,7 +90,6 @@ def relevant_terms():
                       'insertion', 'deletion', 'duplication', 'substitution', 'inversion', 'translocation', 'nonsense', 'frameshift',
                       'mutation', 'CNV', 'SNV', 'SNP', 'variant', 'misssense', 'single nucleotide polymorphism', 'single nucleotide variant', 'truncate',
                       'copy number variant']]
-
     return gene_terms, mutation_terms
 
 def sort_onto_mappings(classno_list):
@@ -114,7 +110,6 @@ def sort_onto_mappings(classno_list):
                 copylist.remove(c1) if c1 in copylist else None
             elif c2 in string_ancestors(c1):
                 copylist.remove(c1) if c1 in copylist else None
-
     return copylist
 
 
@@ -130,7 +125,6 @@ if __name__=="__main__":
     onto_objects = build_onto_objects()
     node_mappings = {}
     final_relations = []
-
     # relevant semantic types
 
     semtype_maps = {
@@ -148,7 +142,7 @@ if __name__=="__main__":
             stemmed_subj = " ".join([stemmer.stem(x) for x in subj.split()])
             stemmed_eff = " ".join([stemmer.stem(x) for x in effectee.split()])
 
-            # search for mutations
+            # search for mutations and mutation terms
             m1, m2 = mutation_search(subj), mutation_search(effectee)
             if len(m1) > 0: subject_mappings.append('Mutations')
             if len(m2) > 0: effectee_mappings.append('Mutations')
@@ -159,7 +153,7 @@ if __name__=="__main__":
             if any([x for x in subj.split() if x in SFARI_genes]): subject_mappings.append('SFARI Genes')
             if any([x for x in effectee.split() if x in SFARI_genes]): effectee_mappings.append('SFARI Genes')
 
-            # search for non SFARI genes
+            # search for non SFARI genes/ gene terms
             if any([x for x in subj.split() if x in non_SFARI_genes]): subject_mappings.append('Genes')
             if any([x for x in effectee.split() if x in non_SFARI_genes]): effectee_mappings.append('Genes')
             if any([stemmer.stem(x) for x in subj.split() if stemmer.stem(x) in gene_terms and 'SFARI Genes' not in subject_mappings]): subject_mappings.append('Genes')
@@ -167,6 +161,10 @@ if __name__=="__main__":
 
             s = annotate(subj)
             e = annotate(effectee)
+
+            # map to onto if semantic type is in related
+            if s == '[gngm]': subject_mappings.append('Genes')
+            if e == '[gngm]': effectee_mappings.append('Genes')
 
             # search for matches in onto
             for node, phrases in onto_terms.items():
@@ -190,17 +188,31 @@ if __name__=="__main__":
         for k, v in node_mappings.items():
             if e1==k[0]: new_e1 = k
             if e2 == k[0]: new_e2 = k
-            if len(new_e1.keys())>0 and len(new_e2.keys())>0:
+            if type(new_e1)==tuple and type(new_e2)==tuple:
                 final_relations.append((new_e1, rel, new_e2 ))
+
+    temp = {'Genes':('Genes', '[heading]'),
+            'SFARI Genes' : ('SFARI Genes', '[heading]'),
+            'Mutations': ('Mutations', '[heading]')
+            }
+
+    # get onto, set type to is_a for the node it's mapped to
+    def get_name(classno):
+        return next((x for x in onto_objects if x.classnum == classno), None).label
 
     for entity, mappings in node_mappings.items():
         for map in mappings:
-            final_relations.append((entity, 'is_a', map))
+            if 'Class' in map:
+                label = get_name(map)
+                final_relations.append((entity, 'is_a', (label, '[pheno]')))
+                final_relations.append(((label, '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')))
+            else:
+                final_relations.append((entity, 'is_a', temp.get(map)))
 
     print('\n\n\n')
 
-    for t in final_relations:
-        print(t)
+    for t in list(set(final_relations)):
+        print(t, ',')
 
 
 

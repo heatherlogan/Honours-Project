@@ -16,7 +16,6 @@ stopwords = list(set(stopwords.words('english')))
 lem = WordNetLemmatizer()
 
 
-
 def acronym_search(text):
     # returns an acronym : term dictionary detected in text assuming acronyms are stated as Full Word (acronym)
     # looks at first letter of every word in preceeding areas or if a word begins with a portion of the acronym
@@ -314,8 +313,7 @@ def relations():
                       ('chromosomal deletion', 'includes', 'PRRG4 genes'),
                       ('PRRG4', 'proposed_to', 'contribute to the autistic symptoms'),
                       ('the molecular function of PRRG4 genes', 'remains', 'unknown'),
-                      ('Drosophila commissurelessissureless gene', 'encodes',
-                       'a short transmembrane protein characterized by PY motifs'),
+                      ('Drosophila commissurelessissureless gene', 'encodes', 'a short transmembrane protein characterized by PY motifs'),
                       ('a short transmembrane protein characterized by PY motifs', 'shared', 'by the PRRG4 protein'),
                       ('Comm', 'intercepts', 'the Robo axon guidance receptor in the ER/Golgi'),
                       ('Comm', 'targets', 'Robo for degradation'),
@@ -328,8 +326,7 @@ def relations():
                       ('PRRG4', 'homologue', 'Comm'),
                       ('Comm', 'required for ', 'axon guidance and synapse formation in the fly'),
                       ('PRRG4', 'contribute to', 'autistic symptoms of WAGR'),
-                      ('PRRG4', 'contribute to', 'by disturbing either of these processes'),
-                      ]
+                      ('PRRG4', 'contribute to', 'by disturbing either of these processes')]
 
     return relations_WAGR
 
@@ -337,7 +334,6 @@ hgnc = load_hgnc()
 gold_annotations = load_gold_annotations()
 
 if __name__ == "__main__":
-
 
     results = {}
 

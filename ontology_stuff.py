@@ -1,5 +1,5 @@
 from owlready2 import *
-from named_entity_recognition import *
+from NER import *
 from nltk import ngrams
 from nltk.stem import PorterStemmer
 # owlready doc: https://media.readthedocs.org/pdf/owlready2/latest/owlready2.pdf

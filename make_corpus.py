@@ -29,8 +29,7 @@ def format_article(url):
         for t in title:
             t2 = t.find_all("article-title")
             all = []
-            for t3 in t2:
-                all.append(t3.text)
+            for t3 in t2: all.append(t3.text)
             article_title = all[0]
 
         abstract = page_soup.find("abstract").text
@@ -52,7 +51,6 @@ def format_article(url):
                     article_text.append(para.text)
 
     except AttributeError:
-
         abstract = ""
         article_text = ""
 
@@ -63,7 +61,6 @@ def build_corpus(url_file):
 
     urls = url_file.split('\n')
     corp = open('files/papers/include_papers.txt', 'w')
-    count = 0
 
     for url in urls:
 
@@ -77,12 +74,8 @@ def build_corpus(url_file):
 
         corp.write(id)
         corp.write(head)
-        if obj.abstract:
-            corp.write(abstract)
+        if obj.abstract: corp.write(abstract)
         corp.write(body)
-
-        count += 1
-        print(count, obj.pmcid)
 
     corp.close()
 
@@ -111,8 +104,6 @@ def find_name(id):
         article_title = all[0]
 
     return article_title
-
-
 
 
 

@@ -58,6 +58,7 @@ def reload_corpus(file):
         for line in article[idx1:]:
             text.append(line)
 
+        # removing common subheadings
         if abstract:
             abstract = " ".join(abstract)
             abstract = re.sub("Background\n", "", abstract)
@@ -88,7 +89,6 @@ def reload_corpus(file):
     #returns article objects
 
     return articles
-
 
 def build_index(article_objects):
 
@@ -179,7 +179,6 @@ def clean_corpus(): #removes failed articles with no text
     articles = reload_corpus(file)
     # build_index(articles)
 
-    count = 0
     for article in articles:
         if article.text == "" or article.text == "\n" or article.text == None:
             str = "{}\t{}\n".format(article.id, article.text)
@@ -189,17 +188,13 @@ def clean_corpus(): #removes failed articles with no text
             head = "PMC_HEADLINE: {}\n".format(article.headline)
             if article.abstract:
                 abstract = "PMC_ABSTRACT: {}:\n".format(article.abstract)
-
             body = "PMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(article.text)
-
             cleaned.write(id)
             cleaned.write(head)
             if article.abstract:
                 cleaned.write(abstract)
             cleaned.write(body)
-            count += 1
 
-    print(count)
 
 
 if __name__=="__main__":

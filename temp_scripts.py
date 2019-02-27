@@ -1,5 +1,5 @@
 from collections import defaultdict, Counter
-from named_entity_recognition import *
+from NER import *
 from nltk.stem.porter import PorterStemmer
 from nltk.stem import WordNetLemmatizer
 from nltk import bigrams, ngrams
