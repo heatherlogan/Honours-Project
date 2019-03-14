@@ -20,7 +20,7 @@ def search_pub(query):
 def search_pmc(query):
     Entrez.email= emailstring
 
-    handle = Entrez.esearch(db='pmc', term=query)
+    handle = Entrez.esearch(db='pmc', term=query,  retmax='12000',)
 
     results = Entrez.read(handle)
     return results
@@ -205,52 +205,15 @@ def get_PMC_from_pubmed(query):
     return pubmed_ids
 
 
-def get_pmcids(gene):
 
-    # builds query with gene and synonyms, retrieves pmcids
+def makeurls(query):
 
-    synonyms = (hgnc.get(gene))
-
-    results = []
-    if synonyms:
-        string = "(".format(gene)
-        for g in synonyms[:len(synonyms)-1]:
-            string += "{}[TW] OR ".format(g)
-
-        query = "{}{}[TW]) AND Autism Spectrum Disorders[majr] AND free full text[sb]"\
-            .format(string, synonyms[len(synonyms)-1])
-        results = get_PMC_from_pubmed(query)
-
-    return results
-
-
-def get_pmcids_autism_majr():
-
-    query = "Autism Spectrum Disorders[majr] AND free full text[sb]"
-
-    results = get_PMC_from_pubmed(query)
-
-    file = open('files/autism_pmcids.txt', 'w')
-    file.write(', '.join(results))
-    file.close()
-
-    return results
-
-
-def makeurls():
-
-    file = open('files/all_pmcids.txt', 'r')
-    urls = open('files/url_list.txt', 'w')
-
-    ids = []
-    for line in file:
-        ids = line.split(',')
+    ids = get_PMC_from_pubmed(query)
+    urls = open('files/papers/pubmed_autism_pheno.txt', 'w')
 
     for id in ids:
-        url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email={}".format(id,
-                                                                                                                    emailstring)
+        url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email={}".format(id,                                                                                                    emailstring)
         urls.write(url + "\n")
-
     urls.close()
 
 
@@ -297,16 +260,11 @@ def check_papers():
 
 if __name__=="__main__":
 
-    file = open('files/papers/exclude_list.txt', 'r').readlines()
-    include_urls = open('files/papers/exclude_urls.txt', 'w')
+    query = '"Autistic Disorder/genetics"[Mesh] AND "loattrfree full text"[sb]'
 
-    for i, line in enumerate(file):
-        print(i)
-        line = line.strip()
-        if len(line)>0:
-            pubmedid = line
-            pmcid = get_PMC_from_pubmed(pubmedid)
-            if len(pmcid)>0:
-                url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email=heather_logan@live.co.uk".format(pmcid)
-                include_urls.write("{}\n".format(url))
-    include_urls.close()
+    query2 = '("autistic disorder"[MeSH Terms] OR ("autistic"[All Fields] AND "disorder"[All Fields]) OR "autistic disorder"[All Fields] OR "autism"[All Fields]) AND ("genes"[MeSH Terms] OR "genes"[All Fields] OR "gene"[All Fields]) AND ("phenotype"[MeSH Terms] OR "phenotype"[All Fields]) AND "open access"[filter]'
+
+    query3 = '"autism spectrum disorder"[MeSH Terms] OR Autism Spectrum Disorder[Text Word] AND ' \
+             '(social[text word] OR behaviour[text word] OR phenotype[text word]) AND "loattrfree full text"[sb]'
+
+    makeurls(query3)

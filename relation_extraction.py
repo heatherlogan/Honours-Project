@@ -2,200 +2,336 @@ import itertools
 from collections import defaultdict, Counter
 from nltk.parse.stanford import StanfordDependencyParser
 import nltk
+from pebble import concurrent
+
+from NER import process_text, stopwords
+import signal
 
 class_path = "/Users/heatherlogan/Desktop/stanford-parser-full-2018-10-17/stanford-parser.jar"
 models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-02-27-models.jar"
 
-def build_paths(tree):
 
-    # print(tree)
+def format(combination, full_tree, node_lookup):
 
-    output_relations = []
+    output = []
+    def node_to_text(int_list):
 
-    def format(subject, relation, effector):
+        txt_string = []
 
-        # possible anaphors are phrases without inner noun phrases
-        # works for 'this' 'that' etc
+        # for i in range(min(int_list) - 1, max(int_list)):
+        for i in sorted(int_list):
+            try:
+                # try as some nodes are missed in the tree
+                txt_string.extend([node_lookup[str(i)]])
+            except KeyError:
+                pass
+        return " ".join(txt_string)
 
-        def anaphor(text):
-            pt = nltk.pos_tag(text.split())
-            if len(pt) == 1 and all(['NN' not in x[1] for x in pt[0]]):
-                return True
+
+    subject, relation, effector = combination
+
+    subject_text = node_to_text(sorted([int(x) for x in subject]))
+    # # if anaphor(subject_text):
+    # #     subject_text = output_relations[len(output_relations) - 1][2]
+    relation = sorted([int(x) for x in relation])
+    relation_text = node_to_text(relation)
+
+    if (-1 in relation and 'no ' not in relation_text and 'not ' not in relation_text): relation_text = "not_" + node_to_text(relation)
+    effector_text = node_to_text(sorted([int(x) for x in effector]))
+
+    return (subject_text, relation_text, effector_text)
+
+
+def sort_combinations(subjects, relations, effectors, full_tree, node_lookup):
+    # print("Subj:",subjects, "\nRelation: ", relations, "\nEffectors: ",effectors)
+
+    combined = []
+
+    # check negations; if negative child node attached to relation subject or entity then negate relation
+    def negated(nodes):
+        return any([x for x in full_tree if x[0] in
+                    [i[0] for i in nodes] and x[2] == 'neg'])
+
+
+    if any([i for i in relations if 'correlat' in node_lookup[i]]):
+        for i, effector in enumerate(effectors):
+            combined.append((effectors[i-1], relations, effectors[i]))
+
+    for subject in subjects:
+        for effector in effectors:
+            if effector != subject:
+                if negated(subject) or negated(effector) or negated(full_tree[0]):
+                    relations.append('-1')
+            combined.append((subject, relations, effector))
+    formatted = []
+    for comb in combined:
+        formatted.append(format(comb, full_tree, node_lookup))
+
+    return formatted
+
+
+def cleanoutput(output):
+
+    cleaned = []
+
+    for out in output:
+        e1, r, e2 = out
+        e1 = e1.split()
+        e2 = e2.split()
+        #remove leading/ending stopwords
+        if e1[0] in stopwords and len(e1)>1: e1 = e1[1:]
+        if e1[-1] in stopwords and len(e1)>1: e1 = e1[:-1]
+        if e2[0] in stopwords and len(e2)>1: e2 = e2[1:]
+        if e2[-1] in stopwords and len(e2)>1: e2 = e2[:-1]
+        e1 = ' '.join(e1)
+        e2 = ' '.join(e2)
+        fin = (e1, r, e2)
+        cleaned.append(fin)
+
+    return cleaned
+
+
+def filteroutput(output):
+
+    remove_terms = ["we"]
+
+    filtered_outputs = output.copy()
+
+    for ent in output:
+        e1, r, e2 = ent
+        if e1==e2 or e1 in e2 or e2 in e1 or r in e1 or r in e2:
+            filtered_outputs.remove(ent)
+        elif not any([i.isalpha() for i in e1]) or not  any([i.isalpha() for i in e2]):
+            filtered_outputs.remove(ent)
+        else:
+            e1_pos = nltk.pos_tag(e1.split())
+            if not any([x for x in e1_pos if 'NN' in x[1]]):
+                filtered_outputs.remove(ent)
             else:
-                return False
+                e2_pos = nltk.pos_tag(e2.split())
+                if not any([x for x in e2_pos if 'NN' in x[1]]):
+                    filtered_outputs.remove(ent)
+
+    # remove duplicates with reverse e1,e2s
+    final_output = filtered_outputs.copy()
+    for fst,snd in itertools.combinations(filtered_outputs, 2):
+        if fst==snd:
+            if fst in final_output: final_output.remove(fst)
+        else:
+            fst_e1, fst_r, fst_e2 = fst
+            snd_e1, snd_r, snd_e2 = snd
+            if fst_r==snd_r:
+                if fst_e1 == snd_e2 and fst_e2==snd_e1:
+                    if fst in final_output: final_output.remove(fst)
+
+    return final_output
 
 
-        def node_to_text(int_list):
+def build_paths(tree, full_tree, node_lookup ):
 
-            txt_string = []
+    combine_relations = ['mod', 'aux', 'case', 'dep', 'det', 'case', 'cc'
+                        'nummod', 'mark', 'dobj', 'nmod', 'amod', 'advmod', 'compound', 'acl', 'neg']
 
-            for i in range(min(int_list) - 1, max(int_list)):
-                try:
-                    # try as some nodes are missed in the tree
-                    txt_string.extend([node_lookup[str(i + 1)]])
-                except KeyError:
-                    pass
-            return " ".join(txt_string)
+    effectee_dependencies = ['dobj', 'nmod', 'amod', 'advcl', 'numod', 'xcomp', 'ccomp', 'acl']
+    num_of_recursions = 0
 
-        subject_text = node_to_text(sorted([int(x) for x in subject]))
+    def break_conjunctions_2(edge_list):
+        broken = edge_list.copy()
+        new = []
+        for i, edge in enumerate(edge_list):
+            if edge[2]=='conj':
+                new2 = []
+                try: broken.remove(edge)
+                except ValueError: pass
+                new2.append(edge)
+                for child in [x for x in edge_list if x[0] == edge[1]]:
+                    try: broken.remove(child)
+                    except ValueError: pass
+                    new2.append(child)
+                new.append(new2)
+        new.append(broken)
+        return new
 
-        # if anaphor(subject_text):
-        #     subject_text = output_relations[len(output_relations) - 1][2]
+    def outgoings(n):
+        return [edge for edge in tree if edge[0] == n]
 
-        relation = sorted([int(x) for x in relation])
-        relation_text = node_to_text(relation) if -1 not in relation else "not_" + node_to_text(relation[1:])
-        effector_text = node_to_text(sorted([int(x)for x in effector]))
+    #
 
-        output_relations.append((subject_text, relation_text, effector_text))
+    def path_to_merge2(num_lst, num_of_recursions):
 
-        print((subject_text, relation_text, effector_text))
-        print("\t{}({}, {})".format(relation_text, subject_text, effector_text))
+        num_of_recursions += 1
 
-
-    def sort_combinations(subjects, relations, effectors):
-
-        # print("Subj:",subjects, "\nRelation: ", relations, "\nEffectors: ",effectors)
-
-        # check negations; if negative child node attached to subject or entity then negate relation
-        def negated(nodes):
-            return any([x for x in tree_triples if x[0] in [i[0] for i in nodes] and x[2]=='neg'])
-
-        for subject in subjects:
-            for effector in effectors:
-                if effector != subject:
-                    if negated(subject) or negated(effector):
-                        relations.append('-1')
-
-                format(subject, relations, effector)
-
-
-    def break_conjunctions(num, limit):
-        conjunctions = [edge[1] for edge in tree if edge[2] == 'conj'and int(num) <= int(edge[0]) <= int(limit)]
-        return conjunctions
-
-    def path_to_merge(num):
-        merge_path = [num]
-
-        def outgoings(n):
-            return [edge for edge in tree_triples if edge[0] == n]
-
-        if outgoings(num):
+        # looks at path dependencies that suggest multiple nodes should be merged as an entity
+        merge_path = []
+        if len(num_lst)==0: return num_lst
+        if len(num_lst)==1: return num_lst
+        for num in num_lst:
             for outgoing in outgoings(num):
                 if any([x for x in combine_relations if x in outgoing[2]]) or 'mod' in outgoing[2]:
+                    merge_path.append(outgoing[0])
                     merge_path.append(outgoing[1])
-                    path_to_merge(outgoing)
-                else:
-                    break
+                    if num_of_recursions < 20:
+                        try:
+                            path_to_merge2(outgoing[1], num_of_recursions)
+                        except RecursionError:
+                            break
+        return list(set(merge_path))
 
-        return merge_path
 
+    # all paths from a node to end of tree
+    def tracepath(num):
+        trace = []
+
+        def p(i):
+            outgoing_edges = [edge for edge in tree if edge[0] == i]
+            if len(outgoing_edges)>0:
+                trace.append(outgoing_edges)
+                for j in outgoing_edges:
+                    p(j[1])
+        p(num)
+        trace = list(itertools.chain.from_iterable(trace))
+        return trace
     # nodes with incoming edges as nsubj or nsubjpass are potential start points
 
     all_subjs = []
     start_subj = [edge[1] for edge in tree if 'subj' in edge[2]]
 
+    # finds the main relation incoming from the start subj
+
     if start_subj:
         main_relation = [edge[0] for edge in tree if edge[1] == start_subj[0]]
-        outgoing_from_starts = start_subj + [edge[1] for edge in tree_triples if edge[0] == start_subj[0]]
-        for effectee in outgoing_from_starts:
-            for start in start_subj + break_conjunctions(effectee, main_relation[0]):
-                mergepath = path_to_merge(start)
-                if mergepath not in all_subjs: all_subjs.append(mergepath)
+        outgoing_from_starts = tracepath(start_subj[0])
+        if outgoing_from_starts:
+            split_lists = break_conjunctions_2(outgoing_from_starts)
+            for lst in split_lists:
+                if lst:
+                    lst2 = [edge[1] for edge in lst]
+                    if any([x[1] for x in outgoings(lst[0][0]) if x[1] in lst2 and x[2] in combine_relations]):
+                        lst2.append(lst[0][0])
+                    mergepath = path_to_merge2(lst2, num_of_recursions)
+                    all_subjs.append(mergepath)
+
+                else:
+                    all_subjs.append(sorted(path_to_merge2([start_subj])))
+        else:
+            p = start_subj + [edge[1] for edge in outgoing_from_starts]
+            all_subjs.append(p)
+
     else:
         main_relation = [edge[1] for edge in tree if edge[2] == 'root']
+    #
 
-    outgoing_relation = [edge for edge in tree if edge[0] == main_relation[0]]
+    # if main relation is not a verb, check if outgoings have verb
+    if main_relation:
+        mainrelation_pos = nltk.pos_tag([node_lookup.get(main_relation[0])])
+        if len(mainrelation_pos)>0:
+            if not (mainrelation_pos[0][1]).startswith('V'):
+                outgoing_relation = [edge for edge in tree if edge[0] == main_relation[0]]
+                if outgoing_relation:
+                    for i in outgoing_relation:
+                        pos_tag = (node_lookup[i[1]])
+                        if pos_tag.startswith("VB") and outgoings(i):
+                            main_relation = i
 
-    possible_effectees = []
+    # special case for correlation/correlates
+    # if correlation is in sentence, set that to main relation
+    # check for previous negations
+    # then subjects/effectees are children of correlation root (maybe take between?)
 
-    for edge in outgoing_relation:
-        if edge[2] in ['compound']:
-            # combine with relation
-            main_relation.append(edge[1])
-        if edge[2] in ['dobj', 'nmod', 'amod', 'advcl', 'numod', 'xcomp', 'ccomp']:
-            possible_effectees.append(edge[1])
+    prev_main = main_relation
+
+    for t in tree:
+        if 'correlat' in node_lookup[t[1]]:
+            main_relation = [t[1]]
 
     all_effectees = []
+    possible_effectees = []
+
+
+    if main_relation:
+        outgoing_relation = [edge for edge in tree if edge[0] == main_relation[0]]
+        for edge in outgoing_relation:
+            if edge[2] in ['compound', 'advmod', 'aux', 'auxpass', 'neg']:
+                # combine with relation
+                main_relation.append(edge[1])
+            # outgoing from main relation that are possible effectees
+            if edge[2] in effectee_dependencies :
+                possible_effectees.append(edge[1])
+            # if edge is a conj and relation = between
+
+            if 'correlat' in node_lookup[main_relation[0]] and edge[2]=='conj':
+                possible_effectees.append(edge[1])
+
+    # print(node_lookup[main_relation[0]], possible_effectees)
+    try:
+        if 'correlat' in node_lookup[main_relation[0]] and len(possible_effectees)<=2:
+            #
+            def outgoing(e):
+                return [edge for edge in tree if edge[0] == e]
+            outgoing_relation = outgoing(prev_main[0])
+
+            for edge in outgoing_relation:
+                if edge[2] in ['compound', 'advmod', 'aux', 'auxpass', 'neg']:
+                    # combine with relation
+                    main_relation.append(edge[1])
+                # outgoing from main relation that are possible effectees
+                if any([e for e in outgoing(edge[1]) if node_lookup[e[1]]=='between']):
+                    possible_effectees.append(edge[1])
+                if edge[2] in effectee_dependencies or edge[2]=='conj':
+                    possible_effectees.append(edge[1])
+                # if edge is a conj and relation = between
+
+    except IndexError:
+        pass
+
+        # if no possible effectees, look for verbs inside subject
     for effectee in possible_effectees:
-        all_ent_starters = break_conjunctions(effectee, max([int(x[0]) for x in tree]))
-        for start in [effectee] + all_ent_starters:
-            mergepath = path_to_merge(start)
-            all_effectees.append(mergepath)
+        split_lists = break_conjunctions_2(tracepath(effectee))
+        for lst in split_lists:
+            if lst:
+                # if lst[0][0] is direct parent node, append
+                lst2 = [edge[1] for edge in lst]
+                if any([x[1] for x in outgoings(lst[0][0]) if x[1] in lst2 and x[2] in combine_relations]):
+                    lst2.append(lst[0][0])
+                mergepath = path_to_merge2(lst2, num_of_recursions)
+                all_effectees.append(sorted(mergepath))
+            else:
+                all_effectees.append(sorted(path_to_merge2([effectee], num_of_recursions)))
 
-    # if there's no start subjects then all effectees are possible combinations of each
+    if not start_subj:
+        print('bope')
 
-    # print("All subjs-{}\nMain relation-{}\nAll_effectees:{}\n".format(all_subjs, main_relation, all_effectees))
+    output = sort_combinations(all_subjs, main_relation, all_effectees, full_tree, node_lookup)
 
-    return sort_combinations(all_subjs, main_relation, all_effectees)
-
-
+    return output
 
 
-if __name__ == "__main__":
 
-    combine_relations = ['acl', 'acl:recl', 'mod', 'aux', 'case', 'dep', 'det', 'case', 'cc'
-                                    'nummod', 'mark', 'acl', 'dobj', 'conj',
-                                    'nmod', 'amod', 'advmod', 'compound']
+def re_main(text):
 
     dependency_parser = StanfordDependencyParser(path_to_jar=class_path, path_to_models_jar=models_path)
+    output_relations = []
+    sentences = nltk.sent_tokenize(text)
+    length = len(sentences)
 
-    # temps
-
-    shank_abs = "SHANK proteins are crucial for the formation and plasticity of excitatory synapses. " \
-                "Although mutations in all three SHANK genes are associated with autism spectrum disorder , " \
-                "SHANK3 appears to be the major Autism Spectrum Disorder gene with a prevalence of approximately 0.5% for SHANK3 mutations " \
-                "in Autism Spectrum Disorder, with higher rates in individuals with Autism Spectrum Disorder and intellectual disability . " \
-                "Interestingly, the most relevant mutations are typically de novo and often are frameshift or nonsense mutations resulting in a" \
-                " premature stop and a truncation of SHANK3 protein. We analyzed three different SHANK3 stop mutations that we identified " \
-                "in individuals with Autism Spectrum Disorder and/or intellectual disability, one novel and two that we recently described . " \
-                "The mutations were inserted into the human SHANK3a sequence and analyzed for effects on subcellular localization and neuronal " \
-                "morphology when overexpressed in rat primary hippocampal neurons. Clinically, all three individuals harboring these mutations had " \
-                "global developmental delays and intellectual disability. In our in vitro assay, c.1527G > A and c.2497delG both result in proteins " \
-                "that lack most of the SHANK3a C-terminus and accumulate in the nucleus of transfected cells. Cells expressing these mutants exhibit " \
-                "converging morphological phenotypes including reduced complexity of the dendritic tree, less spines, and less excitatory, but not " \
-                "inhibitory synapses. In contrast, the truncated protein based on c.5008A > T, which lacks only a short part of the sterile alpha " \
-                "motif domain in the very SHANK3a C-terminus, does not accumulate in the nucleus and has minor effects on neuronal morphology. " \
-                "In spite of the prevalence of SHANK3 disruptions in Autism Spectrum Disorder and intellectual disability, " \
-                "only a few human mutations have been functionally characterized; here we characterize three additional mutations. " \
-                "Considering the transcriptional and functional complexity of SHANK3 in healthy neurons, we propose that any heterozygous " \
-                "stop mutation in SHANK3 will lead to a dysequilibrium of SHANK3 isoform expression and alterations in the stoichiometry of" \
-                " SHANK3 protein complexes, resulting in a distinct perturbation of neuronal morphology. This could explain why the clinical " \
-                "phenotype in all three individuals included in this study remains quite severe - regardless of whether there are disruptions " \
-                "in one or more SHANK3 interaction domains."
-
-    pers_abs = "Maintaining an appropriate distance from others is important for establishing effective communication and good interpersonal relations. Autism spectrum disorder is a developmental disorder associated with social difficulties, and it is thus worth examining whether individuals with ASD maintain typical or atypical degrees of social distance. Any atypicality of social distancing may impact daily social interactions. We measured the preferred distances when individuals with ASD and typically developing individuals approached other people and objects or when other people approached them. Individuals with ASD showed reduced interpersonal distances compared to TD individuals. The same tendency was found when participants judged their preferred distance from objects. In addition, when being approached by other people, both individuals with ASD and TD individuals maintained larger interpersonal distances when there was eye contact, compared to no eye contact. These results suggest that individuals with ASD have a relatively small personal space, and that this atypicality exists not only for persons but also for objects."
-
-    s = "WAGR syndrome is characterized by Wilm’s tumor, aniridia, genitourinary abnormalities and intellectual disabilities. WAGR is caused by a chromosomal deletion that includes the PAX6, WT1 and PRRG4 genes. PRRG4 is proposed to contribute to the autistic symptoms of WAGR syndrome, but the molecular function of PRRG4 genes remains unknown. The Drosophila commissurelessissureless gene encodes a short transmembrane protein characterized by PY motifs, features that are shared by the PRRG4 protein. Comm intercepts the Robo axon guidance receptor in the ER/Golgi and targets Robo for degradation, allowing commissurelessissural axons to cross the CNS midline. Expression of human Robo1 in the fly CNS increases midline crossing and this was enhanced by co-expression of PRRG4, but not CYYR, Shisa or the yeast Rcr genes. In cell culture experiments, PRRG4 could re-localize hRobo1 from the cell surface, suggesting that PRRG4 is a functional homologue of Comm. Comm is required for axon guidance and synapse formation in the fly, so PRRG4 could contribute to the autistic symptoms of WAGR by disturbing either of these processes in the developing human brain."
-
-    s2 = "Comm intercepts the Robo axon guidance receptor in the ER/Golgi and targets Robo for degradation."
-
-    s3 = 'Our results reveal disorder overlap and specificity at the genetic and gene expression level. They suggest new pathways contributing to distinct pathophysiology in psychiatric disorders and shed light on potential shared genomic risk factors.'
-
-
-    for sentence in nltk.sent_tokenize(s3):
-
-        output_relations = []
-
-        print("\n", sentence, "\n")
+    for i, sentence in enumerate(sentences):
 
         result = dependency_parser.raw_parse(sentence)
         dep = result.__next__()
         trips = list(dep.triples())
         tree = str(dep.to_dot())
 
-        for trip in trips:
-            print(trip)
+        # for trip in trips: print(trip)
 
         # part of speech tags to reference
         pos_tagged = {}
         for pos in trips:
             pos_tagged[pos[0][0]] = pos[0][1]
             pos_tagged[pos[2][0]] = pos[2][1]
-        #
-        for i in tree.split("\n"):
-             print(i)
 
         tree_split = list(filter(None, [line.strip() for line in tree.split("\n") if line != "\n"]))
+
+        # for i in tree_split:  print(i)
 
         # dictionary of node num: label to lookup
         node_lookup = {}
@@ -215,20 +351,50 @@ if __name__ == "__main__":
         # if there's multiple subjects, split tree
 
         c = Counter(elem[2] for elem in tree_triples if 'subj' in elem[2])
+        tree = []
         if sum(c.values()) > 1:
             split_indices = []
             for triple in tree_triples:
                 if 'subj' in triple[2]:
-                    split_indices.append(tree_triples.index(triple))
+                    # node number of each sub
+                    # parent node is likely main relation
+                    incoming = [x for x in tree_triples if x[1] == triple[0]]
+                    split_indices.append(tree_triples.index(incoming[0]))
+
             for idx in split_indices:
+                # if first indicy
                 if split_indices.index(idx) == 0:
-                    build_paths(tree_triples[0:split_indices[1] - 1])
+                    tree = (tree_triples[0:split_indices[1] - 1])
                 elif split_indices.index(idx) != len(split_indices) - 1:
-                    build_paths(tree_triples[idx:split_indices[split_indices.index(idx)+1]])
+                    tree = (tree_triples[idx:split_indices[split_indices.index(idx)+1]])
                 else:
-                    build_paths(tree_triples[idx:len(tree_triples)])
+                    tree = (tree_triples[idx:len(tree_triples)])
         else:
-            build_paths(tree_triples)
+            tree = tree_triples
+
+        if tree:
+            out = build_paths(tree, tree_triples, node_lookup)
+            output_relations.append(out)
+
+    # dep.tree().draw()
+    copyoutput = output_relations.copy()
+    output = list(itertools.chain.from_iterable(copyoutput))
+    filtered = filteroutput(output)
+    cleaned = cleanoutput(filtered)
+    return cleaned
 
 
-        dep.tree().draw()
+if __name__=="__main__":
+
+    s = "An essential question in evolutionary biology is whether shifts in a set of polygenic behaviors " \
+        "share a genetic basis across species. " \
+        "Interestingly, these traits largely overlap with the core symptoms of human autism spectrum disorder , " \
+        "raising the possibility that these behavioral traits are underpinned by a similar set of genes . " \
+        "Result Here, we explored whether modification of Autism Spectrum Disorder-risk genes underlies cavefish evolution. " \
+        "Transcriptomic analyses revealed that > 58.5% of 3152 cavefish orthologs to Autism Spectrum Disorder-risk genes are significantly up- or down-regulated in the same direction as genes in postmortem brains from Autism Spectrum Disorder patients. Enrichment tests suggest that Autism Spectrum Disorder-risk gene orthologs in A. mexicanus have experienced more positive selection than other genes across the genome. Notably, these positively selected cavefish Autism Spectrum Disorder-risk genes are enriched for pathways involved in gut function, inflammatory diseases, and lipid/energy metabolism, similar to symptoms that frequently coexist in Autism Spectrum Disorder patients. Lastly, Autism Spectrum Disorder drugs mitigated cavefish’s Autism Spectrum Disorder-like behaviors, implying shared aspects of neural processing. Overall, our study indicates that Autism Spectrum Disorder-risk genes and associated pathways may be repeatedly used for shifts in polygenic behaviors across evolutionary time."
+
+    output = re_main(process_text(s))
+
+    print("OUTPUT")
+    for o in output:
+        print(o)

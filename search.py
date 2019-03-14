@@ -1,9 +1,8 @@
 import numpy as np
 from stemming.porter2 import stem
 from ontology_stuff import *
-
-# for TFIDF queries on corpus index
-
+from pubmed_parse import get_synonyms
+# delete?
 
 def format_txt_file():
 

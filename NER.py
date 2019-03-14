@@ -8,7 +8,7 @@ import nltk
 from pymetamap import MetaMap
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
-
+from pubmed_parse import get_synonyms
 from indexer import reload_corpus
 
 mm = MetaMap.get_instance('/Users/heatherlogan/Desktop/public_mm/bin/metamap16')
@@ -50,8 +50,6 @@ def acronym_search(text):
                     pass
         except ValueError:
             pass
-
-    acronyms['ASD'] = 'Autism Spectrum Disorder'
 
     return acronyms
 
@@ -141,7 +139,7 @@ def meta_ner(entity):
 
 
 def is_gene(term):
-    # used for unidentified terms that could be misspelled genes
+    # used for unidentified terms that could be gene variants
 
     flat_vals = list(itertools.chain.from_iterable(hgnc.values()))
     is_similar = False
@@ -158,14 +156,32 @@ def is_gene(term):
 
     return is_similar
 
-
 def get_genes(text):
     text = nltk.word_tokenize(text)
 
     detected_genes = {}
-
     for t in text:
         if t.upper() in [x.upper() for x in itertools.chain.from_iterable(hgnc.values())] and t not in stopwords:
+            detected_genes[t] = ['[gngm]']
+
+    return detected_genes
+
+def get_non_sfari(text):
+    text = nltk.word_tokenize(text)
+
+    detected_genes = {}
+    for t in text:
+        if t.upper() in [x.upper() for x in non_sfari] and t not in stopwords and any([x.isalnum() for x in t ]):
+            detected_genes[t] = ['[gngm]']
+
+    return detected_genes
+
+def get_sfari(text):
+    text = nltk.word_tokenize(text)
+
+    detected_genes = {}
+    for t in text:
+        if t.upper() in [x.upper() for x in itertools.chain.from_iterable(sfari.values())] and t not in stopwords:
             detected_genes[t] = ['[gngm]']
 
     return detected_genes
@@ -210,7 +226,8 @@ def process_text(text):
 
     for acronym, fullword in acs.items():
         try:
-            text = re.sub(acronym, fullword, text)
+            if acronym not in hgnc.values() and acronym != 'ASD':
+                text = re.sub(acronym, fullword, text)
         except sre_constants.error:
             pass
 
@@ -302,48 +319,25 @@ def annotate_abstracts(filename):
         annotate(text)
 
 
-def relations():
-    relations_WAGR = [('WAGR syndrome', 'characterized by', "Wilm 's tumor"),
-                      ('WAGR syndrome', 'characterized by', 'andridia'),
-                      ('WAGR syndrome', 'characterized by', 'genitourinary abnormalities'),
-                      ('WAGR syndrome', 'characterized by', 'intellectual disabilities'),
-                      ('WAGR', 'caused by', 'chromosomal deletion'),
-                      ('chromosomal deletion', 'includes', 'PAX6'),
-                      ('chromosomal deletion', 'includes', 'WT1'),
-                      ('chromosomal deletion', 'includes', 'PRRG4 genes'),
-                      ('PRRG4', 'proposed_to', 'contribute to the autistic symptoms'),
-                      ('the molecular function of PRRG4 genes', 'remains', 'unknown'),
-                      ('Drosophila commissurelessissureless gene', 'encodes', 'a short transmembrane protein characterized by PY motifs'),
-                      ('a short transmembrane protein characterized by PY motifs', 'shared', 'by the PRRG4 protein'),
-                      ('Comm', 'intercepts', 'the Robo axon guidance receptor in the ER/Golgi'),
-                      ('Comm', 'targets', 'Robo for degradation'),
-                      ('Expression of human Robo1', 'CNS', 'midline crossing'),
-                      ('midline crossing', 'enhanced by', 'co-expression of PRRG4'),
-                      ('midline crossing', 'not enhanced by', 'CYRR'),
-                      ('midline crossing', 'not enhanced by', 'Shisa'),
-                      ('midline crossing', 'not enhanced by', 'yeast Rcr genes'),
-                      ('PRRG4', 'could re-localize', 'hRobo1'),
-                      ('PRRG4', 'homologue', 'Comm'),
-                      ('Comm', 'required for ', 'axon guidance and synapse formation in the fly'),
-                      ('PRRG4', 'contribute to', 'autistic symptoms of WAGR'),
-                      ('PRRG4', 'contribute to', 'by disturbing either of these processes')]
-
-    return relations_WAGR
-
 hgnc = load_hgnc()
+sfari = get_synonyms()
+non_sfari = [x for x in list(hgnc.keys()) if x not in list(itertools.chain.from_iterable(sfari.values()))]
+
 gold_annotations = load_gold_annotations()
 
 if __name__ == "__main__":
 
-    results = {}
-
-    for relation in relations():
-        ent1, ent2 = relation[0], relation[2]
-        r1, r2 = annotate(relation[0]), annotate(relation[2])
-        results[ent1] = r1
-        results[ent2] = r2
-
-    for e, res in results.items():
-        print(e, res)
-
-    # annotate(text)
+    print(non_sfari)
+    # results = {}
+    #
+    #
+    # for relation in relations():
+    #     ent1, ent2 = relation[0], relation[2]
+    #     r1, r2 = annotate(relation[0]), annotate(relation[2])
+    #     results[ent1] = r1
+    #     results[ent2] = r2
+    #
+    # for e, res in results.items():
+    #     print(e, res)
+    #
+    # # annotate(text)

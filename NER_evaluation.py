@@ -10,7 +10,6 @@ def load_gold():
 
     for line in file:
         line = line.strip()
-
         if "***STOP" not in line:
             if "**END" not in line:
                 if "*PMC" in line:
@@ -20,7 +19,6 @@ def load_gold():
                     gold_annotations.append((id, phrase.strip(), semtype.strip()))
         else:
             break
-
     return gold_annotations
 
 
@@ -66,8 +64,7 @@ def is_similar(gold, system):
     def similar(a, b):
         return SequenceMatcher(None, a, b).ratio()
 
-    if similar(gold, system) > 0.8:
-        return True
+    if similar(gold, system) > 0.8: return True
     else:
         return False
 

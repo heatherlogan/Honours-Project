@@ -6,58 +6,6 @@ from ontology_stuff import build_onto_objects
 
 stemmer = PorterStemmer()
 
-# temp
-def example_relations():
-
-    relations_SHANK = [('SHANK proteins', 'crucial for', 'formation of excitatory synapses'),
-                 ('SHANK proteins', 'crucial for', 'plasticity of excitatory synapses'),
-                 ('mutations in all three SHANK genes', 'associated', 'autism spectrum disorder'),
-                 ('SHANK3', 'appears_to_be', 'major ASD gene'),
-                 ('frameshift mutations', 'resulting in', 'premature stop'),
-                 ('frameshift mutations', 'resulting in', 'truncation of SHANK3 protein'),
-                 ('nonsense mutations', 'resulting in', 'premature stop'),
-                 ('nonsense mutations', 'resulting in', 'truncation of SHANK3 protein'),
-                 ('individuals harboring these mutations', 'had', 'global development delays'),
-                 ('individuals harboring these mutations', 'had', 'intellectual disability'),
-                 ('c.1527G > A,', 'result in', 'proteins that lack most of the SHANK3 terminus'),
-                 ('c.2497delG', 'result in', 'proteins that lack most of the SHANK3 terminus'),
-                 ('cells expressing these mutants', 'exhibit', 'converging morphological phenotypes'),
-                 ('protein based on c.5008A>T', 'lacks', 'short part of the sterile alpha motif SAM domain'),
-                 ('protein based on c.5008A>T', 'not accumulate in', 'nucleus'),
-                 ('any heterozygous stop mutation in SHANK3', 'lead to', 'dysequilibrium of SHANK3 isoform expression'),
-                 ('any heterozygous stop mutation in SHANK3', 'lead to', 'alterations in stoichiometry of SHANK3 protein complexes'),
-                 ('any heterozygous stop mutation in SHANK3', 'resulting in', 'distinct perturbation of neuronal morphology'),
-                 ('This', 'could explain', 'why the clinical phenotype in all three individuals included in this study remains')
-                 ]
-
-    relations_WAGR = [ ('WAGR syndrome', 'characterized_by', "by Wilm's tumor"),
-                ('WAGR syndrome', 'characterized_by', 'andridia'),
-                ('WAGR syndrome', 'characterized_by', 'genitourinary abnormalities'),
-                ('WAGR syndrome', 'characterized_by', 'intellectual disabilities'),
-                ('WAGR', 'caused_by', 'chromosomal deletion'),
-                ('chromosomal deletion', 'includes', 'PAX6' ),
-                ('chromosomal deletion', 'includes', 'WT1' ),
-                ('chromosomal deletion', 'includes', 'PRRG4 genes'),
-                ('PRRG4', 'proposed_to', 'contribute to the autistic symptoms'),
-                ('the molecular function of PRRG4 genes', 'remains', 'unknown'),
-                ('Drosophila commissurelessissureless gene', 'encodes', 'a short transmembrane protein characterized by PY motifs'),
-                ('a short transmembrane protein characterized by PY motifs', 'shared_by', 'PRRG4 protein'),
-                ('Comm', 'intercepts', 'the Robo axon guidance receptor in the ER/Golgi'),
-                ('Comm', 'targets', 'Robo for degradation'),
-                ('Expression of human Robo1', 'CNS', 'midline crossing'),
-                ('midline crossing','enhanced_by','co-expression of PRRG4'),
-                ('midline crossing','not_enhanced_by','CYRR'),
-                ('midline crossing','not enhanced_by','Shisa'),
-                ('midline crossing','not enhanced_by','yeast Rcr genes'),
-                ('PRRG4', 're-localize', 'hRobo1'),
-                ('PRRG4', 'homologue' , 'Comm'),
-                ('Comm', 'required_for', 'axon guidance and synapse formation in the fly'),
-                ('PRRG4', 'contribute_to', 'autistic symptoms of WAGR'),
-                ('PRRG4', 'contribute_to', 'disturbing either of these processes'),
-    ]
-
-    return relations_WAGR
-
 
 def load_onto_terms():
 
@@ -76,11 +24,12 @@ def load_onto_terms():
                     terms[classno].append(stemmed_line)
         return terms
 
-    file = open('files/autism_terms/asdpto_terms.txt', 'r').readlines()
+    file = open('files/autism_terms/asdpto_terms_new.txt', 'r').readlines()
     terms = format_terms(file)
     return terms
 
 def relevant_terms():
+
     gene_terms = [stemmer.stem(term) for term in ['gene', 'genetic', 'genome', 'genotype' 'allele', 'carrier',
                   'chromosome', 'dominant', 'DNA', 'heterozygoes', 'recessive',
                   'X-linked', 'homologous', 'RNA', 'translation', 'transcription',
@@ -92,10 +41,13 @@ def relevant_terms():
                       'copy number variant']]
     return gene_terms, mutation_terms
 
-def sort_onto_mappings(classno_list):
 
-    # eliminates double mappings that are ancestors, returns list of ancestors for each mapping
+def sort_onto_mappings(classno_list, onto_objects):
+
+    # eliminates double mappings that are ancestors,
+    # returns list of ancestors for each mapping
     copylist = classno_list.copy()
+
 
     def get_obj(classno):
         return next((x for x in onto_objects if x.classnum == classno), None)
@@ -107,17 +59,15 @@ def sort_onto_mappings(classno_list):
         combs = itertools.combinations(classno_list,2)
         for c1, c2 in combs:
             if c1 in string_ancestors(c2):
-                copylist.remove(c1) if c1 in copylist else None
+                if c1 in copylist: copylist.remove(c1)
             elif c2 in string_ancestors(c1):
-                copylist.remove(c1) if c1 in copylist else None
+                if c1 in copylist: copylist.remove(c1)
     return copylist
 
 
-
-if __name__=="__main__":
+def map_main(relations):
 
     gene_terms, mutation_terms = relevant_terms()
-    relations = example_relations()
     SFARI_genes = set(itertools.chain.from_iterable(get_synonyms().values()))
     non_SFARI_genes = set(itertools.chain.from_iterable(sort_hgnc().values())) - SFARI_genes
     SFARI_genes, non_SFARI_genes = list(SFARI_genes), list(non_SFARI_genes)
@@ -129,7 +79,8 @@ if __name__=="__main__":
 
     semtype_maps = {
         '[gngm]': 'Genes',
-        '': ''
+        '[diap]': 'Diagnosis',
+        '[cgab]': 'Congenital Abnormalities'
     }
 
     for subj, rel, effectee in relations:
@@ -174,8 +125,8 @@ if __name__=="__main__":
                     if type(phrase) != list and "{} ".format(phrase) in stemmed_eff or phrase==stemmed_eff:
                         effectee_onto_mappings.append(node)
 
-            if subj_onto_mappings: subject_mappings.extend(sort_onto_mappings(subj_onto_mappings))
-            if effectee_onto_mappings: effectee_mappings.extend(sort_onto_mappings(effectee_onto_mappings))
+            if subj_onto_mappings: subject_mappings.extend(sort_onto_mappings(subj_onto_mappings, onto_objects))
+            if effectee_onto_mappings: effectee_mappings.extend(sort_onto_mappings(effectee_onto_mappings, onto_objects))
 
             # map to onto if semantic type is in related
 
@@ -211,13 +162,37 @@ if __name__=="__main__":
 
     print('\n\n\n')
 
-    for t in list(set(final_relations)):
-        print(t, ',')
+    return list(set(final_relations))
 
 
 
 
+if __name__=='__main__':
 
+    gene_terms, mutation_terms = relevant_terms()
+    SFARI_genes = set(itertools.chain.from_iterable(get_synonyms().values()))
+    non_SFARI_genes = set(itertools.chain.from_iterable(sort_hgnc().values())) - SFARI_genes
+    SFARI_genes, non_SFARI_genes = list(SFARI_genes), list(non_SFARI_genes)
+    onto_terms = load_onto_terms()
+    onto_objects = build_onto_objects()
+    node_mappings = {}
+    final_relations = []
 
+    semtype_maps = {
+        '[gngm]': 'Genes',
+        '[diap]': 'Diagnosis',
+        '[cgab]': 'Congenital Abnormalities'
+    }
 
+    relations = []
+    file = open('files/NER_outputs/map_output.txt', 'r').readlines()
+    for line in file:
+        r, e = line.strip().split("(")
+        e1, e2 = e.split(', ')
+        e2 = e2.replace(")", '')
+        relations.append((e1, r, e2))
 
+    relations = list(set(relations))
+
+    for relation in map_main(relations):
+        print(map, ", ")

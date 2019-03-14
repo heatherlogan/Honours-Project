@@ -4,6 +4,8 @@ from nltk.corpus import stopwords
 
 stopwords = list(set(stopwords.words('english')))
 
+# delete?
+
 class Article:
 
     def __init__(self, id, headline, abstract, text):
@@ -170,38 +172,40 @@ def build_index(article_objects):
         f2.write("{}: {}" .format(article.id, article.headline))
     f2.close()
 
-
 def clean_corpus(): #removes failed articles with no text
 
-    file = open('files/corpus.txt', 'r').readlines()
-    cleaned = open('files/corpus_cleaned.txt', 'w')
-    failed_ids = open('files/failed_ids.txt', 'w')
+    file = open('files/papers/asd_pheno_corpus.txt', 'r').readlines()
+    cleaned = open('files/papers/asd_pheno_corpus.txt', 'w')
     articles = reload_corpus(file)
+    failed_ids = []
     # build_index(articles)
+
+    headings_remove = ['Background\n','Methods\n', 'Objectives\n', 'Results\n', 'Conclusion\n', 'Conclusions\n',
+                'Electronic Supplementary Material\n', '\n']
 
     for article in articles:
         if article.text == "" or article.text == "\n" or article.text == None:
             str = "{}\t{}\n".format(article.id, article.text)
-            failed_ids.write(str)
+            failed_ids.append(str)
         else:
             id = "PMC_ID: {}\n".format(article.id)
-            head = "PMC_HEADLINE: {}\n".format(article.headline)
+            head = "PMC_HEADLINE: {}\n".format(article.headline.strip())
             if article.abstract:
                 abstract = "PMC_ABSTRACT: {}:\n".format(article.abstract)
-            body = "PMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(article.text)
+            body = "\nPMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(article.text)
             cleaned.write(id)
             cleaned.write(head)
             if article.abstract:
-                cleaned.write(abstract)
+                for r in headings_remove:
+                    abstract = abstract.replace(r, '')
+                cleaned.write(abstract.strip())
+
             cleaned.write(body)
 
-
+    print(failed_ids)
 
 if __name__=="__main__":
 
-    file = open('files/papers/include_papers.txt', 'r').readlines()
-    articles = reload_corpus(file)
+    # clean_corpus()
 
-    for article in articles:
-        print(article.headline)
-
+     clean_corpus()

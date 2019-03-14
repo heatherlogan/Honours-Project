@@ -60,22 +60,28 @@ def format_article(url):
 def build_corpus(url_file):
 
     urls = url_file.split('\n')
-    corp = open('files/papers/include_papers.txt', 'w')
+    corp = open('files/papers/asd_pheno_corpus.txt', 'w')
 
-    for url in urls:
+    length = len(urls)
 
-        obj = format_article(url)
+    for i, url in enumerate(urls):
 
-        id = "PMC_ID: {}\n".format(obj.pmcid)
-        head = "PMC_HEADLINE: {}\n".format(obj.title)
-        if obj.abstract:
-            abstract = "PMC_ABSTRACT: {}:\n".format(obj.abstract)
-        body = "PMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(obj.text)
+        print("{} - {}%".format(i, (i/length)*100))
 
-        corp.write(id)
-        corp.write(head)
-        if obj.abstract: corp.write(abstract)
-        corp.write(body)
+        if i > 0:
+
+            obj = format_article(url)
+
+            id = "PMC_ID: {}\n".format(obj.pmcid)
+            head = "PMC_HEADLINE: {}\n".format(obj.title)
+            if obj.abstract:
+                abstract = "PMC_ABSTRACT: {}:\n".format(obj.abstract)
+            body = "\nPMC_TEXT: {} \n:PMC_ENDTEXT\n\n".format(obj.text)
+
+            corp.write(id)
+            corp.write(head)
+            if obj.abstract: corp.write(abstract)
+            corp.write(body)
 
     corp.close()
 
@@ -109,7 +115,7 @@ def find_name(id):
 
 if __name__=="__main__":
 
-    url_file = open('files/papers/include_urls.txt', 'r').read()
+    url_file = open('files/papers/pubmed_autism_pheno.txt', 'r').read()
     build_corpus(url_file)
 
 
