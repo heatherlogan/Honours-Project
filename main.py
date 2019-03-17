@@ -214,22 +214,21 @@ if __name__=="__main__":
     onto_objects = build_onto_objects()
 
     file = open('files/papers/asd_gene_corpus.txt').readlines()
-    write_file = open("files/system_output/gene_output_2.txt", 'w')
+    write_file = open("files/system_output/gene_output_3.txt", 'w')
 
     papers = reload_corpus(file)
 
-    results_file = open('files/system_output/gene_output.txt', 'r').readlines()
+    results_file = open('files/system_output/gene_output_full.txt', 'r').readlines()
     results = format_results(results_file)
     downloaded_ids = [str(result.id) for result in results]
-
     count = 0
     for paper in papers:
         if str(paper.id) not in downloaded_ids:
+            pass
             print(str(paper.id))
-            count += 1
-            write_file.write('\n\nPMCID:{}\n'.format(paper.id))
-            text = paper.abstract + paper.text
-            main(text)
-
+            # count += 1
+            # write_file.write('\n\nPMCID:{}\n'.format(paper.id))
+            # text = paper.abstract + paper.text
+            # main(text)
     write_file.close()
 

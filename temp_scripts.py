@@ -172,10 +172,19 @@ def get_pubmmeds():
             if p2.startswith("PMC"):
                 new_ids.append(str(p2).replace('PMC', ''))
 
-
     print(new_ids)
     print(len(pmcids), len(new_ids))
 
 if __name__=="__main__":
 
-    get_pubmmeds()
+    pheno_file = open('files/papers/asd_pheno_corpus.txt', 'r').readlines()
+    pheno_title_file = open('files/paper_info/pheno_titles.txt', 'w')
+
+
+    pheno_titles = reload_corpus(pheno_file)
+
+    for title in pheno_titles:
+        print(title.id, title.headline)
+        pheno_title_file.write("{}\t{}".format(title.id, title.headline))
+
+    pheno_title_file.close()

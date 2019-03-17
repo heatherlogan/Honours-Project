@@ -1,9 +1,11 @@
+import itertools
 import re
 import pandas
 import numpy
 from pubmed_parse import get_geneinfo
 from collections import defaultdict
 from ontology_stuff import build_onto_objects
+from relation_mapping import get_synonyms
 
 class ResultsObject:
 
@@ -22,6 +24,7 @@ def format_results(file):
 
     for line in file:
         line = line.strip()
+        line = line.replace('Stereotyped, Restricted, and Repetitive Behavior', 'Stereotyped Restricted and Repetitive Behavior')
         if line.startswith('PMCID:'):
             p, id = line.split(':')
             sfari_genes = defaultdict(list)
@@ -39,7 +42,9 @@ def format_results(file):
                         g, count = gene.split(": ")
                         g = re.sub("'", '' , g)
                         g = (g.strip()).upper()
-                        sfari_genes[g].append(int(count))
+                        if g not in ['MET', 'KIT', 'AN']:
+
+                            sfari_genes[g].append(int(count))
 
                 for gene, counts in sfari_genes.items():
                     if len(counts)>1:
@@ -55,7 +60,8 @@ def format_results(file):
                         g, count = gene.split(": ")
                         g = re.sub("'", '' , g)
                         g = (g.strip()).upper()
-                        non_sfari_genes[g].append(int(count))
+                        if g not in ['MET', 'KIT', 'AN']:
+                            non_sfari_genes[g].append(int(count))
 
                 for gene, counts in non_sfari_genes.items():
                     if len(counts) > 1:
@@ -69,9 +75,9 @@ def format_results(file):
                 for term in terms:
                     if term:
                         term = term.replace("(", '').replace(")", '')
-                        term, label = term.split(', "')
-                        term = term.replace("'", '')
+                        term, label = term.split(', ')
                         label = label.replace('"', '')
+                        term = term.replace("'", "")
                         asd_terms[label].append(term)
 
                 if id not in used:
@@ -154,33 +160,84 @@ def group_counts(result_list):
     }
 
     for k, v in second_level_group.items():
-        print(k, v)
+        print(k)
+        for v2 in v:
+            print('\t', v2)
 
 
 
-    # for result in result_list:
-    #
-    #     counts = defaultdict(list)
-    #
-    #     for label, terms in result.asd_terms.items():
-    #         print(label, terms)
-    #         for group, descendants in second_level_group.items():
-    #             if label in descendants:
-    #                 counts[group].extend(terms)
-    #
-    #     print(result.id, len(counts.values()))
-    #     print(counts)
-    #     print('\n')
+    for result in result_list:
+
+        counts = defaultdict(list)
+
+        for label, terms in result.asd_terms.items():
+            print(label, terms)
+            for group, descendants in second_level_group.items():
+                if label in descendants:
+                    counts[group].extend(terms)
+
+        print(result.id, len(counts.values()))
+        print(counts)
+        print('\n')
+
+
+def cluster_results(file):
+
+    num_clusters = 9
+
+    sfari_genes = [x.lower() for x in list(set(itertools.chain.from_iterable(get_synonyms().values())))]
+    results = []
+
+    for i in range(0, num_clusters):
+        terms = []
+        genes = []
+        asd = []
+        print(i)
+        for line in file:
+            if line.startswith("Cluster {} words:".format(i)):
+                line = line.replace("Cluster {} words:".format(i), "")
+                line = line.replace("Cluster 0 words:", "")
+                terms = line.strip().split(',')
+                terms = [term.replace("b'", "").replace("'", "").replace("_", ' ') for term in terms]
+                for term in terms:
+                    if term in sfari_genes and term != '':
+                        genes.append(term)
+                    else:
+                        asd.append(term)
+
+        result = (i, genes, asd)
+        results.append(result)
+
+
+    for r in results:
+        print(r)
+
+
+
+
 
 
 if __name__=='__main__':
 
-    results_file = open('files/system_output/gene_output.txt', 'r').readlines()
-
+    results_file = open('files/system_output/gene_output_full.txt', 'r').readlines()
     results = format_results(results_file)
-    gene_counts, paper_counts = gene_count(results)
-    gene_mentions = gene_paper_mentions(results)
-    group_counts(results)
+
+    gene_file = open('files/system_output/gene_output.txt', 'r').readlines()
+    pheno_file = open('files/system_output/pheno_output.txt', 'r').readlines()
+
+    gene_results = format_results(gene_file)
+    pheno_results = format_results(pheno_file)
+
+    cluster_file = open('files/stats/genes_9_clusters.txt', 'r').readlines()
+    cluster_results(cluster_file)
+
+    sfari_genes = get_geneinfo()
+
+
+
+    # gene_counts, paper_counts = gene_count(results)
+    # gene_mentions = gene_paper_mentions(results)
+    # group_counts(results)
 
     # sfari_genes = get_geneinfo()
     # for gene in sfari_genes:
