@@ -1,5 +1,6 @@
 from collections import defaultdict
 from Bio import Entrez
+from indexer import reload_corpus
 
 emailstring = 'heather_logan@live.co.uk'
 
@@ -19,8 +20,7 @@ def search_pub(query):
 
 def search_pmc(query):
     Entrez.email= emailstring
-
-    handle = Entrez.esearch(db='pmc', term=query,  retmax='12000',)
+    handle = Entrez.esearch(db='pmc', term=query,  retmax='120000',)
 
     results = Entrez.read(handle)
     return results
@@ -77,7 +77,7 @@ class Gene:
 
 def get_geneinfo():
 
-    file = open("files/SFARI_file.csv", 'r').readlines()
+    file = open("files/genes_etc/SFARI_file.csv", 'r').readlines()
 
     genes = []
 
@@ -199,20 +199,25 @@ def get_PMC_from_pubmed(query):
         for paper in r:
             p = paper['PubmedData']['ArticleIdList']
             for p2 in p:
+                year = 0
                 if p2.startswith("PMC"):
                     pubmed_ids.append(str(p2))
+                    for date in paper['PubmedData']['History']:
+                        if date.attributes['PubStatus'] == 'entrez':
+                            year = date['Year']
+                    print(str(p2), '\t', year)
 
     return pubmed_ids
 
 
 
-def makeurls(query):
+def makeurls(ids):
 
-    ids = get_PMC_from_pubmed(query)
-    urls = open('files/papers/pubmed_autism_pheno.txt', 'w')
+    # ids = get_PMC_from_pubmed(query)
+    urls = open('files/papers/asd_gene_urls_2.txt', 'w')
 
     for id in ids:
-        url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email={}".format(id,                                                                                                    emailstring)
+        url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id={}&tool=my_tool&email={}".format(id, emailstring)
         urls.write(url + "\n")
     urls.close()
 
@@ -251,7 +256,7 @@ def check_papers():
     gene_only = len(gene_papers) - in_both
     print(in_both, autism_only, gene_only)
 
-    file = open('files/all_pmcids.txt', 'w')
+    file = open('files/large_pmcids.txt', 'w')
 
     gene_papers.extend(autism_papers)
     all_papers = list(set(gene_papers))
@@ -261,10 +266,11 @@ def check_papers():
 if __name__=="__main__":
 
     query = '"Autistic Disorder/genetics"[Mesh] AND "loattrfree full text"[sb]'
+    query3 = '"autism spectrum disorder"[MeSH Terms] OR Autism Spectrum Disorder[Text Word] AND (social[text word] OR behaviour[text word] OR phenotype[text word]) AND "loattrfree full text"[sb]'
 
-    query2 = '("autistic disorder"[MeSH Terms] OR ("autistic"[All Fields] AND "disorder"[All Fields]) OR "autistic disorder"[All Fields] OR "autism"[All Fields]) AND ("genes"[MeSH Terms] OR "genes"[All Fields] OR "gene"[All Fields]) AND ("phenotype"[MeSH Terms] OR "phenotype"[All Fields]) AND "open access"[filter]'
+    query4 = '"autistic disorder"[MeSH Terms] O AND "loattrfull text"[sb]'
+    query5 = '("autism spectrum disorder"[MeSH Terms] OR ("autism"[All Fields] AND "spectrum"[All Fields] AND "disorder"[All Fields]) OR "autism spectrum disorder"[All Fields]) AND "open access"[filter]'
 
-    query3 = '"autism spectrum disorder"[MeSH Terms] OR Autism Spectrum Disorder[Text Word] AND ' \
-             '(social[text word] OR behaviour[text word] OR phenotype[text word]) AND "loattrfree full text"[sb]'
+    query6 = '"autism spectrum disorder"[MeSH Terms] AND (("genetics"[Subheading] OR "genetics"[All Fields] OR "genetics"[MeSH Terms]) OR ("genes"[MeSH Terms] OR "genes"[All Fields])) AND "open access"[filter]'
 
-    makeurls(query3)
+

@@ -3,6 +3,7 @@ from NER import *
 from relation_mapping import *
 from indexer import *
 import nltk
+from analyse import format_results
 
 
 def sort_final_mapping(mapping_list):
@@ -158,28 +159,23 @@ def main(text):
 
     # get basic relations - pass full text
 
-    print("\n****** SFARI Genes ******")
     if SFARI_genes:
         count_sfari = Counter(SFARI_genes)
-        write_file.write("SFARI Genes\n")
+        write_file.write("SFARI Genes: ")
         for gene, count in count_sfari.items():
-            write_file.write("\t{}: {}\n".format(gene, count))
-
-    print("\n****** Non SFARI Genes ******")
+            write_file.write("{}: {},".format(gene, count))
 
     if non_SFARI_genes:
         count_non_sfari = Counter(non_SFARI_genes)
-        write_file.write('NON-SFARI Genes\n')
+        write_file.write("\nNon SFARI Genes: ")
         for gene, count in count_non_sfari.items():
-            write_file.write("\t{}: {}\n".format(gene, count))
+            write_file.write("{}: {},".format(gene, count))
 
+    write_file.write('\nASD_Terms:')
+    for term in pheno_terms:
+        write_file.write('({}), '.format(term))
 
-    print("\n******Autism Terms ******")
-    write_file.write('Autism Terms\n')
-
-    for term, mapping in list(set(pheno_terms)):
-        write_file.write('\t{} - {}\n'.format(term, mapping))
-
+    write_file.write('\n')
     # text = ' '.join(relevant_sentences)
     # relations = re_main(text)
     # #
@@ -217,21 +213,23 @@ if __name__=="__main__":
     onto_terms = load_onto_terms()
     onto_objects = build_onto_objects()
 
-    write_file = open("files/system_output/abstract_output.txt", 'w')
-    file = open('files/papers/abstracts.txt').readlines()
+    file = open('files/papers/asd_gene_corpus.txt').readlines()
+    write_file = open("files/system_output/gene_output_2.txt", 'w')
 
+    papers = reload_corpus(file)
 
-    abs = reload_corpus(file)
+    results_file = open('files/system_output/gene_output.txt', 'r').readlines()
+    results = format_results(results_file)
+    downloaded_ids = [str(result.id) for result in results]
+
     count = 0
-    for paper in abs:
-        print("------------PMC{}------------\n".format(paper.id))
-        count += 1
-        write_file.write('\n\nPMCID:{}\n'.format(paper.id))
-        text = paper.abstract + paper.text
-        print(paper.abstract)
-        main(paper.abstract)
-        print("------------END PMC{}------------\n".format(paper.id))
+    for paper in papers:
+        if str(paper.id) not in downloaded_ids:
+            print(str(paper.id))
+            count += 1
+            write_file.write('\n\nPMCID:{}\n'.format(paper.id))
+            text = paper.abstract + paper.text
+            main(text)
 
-    print(count)
     write_file.close()
 

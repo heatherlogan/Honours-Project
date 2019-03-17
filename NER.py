@@ -120,7 +120,6 @@ def entity_extract(text, pattern):
                 fixed_named_ents[k2] = []
         else:
             fixed_named_ents[k] = v
-
     return fixed_named_ents
 
 
@@ -134,7 +133,8 @@ def meta_ner(entity):
     cs, error = mm.extract_concepts([entity], [1])
     semtypes_lst = []
     for c in cs:
-        semtypes_lst.append(c.semtypes)
+        if c.semtypes:
+            semtypes_lst.append(c.semtypes)
     return semtypes_lst
 
 
@@ -156,6 +156,7 @@ def is_gene(term):
 
     return is_similar
 
+
 def get_genes(text):
     text = nltk.word_tokenize(text)
 
@@ -165,6 +166,7 @@ def get_genes(text):
             detected_genes[t] = ['[gngm]']
 
     return detected_genes
+
 
 def get_non_sfari(text):
     text = nltk.word_tokenize(text)
@@ -284,8 +286,6 @@ def similar_gold(term):
 
 def annotate(text):
 
-    text = process_text(text)
-
     found_genes = [g.lower() for g in get_genes(text)]
     mutations = {}
     for mutation in mutation_search(text):
@@ -311,12 +311,20 @@ def annotate(text):
 
 def annotate_abstracts(filename):
     abstract_file = open('files/papers/{}'.format(filename), 'r').readlines()
+    write_file = open('files/NER_output.txt', 'w')
     abstracts = reload_corpus(abstract_file)
 
     for i, ab in enumerate(abstracts):
         print("*PMC{}*".format(ab.id))
+        write_file.write("\n\n*PMC{}*\n".format(ab.id))
         text = ab.abstract
-        annotate(text)
+        text = text.encode('ascii', 'ignore').decode('ascii')
+        entities = entity_extract(text, 'default')
+        entities = sorted(list(set(entities)))
+        for entity in entities:
+            annotation = annotate(entity)
+            # if entity in relevant groups
+            write_file.write("\t{}: {}\n".format(entity, annotation))
 
 
 hgnc = load_hgnc()
@@ -327,17 +335,5 @@ gold_annotations = load_gold_annotations()
 
 if __name__ == "__main__":
 
-    print(non_sfari)
-    # results = {}
-    #
-    #
-    # for relation in relations():
-    #     ent1, ent2 = relation[0], relation[2]
-    #     r1, r2 = annotate(relation[0]), annotate(relation[2])
-    #     results[ent1] = r1
-    #     results[ent2] = r2
-    #
-    # for e, res in results.items():
-    #     print(e, res)
-    #
-    # # annotate(text)
+    annotate_abstracts('abstracts.txt')
+

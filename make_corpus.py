@@ -60,7 +60,7 @@ def format_article(url):
 def build_corpus(url_file):
 
     urls = url_file.split('\n')
-    corp = open('files/papers/asd_pheno_corpus.txt', 'w')
+    corp = open('files/papers/asd_gene_corpus.txt', 'w')
 
     length = len(urls)
 
@@ -115,7 +115,7 @@ def find_name(id):
 
 if __name__=="__main__":
 
-    url_file = open('files/papers/pubmed_autism_pheno.txt', 'r').read()
+    url_file = open('files/papers/ .txt', 'r').read()
     build_corpus(url_file)
 
 

@@ -174,8 +174,8 @@ def build_index(article_objects):
 
 def clean_corpus(): #removes failed articles with no text
 
-    file = open('files/papers/asd_pheno_corpus.txt', 'r').readlines()
-    cleaned = open('files/papers/asd_pheno_corpus.txt', 'w')
+    file = open('files/papers/asd_gene_corpus.txt', 'r').readlines()
+    cleaned = open('files/papers/asd_gene_corpus.txt', 'w')
     articles = reload_corpus(file)
     failed_ids = []
     # build_index(articles)
