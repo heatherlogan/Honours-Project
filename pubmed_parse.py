@@ -1,6 +1,5 @@
 from collections import defaultdict
 from Bio import Entrez
-from indexer import reload_corpus
 
 emailstring = 'heather_logan@live.co.uk'
 
@@ -266,11 +265,8 @@ def check_papers():
 if __name__=="__main__":
 
     query = '"Autistic Disorder/genetics"[Mesh] AND "loattrfree full text"[sb]'
-    query3 = '"autism spectrum disorder"[MeSH Terms] OR Autism Spectrum Disorder[Text Word] AND (social[text word] OR behaviour[text word] OR phenotype[text word]) AND "loattrfree full text"[sb]'
-
-    query4 = '"autistic disorder"[MeSH Terms] O AND "loattrfull text"[sb]'
+    query3 = '"autism spectrum disorder"[MeSH Terms] AND (social[text word] OR behaviour[text word] OR phenotype[text word]) AND "loattrfree full text"[sb]'
     query5 = '("autism spectrum disorder"[MeSH Terms] OR ("autism"[All Fields] AND "spectrum"[All Fields] AND "disorder"[All Fields]) OR "autism spectrum disorder"[All Fields]) AND "open access"[filter]'
-
     query6 = '"autism spectrum disorder"[MeSH Terms] AND (("genetics"[Subheading] OR "genetics"[All Fields] OR "genetics"[MeSH Terms]) OR ("genes"[MeSH Terms] OR "genes"[All Fields])) AND "open access"[filter]'
 
 

@@ -2,13 +2,14 @@ import itertools
 from collections import defaultdict, Counter
 from nltk.parse.stanford import StanfordDependencyParser
 import nltk
-from pebble import concurrent
-
+from indexer import reload_corpus
+from analyse import format_results
 from NER import process_text, stopwords
-import signal
+from main import *
+from relation_mapping import get_synonyms
 
 class_path = "/Users/heatherlogan/Desktop/stanford-parser-full-2018-10-17/stanford-parser.jar"
-models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-02-27-models.jar"
+models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-10-05-models.jar"
 
 
 def format(combination, full_tree, node_lookup):
@@ -62,8 +63,12 @@ def sort_combinations(subjects, relations, effectors, full_tree, node_lookup):
             if effector != subject:
                 if negated(subject) or negated(effector) or negated(full_tree[0]):
                     relations.append('-1')
+
+            # check path between subject and effectee
             combined.append((subject, relations, effector))
     formatted = []
+
+
     for comb in combined:
         formatted.append(format(comb, full_tree, node_lookup))
 
@@ -92,8 +97,6 @@ def cleanoutput(output):
 
 
 def filteroutput(output):
-
-    remove_terms = ["we"]
 
     filtered_outputs = output.copy()
 
@@ -298,9 +301,6 @@ def build_paths(tree, full_tree, node_lookup ):
             else:
                 all_effectees.append(sorted(path_to_merge2([effectee], num_of_recursions)))
 
-    if not start_subj:
-        print('bope')
-
     output = sort_combinations(all_subjs, main_relation, all_effectees, full_tree, node_lookup)
 
     return output
@@ -376,25 +376,68 @@ def re_main(text):
             out = build_paths(tree, tree_triples, node_lookup)
             output_relations.append(out)
 
-    # dep.tree().draw()
     copyoutput = output_relations.copy()
     output = list(itertools.chain.from_iterable(copyoutput))
     filtered = filteroutput(output)
     cleaned = cleanoutput(filtered)
+
+    # dep.tree().draw()
+
     return cleaned
 
 
 if __name__=="__main__":
 
-    s = "An essential question in evolutionary biology is whether shifts in a set of polygenic behaviors " \
-        "share a genetic basis across species. " \
-        "Interestingly, these traits largely overlap with the core symptoms of human autism spectrum disorder , " \
-        "raising the possibility that these behavioral traits are underpinned by a similar set of genes . " \
-        "Result Here, we explored whether modification of Autism Spectrum Disorder-risk genes underlies cavefish evolution. " \
-        "Transcriptomic analyses revealed that > 58.5% of 3152 cavefish orthologs to Autism Spectrum Disorder-risk genes are significantly up- or down-regulated in the same direction as genes in postmortem brains from Autism Spectrum Disorder patients. Enrichment tests suggest that Autism Spectrum Disorder-risk gene orthologs in A. mexicanus have experienced more positive selection than other genes across the genome. Notably, these positively selected cavefish Autism Spectrum Disorder-risk genes are enriched for pathways involved in gut function, inflammatory diseases, and lipid/energy metabolism, similar to symptoms that frequently coexist in Autism Spectrum Disorder patients. Lastly, Autism Spectrum Disorder drugs mitigated cavefish’s Autism Spectrum Disorder-like behaviors, implying shared aspects of neural processing. Overall, our study indicates that Autism Spectrum Disorder-risk genes and associated pathways may be repeatedly used for shifts in polygenic behaviors across evolutionary time."
+    sentence_file = open('files/evaluation_files/relations_gene_onto.txt', 'r').readlines()
+    write_file = open('files/evaluation_files/re_output.txt', 'w')
 
-    output = re_main(process_text(s))
+    results = {}
 
-    print("OUTPUT")
-    for o in output:
-        print(o)
+    for line in sentence_file:
+        if not line.startswith('PMC') and line != '\n':
+            sentence = line.strip()
+            relations = re_main(sentence)
+            write_file.write("\nsentence: {}\n".format(sentence))
+            for relation in relations:
+
+                write_file.write("{}\n".format(relation))
+                print(relation)
+
+
+    write_file.close()
+
+
+    # gene_corpus_file = open('files/papers/asd_gene_corpus.txt', 'r').readlines()
+    # gene_corpus = reload_corpus(gene_corpus_file)
+    #
+    # pheno_corpus_file = open('files/papers/asd_pheno_corpus.txt', 'r').readlines()
+    # pheno_corpus = reload_corpus(pheno_corpus_file)
+    #
+    # corpus = list(set(gene_corpus + pheno_corpus))
+    #
+    # write_file = open('files/papers/sentences_for_relation_gene.txt', 'w')
+    #
+    #
+    # for i, paper in enumerate(gene_corpus):
+    #     sentence_list = []
+    #     if paper.abstract:
+    #         text = process_text(paper.abstract+ paper.text)
+    #         for sentence in nltk.sent_tokenize(text):
+    #             sentence = sentence.lower()
+    #             if len(sentence.split())<40:
+    #                 sfari = [k for k, v in get_sfari(sentence).items()]
+    #                 if len(sfari)>0:
+    #                     maps = main_main(sentence)
+    #                     if maps:
+    #                         print(sentence)
+    #                         sentence_list.append(sentence)
+    #
+    #     if len(sentence_list)>0:
+    #         sentence_list = list(set(sentence_list))
+    #         write_file.write("\nPMC{}:\n".format(paper.id))
+    #         for sentence in sentence_list:
+    #             write_file.write("{}\n".format(sentence))
+    #
+    # write_file.close()
+
+

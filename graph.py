@@ -1,15 +1,15 @@
 from py2neo import Graph, Node, Relationship, NodeMatcher
+from pubmed_parse import *
+import itertools
+from main import main_main
+from ontology_stuff import build_onto_objects
 
+from analyse import *
 
 def graph_relations(relations):
 
-    relations = [
-        (('Genes', '[heading]'), 'is_a', ('PMCID', '[paper]')),
-        (('SFARI Genes', '[heading]'), 'is_a', ('PMCID', '[paper]')),
-        (('ASD Phenotype', '[heading]'), 'is_a', ('PMCID', '[paper]')),
-        (('Mutations', '[heading]'), 'is_a', ('PMCID', '[paper]')) ] + relations
+    graph = Graph("http://localhost:7474/db/data/", user="neo4j", password="piggybank13")
 
-    graph = Graph()
     matcher = NodeMatcher(graph)
 
     all_terms = []
@@ -24,8 +24,8 @@ def graph_relations(relations):
         label, type = term[0], term[1]
 
         print(label, type)
-
-        graph.create(Node(type, name=label))
+        if label and type:
+            graph.create(Node(type, name=label))
 
     for t1, relation, t2 in relations:
         t1_label, t1_type = t1[0], t1[1]
@@ -37,108 +37,96 @@ def graph_relations(relations):
         print(i, rel)
         graph.create(rel)
 
+
+def get_obj(classno):
+    return next((x for x in onto_objects if x.classnum == classno), None)
+
+def get_descendants(obj):
+    return [get_obj(str(x).replace('asdpto.', '')).label for x in obj.descendants()]
+
+
+def get_group(tag):
+
+    out = ""
+
+    group_labels = {
+    'Comorbidities': get_descendants(get_obj('Class_365')) + ["'Comorbidities'"],
+    'Complaints and indications' :get_descendants(get_obj('Class_406')) + ["'Complaints and Indications'"],
+    'Diagnosis': get_descendants(get_obj('Class_97'))+ ["'Diagnosis'"],
+    'Exposures': get_descendants(get_obj('Class_148'))+ ["'Exposures'"],
+    'Perinatal History': get_descendants(get_obj('Class_385')) + ["'Perinatal History'"],
+    'Cognitive Abilties': get_descendants(get_obj('Class_158')) + ["'Cognitive Abilities'"],
+    'Emotional Traits': get_descendants(get_obj('Class_160')) + ["'Emotional Traits'"],
+    'Executive Function': get_descendants(get_obj('Class_155')) + ["'Executive Function'"],
+    'Language Ability': get_descendants(get_obj('Class_156')) + ["'Language Ability'"],
+    'Stereotyped, Restricted and Repetitive Behaviours': get_descendants(get_obj('Class_166')) + ["'Stereotyped, Restricted, and Repetitive Behavior'"],
+    'Adaptive Life Skills': get_descendants(get_obj('Class_538')) + ["'Adaptive Life Skills'"],
+    'Interpersonal Interactions': get_descendants(get_obj('Class_283')) + ["'Interpersonal Interactions'"],
+    'Recognition of Social Norms': get_descendants(get_obj('Class_66')) + ["'Recognition of Social Norms'"],
+    }
+
+    for label, descendants in group_labels.items():
+        if tag in [d.replace(" ", "_").replace("'", "").replace(",", '').lower() for d in descendants]:
+            out = label
+            break
+    return out
+
+
+
+def format_relations():
+
+    relations = []
+    syns = get_synonyms()
+
+    relation_file = open('files/system_output/final_re.txt', 'r').readlines()
+
+    for line in relation_file:
+        line = line.strip()
+        arg1_tag = ""
+        arg2_tag = ""
+        if line.startswith("("):
+            line2 = line.strip().replace(')', '').replace('(', '').replace("'", '')
+            arg1, rel, arg2 = line2.split(', ')
+            for gene, synonyms in syns.items():
+                for arg in arg1.split():
+                    if arg.upper() in synonyms:
+                        arg1 = gene
+                        arg1_tag = "Gene"
+                        break
+                for arg in arg2.split():
+                    if arg.upper() in synonyms:
+                        arg2 = gene
+                        arg2_tag = "Gene"
+                        break
+
+            if arg1_tag == "":
+                pheno_map = main_main(arg1)
+                if len(pheno_map)>0:
+                    arg1 = pheno_map[0][1]
+                    arg1_tag = get_group(arg1)
+            if arg2_tag == "":
+                pheno_map = main_main(arg2)
+                if len(pheno_map) > 0:
+                    arg2 = pheno_map[0][1]
+                    arg2_tag = get_group(arg2)
+
+        if arg1_tag != '' and arg2_tag != '':
+            relation = ((arg1, arg1_tag), rel.replace(' ', '_'), (arg2, arg2_tag))
+            relations.append(relation)
+
+    return relations
+
+
+onto_objects = build_onto_objects()
+
+
 if __name__ == "__main__":
 
-    relations_ex = [
-        ((('Genes', '[heading]')), 'is_a', ('PMCID', '[paper]')),
-        (('SFARI Genes', '[heading]'), 'is_a', ('PMCID', '[paper]')),
-        (('ASD Phenotype', '[heading]'), 'is_a', ('PMCID', '[paper]')),
-        (('Mutations', '[heading]'), 'is_a', ('PMCID', '[paper]')),
-        (('that', '[gngm]'), 'plays', ('a role in cellular proliferation', '[celf]')),
-        (('development of the axonal tract', '[celf]'), 'have been associated', ('with a non-progressive neurological disease', '[fndg]')),
-        (('several other genes', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (("'Autism Phenotype'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('that', '[gngm]'), 'plays', ('differentiation', '[celf]')),
-        (('Chd2', '[gngm]'), 'leads', ('impaired memory', '[mobd]')),
-        (('they', '[?]'), 'demonstrate', ('impaired perception of biological motion with motor control', '[menp]')),
-        (('SCN1A mutations', '[genf]'), 'is_a', ('SFARI Genes', '[heading]')),
-        (('UBE3A including GABRB3 GABRA5 GABRG3', '[ftcn]'), 'is_a', ('Genes', '[heading]')),
-        (('social behavior phenotype NKX2-1 mutations', '[genf]'), 'have been associated',
-         ('with a non-progressive neurological disease', '[fndg]')),
-        (('The IQSEC2 variant phenotype', '[orga]'), 'includes', ('developmental delay', '[mobd]')),
-        (('affected by attention-deficit/hyperactivity disorder', '[mobd]'), 'are associated',
-         ('with deletion involving 11p14 .1', '[genf]')),
-        (('adolescents', '[aggp]'), 'tend', ('childhood epilepsy', '[dsyn]')),
-        (('adolescents', '[aggp]'), 'tend', ('to show an increased risk of attention-deficit/hyperactivity disorder')),
-        (('which', '[gngm]'), 'encompasses', ('UBE3A including GABRB3 GABRA5 GABRG3', '[ftcn]')),
-        (('which', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (('which', '[gngm]'), 'encompasses', ('several other genes', '[gngm]')),
-        (('Cardiofaciocutaneous syndrome', '[cgab]'), 'are caused', ('by heterozygous germline mutations', '[genf]')),
-        (('Angelman syndrome', '[dsyn]'), 'caused', ('by either disruptions of the gene UBE3A of chromosome 15', '[celc]')),
-        (('IQSEC2 as a neurodevelopmental disability gene', '[gngm]'), 'is_a', ("'Learning Disorders'", '[pheno]')),
-        (('IQSEC2 as a neurodevelopmental disability gene', '[gngm]'), 'is_a', ('SFARI Genes', '[heading]')),
-        (('intellectual disability epilepsy hypotonia autism developmental regression', '[mobd]'), 'is_a',
-         ("'Learning Disorders'", '[pheno]')),
-        (("'Epilepsy'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('social behavior phenotype NKX2-1 mutations', '[genf]'), 'is_a', ('Mutations', '[heading]')),
-        (('with deletion involving 11p14 .1', '[genf]'), 'is_a', ('Mutations', '[heading]')),
-        (('Chd2', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (('to aberrant cortical network function', '[bpoc]'), 'is_a', ("'Tics and Mannerisms'", '[pheno]')),
-        (('Costello syndrome', '[dsyn]'), 'are caused', ('by heterozygous germline mutations', '[genf]')),
-        (('CDK5R1 gene', '[gngm]'), 'has been associated', ('with intellectual disability in humans', '[humn]')),
-        (('RASopathies including Noonan syndrome', '[cgab,dsyn]'), 'are caused', ('in genes', '[gngm]')),
-        (('The IQSEC2 variant phenotype', '[orga]'), 'includes', ('stereotypies', '[mobd]')),
-        (('by either disruptions of the gene UBE3A of chromosome 15', '[celc]'), 'is_a', ('SFARI Genes', '[heading]')),
-        (('Whole exome sequencing', '[mbrt]'), 'has established',
-         ('IQSEC2 as a neurodevelopmental disability gene', '[gngm]')),
-        (("'Affect'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('social behavior phenotype NKX2-1 mutations', '[genf]'), 'is_a', ('Genes', '[heading]')),
-        (('Angelman syndrome', '[dsyn]'), 'caused', ('deletion', '[genf]')),
-        (('intellectual disability epilepsy hypotonia autism developmental regression', '[mobd]'), 'is_a',
-         ("'Epilepsy'", '[pheno]')),
-        (('that', '[gngm]'), 'plays', ('survival', '[acty]')),
-        (('developmental delay', '[mobd]'), 'are associated', ('with deletion involving 11p14 .1', '[genf]')),
-        (('deletion', '[genf]'), 'is_a', ('Mutations', '[heading]')),
-        (('in genes', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (("'Neurologic Indications'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('Children with epilepsy', '[podg]'), 'tend',
-         ('affected by attention-deficit/hyperactivity disorder phenotype', '[mobd]')),
-        (('UBE3A including GABRB3 GABRA5 GABRG3', '[ftcn]'), 'is_a', ('SFARI Genes', '[heading]')),
-        (('cranial neural crest migration', '[bpoc]'), 'have been associated',
-         ('with a non-progressive neurological disease', '[fndg]')),
-        (('with intellectual disability in humans', '[humn]'), 'is_a', ("'Learning Disorders'", '[pheno]')),
-        (('that', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (('CDK5R1 gene', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (('with a non-progressive neurological disease', '[fndg]'), 'is_a', ("'Neurologic Indications'", '[pheno]')),
-        (('social behavior phenotype NKX2-1 mutations', '[genf]'), 'is_a', ("'Autism Phenotype'", '[pheno]')),
-        (('to aberrant cortical network function', '[bpoc]'), 'is_a', ("'Tourette Syndrome'", '[pheno]')),
-        (('they', '[?]'), 'demonstrate', ('problems', '[idcn]')),
-        (("'Tourette Syndrome'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('The IQSEC2 variant phenotype', '[orga]'), 'is_a', ('SFARI Genes', '[heading]')),
-        (('SCN1A mutations', '[genf]'), 'is_a', ('Mutations', '[heading]')),
-        (('RASopathies including Noonan syndrome', '[cgab,dsyn]'), 'are caused',
-         ('by heterozygous germline mutations', '[genf]')),
-        (('IQSEC2 as a neurodevelopmental disability gene', '[gngm]'), 'is_a', ('Genes', '[heading]')),
-        (('The IQSEC2 variant phenotype', '[orga]'), 'includes', ('microcephaly', '[cgab,dsyn]')),
-        (('Costello syndrome', '[dsyn]'), 'are caused', ('in genes', '[gngm]')),
-        (('The IQSEC2 variant phenotype', '[orga]'), 'includes',
-         ('intellectual disability epilepsy hypotonia autism developmental regression', '[mobd]')),
-        (('adolescents', '[aggp]'), 'tend', ('affected by attention-deficit/hyperactivity disorder phenotype', '[mobd]')),
-        (('Chd2', '[gngm]'), 'leads', ('to aberrant cortical network function', '[bpoc]')),
-        (('affected by attention-deficit/hyperactivity disorder phenotype', '[mobd]'), 'is_a', ("'Affect'", '[pheno]')),
-        (('to show an increased risk of affected by attention-deficit/hyperactivity disorder','[idcn]'), 'is_a', ("'Affect'", '[pheno]')),
-        (('The IQSEC2 variant phenotype', '[orga]'), 'is_a', ('Mutations', '[heading]')),
-        (("'Attention Deficit Disorder with Hyperactivity'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('developmental delay', '[mobd]'), 'is_a', ("'Learning Disorders'", '[pheno]')),
-        (('affected by attention-deficit/hyperactivity disorder', '[mobd]'), 'is_a', ("'Affect'", '[pheno]')),
-        (('Cardiofaciocutaneous syndrome', '[cgab]'), 'are caused', ('in genes', '[gngm]')),
-        (("'Learning Disorders'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('by heterozygous germline mutations', '[genf]'), 'is_a', ('Mutations', '[heading]')),
-        (('autism', '[mobd]'), 'are associated', ('with deletion involving 11p14 .1', '[genf]')),
-        (('obesity', '[dsyn]'), 'are associated', ('with deletion involving 11p14 .1', '[genf]')),
-        (('Whole exome sequencing', '[mbrt]'), 'is_a', ('Genes', '[heading]')),
-        (('affected by attention-deficit/hyperactivity disorder', '[mobd]'), 'is_a',
-         ("'Attention Deficit Disorder with Hyperactivity'", '[pheno]')),
-        (('SCN1A mutations', '[genf]'), 'cause', ('Dravet syndrome', '[dsyn]')),
-        (("'Cognitive Ability'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('SCN1A mutations', '[genf]'), 'cause', ('GEFS +', '[dsyn]')),
-        (('Children with epilepsy', '[podg]'), 'tend', ('to show an increased risk of affected by attention-deficit/hyperactivity disorder', '[idcn]')),
-        (('impaired perception of biological motion with motor control', '[menp]'), 'is_a',
-         ("'Cognitive Ability'", '[pheno]')),
-        (("'Tics and Mannerisms'", '[pheno]'), 'is_a', ('ASD Phenotype', '[heading]')),
-        (('Children with epilepsy', '[podg]'), 'tend', ('childhood epilepsy', '[dsyn]')),
-        (('by either disruptions of the gene UBE3A of chromosome 15', '[celc]'), 'is_a', ('Genes', '[heading]')),
-        (('Angelman syndrome', '[dsyn]'), 'caused', ('15q11-q13', '[celc]')),
-    ]
+    relations_ex = []
+    relations = format_relations()
+    full_relations = []
+    graph_relations(full_relations)
+    syns = get_synonyms()
+    sfari_genes = [x.upper() for x in list(itertools.chain.from_iterable((syns.values())))]
+    # graph_relations(relations)
 
-    graph_relations(relations_ex)

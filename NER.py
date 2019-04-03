@@ -9,11 +9,16 @@ from pymetamap import MetaMap
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from pubmed_parse import get_synonyms
-from indexer import reload_corpus
 
 mm = MetaMap.get_instance('/Users/heatherlogan/Desktop/public_mm/bin/metamap16')
 stopwords = list(set(stopwords.words('english')))
 lem = WordNetLemmatizer()
+
+ignore_semtypes = ["[drdd]", "[medd]", "[resd]", "[geoa]", "[enty]", "[food]", "[mnob]", "[phob]",
+                   "[bmod]", "[ocac]", "[ocdi]", "[prog]", "[clas]", "[cnce]",
+                   "[ftcn]", "[idcn]", "[ipro]", "[qlco]", "[gora]", "[rnlw]", "[spco]", "[tmco]",
+                   "[?]", "[inpr]"]
+
 
 
 def acronym_search(text):
@@ -133,8 +138,11 @@ def meta_ner(entity):
     cs, error = mm.extract_concepts([entity], [1])
     semtypes_lst = []
     for c in cs:
-        if c.semtypes:
-            semtypes_lst.append(c.semtypes)
+        try:
+            if c.semtypes:
+                semtypes_lst.append(c.semtypes)
+        except AttributeError:
+            pass
     return semtypes_lst
 
 
@@ -177,6 +185,7 @@ def get_non_sfari(text):
             detected_genes[t] = ['[gngm]']
 
     return detected_genes
+
 
 def get_sfari(text):
     text = nltk.word_tokenize(text)
@@ -254,7 +263,7 @@ def process_text(text):
 
 
 def load_gold_annotations():
-    file = open('files/gold_most_common_entities.txt', 'r').readlines()
+    file = open('files/autism_terms/gold_most_common_entities.txt', 'r').readlines()
     gold_annotations = {}
 
     for line in file:
@@ -291,41 +300,30 @@ def annotate(text):
     for mutation in mutation_search(text):
         mutations[mutation] = []
     id_entity = {}
-
     if any([k for k in mutations.keys() if k in text]):
         id_entity[text] = '[comd]'
     elif text in found_genes:
         id_entity[text] = '[gngm]'
     else:
+        for i, k in gold_annotations.items():
+            if i in text:
+                id_entity[text] = k
+                break
         semtypes = meta_ner(text)
         if len(semtypes) > 0:
-            id_entity[text] = semtypes[0]
-        elif is_gene(text):
-            id_entity[text] = '[gngm]'
-        else:
-            id_entity[text] = '[?]'
+            filtered_semtypes = []
+            for sem in semtypes:
+                if sem not in ignore_semtypes:
+                    filtered_semtypes.append(sem)
+            if len(filtered_semtypes)>0:
+                id_entity[text] = filtered_semtypes[0]
 
-    result = list(id_entity.values())[0]
+    result = list(id_entity.values())
+    if len(result)>0:
+        if result[0] not in ignore_semtypes and result[0] != None:
+            result = result[0]
+
     return result
-
-
-def annotate_abstracts(filename):
-    abstract_file = open('files/papers/{}'.format(filename), 'r').readlines()
-    write_file = open('files/NER_output.txt', 'w')
-    abstracts = reload_corpus(abstract_file)
-
-    for i, ab in enumerate(abstracts):
-        print("*PMC{}*".format(ab.id))
-        write_file.write("\n\n*PMC{}*\n".format(ab.id))
-        text = ab.abstract
-        text = text.encode('ascii', 'ignore').decode('ascii')
-        entities = entity_extract(text, 'default')
-        entities = sorted(list(set(entities)))
-        for entity in entities:
-            annotation = annotate(entity)
-            # if entity in relevant groups
-            write_file.write("\t{}: {}\n".format(entity, annotation))
-
 
 hgnc = load_hgnc()
 sfari = get_synonyms()
@@ -333,7 +331,17 @@ non_sfari = [x for x in list(hgnc.keys()) if x not in list(itertools.chain.from_
 
 gold_annotations = load_gold_annotations()
 
+def annotate_abs(text):
+    result = []
+    ents = entity_extract(text, 'default')
+    for ent in ents:
+        label = annotate(ent)
+        if label != None and label not in ignore_semtypes and label != '[]':
+            result.append((ent, label))
+    return result
+
 if __name__ == "__main__":
 
-    annotate_abstracts('abstracts.txt')
+    practice = "GABA3 has social difficulties and anxiety."
 
+    print(annotate_abs(practice))

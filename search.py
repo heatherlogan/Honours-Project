@@ -1,8 +1,7 @@
 import numpy as np
 from stemming.porter2 import stem
-from ontology_stuff import *
-from pubmed_parse import get_synonyms
-# delete?
+import re
+from graph import *
 
 def format_txt_file():
 
@@ -74,8 +73,10 @@ def rankedir_search(query):
     def tfidf(tf, df):
         return (1 + np.log10(tf)) * (np.log10(N/df))
 
+    def idf(df):
+        return np.log10(N / df)
+
     for term in query:
-        term = preprocess_term(term)
         positions = getpositions(term)
         docfreq = len(positions)
 
@@ -91,7 +92,22 @@ def rankedir_search(query):
                     tfidfs[doc] = newval
     return tfidfs
 
-# Query in list format, preprocesses
+def frequencies(term):
+    # gets list of positions for each term in the query and calculates tfidf score for each document
+    N = len(list(set(docnumbers)))
+
+    term = preprocess_term(term)
+    positions = getpositions(term)
+    docfreq = len(positions)
+
+    termfreqsum = 0
+    for position in positions:
+        for doc in position:
+            print(doc)
+            termfreqsum += len(position[doc])
+
+    return docfreq, termfreqsum
+
 
 def parsequery(query):
 
@@ -100,39 +116,65 @@ def parsequery(query):
     for doc, score in results_c.items():
         if score == 0.0:
             results.pop(doc)
-    results = (sorted(results.items(), key=lambda kv: kv[1], reverse=True))
-    # return results[:5]
-    print(results[:5])
 
+    results = sorted(results.items(), key=lambda kv: kv[1], reverse=True)
 
-def query_idx(query_file):
+    cutoff = 0.5
 
-    f = open('files/ontology_paper_results2.txt', 'w')
+    if len(results)>0:
+        max = results[0][1]
+        results_filtered = [(x,y) for (x,y) in results if y>max*cutoff]
 
-    for query in query_file[175:]:
-        query = query.split(': ')
-        classnum, query = query[0], query[1]
-        results = parsequery(query)
-        r = []
-        for id, score in results:
-            r.append(str(id))
-        strn = classnum + ": " + ','.join(r) + "\n"
-        print(strn)
-        f.write(strn)
-    f.close()
+    return results, results_filtered
 
 
 if __name__=='__main__':
-    indexed_file = open('files/index.txt', 'r').readlines()
+
+    indexed_file = open('files/indexer/annotated_index.txt', 'r').readlines()
     docnumbers = []
 
     inverted_index = format_txt_file()
 
-    q = "Cardiovascular Diseases. Pathological conditions involving the cardiovascular system including the heart, the blood vessels, or the pericardium."
-    query = preprocess_query(q)
 
-    parsequery(query)
+    querys = list(set([list(x.keys())[0] for x in inverted_index]))
 
-    # query_file = get_queries()
-    # query_idx(query_file)
+    counts_full = []
+    total = 0
+    counts_filtered = []
+    for query in querys:
+        res, res_filter = parsequery(query)
+        total += len(res)
+        print(query, len(res))
+
+    print(total)
+    #
+    #
+    # for tag, count1, count2 in counts_full:
+    #     tag2 = " ".join(x.capitalize() for x in tag.split("_"))
+    #     print("{},{},{},{}".format(tag2, get_group(tag), count1, count2))
+    #
+
+
+
+
+
+    # count_dict = {}
+
+    # write_file = open('files/stats/sfaricounts_gene_papers.csv', 'w')
+    # write_file.write("gene, score, syndromic, docs_appeared, number_mentions \n")
+    #
+    # for gene in sfari_genes:
+    #     syns = list(set(synonyms.get(gene.symbol)))
+    #     total_docs = 0
+    #     total_freq = 0
+    #     for syn in syns:
+    #         docfreq, termfreq = frequencies(syn)
+    #         total_docs += docfreq
+    #         total_freq += termfreq
+    #     write_file.write("{}, {}, {}, {}, {}\n".format(gene.symbol, gene.score, gene.syndromic, total_docs, total_freq))
+    #     print(gene.symbol, gene.score, gene.syndromic, total_docs, total_freq, list(set(synonyms.get(gene.symbol))))
+    #
+    # write_file.close()
+
+
 

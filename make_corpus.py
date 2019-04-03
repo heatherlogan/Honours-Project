@@ -115,7 +115,7 @@ def find_name(id):
 
 if __name__=="__main__":
 
-    url_file = open('files/papers/ .txt', 'r').read()
+    url_file = open('files/papers/asd_pheno_corpus.txt', 'r').read()
     build_corpus(url_file)
 
 

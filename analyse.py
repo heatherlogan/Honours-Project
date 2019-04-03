@@ -1,87 +1,81 @@
-import itertools
-import re
-import pandas
-import numpy
-from pubmed_parse import get_geneinfo
-from collections import defaultdict
+from collections import defaultdict, OrderedDict
+from indexer import *
 from ontology_stuff import build_onto_objects
 from relation_mapping import get_synonyms
 
+
 class ResultsObject:
 
-    def __init__(self, id, sfari, non_sfari, asd_terms):
-
+    def __init__(self, id, sfari, non_sfari, named_ents, asd_terms):
         self.id = id
         self.sfari = sfari
         self.non_sfari = non_sfari
+        self.named_ents = named_ents
         self.asd_terms = asd_terms
 
 
-def format_results(file):
 
+
+def format_results(file):
     results = []
     used = []
 
     for line in file:
         line = line.strip()
-        line = line.replace('Stereotyped, Restricted, and Repetitive Behavior', 'Stereotyped Restricted and Repetitive Behavior')
+        line = line.replace('Stereotyped, Restricted, and Repetitive Behavior',
+                            'Stereotyped Restricted and Repetitive Behavior')
         if line.startswith('PMCID:'):
             p, id = line.split(':')
-            sfari_genes = defaultdict(list)
-            non_sfari_genes = defaultdict(list)
+            sfari_genes = defaultdict(int)
+            non_sfari_genes = []
+            named_ents = defaultdict(list)
             asd_terms = defaultdict(list)
             final_sfari = {}
             final_non_sfari = {}
         elif not line == "\n":
-            if line.startswith('SFARI Genes:'):
-                line = line.replace('SFARI Genes:', '').replace('[', '').replace(']', '')
+            if line.startswith('SFARI Genes: '):
+                line = line.replace('SFARI Genes: ', '')
                 genes = line.strip().split(',')
                 for gene in genes:
-                    if gene:
-                        gene = re.sub("'", '', gene)
-                        g, count = gene.split(": ")
-                        g = re.sub("'", '' , g)
-                        g = (g.strip()).upper()
-                        if g not in ['MET', 'KIT', 'AN']:
-
-                            sfari_genes[g].append(int(count))
-
-                for gene, counts in sfari_genes.items():
-                    if len(counts)>1:
-                        final_sfari[gene] = sum(counts)
-                    else: final_sfari[gene] = counts[0]
+                    if ":" in gene:
+                        gene, count = gene.split(':')
+                        sfari_genes[gene.upper()] += int(count.strip())
 
             if line.startswith('Non SFARI Genes:'):
                 line = line.replace('Non SFARI Genes:', '').replace('[', '').replace(']', '')
                 genes = line.strip().split(',')
                 for gene in genes:
-                    if gene:
-                        gene = re.sub("'", '', gene)
-                        g, count = gene.split(": ")
-                        g = re.sub("'", '' , g)
-                        g = (g.strip()).upper()
-                        if g not in ['MET', 'KIT', 'AN']:
-                            non_sfari_genes[g].append(int(count))
+                    gene = gene.upper()
+                    non_sfari_genes.append(gene)
 
-                for gene, counts in non_sfari_genes.items():
-                    if len(counts) > 1:
-                        final_non_sfari[gene] = sum(counts)
-                    else:
-                        final_non_sfari[gene] = counts[0]
+            if line.startswith('Named Entities:'):
+                line = line.replace("Named Entities: ", '').strip()
+                terms = line.split('), (')
+                for term in terms:
+                    if '[]' not in term:
+                        try:
+                            term=term.replace("(", '').replace(")",'')
+                            ent, label = term.split(': [')
+                            label=label.replace(']', '')
+                            str = ""
+                            labels = label.split(',')
+                            for label in labels: str += "{} ".format(semtypes.get(label))
+                            named_ents[str].append(ent)
+                        except ValueError: pass
 
             if line.startswith('ASD_Terms:'):
                 line = line.replace('ASD_Terms:', '').replace('[', '').replace(']', '')
-                terms = line.strip().split(')), ')
+                terms = line.strip().split(')),')
                 for term in terms:
                     if term:
                         term = term.replace("(", '').replace(")", '')
                         term, label = term.split(', ')
                         label = label.replace('"', '')
                         term = term.replace("'", "")
-                        asd_terms[label].append(term)
+                        asd_terms[label.strip()].append(term.strip())
 
                 if id not in used:
-                    r = ResultsObject(id, final_sfari, final_non_sfari, asd_terms)
+                    r = ResultsObject(id, sfari_genes, non_sfari_genes, named_ents, asd_terms)
                     results.append(r)
                     used.append(id)
 
@@ -97,12 +91,11 @@ def format_results(file):
     return results
 
 
-
 def gene_count(result_list):
-
     gene_paper_counts = defaultdict(int)
     gene_mention_count = defaultdict(int)
     gene_score = []
+
 
     for result in result_list:
         for g, c in result.sfari.items():
@@ -113,7 +106,6 @@ def gene_count(result_list):
 
 
 def gene_paper_mentions(result_list):
-
     gene_paper = defaultdict(list)
 
     for result in result_list:
@@ -124,11 +116,7 @@ def gene_paper_mentions(result_list):
     return gene_paper
 
 
-
-
-
 def group_counts(result_list):
-
     onto_objects = build_onto_objects()
 
     def get_obj(classno):
@@ -138,52 +126,43 @@ def group_counts(result_list):
         return [get_obj(str(x).replace('asdpto.', '')).label for x in obj.descendants()]
 
     major_groups = {
-    'medical_group': get_descendants(get_obj('Class_154')) + ["'Medical History'"],
-    'personal_group': get_descendants(get_obj('Class_152')) + ["'Personal Traits"],
-    'social_group' : get_descendants(get_obj('Class_153')) + ["'Social Competence'"]
+        'medical_group': get_descendants(get_obj('Class_154')) + ["'Medical History'"],
+        'personal_group': get_descendants(get_obj('Class_152')) + ["'Personal Traits"],
+        'social_group': get_descendants(get_obj('Class_153')) + ["'Social Competence'"]
     }
 
     second_level_group = {
-    'comorbid_group': get_descendants(get_obj('Class_365')) + ["'Comorbidities'"],
-    'complaints_group' :get_descendants(get_obj('Class_406')) + ["'Complaints and Indications'"],
-    'diagnosis_group': get_descendants(get_obj('Class_97'))+ ["'Diagnosis'"],
-    'exposures_group': get_descendants(get_obj('Class_148'))+ ["'Exposures'"],
-    'perinatal_group': get_descendants(get_obj('Class_385')) + ["'Perinatal History'"],
-    'cognitive_group': get_descendants(get_obj('Class_158')) + ["'Cognitive Abilities'"],
-    'emotional_group': get_descendants(get_obj('Class_160')) + ["'Emotional Traits'"],
-    'executive_group': get_descendants(get_obj('Class_155')) + ["'Executive Function'"],
-    'language_group': get_descendants(get_obj('Class_156')) + ["'Language Ability'"],
-    'stereo_group': get_descendants(get_obj('Class_166')) + ["'Stereotyped, Restricted, and Repetitive Behavior'"],
-    'adaptive_life_group': get_descendants(get_obj('Class_538')) + ["'Adaptive Life Skills'"],
-    'interpersonal_group': get_descendants(get_obj('Class_283')) + ["'Interpersonal Interactions'"],
-    'social_norm_group': get_descendants(get_obj('Class_66')) + ["'Recognition of Social Norms'"],
+        'comorbid_group': get_descendants(get_obj('Class_365')) + ["'Comorbidities'"],
+        'complaints_group': get_descendants(get_obj('Class_406')) + ["'Complaints and Indications'"],
+        'diagnosis_group': get_descendants(get_obj('Class_97')) + ["'Diagnosis'"],
+        'exposures_group': get_descendants(get_obj('Class_148')) + ["'Exposures'"],
+        'perinatal_group': get_descendants(get_obj('Class_385')) + ["'Perinatal History'"],
+        'cognitive_group': get_descendants(get_obj('Class_158')) + ["'Cognitive Abilities'"],
+        'emotional_group': get_descendants(get_obj('Class_160')) + ["'Emotional Traits'"],
+        'executive_group': get_descendants(get_obj('Class_155')) + ["'Executive Function'"],
+        'language_group': get_descendants(get_obj('Class_156')) + ["'Language Ability'"],
+        'stereo_group': get_descendants(get_obj('Class_166')) + ["'Stereotyped, Restricted, and Repetitive Behavior'"],
+        'adaptive_life_group': get_descendants(get_obj('Class_538')) + ["'Adaptive Life Skills'"],
+        'interpersonal_group': get_descendants(get_obj('Class_283')) + ["'Interpersonal Interactions'"],
+        'social_norm_group': get_descendants(get_obj('Class_66')) + ["'Recognition of Social Norms'"],
     }
 
-    for k, v in second_level_group.items():
-        print(k)
-        for v2 in v:
-            print('\t', v2)
-
-
+    group_mentions = defaultdict(int)
 
     for result in result_list:
-
-        counts = defaultdict(list)
-
-        for label, terms in result.asd_terms.items():
-            print(label, terms)
+        for asd_term in result.asd_terms:
             for group, descendants in second_level_group.items():
-                if label in descendants:
-                    counts[group].extend(terms)
+                if asd_term in descendants:
+                    group_mentions[group] += 1
+                    break
 
-        print(result.id, len(counts.values()))
-        print(counts)
-        print('\n')
+    for group, count in group_mentions.items():
+        print("{},{}".format(group, count))
 
 
 def cluster_results(file):
 
-    num_clusters = 9
+    num_clusters = 3
 
     sfari_genes = [x.lower() for x in list(set(itertools.chain.from_iterable(get_synonyms().values())))]
     results = []
@@ -192,11 +171,10 @@ def cluster_results(file):
         terms = []
         genes = []
         asd = []
-        print(i)
+        papers = []
         for line in file:
             if line.startswith("Cluster {} words:".format(i)):
                 line = line.replace("Cluster {} words:".format(i), "")
-                line = line.replace("Cluster 0 words:", "")
                 terms = line.strip().split(',')
                 terms = [term.replace("b'", "").replace("'", "").replace("_", ' ') for term in terms]
                 for term in terms:
@@ -204,51 +182,41 @@ def cluster_results(file):
                         genes.append(term)
                     else:
                         asd.append(term)
+            if line.startswith("Cluster {} titles:".format(i)):
+                line = line.replace("Cluster {} titles:".format(i), "")
+                papers = line.strip().split(', ')
 
-        result = (i, genes, asd)
+            result = (i, genes, asd, papers)
         results.append(result)
 
-
-    for r in results:
-        print(r)
+    return results
 
 
+def cluster():
+
+    cluster_file = open('files/stats/clustering/3_annotated.txt', 'r').readlines()
+    res = cluster_results(cluster_file)
+
+    gene_file  = open("files/papers/asd_gene_corpus.txt", 'r').readlines()
+    pheno_file  = open("files/papers/asd_pheno_corpus.txt", 'r').readlines()
+
+    gene_papers = [str(paper.id) for paper in reload_corpus(gene_file)]
+    pheno_papers = [str(paper.id) for paper in reload_corpus(pheno_file)]
+
+
+    for cluster in res:
+        gene_percent = 0
+        pheno_percent = 0
+        overlap_percent = 0
+        papers = (cluster[3])
+        for paper in papers:
+            if paper in gene_papers and paper in pheno_papers: overlap_percent += 1
+            elif paper in gene_papers: gene_percent += 1
+            elif paper in pheno_papers: pheno_percent += 1
+        print(cluster[0], len(papers), gene_percent/len(papers), pheno_percent/len(papers), overlap_percent/len(papers))
+
+if __name__=="__main__":
 
 
 
-
-if __name__=='__main__':
-
-    results_file = open('files/system_output/gene_output_full.txt', 'r').readlines()
-    results = format_results(results_file)
-
-    gene_file = open('files/system_output/gene_output.txt', 'r').readlines()
-    pheno_file = open('files/system_output/pheno_output.txt', 'r').readlines()
-
-    gene_results = format_results(gene_file)
-    pheno_results = format_results(pheno_file)
-
-    cluster_file = open('files/stats/genes_9_clusters.txt', 'r').readlines()
-    cluster_results(cluster_file)
-
-    sfari_genes = get_geneinfo()
-
-
-
-    # gene_counts, paper_counts = gene_count(results)
-    # gene_mentions = gene_paper_mentions(results)
-    # group_counts(results)
-
-    # sfari_genes = get_geneinfo()
-    # for gene in sfari_genes:
-    #     if gene.symbol in gene_counts.keys():
-    #         c = gene_counts[gene.symbol]
-    #         p = paper_counts[gene.symbol]
-    #         mentions = gene_mentions[gene.symbol]
-    #     else:
-    #         c = 0
-    #         p = 0
-    #         mentions = []
-    #
-    #     print(gene.symbol, ',', gene.score, ',', gene.syndromic, ',', c, ',', p )
-
+    results = format_results()

@@ -5,6 +5,8 @@ from indexer import *
 import nltk
 from analyse import format_results
 
+onto_terms = load_onto_terms()
+onto_objects = build_onto_objects()
 
 def sort_final_mapping(mapping_list):
 
@@ -29,7 +31,14 @@ def sort_final_mapping(mapping_list):
         else:
             return mapping_list[0]
 
-def main(text):
+
+def main_main(text):
+
+    illness_syns = [stemmer.stem(x) for x in ['illness', 'disorder', 'disability', 'disease', 'infection', 'syndrome', 'virus' ]]
+    deficit_syns = [stemmer.stem(x) for x in ['atypicality', 'deficit', 'disability', 'dysfunction', 'delay', 'abnormality', 'complication', 'condition', 'problem',
+                    'impairment', 'malformation', 'issue', 'imbalanced', 'disturbance', 'difficulty', 'difficulties', 'differences', 'diagnosis', 'affliction', 'disabled']]
+    skills_syns = [stemmer.stem(x) for x in ['skills', 'proficiency', 'abilities', 'ability', 'capability', 'development',
+                                             'understanding', 'talent', 'comprehension', 'function', 'control']]
 
     SFARI_genes = []
     non_SFARI_genes = []
@@ -53,7 +62,7 @@ def main(text):
 
     for i, sentence in enumerate(sentences):
 
-        print('{:.3f}'.format((i/length)*100))
+        # print('{:.3f}'.format((i/length)*100))
 
         sentence = re.sub(r"[:;]", ',', sentence)
         mentioned_sfari = get_sfari(sentence)
@@ -157,50 +166,7 @@ def main(text):
                 pheno_terms.append((entity.strip(), final_mapping2))
                 if sentence not in relevant_sentences: relevant_sentences.append(sentence)
 
-    # get basic relations - pass full text
-
-    if SFARI_genes:
-        count_sfari = Counter(SFARI_genes)
-        write_file.write("SFARI Genes: ")
-        for gene, count in count_sfari.items():
-            write_file.write("{}: {},".format(gene, count))
-
-    if non_SFARI_genes:
-        count_non_sfari = Counter(non_SFARI_genes)
-        write_file.write("\nNon SFARI Genes: ")
-        for gene, count in count_non_sfari.items():
-            write_file.write("{}: {},".format(gene, count))
-
-    write_file.write('\nASD_Terms:')
-    for term in pheno_terms:
-        write_file.write('({}), '.format(term))
-
-    write_file.write('\n')
-    # text = ' '.join(relevant_sentences)
-    # relations = re_main(text)
-    # #
-    # print("\n\n******RELATIONS******")
-    # write_file.write('Relations\n')
-    # for relation in relations:
-    #     write_file.write("\t{}\n".format(relation))
-
-
-    # # mappings
-    # print('mapping')
-    # mappings = map_main(relations)
-    #
-    # Mapping
-    # print("\n\n******MAPPING******")
-    #
-    # for mapping in mappings:
-    #     print(mapping, ",")
-    #
-    # print("\n\n")
-    # # add to neo4j
-    #
-    # graph_relations(mappings)
-    #
-    # print("graphing done")
+    return SFARI_genes, non_SFARI_genes, pheno_terms
 
 if __name__=="__main__":
 
@@ -210,25 +176,10 @@ if __name__=="__main__":
     skills_syns = [stemmer.stem(x) for x in ['skills', 'proficiency', 'abilities', 'ability', 'capability', 'development',
                                              'understanding', 'talent', 'comprehension', 'function', 'control']]
 
-    onto_terms = load_onto_terms()
-    onto_objects = build_onto_objects()
+    pheno_terms = main_main("GABA3 has social difficulties and anxiety.")
 
-    file = open('files/papers/asd_gene_corpus.txt').readlines()
-    write_file = open("files/system_output/gene_output_3.txt", 'w')
 
-    papers = reload_corpus(file)
+    abstracts = open('files/papers/full_corpus.txt', 'r').readlines()
 
-    results_file = open('files/system_output/gene_output_full.txt', 'r').readlines()
-    results = format_results(results_file)
-    downloaded_ids = [str(result.id) for result in results]
-    count = 0
-    for paper in papers:
-        if str(paper.id) not in downloaded_ids:
-            pass
-            print(str(paper.id))
-            # count += 1
-            # write_file.write('\n\nPMCID:{}\n'.format(paper.id))
-            # text = paper.abstract + paper.text
-            # main(text)
-    write_file.close()
-
+    write_file = open('files/full_metamapped_corpus_2.txt', 'w')
+    abstracts = reload_corpus(abstracts)

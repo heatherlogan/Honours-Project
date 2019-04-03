@@ -1,6 +1,7 @@
 import re
 import itertools
 from nltk.corpus import stopwords
+from analyse import *
 
 stopwords = list(set(stopwords.words('english')))
 
@@ -24,6 +25,7 @@ def reload_corpus(file):
     start_end = list(zip(id_indexes, end_indexes))
     articles = []
     article_list = []
+    pmc_list = []
     count = 0
 
     for i in start_end:
@@ -83,8 +85,10 @@ def reload_corpus(file):
             if len(text) == 1:
                 count += 1
             else:
-                new_article = Article(int(id), headline, abstract, text.strip())
-                articles.append(new_article)
+                if id not in pmc_list:
+                    new_article = Article(int(id), headline, abstract, text.strip())
+                    articles.append(new_article)
+                    pmc_list.append(id)
 
     print("corpus loaded")
 
@@ -122,7 +126,7 @@ def build_index(article_objects):
 
         # Remove docs > 20000 long as they were taking to long to index
 
-        if len(processed_text) < 20000:
+        if len(processed_text) < 30000:
 
             for word in processed_text:
                 word_occurrences = {}
@@ -149,7 +153,7 @@ def build_index(article_objects):
 
     # Format and save to index file
 
-    f = open('files/index.txt', 'w')
+    f = open('files/indexer/annotated_index.txt', 'w')
 
     for word, positions in inv_index:
         string_word = "{}:\n".format(''.join(word))
@@ -165,12 +169,6 @@ def build_index(article_objects):
 
     print("indexing complete\n")
     f.close()
-
-    f2 = open('files/ignored_articles.txt', 'w')
-
-    for article in ignored_articles:
-        f2.write("{}: {}" .format(article.id, article.headline))
-    f2.close()
 
 def clean_corpus(): #removes failed articles with no text
 
@@ -204,8 +202,24 @@ def clean_corpus(): #removes failed articles with no text
 
     print(failed_ids)
 
+
+def temp_corpus():
+
+    items = []
+    results = format_results(file)
+
+    for r in results:
+        text = ""
+        for term, list in r.asd_terms.items():
+            term = term.lower().replace('\'', '').replace("-", "_").replace("'", '').replace(" ", "_")
+            text += "{} ".format(term) * len(list)
+        items.append(Article(r.id, "", "", text))
+
+    return items
+
 if __name__=="__main__":
 
-    # clean_corpus()
+    file = open('files/system_output/full_corpus_output.txt', 'r').readlines()
 
-     clean_corpus()
+    file2 = open('files/indexer/annotated_index.txt', 'r').readlines()
+
