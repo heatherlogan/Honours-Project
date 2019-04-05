@@ -1,0 +1,1991 @@
+Class_301: 'Autism Phenotype'
+asd phenotype
+asd behaviour
+asd-like behavior
+autism
+
+Class_154: Medical History
+medical history
+autism etiology
+patients background
+background health
+
+
+Class_152: Personal Traits
+personal traits
+personal characteristics
+personal qualities
+behavioural traits
+behaviour *d
+behaviour *d
+behavior *d
+
+Class_153: 'Social Competence'
+social competence
+social behaviour
+social behavior
+function social
+social situation
+social competent
+social challenges
+social *d
+social *s
+
+
+Class_634: 'Obstetric Delivery Procedures'
+obstetrician
+childbirth
+midwife
+
+
+Class_385: 'Perinatal History'
+gestation
+perinatal
+delivery
+birth complications
+delivery complications
+infancy
+offspring
+
+
+Class_464: 'Attention Deficit Disorder with Hyperactivity'
+attention deficit disorder
+adhd
+inattention
+attention deficit disorder with hyperactivity
+attention-deficit/hyperactivity disorder
+attention *i
+hyperactivity *i
+
+
+Class_455: 'Mental Disorders'
+psychiatric *i
+psychiatric *d
+mental *i
+
+
+Class_689: 'Psychiatric Hospitalization'
+psychiatric institution
+psychiatric hospital
+mental hospital
+mental institution
+
+
+Class_138: 'Psychologic Indications'
+atypical thoughts
+atypical feelings
+atypical behaviours
+psychologic indications
+
+
+Class_777: 'Pervasive Child Development Disorders'
+pervasive child development disorder
+child development disorder
+pcdd
+cdd
+
+
+Class_163: 'Primary Diagnosis'
+primary diagnosis
+initial diagnosis
+
+
+Class_424: 'Herpesviridae Infections'
+herpesviridae
+herpes
+
+
+
+Class_422: 'Virus Diseases'
+viral *i
+virus *i
+
+
+Class_376: 'Autoimmune Diseases'
+autoimmune *i
+autoimmmune *d
+immunilogical *d 
+
+
+Class_365: 'Comorbidities'
+comorbidities
+co-existing *i
+additional disease
+comorbidity
+
+
+
+Class_212: 'Respiratory Indications'
+respiratory *d
+respiratory *i
+
+
+Class_406: 'Complaints and Indications'
+symptom autism
+symptom asd
+symptom autistic
+complaints asd
+complaints autistic
+complaints autism
+
+
+Class_386: 'Perinatal Exposures'
+perinatal
+perinatal exposure
+development of fetus
+development of infant
+
+
+Class_112: 'Phenylketonurias'
+phenylketonuria
+pku
+phenylalanine hydroxylase
+dihydropteridine reductase
+atypical phenylketonuria
+
+
+
+Class_517: 'Central Nervous System Diseases'
+central nervous system *i
+cns *i
+brain disease *i
+spinal cord *i
+neurobehavior
+neurobehavioral
+
+
+
+Class_35: 'Body Temperature Changes'
+body temperature
+body temp
+body temp change
+body temperature change
+
+
+
+Class_737: 'Smoking'
+smoking
+smoker
+tobacco
+cigarettes
+
+
+Class_384: 'Substance Abuse'
+substance abuse
+amphetamine
+drug abuse
+cocaine
+heroin
+marijuana
+
+
+Class_387: 'Gastroesophageal Reflux'
+gastroesophageal reflux
+esophageal reflux
+gastric juice
+
+Class_527: 'Gastrointestinal Diseases'
+gastrointestinal *i
+gastrointestinal tract
+oesophagus *i
+
+
+Class_437: 'Mumps'
+mumps
+rubulavirus
+mumps *i
+
+
+
+Class_466: 'Asperger Syndrome
+aspergers
+
+
+Class_522: 'Newborn Exposures'
+newborn exposures
+
+
+
+Class_549: 'Pregnancy Complications'
+pregnancy *d
+
+
+
+Class_734: 'Alcohol Drinking'
+alcohol
+alcoholic
+alcohol drinking
+alcohol abuse
+
+
+Class_394: 'Thyroid Diseases'
+thyroid *d
+thyroid *i
+
+
+Class_393: 'Endocrine System Diseases'
+endocrine glands
+endocrine *i
+hormone *d
+
+
+Class_494: 'Neurodegenerative Diseases'
+neurodegenerative *i
+neurodegenerative *d
+
+
+Class_216: 'Nervous System Diseases'
+nervous system *d
+nervous system *i
+central nervous system *d
+peripheral nervous system *i
+
+
+Class_523: 'Migraine Disorders'
+migraine
+headache
+migraine *d
+headache *d
+
+Class_86: 'Dietary Restrictions'
+diet
+dietary restriction
+
+Class_148: 'Exposures'
+exposures
+
+
+Class_389: 'Allergies'
+allergy
+allergic
+allergic reaction
+antigen
+pathologic reactions
+
+
+Class_638: 'Labor Presentation'
+labor presentation
+position of fetus
+orientation of fetus
+
+Class_97: 'Diagnosis'
+diagnosis
+
+
+Class_685: 'Muscle Weakness'
+muscle weakness
+muscle debility
+muscle fatigue
+muscle exhaustion
+muscle strength
+
+
+Class_665: 'Neurologic Indications'
+neurologic
+neurological *d
+neurologic symptoms
+neurologic *d
+nervous system *d
+
+
+Class_460: 'Post-Traumatic Stress Disorders'
+post-traumatic stress
+post traumatic stress
+post traumatic stress *i
+post traumatic stress *d
+traumatic
+trauma
+stress disorder
+flashbacks
+ptsd
+
+
+Class_457: 'Anxiety Disorders'
+anxiety
+anxiety *i
+anxiety *d
+anxious
+
+
+Class_142: 'Congenital Heart Defects'
+congenial heart *d
+heart *d
+chd
+
+Class_516: 'Congenital Abnormalities'
+congenital *i
+congenital *d
+
+
+Class_103: 'Strange or Illogical Ideas'
+strange ideas
+illogical ideas
+strange thoughts
+unusual ideas
+unusual thoughts
+illogical thoughts
+abnormal thoughts
+abnormal ideas
+nonsensical thoughts
+nonsensical ideas
+
+
+Class_454: 'Rett Syndrome'
+rett
+retts
+rett *i
+
+
+Class_38: 'Metabolic Indications'
+metabolism *i 
+metabolism *d
+metabolic *i
+metabolic *d
+
+
+Class_742: 'Sexual Issues'
+sexual issues
+sexual *d
+
+
+Class_7: 'Substance Abuse During Pregnancy'
+abuse pregnancy
+drugs pregnancy
+drugs fetus
+substance abuse pregnancy
+substance fetus
+pregnancy cocaine
+pregnant heroin
+
+
+
+Class_782: 'Schizophrenia and Disorders with Psychotic Features'
+schizophrenia
+schizophrenic
+psychotic disorder
+delusions
+hallucinations
+psychotic behaviour
+psychotic delusions
+psychotic thoughts
+thought *i
+
+Class_413: 'Tourette Syndrome'
+tourettes
+tics
+swear
+tourette syndrome
+spasms
+
+
+Class_392: 'Asthma'
+asthma
+asthmatic
+bronchial *i
+
+
+Class_433: 'Rubella'
+rubella
+rubella *i
+
+
+Class_308: 'Fragile X Syndrome'
+fmr
+fragile x
+fragile x *i
+fraxa
+fraxe
+
+
+
+Class_452: 'Mental Retardation'
+mental retardation
+mentally retarded
+impared intellectual function
+intellectual function
+mental *d
+retardation
+
+
+
+Class_102: 'Suspicious of Others'
+suspicion
+suspicious
+
+
+Class_700: 'Complications in Infancy'
+infant abnormal
+infant complication
+infant problem
+
+
+Class_180: 'Onset of Symptoms'
+onset
+onset symptoms
+age onset
+age years
+age symptoms
+
+
+
+Class_111: 'Abnormal Activity or Energy Level'
+activity level
+energy level
+abnormal energy
+energetic
+hyperactive
+
+
+Class_442: 'Bacterial Infections'
+bacteria
+bacterial
+bacterial infection
+
+
+
+Class_378: 'Ulcerative Colitis'
+colon *i
+colon *d
+ulcerative colitis
+colon inflammation
+mucosa
+
+
+
+Class_372: 'Inflammatory Bowel Diseases'
+bowl *i
+bowl inflammation
+inflammatory bowel
+inflammatory bowel *i
+gastrointestinal inflammation
+
+
+Class_677: 'Pain'
+pain
+hurt
+discomfort
+
+
+Class_130: 'Smith-Lemli-Opitz Syndrome'
+smith lemli opitz
+smith-lemli-opitz *i
+
+
+Class_181: 'Down Syndrome'
+down syndrome
+extra chromosome
+chromosome *i
+downs syndrome
+trisonmy
+
+
+Class_471: 'Depressive Disorder'
+depressive
+despressive *i
+depression
+suicide
+low mood
+loss of interest
+loss of pleasure
+
+
+Class_468: 'Mood Disorders'
+mood *i
+disturbance mood
+
+
+Class_508: 'Childhood Disintegrative Disorder'
+childhood disintigrative *i
+functioning regression
+development regression
+CDD
+
+
+Class_120: 'Cri-du-Chat Syndrome'
+cri-du-chat
+cri-du-chat *i
+chromosome 5p deletion
+
+
+Class_100: 'Vaccination'
+vaccinate
+vaccines
+vaccination
+vaccine
+immunise
+
+
+Class_421: 'Stomach Ulcer'
+stomach ulcer
+stomach ulceration
+gastic ulcer
+mucosa ulcer
+
+
+Class_131: 'Cranial Nerve Diseases'
+cranial nerve
+cranial nerve *i
+cranial *i
+brain stem *i
+
+
+Class_470: 'Bipolar Disorder'
+major affective disorder
+mood swings
+manic depressive
+depressive episodes
+bipolar
+bipolar disorder
+
+
+Class_682: 'Skin Indications'
+dermatologic *d
+skin *d
+eczema
+psorisis
+
+
+Class_5: 'Medications During Pregnancy'
+medication pregnancy
+pregnant medicine
+fetus medication
+fetus medication
+
+
+Class_171: 'Congenital Kidney Defect'
+congential kidney *d
+kidney *d
+congenital kidney
+
+
+Class_175: 'Lead Exposure'
+lead exposure
+lead poison
+
+
+
+Class_629: 'Dietary Supplements'
+vitamin
+mineral
+supplement
+dietary supplement
+
+
+Class_331: 'Procedures During Pregnancy'
+pregnant procedure
+pregnancy procedure
+pregnant surgery
+pregnant hospitalise
+
+
+Class_500: 'Prader-Willi Syndrome'
+prader-willi
+prader willi
+prader willi syndrome
+
+
+Class_519: 'Epilepsy'
+epilepsy
+epileptic
+
+
+Class_458: 'Obsessive-Compulsive Disorder'
+obsessive-compulsive disorder
+obsessive disorder
+obsessive compulsive
+compulsions
+obsessions
+ocd
+
+
+Class_206: 'Sleeping Problems'
+sleep pattern
+sleeping *d
+sleep problems
+sleep disturbance
+sleepless
+
+
+Class_656: 'Drug Abuse'
+drug abuse
+cocaine
+heroin
+
+
+Class_217: 'Overactivity'
+overactive
+overactivity
+abnormal activity level
+hyperactive
+
+
+Class_487: 'Ear Diseases'
+ear disease
+
+
+Class_601: 'Obstetric Delivery Complications'
+delivery complication
+obstetric complication
+childbirth complication
+labor complication
+birth complication
+
+Class_502: 'Angelman Syndrome'
+angelman
+angelman *i
+
+
+Class_276: 'Pica'
+pica
+
+
+Class_741: 'Hearing Loss'
+hearing loss
+deaf
+deafness
+partial hear loss
+
+Class_63: 'Urogenital Diseases'
+urogenital *i
+genitourinary
+reproductive *i
+reproductive *d
+genital *d
+genital *d
+
+
+Class_261: 'Pregnancy Outcome'
+pregnancy outcome
+
+
+Class_716: 'Learning Disorders'
+neurodevelopmental
+learning disorder
+learning *d
+intellectual *i
+intellectual *d
+learning difficulty
+development *d
+developmental *d
+
+
+
+Class_488: 'Otitis'
+otitis
+ear inflammation
+ear inflam
+ear pain
+
+
+Class_381: 'Celiac Disease'
+celiac
+celiac *i
+gluten intolerance
+
+
+Class_172: 'Head Injury'
+head injury
+brain injury
+head trauma
+brain trauma
+cranium injury
+
+
+Class_256: 'Lethargy'
+leathargy
+tiredness
+slugishness
+listeless
+sleepy
+
+
+Class_503: 'Hydrocephalus'
+hydrocephalus
+cerebrospinal fluid
+
+
+Class_524: 'Seizures'
+siezure
+siezures
+
+
+Class_10: 'Hospitalizations'
+inpatient
+hospitalization
+
+
+Class_467: 'Autistic Disorder'
+autistic disorder
+
+
+Class_178: 'Cardiovascular Diseases'
+cardiovascular disease
+cardiovascular
+heart disease
+blood vessel disease
+pericardium disease
+cardiac *d
+
+
+Class_373: 'Crohn Disease'
+crohns
+crohns *i
+colon *i
+
+
+Class_496: 'Tuberous Sclerosis'
+phacomatosis
+tuberous
+tuberous sclerosis
+glial cell tumours
+rhabdomyomas
+angiomyolipomas
+benign tumours
+
+
+Class_137: 'Congenital Rubella Syndrome'
+congenial rubella
+congenital rubella *i
+
+
+
+Class_505: 'Cerebral Palsy'
+cereberal palsy
+
+
+Class_407: 'Digestive Complaints'
+digestive complaints
+digestive syndrome
+digestion complaint
+
+
+Class_449: 'Landau-Kleffner Syndrome'
+landau kleffner
+landau kleffner *i
+
+
+Class_128: 'Apgar Score'
+apgar score
+apgar
+
+
+Class_585: 'Medications'
+medication
+
+
+Class_497: 'Neurofibromatoses'
+neurofibromatoses
+neurofibromas
+neurilemmomas
+
+
+Class_506: 'Systemic Lupus Erythematosus'
+lupus
+sustemic lupus
+systemic lupus erythematosus
+
+
+Class_398: 'Diabetes Mellitus Type 1'
+diabetes
+miabetes mellitus
+type diabetes
+
+
+Class_429: 'Irritable Bowel Syndrome'
+irritable bowel *i
+IBS
+bowel *i
+irritable bowel
+
+
+Class_34: 'Gross Motor Skills'
+gross motor skills
+large muscle groups
+arm movement
+leg movement
+feet movement
+body movement
+
+
+Class_753: 'Motor Skills'
+complex motor acts
+muscle movement
+motor function
+motor *d
+coordination
+
+
+Class_166: 'Stereotyped, Restricted, and Repetitive Behavior'
+stereotyped behaviour
+restricted behaviour
+repetitive behaviour
+stereotyped behavior
+restricted behavior
+repetitive behavior
+repetitively behave
+stereotyped behavior
+restricted behavior
+repetitive behavior
+stereotyped interests
+stereotyped behave
+restricted interests
+repetitive interests
+stereotyped interests
+restricted interests
+repetitive interests
+stereotyped movements
+restricted movements
+repetitive movements
+stereotypical
+
+Class_324: 'Receptive Phonology'
+receptive phonology
+recognize sounds
+understand sounds
+
+
+Class_176: 'Receptive Language'
+receptive language
+recognize language
+understand languange
+reading *s
+writing *s
+written *s
+
+
+Class_156: 'Language Ability'
+language impairment
+language comprehension
+language impairment
+language *d
+language *s
+speech
+
+Class_357: 'Use of Free Time'
+free time
+recreational
+leisure
+
+
+Class_30: 'Planning'
+planning
+sequence of actions
+
+
+
+Class_126: 'Immoderate Behavior'
+silliness
+laughing
+loudness
+inability to control behaviour
+immoderate behavior
+
+
+Class_110: 'Impulse Control and Regulation'
+impulse control
+impulse regulation
+resist impulse
+urges
+
+
+Class_84: 'Depression'
+depressive
+sadness
+depression
+depressed
+unhappiness
+
+
+Class_245: 'Mood'
+mood
+state of mind
+
+
+Class_164: 'Numeracy'
+numeracy
+maths *s
+mathematics *s
+numeracy *s
+nememracy *s
+counting *s
+ordering *s
+telling time
+
+
+Class_165: 'Analytic Capability'
+analytic *s
+reasoning *s
+
+
+
+Class_368: 'Flexibility in Problem Solving'
+problem solving flexibility
+
+
+
+Class_529: 'Mental Flexibility'
+mental flexibility
+shift thought
+change actions
+act accordingly
+
+
+Class_125: 'Reaction to Unexpected Change'
+reaction to change
+reaction unexpected change
+react change
+react situation
+
+
+
+Class_6: 'Restricted and Repetitive Behavior'
+restricted behavior
+repetitive behaviour
+unsusual behavior
+atypical behavior
+unusual movements
+atypical movements
+behave repetitively
+
+
+Class_158: 'Cognitive Ability'
+cognitive *s
+cognitive *d
+cognitive profile
+cognition
+neurocognitive
+mental function
+cognitive function
+cognitive development
+perception
+
+
+Class_22: 'Idiosyncratic and Routinized Speech'
+unusual speech
+speech *d
+formulaic speech
+idiosyncratic speech
+routinized speech
+atypical speech
+
+
+Class_32: 'Fine Motor Skills'
+fine motor *s
+fine moto
+hand movement
+wrist movement
+finger movement
+feet movement
+toes movement
+lip movement
+tongue movement
+hand use
+foot use
+
+
+Class_249: 'Awareness and Avoidance of Danger'
+awareness danger
+avoid danger
+awareness hazard
+avoid hazard
+avoid risk
+
+
+Class_155: 'Executive Function'
+executive function
+complex behavior
+goal-directed thought
+goal thought
+
+
+
+Class_123: 'Unusual Sensory Interests'
+unusual sensory interests
+sensory interest
+atypical interest
+flashing lights
+interest textures
+interest sound
+interest stimuli
+
+
+Class_235: 'Restricted and Unusual Interests'
+restricted interest
+unusual interest
+specific interest
+
+
+Class_58: 'Self-Injurious Behavior'
+self-injury
+self harm
+self hurt
+injure self
+
+
+Class_162: 'Emotional Regulation and Control'
+emotional regulation
+emotion control
+direct emotion
+emotion management
+
+
+Class_8: 'Reasoning'
+reasoning *s
+logical thinking
+logical *s
+
+
+Class_43: 'Tics and Mannerisms'
+tics
+
+
+Class_168: 'Involuntary Behaviors'
+involuntary behaviour
+non-intentional behaviour
+involuntary behavior
+non-intentional behavior
+perseveration
+habitual repeated movements
+
+
+Class_328: 'Intense Interests'
+intense interests
+strong interest
+
+
+Class_183: 'Task Completion'
+task completion
+task complete
+
+
+Class_293: 'Task Performance'
+task performance
+initiate task
+organize task
+
+
+Class_45: 'Regression of Language Skills'
+language regression
+loss language *s
+reduction language *s
+
+
+Class_189: 'Development or Regression of Language Skills'
+language regression
+language *s
+
+
+Class_18: 'Integrated Verbal and NonVerbal Communication'
+verbal and nonverbal integrate
+gestures
+facial expression
+face processing
+facial processing
+
+
+Class_88: 'Visual Thinking'
+visual thinking
+visualizing
+
+
+
+Class_11: 'Abstract Thinking'
+abstract thinking
+create ideas
+imagination
+
+
+Class_329: 'Showing Emotion'
+emotion display
+show emotion
+
+
+Class_140: 'Affect'
+facial gestures
+body language
+body gestures
+
+
+Class_39: 'Imagination'
+imagination
+imagine
+
+
+Class_160: 'Emotional Traits'
+emotional traits
+emotional aspects
+
+
+Class_724: 'Functional Laterality'
+functional laterality
+preferred use side
+dexterity
+preferred arm
+preferred foot
+
+
+Class_17: 'Language Development'
+language development
+language development *s
+language improvement
+
+
+Class_307: 'Expressive Phonology'
+expressive phonology
+produce sounds
+follow sound patterns
+
+
+Class_177: 'Expressive Language'
+expressive language
+expressive language
+use of language
+produce language
+meaningful language
+
+
+Class_121: 'Emotional Outbursts'
+emotional outburst
+display of emotion
+emotion reaction
+tantrum
+
+
+
+Class_96: 'Control of Emotional Reactions'
+emotion control
+emotion reaction control
+reaction control
+
+
+Class_226: 'Form Perception'
+form perception
+sensory perception
+sensory discrimination
+pattern perception
+shape perception
+
+
+Class_755: 'Visual Perception'
+visual perception
+discriminating shape
+discriminating size
+discriminating color
+visual perceptual
+visual skills
+emotion perception
+
+
+Class_75: 'Prosody'
+prosody
+produce rhythm
+rhythm
+intonation
+
+
+Class_279: 'Vocalizations'
+'Speech-like and non-speech sounds.'
+vocalization
+speech sounds
+non-speech sounds
+
+
+Class_57: 'Reaction to Sensory Stimuli'
+reaction stimuli
+sensory reaction
+sensory response
+stimuli reaction
+react light
+react smell
+react textures
+react noise
+sensory *d
+
+Class_47: 'Adherence to Rituals and Routines'
+adhere routines
+keep routine
+follow routine
+adhere rituals
+
+
+Class_9: 'Understanding Logical Progression'
+logical progression
+understand connection
+logical connection
+understand sequence
+logical sequence
+
+
+Class_161: 'Pattern Recognition and Rendering'
+pattern recognition
+pattern rendering
+analysis stimuli
+vision pattern
+touch pattern
+produce pattern
+process pattern
+
+
+Class_27: 'Anxiety'
+anxiety
+anxious
+panic attack
+unreasonable phobia
+
+
+Class_239: 'Insistence on Order'
+order insistence
+sorting insistence
+order objects
+
+
+Class_327: 'Restricted Range of Interests'
+restricted interest
+
+
+Class_132: 'Self Concept'
+self concept
+confidence abilities
+self confidence
+confidence traits
+view of self
+
+Class_274: 'Receptive Morphology'
+receptive morphology
+understand word
+constituents word
+
+
+Class_219: 'Acting Before Thinking'
+act before think
+not consider consequences
+
+
+
+Class_233: 'Repetitive Actions'
+repetitive action
+repeated action
+
+
+
+Class_757: 'Color Perception'
+color perception
+colour perception
+colour awareness
+
+
+Class_756: 'Space Perception'
+space perception
+spatial awareness
+aware physical space
+
+
+Class_273: 'Expressive Lexicon'
+expressive lexicon
+produce vocabulary
+
+
+Class_319: 'Distant or Preoccupied Affect'
+distant affect
+unemotional
+preoccupied affect
+unresponsive
+
+Class_254: 'Expressive Syntax'
+express syntax
+grammar
+
+
+Class_344: 'Managing Internal Emotions'
+manage emotion
+internal emotion
+control internal emotion
+
+
+Class_184: 'Task Initiation'
+task initiatation
+task prepare
+task arrange
+
+
+Class_270: 'Working Memory'
+memory
+
+
+Class_531: 'Response Inhibition'
+response inhibition
+interfere response
+prevent response
+
+
+Class_360: 'Expressive Semantics'
+expressive semantics
+produce phrase
+produce sentence
+
+
+
+Class_262: 'Non-Verbal Communication'
+nonverbal communication
+non verbal communication
+non-verbal interaction
+nonverbal interaction
+non spoken communication
+
+
+
+Class_173: 'Transitioning Ability'
+transition ability
+shift attention
+shift focus
+
+
+Class_3: 'Preparing for Tasks'
+prepare task
+manage time
+
+
+
+Class_255: 'Receptive Syntax'
+receptive syntax
+comprehend phrases
+understand phrases
+comprehend sentence
+
+
+
+Class_218: 'Impatience'
+impatient
+impatience
+wait inability
+wait adgitate
+
+
+Class_275: 'Receptive Lexicon'
+receptive lexicon
+understand vocabulary
+
+
+
+Class_4: 'IQ'
+intelligence quotient
+intelligence score
+IQ
+
+
+Class_92: 'Attention and Focus'
+pay attention
+attention span
+imbalanced attention
+focus on
+
+
+Class_332: 'Facial Expressions'
+face expression
+face gesture
+facial expression
+
+
+Class_288: 'Gestures'
+gestures
+gesture
+
+
+Class_201: 'Quality of Performed Task'
+task quality
+task excellence
+
+
+Class_136: 'Emotional Swings'
+emmotional swings
+unpredictable emotions
+mood swings
+unpredictable mmood
+extreme emotion
+extreme mood
+change mood
+change emotions
+
+
+Class_1: 'Problem Solving Ability'
+problem solving
+solving *s
+strategy *s
+
+
+Class_116: 'Motor Perseveration'
+motor preservation
+persistent motor repsonse
+repetition motor response
+
+
+Class_297: 'Compulsive Behavior'
+compulsive behaviour
+persistent behaviour
+compulsive act
+persistent act
+repetitive act
+
+
+Class_2: 'Isolated Cognitive Skills'
+isolate congitive *s
+music *s
+drawing *s
+reading *s
+computational *s
+
+
+Class_272: 'Expressive Morphology'
+produce words
+expressive morphology
+
+
+Class_535: 'Receptive Semantics'
+receptive semantics
+understand meaning
+
+
+Class_370: 'Sorting Ability'
+sorting ability
+sort objects
+order objects
+sort items
+sort rules
+
+
+Class_231: 'Insistence on Routine'
+insist routine
+adhere routine
+insist order
+
+
+Class_299: 'Decision Making Ability'
+decision make
+decision *s
+make choice
+evaluate choice
+decide choice
+
+
+Class_119: 'Anger Control'
+anger control
+anger manage
+
+
+
+Class_356: 'Ability to Convey Feelings'
+convey feelings
+express feelings
+express thoughts
+convey thoughts
+express opinions
+convey opinions
+
+
+Class_253: 'Ability to Convey Information'
+express information
+convey information
+answer questions
+information process
+
+
+Class_310: 'Recognition and Responsiveness to Voice'
+recognise voice
+recognition voice
+repsons voice
+recognis voice
+voice aware
+
+
+
+Class_60: 'Reciprocal Social Interaction'
+social interaction
+social behaviour
+social behavior
+social interaction *s
+reciprocal interaction
+social communicate
+communication *s
+social exchange
+
+
+Class_49: 'Home Life Skills'
+home *s
+everyday tasks
+house rules
+house tasks
+domestic tasks
+
+
+Class_538: 'Adaptive Life Skills'
+everyday *s
+adaptive life *s
+adaptability
+
+Class_99: 'Social Anxiety'
+social anxiety
+fear social
+
+
+Class_283: 'Interpersonal Interactions'
+interpersonal interaction
+
+
+Class_200: 'Performance of Chores'
+chores
+tidying
+washing
+
+
+Class_532: 'Performance of Household Tasks'
+household tasks
+
+
+Class_312: "Understanding Others' Expectations"
+understand obligations
+understand accountability
+understand expectations
+
+
+Class_284: 'Interpersonal Awareness'
+interpersonal awareness
+consideration others
+respond feelings
+social conscious
+
+
+Class_85: 'Initiating and Responding to Social Overtures'
+initiating social
+responding advances
+
+
+
+Class_67: 'Social Interest'
+social interest
+social viewing
+social scene
+seek interactions
+
+
+Class_322: 'Adherence to Rules in the Home'
+understand rules
+adhere rules
+obey rules
+
+
+Class_210: 'Lack of Appropriate Guilt'
+lack guilt
+no guily
+guilt absence
+
+
+Class_42: 'Intentional Bad Behavior'
+bad behavior
+bad behaviour
+disruptive behav
+inappropriate behav
+
+
+
+Class_579: 'Using Language Appropriately'
+language use
+appropriate language
+proper language
+proper speaking
+language according
+
+
+Class_304: 'Ability to Converse in Social Settings'
+social convers
+social *s
+
+
+Class_229: 'Understanding Context'
+context understand
+recognize context
+comprehend context
+
+
+Class_15: 'Conversational Skills'
+conversation *s
+interaction *s
+
+
+Class_192: 'Skill in Understanding Non-Literal Meaning'
+figurative meaning
+metaphorical meaning
+undertand figurative
+understand meaning
+non-literal meaning
+
+
+Class_348: 'Job Performance'
+job performance
+job quality
+work quality
+work performance
+occupational
+
+
+Class_54: 'Community Life Skills'
+community life *s
+community social life
+recreation *s
+
+Class_268: 'Performance in School'
+performance school
+school activities
+education *s
+academic *s
+academic performance
+
+
+Class_87: 'Preparation of Food'
+food preparation
+food plan
+food serving
+cooking
+meal plan
+
+
+Class_19: 'Awareness of Social and Personal Space'
+personal space
+awareness space
+distance awareness
+social space
+
+
+Class_287: 'Awareness of Social Cues'
+social cue
+awareness cue
+aware hint
+aware interactions
+
+
+Class_250: 'Interactions with Friends and Family'
+friend interaction
+family interaction
+family conversation
+frient conversation
+family relation
+friend reltion
+
+
+
+Class_240: 'Engaging in Social Conversation'
+engaging conversation
+engaging interaction
+social engagement
+engage interaction
+enjoying interaction
+
+
+Class_56: 'Toileting'
+toileting
+defication
+
+
+Class_174: 'Self-Care'
+self care
+self-care
+washing self
+drying self
+caring self
+
+
+Class_251: 'Use of Everyday Household Items'
+use household items
+use cookware
+use iron
+use vacuum
+use washing machine
+
+
+Class_306: 'Ability to Convey Correct Information'
+correct information
+accurate information
+relevant information
+convey relevant
+express correct
+
+
+Class_76: 'Money Management'
+money manage
+money use
+money save
+finances
+budgeting
+
+
+Class_37: 'Engaging in Social Play'
+engage play
+engage games
+participate play
+participate games
+enjoy games
+interact games
+social play
+engage recreation
+
+
+Class_66: 'Recognition of Social Norms'
+social norms
+aware rules
+aware conduct
+aware standards
+aware norms
+
+
+Class_28: 'Keeps to Self'
+isolate self
+behaves isolated
+avoid interaction
+keep to self
+
+
+Class_52: 'Eating Ability'
+eat ability
+indicate hungry
+indicate food
+eat action
+food action
+drink hold
+consume food
+
+
+
+Class_146: 'Intentional Cruelty'
+intention cruel
+intention pain
+intention hurt
+deliberate cruel
+deliberate hurt
+deliberate pain
+
+
+Class_185: 'Initiating Social Interaction'
+initiating social
+initiate interaction
+introduce self
+try make friends
+
+
+Class_243: 'Social Awkwardness'
+social awkward
+social inept
+awkward 
+
+Class_93: 'Sharing'
+share *s
+lend posessions
+lend item
+lend toys
+
+
+Class_263: 'Engagement in Social Activities'
+activity engage
+social activity
+social status 
+
+
+
+Class_170: 'Maintenance and Organization of Possessions'
+own posession
+organize possession
+maintain posession
+arrange posession
+
+
+
+Class_244: 'Sharing in Interests of Others'
+share interest
+others interest
+show interest others
+
+
+Class_581: 'Participation in Athletic Activities'
+athletic participate
+sport participate
+engage althletic
+athletic games
+
+
+
+Class_64: 'Ability to Engage in Casual Conversation'
+casual conversation
+engage casual
+casual interaction
+chatting
+small talk
+
+
+
+Class_241: "Understanding the Effect of One's Actions"
+understand effect actions
+understand behaviour
+recognize behaviour
+recognize actions
+
+
+Class_104: 'Poor Eating Behavior'
+poor eating
+bad eating
+
+
+Class_207: 'Disobedience'
+disobedience
+disobey
+violate rules
+
+
+Class_134: 'Eye Contact'
+eye contact
+eye movemment
+eye tracking
+eye communicate
+share eye
+meeting eye
+
+
+Class_187: 'Relating to Others'
+relating to others
+relate with others
+relate to
+relate with
+maintain interaction
+maintain relationship
+
+
+Class_53: 'Hygiene'
+hygiene
+personal cleanliness
+
+
+Class_145: 'Destructive Behavior'
+destructive behavior
+damaging belongings
+damaging posessions
+
+
+Class_321: 'Adherence to Rules in the Community'
+adhere rule community
+understand rule community
+obey rules commmminuty
+community rules
+commmunity laws
+
+
+Class_547: 'Social Dependence on Others'
+social dependence
+dependence others
+require attention
+dependant others
+
+
+Class_62: 'Joint Attention'
+joint attention
+joint focus
+share focus
+attention focus
+
+
+Class_257: 'Empathy'
+empathy
+concern others
+empathetic
+awareness feelings
+conscious feelings
+emotion recognise
+emotion recognition
+emotion awareness
+emotion response
+
+
+
+Class_61: 'Imitation'
+imitation
+mimicking
+copying movemments
+copying others
+copying actions
+
+Class_188: 'Ability to Convey Appropriate Level of Detail'
+ability detail
+convey detail
+level detail
+express detail
+appropriate level information
+
+
+
+Class_248: 'Awareness of Harmful Social Situations'
+awareness harm social
+recognize treat poor
+aware bad treatment
+
+
+Class_41: 'Aggressive Behavior'
+aggressive
+hostile
+obstructionism
+
+
+Class_90: 'Responsiveness to Social Advances'
+social advance
+response advance
+react interaction
+react advance
+
+
+Class_230: 'Skill in Understanding Humor'
+understand humor
+recognise humor
+understand jokes
+irony
+sarcasm
+jokes
+
+
+Class_545: 'Regression of General Skills'
+regression skills
+loss skills
+decline skills
+regression abilities
+loss abilities
+decline abilities
+
+
+Class_50: 'Clothing Self'
+clothing
+dressing self
+
+
+Class_82: 'Regard for Customs and Manners'
+regard customs
+regard manners
+show manners
+recognize social conventions
+adhere social conventions
+govern behavior
+
+
+Class_534: 'Sensitivity to Conversant'
+conservant sensitivity
+conservant recognise
+conservant needs
+conversation participant
+
+
+Class_271: 'Participation in Play Activities'
+participate games
+engage play
+play activities
+
+
+Class_149: 'Poor Treatment by Others in Social Settings'
+bullied
+bully
+made fun of
+poor treated
+bad treated
+laughed at

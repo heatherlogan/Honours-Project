@@ -1,0 +1,199 @@
+PMCID:6004695
+SFARI Genes
+	An: 2
+Autism Terms
+	imbalanced attention - 'Attention and Focus'
+	core symptoms of human autism spectrum disorder - 'Complaints and Indications'
+	hyperactive - 'Overactivity'
+	cavefishs asd-like behaviors - 'Autism Phenotype'
+	sleepless - 'Sleeping Problems'
+
+
+PMCID:5578492
+SFARI Genes
+	WAGR: 8
+	PAX6: 2
+	Robo1: 2
+NON-SFARI Genes
+	WT1: 1
+	PRRG4: 6
+Autism Terms
+	intellectual disabilities - 'Learning Disorders'
+	genitourinary abnormalities - 'Urogenital Diseases'
+	autistic symptoms - 'Complaints and Indications'
+
+
+PMCID:5701309
+SFARI Genes
+	EBF3: 4
+Autism Terms
+	unrelated individuals with global developmental delay - 'Learning Disorders'
+	global developmental delay - 'Learning Disorders'
+	developmental delay - 'Learning Disorders'
+	intellectual disability - 'Learning Disorders'
+	central nervous system development - 'Nervous System Diseases'
+
+
+PMCID:5842695
+Autism Terms
+	social visual engagement - 'Visual Thinking'
+	capacitysocial visual engagementshapes - 'Visual Thinking'
+	neurodevelopmental endophenotypenot - 'Learning Disorders'
+
+
+PMCID:5472997
+SFARI Genes
+	SHANK3: 2
+Autism Terms
+	diagnostic symptoms of asd - 'Complaints and Indications'
+	memory - 'Working Memory'
+	vocalizations - 'Vocalizations'
+	ptz seizure induction - 'Epilepsy'
+	sensory behavioral abnormalities - 'Reaction to Sensory Stimuli'
+	reciprocal social interactions - 'Reciprocal Social Interaction'
+	sensory responses - 'Reaction to Sensory Stimuli'
+	associated symptoms of asd - 'Complaints and Indications'
+	other neurodevelopmental disorders - 'Learning Disorders'
+	cognitive - 'Cognitive Ability'
+
+
+PMCID:5181638
+SFARI Genes
+	CTNNB1: 20
+Autism Terms
+	enhanced spatial memory - 'Working Memory'
+	intellectual disability - 'Learning Disorders'
+	repetitive behaviors - 'Stereotyped, Restricted, and Repetitive Behavior'
+	social interactions - 'Reciprocal Social Interaction'
+	mental disorders - 'Mental Disorders'
+
+
+PMCID:6345368
+Autism Terms
+	directed emotional faces task - 'Emotional Regulation and Control'
+	empathy (the empathy quotient - 'Empathy'
+	emotion recognition - 'Empathy'
+	control group - 'Community Life Skills'
+	empathy difficulties - 'Empathy'
+	self-reported empathy - 'Empathy'
+	empathy - 'Empathy'
+	emotion recognition performance - 'Empathy'
+	empathy measures - 'Empathy'
+	self-reported empathy deficits - 'Empathy'
+	facial emotion recognition - 'Empathy'
+	karolinska directed emotional faces task - 'Emotional Regulation and Control'
+
+
+PMCID:3474800
+Autism Terms
+	facial emotion perception domain - 'Visual Perception'
+	dexterity - 'Functional Laterality'
+	key cognitive domains - 'Cognitive Ability'
+	specific non-social cognitive domains - 'Cognitive Ability'
+	executive function - 'Executive Function'
+	cognitive profiles - 'Cognitive Ability'
+
+
+PMCID:4990618
+Autism Terms
+	terms of social development - 'Ability to Converse in Social Settings'
+	social challenges - 'Social Competence'
+	abnormal brain development - 'Learning Disorders'
+	autism symptoms - 'Complaints and Indications'
+	autism spectrum symptoms - 'Complaints and Indications'
+	social development - 'Ability to Converse in Social Settings'
+	cognitive - 'Cognitive Ability'
+
+
+PMCID:3619456
+Autism Terms
+	social stimuli than low-risk controls - 'Ability to Converse in Social Settings'
+	atypical social interactions - 'Reciprocal Social Interaction'
+	diagnosis - 'Diagnosis'
+	early infancy - 'Perinatal History'
+	years of age - 'Onset of Symptoms'
+	infancy differs - 'Perinatal History'
+
+
+PMCID:3513680
+SFARI Genes
+	RTT: 8
+	MeCP2: 4
+Autism Terms
+	many neurodevelopmental disorders - 'Learning Disorders'
+	rett syndrome - 'Rett Syndrome'
+	volitional hand use - 'Fine Motor Skills'
+	other neurological disorders - 'Neurologic Indications'
+	neurodevelopmental disorder - 'Learning Disorders'
+
+
+PMCID:3399634
+Autism Terms
+	ongoing atypical development in adults - 'Learning Disorders'
+	suicidality - 'Depressive Disorder'
+	atypical development - 'Learning Disorders'
+	occupational capacity - 'Job Performance'
+
+
+PMCID:3270696
+SFARI Genes
+	TBX1: 2
+	GNB1L: 8
+NON-SFARI Genes
+	Mb: 1
+Autism Terms
+	absence of congenital malformations - 'Congenital Abnormalities'
+	specific cognitive profile - 'Cognitive Ability'
+	congenital malformations - 'Congenital Abnormalities'
+	cognitive impairment - 'Cognitive Ability'
+	neurocognitive abnormalities - 'Cognitive Ability'
+	schizophrenia - 'Schizophrenia and Disorders with Psychotic Features'
+	cardiac malformations - 'Cardiovascular Diseases'
+
+
+PMCID:3309518
+Autism Terms
+	face processing - 'Integrated Verbal and NonVerbal Communication'
+	empathy - 'Empathy'
+	etiology of autism - 'Medical History'
+	social communication deficits - 'Reciprocal Social Interaction'
+	facial expression - 'Integrated Verbal and NonVerbal Communication'
+	cognitive - 'Cognitive Ability'
+
+
+PMCID:3094531
+Autism Terms
+
+
+PMCID:3197027
+Autism Terms
+	severe mental disorders - 'Mental Disorders'
+	schizophrenia - 'Schizophrenia and Disorders with Psychotic Features'
+
+
+PMCID:4693501
+SFARI Genes
+	FMR2: 4
+Autism Terms
+	mental retardation - 'Mental Retardation'
+	fragile x - 'Fragile X Syndrome'
+	abstract fragile x syndrome - 'Fragile X Syndrome'
+	fragile x gene family - 'Fragile X Syndrome'
+	schizophrenia - 'Schizophrenia and Disorders with Psychotic Features'
+
+
+PMCID:4701386
+SFARI Genes
+	CBP: 10
+	p300: 4
+Autism Terms
+	asd-relevant repetitive behaviors - 'Stereotyped, Restricted, and Repetitive Behavior'
+	hyperactivity - 'Overactivity'
+	social interaction - 'Reciprocal Social Interaction'
+	impaired communication skills - 'Reciprocal Social Interaction'
+	repetitive behaviors - 'Stereotyped, Restricted, and Repetitive Behavior'
+	social interaction deficits - 'Reciprocal Social Interaction'
+	cognition - 'Cognitive Ability'
+	neurodevelopmental afflictions - 'Learning Disorders'
+	impaired recognition memory - 'Working Memory'
+	motor dysfunction - 'Motor Skills'

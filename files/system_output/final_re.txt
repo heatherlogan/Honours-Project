@@ -1,0 +1,435 @@
+ TSC1
+	 ('tuberous sclerosis tsc1', 'display', 'inositol trisphosphate receptors')
+	 ('tuberous sclerosis tsc1', 'display', 'depressed ca2 + release')
+	 ('tuberous sclerosis tsc1', 'display', 'inositol trisphosphate receptors')
+	 ('tuberous sclerosis complex', 'caused by', 'haploinsufficiency of the tsc1 genes')
+
+ TSC2
+	 ('tsc2 syndromes', 'display', 'depressed ca2 + release')
+	 ('tsc2 syndromes', 'display', 'inositol trisphosphate receptors')
+	 ('tsc2 syndromes', 'display', 'depressed ca2 + release')
+	 ('tsc2 syndromes', 'display', 'inositol trisphosphate receptors')
+	 ('genetic disorders', 'frequently accompany', 'tsc2')
+	 
+ SHANK3
+	 ('deletions involving shank3 gene', 'lead', 'moderate to profound intellectual disability speech')
+	 ('disruptions of shank3', 'have resulted', 'autistic-like behaviors including anxiety')
+	 ('disruptions of shank3', 'have resulted', 'social interaction deficits')
+	 ('disruptions of shank3', 'have resulted', 'repetitive behavior')
+	 ('disruptions of shank3', 'have resulted', 'synaptic defects')
+	 ('shank3 truncating mutations', 'are associated', 'profound intellectual disability')
+	 ('shank3 insufficiency', 'affects', 'specific neural circuits')
+	 ('mice with shank3 gene deletions', 'exhibit', 'deficits in social interaction')
+	 ('mice with shank3 gene deletions', 'exhibit', 'self-injurious repetitive grooming')
+	 ('one copy of the shank3 gene', 'is missing', 'intellectual disability')
+	 ('one copy of the shank3 gene', 'is missing', 'autism')
+	 ('one copy of the shank3 gene', 'is missing', 'leading to a global developmental delay')
+	 ('genetic mutations of shank3', 'have been reported', 'autism spectrum disorder')
+	 ('genetic mutations of shank3', 'have been reported', 'schizophrenia')
+	 ('genetic mutations of shank3', 'have been reported', 'patients with intellectual disability')
+	 ('shank3 insufficiency', 'how affects', 'specific neural circuits')
+	 ('phenotype of shank3 deficiency', 'has been described primarily', 'case studies')
+	 ('phenotype of shank3 deficiency', 'has been described primarily', 'cognitive')
+	 ('phenotype of shank3 deficiency', 'has been described primarily', 'limited evaluation of behavioral deficits')
+	 ('mutations in the synaptic gene shank3', 'lead', 'a neurodevelopmental disorder known as phelan-mcdermid syndrome')
+	 ('deletions involving the shank3 gene', 'lead', 'a nonspecific clinical presentation')
+	 ('deletions involving the shank3 gene', 'lead', 'absent')
+	 ('deletions involving the shank3 gene', 'lead', 'moderate to profound intellectual disability speech')
+	 ('disruptions of the shank3 gene in mouse models', 'have resulted', 'autistic-like behaviors including anxiety')
+	 ('disruptions of the shank3 gene in mouse models', 'have resulted', 'social interaction deficits')
+	 ('disruptions of the shank3 gene in mouse models', 'have resulted', 'repetitive behavior')
+	 ('disruptions of the shank3 gene in mouse models', 'have resulted', 'synaptic defects')
+	 ('deleted shank3 regions', 'revealed', 'neurobehavioral impairments')
+
+ FMR1
+	 ('abstract fragile x syndrome', 'results', 'loss of the rna‐binding protein fmrp')
+	 ('levels of protein synthesis', 'are increased', 'fmr1 ko mice')
+	 ('genetic cause of fragile x syndrome', 'is known', 'silencing of fmr1')
+	 ('levels of protein synthesis', 'are increased', 'fmr1 ko mice')
+
+ GABRB1
+	 ('three single nucleotide polymorphisms within gabrb1', 'however showed', 'rs3832300')
+	 ('three single nucleotide polymorphisms within gabrb1', 'however showed', 'significant allelic association rs2351299 rs4482737')
+
+ TPH2
+	 ('tph2 alleles', 'associations', 'autism')
+
+ TDO2
+	 ('tph2 alleles', 'associations', 'autism')
+
+ CACNA1A
+	 ('cacna1a', 'might play', 'the etiology of autism')
+
+ MECP2
+	 ('mutations in mecp2', 'cause', 'neurodevelopmental disorder ')
+	 ('mutations in mecp2', 'cause', 'rett syndrome')
+	 ('rett syndrome', 'caused by', 'mutations in the x-linked mecp2 gene')
+	 ('skeletal', 'revealed', 'increases in levels of tca cycle intermediates with triheptanoin diet with the improved metabolic phenotype in mecp2 knockout mice on triheptanoin')
+	 ('untargeted metabolomics of liver muscle', 'revealed', 'increases in levels of tca cycle intermediates with triheptanoin diet with the improved metabolic phenotype in mecp2 knockout mice on triheptanoin')
+	 ('approach using dietary supplementation with anaplerotic substrate', 'effective', 'metabolic health in rtt')
+	 ('improved motor function', 'hemizygous', 'mecp2 knockout')
+	 ('social interaction in male mice', 'hemizygous', 'mecp2 knockout')
+	 ('dietary therapy with triheptanoin significantly increased longevity', 'hemizygous', 'mecp2 knockout')
+	 ('mecp2 duplications', 'displayed', 'intellectual disability)
+	 ('mecp2 duplications', 'displayed', 'lack of speech')
+	 ('mecp2 duplications', 'displayed', 'slight hypotonia')
+	 ('rtt', 'characterized', 'psychomotor regression')
+	 ('rtt', 'characterized', 'loss of volitional hand use')
+
+ CNTNAP2
+	 ('heterozygous mutations in cntnap2', 'identified', 'autism')
+	 ('heterozygous mutations in cntnap2', 'identified', 'schizophrenia')
+	 ('heterozygous mutations in cntnap2', 'identified', 'intellectual disability')
+	 ('cntnap2 polymorphism identified in this population', 'not linked', 'the asd phenotype')
+	 ('cntnap2 polymorphism identified in this population', 'not linked', 'the asd phenotype')
+	 ('cntnap2 variants', 'affect', 'communicative behavior')
+	 ('variants of the cntnap2 gene', 'associated', 'language delays in autism')
+	 ('variants of the cntnap2 gene', 'associated', 'language deficits in specific language impairment')
+	 ('cntnap2 null mice', 'showed', 'reduced vocalizations')
+
+ PTEN
+	 ('pten haploinsufficiency', 'elucidate', 'modulation of social behavior')
+	 ('pten pathway protein expression', 'evaluated', 'global structural brain volumes')
+	 ('pten pathway protein expression', 'evaluated', 'neurocognition')
+	 ('pten pathway protein expression', 'evaluated', 'adaptive behavior')
+	 ('pten protein reductions, 'reduced', 'cognitive ability')
+
+ NOS1
+	 ('substance abuse', 'more common', 'the pdd nos group')
+	 ('antisocial personality disorder', 'more common', 'the pdd nos group')
+
+ SLC9A9
+	 ('inactivation of nhe9 in mice', 'reproduces', 'repetitive behaviors')
+	 ('inactivation of nhe9 in mice', 'reproduces', 'altered sensory processing')
+	 ('inactivation of nhe9 in mice', 'reproduces', 'impaired social interaction')
+	 ('nhe9', 'implicated',  'autism spectrum disorders hyperactivity disorder')
+
+ GABRB3
+	 ('gabrb3 polymorphisms', 'associated', 'visual response')
+	 ('gabrb3 polymorphisms', 'associated', 'imitation')
+	 ('gabrb3 polymorphisms', 'associated', 'activity level')
+	 ('gabrb3 polymorphisms', 'associated', 'language expression')
+	 ('gabrb3 polymorphisms', 'associated', 'adaptability')
+	 ('gabrb3 polymorphisms', 'associated', 'sensorimotor coordination')
+	 ('gabrb3 polymorphisms', 'associated', 'somatosensory coordination')
+	 ('gabrb3 polymorphisms', 'associated', 'sdeficits in social interaction')
+	 ('developmental abnormalities in fine motor', 'detected', 'gabrb3 rs2081648 polymorphism')
+	 ('abnormmalities social interaction', 'detected', 'gabrb3 rs2081648 polymorphism')
+	 ('maternal transmission of a gabrb3', 'implicated', in childhood absence epilepsy')
+	 ('polymorphisms', 'were associated', 'besides gabrb3 rs2081648 gabra5 rs1426217 gabra5')
+	 ('fine motor', 'were detected', 'gabrb3 rs2081648 polymorphism')
+
+ CDH8
+	 ('cdh8', 'implicate', 'autism disability')
+
+ CTNNB1
+	 ('ctnnb1 conditional knockout mice', 'had increased', 'anxiety')
+	 ('deleting ctnnb1', 'enhanced', 'spatial memory')
+	 ('ctnnb1 conditional knockout mice', 'had increased', 'anxiety')
+	 ('deleting ctnnb1 in parvalbumin-interneurons', 'surprisingly enhanced', 'spatial memory')
+
+ CNTN5
+	 ('attention-deficit/hyperactivity', 'was carrying', 'five copies of cntn5')
+	 ('girl with asd disorder', 'was carrying', 'five copies of cntn5')
+
+ MAGEL2
+	 ('magel2', 'is located', 'the prader-willi critical region 15q11-13')
+	 ('magel2', 'is located', 'the prader-willi critical region 15q11-13')
+	 ('magel2 magel2loss', 'novel gene', 'causing complex asds')
+	 ('magel2 magel2loss', 'novel gene', 'causing complex asds')
+
+ CREBBP
+	 ('variable rts', 'markers', 'attention deficit hyperactivity disorder compared to asd')
+
+ RBFOX1
+	 ('abnormalities rbfox1', 'shown', 'neurodevelopmental disorders')
+	 ('abnormalities rbfox1', 'shown', 'autism spectrum disorder')
+
+ PAX6
+	 ('wagr syndrome', 'is characterized', 'genitourinary abnormalities')
+	 ('wagr syndrome', 'is characterized', 'intellectual disabilities')
+	 ('wagr syndrome', 'is characterized', "wilm 's tumor")
+	 ('prrg4', 'could contribute', 'the autistic symptoms of wagr')
+
+ MEF2C
+	 ('transcription factor mef2c', 'regulates', 'intellectual disability')
+	 ('transcription factor mef2c', 'regulates', 'epilepsy')
+	 ('transcription factor mef2c', 'regulates', 'multiple genes linked to autism spectrum disorder')
+	 ('foxp2 deletion de-represses mef2c of mef2c rescue vocalization', 'spinogenesis', 'defects of foxp2-deletion mutants')
+	 ('mef2c inhibition by foxp2', 'controls', 'vocalization in neonates')
+	 ('mef2c inhibition by foxp2', 'controls', 'synaptogenesis of corticostriatal inputs')
+	 ('perturbing mef2c function in neocortex', 'can produce', 'autistic disability-like behaviors')
+	 ('perturbing mef2c function in neocortex', 'can produce', 'mice')
+	 ('genetic variants mef2c', 'are linked', 'intellectual disability')
+	 ('genetic variants mef2c', 'are linked', 'schizophrenia')
+	 ('genetic variants mef2c', 'are linked', 'autism a heterogeneous collection of neurodevelopmental disorders')
+	 ('genetic variants mef2c', 'are linked', 'unclear pathophysiology')
+	 ('transcription factor mef2c', 'regulates', 'intellectual disability')
+	 ('transcription factor mef2c', 'regulates', 'epilepsy')
+	 ('transcription factor mef2c', 'regulates', 'multiple genes linked to autism spectrum disorder')
+
+ SHANK2
+	 ('shank2 ko mice', 'showed', 'analgesia')
+	 ('shank2 ko mice', 'showed', 'reduced tactile perception')
+	 ('shank2 ko mice', 'showed', 'chronic pain')
+	 ('loss-of-function mutations shank2', 'cause', 'autism spectrum disorders')
+	 ('loss-of-function mutations shank2', 'cause', 'cerebellum-related motor problems')
+	 ('shank2 loss-of-function mutation', 'resulted', 'increased locomotion')
+	 ('shank2 loss-of-function mutation', 'resulted', 'repetitive behaviors')
+	 ('shank2 loss-of-function mutation', 'resulted', 'hyperactivity encompassing hypermotivation')
+
+ FOXP2
+	 ('mef2c inhibition by foxp2', 'controls', 'vocalization in neonates')
+	 ('mef2c inhibition by foxp2', 'controls', 'synaptogenesis of corticostriatal inputs')
+
+ TSHZ3
+	 ('mice heterozygous for tshz3 deletion', 'furthermore show', 'functional changes')
+	 ('mice heterozygous for tshz3 deletion', 'furthermore show', 'asd-like behavioral abnormalities')
+	 ('mice heterozygous for tshz3 deletion', 'furthermore show', 'synapses established by cerebral cortical projection neurons')
+
+ CNR1
+	 ('increasing anandamide activity at cb1 receptors', 'improves', 'asd-related social impairment')
+
+ GRIN2B
+	 ('grin2b gene', 'plays role', 'normal neuronal development')
+
+ CACNA1C
+	 ('cacna1c', 'might play', 'role in the genetic etiology of autism')
+	 ('rare mutation in cacna1c', 'suggested to cause', 'timothy syndrome a multisystem disorder including autism-associated phenotype')
+	 ('cacna1c deletion', 'reduced', 'social approach behavior')
+	 ('cacna1c', 'plays role', 'bipolar disorder')
+	 ('cacna1c', 'plays tolr', 'regulating socio-affective communication in rats with relevance for asd')
+	 ('deletion of cacna1c', 'leads', 'deficits in social behavior')
+	 ('cacna1c haploinsufficient rats', 'derive', 'playful social interactions')
+	 ('cacna1c', 'might play', 'role in the genetic etiology of autism')
+
+ JMJD1C
+	 ('two de novo jmjd1c germline mutations', 'were identified', 'a patient with intellectual disability')
+	 ('two de novo jmjd1c germline mutations', 'were identified', 'a case of rett syndrome')
+	 ('mutations in jmjd1c', 'contribute', 'intellectual disability')
+	 ('mutations in jmjd1c', 'contribute', 'the development of rett syndrome')
+	 ('two de novo jmjd1c germline mutations', 'were identified', 'a patient with intellectual disability')
+	 ('two de novo jmjd1c germline mutations', 'were identified', 'a case of rett syndrome')
+	 ('mutations in jmjd1c', 'contribute', 'intellectual disability')
+	 ('mutations in jmjd1c', 'contribute', 'the development of rett syndrome')
+
+ CBLN1
+	 ('epileptic seizures', 'also repress', 'cbln1')
+	 ('viral-vector-based chemogenetic activations of cbln1 restorations in ventral tegmental area glutamatergic neurons', 'rescues', 'sociability deficits induced by ube3a and/or seizures')
+
+ UBE3A
+	 ('viral-vector-based chemogenetic activations of cbln1 restorations in ventral tegmental area glutamatergic neurons', 'rescues', 'sociability deficits induced by ube3a and/or seizures')
+
+ AVP
+	 ('amygdala', 'are known', 'contain avp neurons')
+	 ('hippocampus', 'are known', 'contain avp neurons')
+	 ('certain regions such the hypothalamus', 'are known', 'contain avp neurons')
+	 ('changes in structure avp', 'may be involved', 'the etiology of autism')
+
+ GTF2I
+	 ('arterial spin labeling', 'revealed', 'hypoperfusion')
+	 ('arterial spin labeling', 'revealed', 'children with asd')
+	 ('arterial spin labeling', 'revealed', 'cognition')
+	 ('arterial spin labeling', 'revealed', 'regions critical to social perception')
+
+ DISC1
+	 ('disc1 polymorphisms', 'were associated', 'asperger')
+	 ('disc1 polymorphisms', 'were associated', 'autism syndrome')
+
+ SLC7A3
+	 ('patient with the most deleterious slc7a3 variant', 'had', 'epilepsy')
+	 ('patient with the most deleterious slc7a3 variant', 'had', 'high-functioning autism')
+
+ GRM1
+	 ('hyperactive phenotype', 'associated', 'an upregulation of mglur1 expression')
+	 ('administration of the mglur1 antagonist jnj16259685', 'selectively normalized', 'physiology')
+	 ('administration of the mglur1 antagonist jnj16259685', 'selectively normalized', 'expression of striatally mediated repetitive behaviors')
+
+ OXT
+	 ('oxt', 'could have', 'the highly representative group of kanner-type asd subjects')
+	 ('oxt', 'could have', 'social interaction')
+	 ('oxt', 'could have', 'beneficial effect on social communication')
+	 ('arginine', 'are associated', 'diagnosis of asd social behaviors restricted behaviors plasma ot serotonin')
+	 ('snps near oxt and vasopressin', 'are associated', 'whole blood')
+	 ('snps near oxt and vasopressin', 'are associated', 'repetitive behaviors')
+	 ('snps near oxt and vasopressin', 'are associated', 'diagnosis of asd social behaviors restricted behaviors')
+	 ('snps near oxt and vasopressin', 'are associated', 'diagnosis of asd social behaviors restricted behaviors plasma ot serotonin')
+	 ('neuropeptide hormones ot', 'influence', 'territorial behaviors')
+
+ AUTS2
+	 ('number variants', 'involved', 'auts2')
+
+ GNB1L
+	 ('copy number evaluations in 271 schizophrenia', 'revealed', 'private gnb1l missense variants in conserved residues')
+	 ('gnb1l', 'may have role', 'schizophrenia')
+
+ RBM8A
+	 ('autism', 'highly represented', 'downstream transcripts of rbm8a')
+	 ('schizophrenia', 'highly represented', 'downstream transcripts of rbm8a')
+	 ('interestingly risk genes', 'highly represented', 'downstream transcripts of rbm8a')
+
+ POGZ
+	 ('loss of function variants in pogz', 'lead', 'identifiable syndrome of neurodevelopmental disorders')
+	 ('loss of function variants in pogz', 'lead', 'specific phenotypic traits')
+
+ ARID1B
+	 ('model', 'functionally validates', 'involvement of arid1b')
+	 ('haploinsufficiency of arid1b', 'is associated', 'intellectual disability')
+	 ('haploinsufficiency of arid1b', 'is associated', 'severe speech impairment')
+	 ('haploinsufficiency of arid1b', 'is associated', 'autism')
+	 ('haploinsufficiency of arid1b', 'is associated', 'corpus callosum abnormalities')
+	 ('arid1b heterozygous knockout mice', 'exhibited', 'associated features reported cases')
+	 ('arid1b heterozygous knockout mice', 'exhibited', 'anxiety')
+	 ('arid1b heterozygous knockout mice', 'exhibited', 'perseveration')
+	 ('arid1b heterozygous knockout mice', 'exhibited', 'impaired motor coordination')
+	 ('arid1b heterozygous knockout mice', 'exhibited', 'hydrocephalus')
+	 ('arid1b heterozygous knockout mice', 'exhibited', 'asd-like traits related to social behavior')
+
+ ASTN2
+	 ('schizophrenia of asd', 'have correlation', 'astn2')
+	 ('astn2', 'have correlation', 'macrod2')
+	 ('schizophrenia of asd', 'have correlation', 'astn2')
+	 ('astn2', 'have correlation', 'macrod2')
+
+ MACROD2
+	 ('astn2', 'have correlation', 'macrod2')
+	 ('macrod2', 'have correlation', 'hdac4')
+	 ('astn2', 'have correlation', 'macrod2')
+	 ('macrod2', 'have correlation', 'hdac4')
+
+ HDAC4
+	 ('macrod2', 'have correlation', 'hdac4')
+	 ('hdac4', 'have correlation', 'several neurodevelopmental-related genes such ext1')
+	 ('macrod2', 'have correlation', 'hdac4')
+	 ('hdac4', 'have correlation', 'several neurodevelopmental-related genes such ext1')
+
+ EXT1
+	 ('hdac4', 'have correlation', 'several neurodevelopmental-related genes such ext1')
+	 ('several neurodevelopmental-related genes such ext1', 'have correlation', 'significant genetic correlation')
+	 ('hdac4', 'have correlation', 'several neurodevelopmental-related genes such ext1')
+	 ('several neurodevelopmental-related genes such ext1', 'have correlation', 'significant genetic correlation')
+
+ LRFN2
+	 ('lrfn2 knockout mice', 'exhibit', 'social withdrawal')
+	 ('lrfn2 knockout mice', 'exhibit', 'decreased vocal communications')
+	 ('lrfn2 knockout mice', 'exhibit', 'increased stereotyped activities')
+	 ('lrfn2 knockout mice', 'exhibit', 'prepulse inhibition deficits')
+	 ('lrfn2 knockout mice', 'exhibit', 'memory')
+	 ('lrfn2 knockout mice', 'exhibit', 'autism-like behavioural abnormalities')
+
+ CHRNA7
+	 ('alpha7 nicotinic acetylcholine receptor encoded by the chrna7 gene', 'implicated', 'behavioral disorders')
+	 ('alpha7 nicotinic acetylcholine receptor encoded by the chrna7 gene', 'implicated', "parkinson's disease")
+	 ('alpha7 nicotinic acetylcholine receptor encoded by the chrna7 gene', 'implicated', "shizophrenia")
+	 ('alpha7 nicotinic acetylcholine receptor encoded by the chrna7 gene', 'implicated', "bipolar disorder")
+	 ('alpha7 nicotinic acetylcholine receptor encoded by the chrna7 gene', 'implicated', "alzheimer's disease")
+	 ('chrna7 deficient mice', 'had', 'attention deficits')
+
+ ANKRD11
+	 ('16q24 deletion involving the ankrd11 gene', 'associated', 'facial dysmorphisms with dental anomalies')
+	 ('16q24 deletion involving the ankrd11 gene', 'associated', 'brain abnormalities essentially affecting callosum')
+	 ('16q24 deletion involving the ankrd11 gene', 'associated', 'short stature')
+	 ('16q24 deletion involving the ankrd11 gene', 'associated', 'cognitive impairment')
+ SCN2A
+	 ('sodium channel disruptions such mutations in scn2a', 'play_role', 'psychiatric disorders')
+
+ RAI1
+	 ('magenis syndrome mouse model', 'demonstrates', 'restoring the rai1 gene dose in an early postnatal window could repair gene expression in this smith')
+
+ FOXP1
+	 ('foxp1 ablation', 'associated', 'cognitive deficits')
+	 ('foxp1 ablation', 'associated', 'providing new insights into its behavioural importance')
+	 ('de novo foxp1 mutations', 'associated', 'motor delay')
+	 ('de novo foxp1 mutations', 'associated', 'autistic features')
+	 ('de novo foxp1 mutations', 'associated', 'spectrum of speech difficulties')
+	 ('de novo foxp1 mutations', 'hassociated', 'intellectual disability')
+
+ NRXN1
+	 ('mice', 'show', 'nrxn1')
+
+ NRXN2
+	 ('mice', 'show', 'nrxn2')
+
+ SHOX
+	 ('astrocytic amyloid ß accumulation diffuse plaque formation', 'supports', 'a high risk of sudden unexpected death epilepsy')
+	 ('astrocytic amyloid ß accumulation diffuse plaque formation', 'supports', 'conclusions/significance the higher prevalence of excessive amyloid ß accumulation in neurons in individuals with early onset of intractable seizures in epilepsy in autistic subjects with dup compared to subjects with idiopathic asd')
+	 ('astrocytic amyloid ß accumulation diffuse plaque formation', 'supports', 'conclusions/significance the higher prevalence of excessive amyloid ß accumulation in neurons in individuals with early onset of intractable seizures in epilepsy in autistic subjects with dup compared to subjects with idiopathic asd')
+	 ('alterations', 'supports', 'conclusions/significance the higher prevalence of excessive amyloid ß accumulation in neurons in individuals with early onset of intractable seizures in epilepsy in autistic subjects with dup compared to subjects with idiopathic asd')
+	 ('diffuse plaque formation', 'supports', 'conclusions/significance the higher prevalence of excessive amyloid ß accumulation in neurons in individuals with early onset of intractable seizures in epilepsy in autistic subjects with dup compared to subjects with idiopathic asd')
+	 ('concept of mechanistic links between autism of precursor protein processing leading to neuronal', 'supports', 'conclusions/significance the higher prevalence of excessive amyloid ß accumulation in neurons in individuals with early onset of intractable seizures in epilepsy in autistic subjects with dup compared to subjects with idiopathic asd')
+
+ SCN1A
+	 ('mice with scn1a haploinsufficiency', 'display', 'stereotyped behaviors')
+	 ('mice with scn1a haploinsufficiency', 'display', 'social interaction deficits')
+	 ('mice with scn1a haploinsufficiency', 'display', 'impaired context-dependent spatial memory')
+	 (''haploinsufficiency of the scn1a gene', 'causes', 'cognitive deficit')
+	 (''haploinsufficiency of the scn1a gene', 'causes', 'autism spectrum disorders')
+	 (''haploinsufficiency of the scn1a gene', 'causes', 'dravet syndrome')
+	 ('mice with scn1a haploinsufficiency', 'display', 'stereotyped behaviors')
+	 ('mice with scn1a haploinsufficiency', 'display', 'social interaction deficits')
+	 ('mice with scn1a haploinsufficiency', 'display', 'impaired context-dependent spatial memory')
+
+ YWHAE
+	 ('isolated duplications of ywhae', 'have been associated', 'autism')
+
+ PAFAH1B1
+	 ('lis1 inactivation restricted to the postnatal hippocampus', 'resulted', 'similar deficits')
+	 ('lis1 inactivation restricted to the postnatal hippocampus', 'resulted', 'social interactions')
+	 ('lis1 inactivation restricted to the postnatal hippocampus', 'resulted', 'dendritic protrusion density')
+	 ('lis1 loss', 'is associated', 'dynein protein motor dysfunction')
+	 ('lis1 inactivation restricted to the postnatal hippocampus', 'resulted', 'similar deficits')
+	 ('lis1 inactivation restricted to the postnatal hippocampus', 'resulted', 'social interactions')
+	 ('lis1 inactivation restricted to the postnatal hippocampus', 'resulted', 'dendritic protrusion density')
+	 ('lis1 loss', 'is associated', 'dynein protein motor dysfunction')
+
+ ATP2B2
+	 ('atp2b2', 'might play', 'role in the etiology of autism')
+	 ('atp2b2', 'might play', 'chinese han population')
+
+ DYRK1A
+	 ('dyrk1a haploinsufficiency', 'exhibit', 'intellectual disability')
+	 ('dyrk1a haploinsufficiency', 'exhibit', 'speech delay')
+	 ('dyrk1a haploinsufficiency', 'exhibit', 'facial dysmorphisms')
+	 ('dyrk1a haploinsufficiency', 'exhibit', 'common phenotypic features including microcephaly')
+
+ KMT2C
+	 ('clinical data', 'delineates', 'kmt2c phenotypic spectrum')
+
+ EBF3
+	 ('behavioral differences', 'observed', 'deleterious variant in ebf3')
+
+ RAB39B
+	 ('predicted pathogenic nonsense mutation in the x-chromosome gene rab39b', 'segregates', 'asd phenotype')
+	 ('two males with an inherited rab39b mutation', 'presented', 'intellectual disability')
+	 ('two males with an inherited rab39b mutation', 'presented', 'asd')
+	 ('two males with an inherited rab39b mutation', 'presented', 'macrocephaly')
+	 ('predicted pathogenic nonsense mutation in the x-chromosome gene rab39b', 'segregates', 'asd phenotype')
+	 ('two males with an inherited rab39b mutation', 'presented', 'intellectual disability')
+	 ('two males with an inherited rab39b mutation', 'presented', 'asd')
+	 ('two males with an inherited rab39b mutation', 'presented', 'macrocephaly')
+
+ NRG1
+	 ('nrg1 expression', 'correlations', 'severity of asd symmptoms')
+
+ CD38
+	 ('cd38', 'associations'', 'social behavior')
+
+ IL6
+	 ('il-6', 'increased', 'offspring of ASD rats')
+
+ OXTR
+	 ('oxtr rs2268493', 'was associated', 'diagnosis')
+
+ KIRREL3
+	 ('children with kirrel3 variants', 'often had', 'intellectual disability')
+	 ('children with kirrel3 variants', 'often had', 'minor facial dysmorphism')
+	 ('kirrel3 interacting proteins', 'candidates', 'autism spectrum disorder')
+	 ('kirrel3 interacting proteins', 'candidates', 'intellectual disability')
+	 ('kirrel3 interacts with the x-linked intellectual disability', 'associated', 'synaptic scaffolding protein cask through its cytoplasmic domain')
+	 ('dysfunction of kirrel3 a synaptic molecule of the immunoglobulin superfamily', 'recently has been implicated', 'the neurocognitive delay associated syndrome')
+	 ('dysfunction of kirrel3 a synaptic molecule of the immunoglobulin superfamily', 'recently has been implicated', 'several neurodevelopmental conditions including intellectual disability autism spectrum disorder with jacobsen syndrome')
+	 ('kirrel3', 'interacts', 'x-linked intellectual disability')
+
+ GRM5
+	 ('chronic treatment with a negative allosteric modulator of mglur5', 'reverses', 'cognitive deficit')
+ 

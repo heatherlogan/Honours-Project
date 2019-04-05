@@ -1,0 +1,1620 @@
+PMC4568303:
+individuals with idiopathic developmental delay and autism, and families affected by infertility and reproductive wastage.
+
+PMC5068815:
+here, we report that patient-derived fibroblasts from three monogenic models of asd—fragile x and tuberous sclerosis tsc1 and tsc2 syndromes—display depressed ca2+ release through inositol trisphosphate receptors .
+
+PMC4574168:
+discussion identification of predictive pre-morbid clinical, cognitive, functional and structural brain alterations in 22q11 deletion carriers may alter current clinical practice from symptomatic therapy of manifest mental illness into early intervention strategies, which may also be applicable to at risk subjects without known etiology.
+we use a population based epidemiological design to inform on disease prevalence, environmental risk factors and familial disposition for mental health disorders and a case control study design to map the functional effects across behavioral and neurophysiological traits of the 22q11 deletion in a recruited sample of danish individuals.
+we have established a danish research initiative to study the common microdeletion at chromosome 22q11.2, which is one of the genetic anomalies that confer high risk of schizophrenia, autism and attention deficit hyperactivity disorder.
+
+PMC4230543:
+this study examined explicit and implicit variants of social cognition testing in autism spectrum disorder.
+
+PMC4867450:
+our genetic screens identified the first case of a de novo sema5a microdeletion in a patient with asd and intellectual disability.
+we first identified a de novo translocation t in a patient with asd and intellectual disability .
+it provides additional evidence that semaphorin dysfunction could lead to asd and intellectual disability.
+
+PMC4549933:
+the analyses relating the phelan-mcdermid syndrome genotype to the behavioral phenotype revealed additional complex relationships with contributions of genes in both deleted and preserved shank3 regions to the asd phenotype and other neurobehavioral impairments.
+the majority of phelan-mcdermid syndrome participants in our sample displayed persistent deficits in social communication, but only half met diagnostic criteria under the restricted, repetitive patterns of behavior, interests, or activities domain.
+  phelan-mcdermid syndrome is a neurodevelopmental disorder associated with a terminal deletion affecting chromosome 22 that results in the loss of function of the shank3 gene.
+there also appears to be contributions of genes in both deleted and preserved shank3 regions to the asd phenotype and other neurobehavioral impairments.
+
+PMC4614053:
+abstract  fragile x syndrome, the most common single gene cause of autism, results from loss of the rna‐binding protein fmrp.
+
+PMC4591364:
+twenty-five of 59 asd children and 13 of 44 neurotypical siblings met rome iii criteria for at least one functional gastrointestinal disorders.
+
+PMC64493:
+we have now identified the ndnl2 gene within the 15q autistic disorder susceptibility region and have mapped its murine homolog to the region of conserved synteny near necdin on mouse chr 7.
+  proximal chromosome 15q is implicated in neurodevelopmental disorders including prader-willi and angelman syndromes, autistic disorder and developmental abnormalities resulting from chromosomal deletions or duplications.
+ndnl2/mage-g is a member of a large gene family that includes the x-linked mage cluster, maged1 , magel2 and ndn, where the latter two genes are implicated in prader-willi syndrome.
+
+PMC59656:
+presentation we hypothesize that aminoglycoside antibiotics could a) trigger the autism syndrome in susceptible infants by causing the stop codon readthrough, i.e., a misreading of the genetic code of a hypothetical critical gene, and/or b) improve autism symptoms by correcting the premature stop codon mutation in a hypothetical polymorphic gene linked to autism.
+
+PMC4603300:
+the aim of this stereological study of neuronal soma volume in 25 brain structures and their subdivisions in eight individuals 9 to 26 years of age who were diagnosed with chromosome 15q11.2-13.1 duplication syndrome , autism, intellectual disability and epilepsy; eight age-matched subjects diagnosed with autism of unknown etiology and seven control individuals was to establish whether defects of neuronal soma growth are a common denominator of developmental pathology in idiopathic and syndromic autism and how genetic modifications alter the trajectory of neuronal soma growth in dup autism.
+
+PMC5862414:
+we assessed synaptic and network characteristics in neuroligin-4 knockout mice, focusing on the hippocampus as a model brain region with a critical role in cognition and memory, and found that neuroligin-4 deletion causes subtle defects of the protein composition and function of gabaergic synapses in the hippocampal ca3 region.
+
+PMC411038:
+case presentation we describe a child with autistic disorder and an interstitial deletion on chromosome 4q.
+
+PMC394332:
+the mean age at first recording of a pdd diagnosis in the general practitioner research database database was 6.3 years .
+
+PMC1513515:
+these results confirmed our earlier findings, indicating gabra4 and gabrb1 as genes contributing to autism susceptibility, extending the effect to multiple ethnic groups and suggesting seizures as a stratifying phenotype.
+analysis of the subset of families with a positive history of seizure activity in at least one autism patient revealed no association to gabra4; however, three single nucleotide polymorphisms within gabrb1 showed significant allelic association; rs2351299 , rs4482737 , and rs3832300 .
+
+PMC4618364:
+therefore, we think it is crucial to look for mutations in the gene shank3 in patients diagnosed for childhood disintegrative disorder or any developmental disorder with a regressive pattern involving social and communicative skills as well as cognitive and instinctual functions, with onset around 3 years.
+  deletions and mutations involving the shank3 gene lead to a nonspecific clinical presentation with moderate to profound intellectual disability, severely delayed or absent speech, and autism spectrum disorders .
+better knowledge of the clinical spectrum of shank3 haploinsufficiency is useful to facilitate clinical care monitoring and to guide molecular diagnosis, essential for genetic counselling.
+
+PMC1851007:
+tph2 gene variants are unlikely to contribute to autism or to the presence/absence of prominent repetitive behaviors in our sample, although an influence on the intensity of these behaviors in autism cannot be excluded.
+stereotypic and repetitive behaviors are influenced by 5-ht, and initial studies report an association of tph2 alleles with childhood-onset obsessive-compulsive disorder and with autism.
+
+PMC1888683:
+a novel neuregulin 1 missense variant was recently associated with psychosis and schizophrenia in the same population isolate.
+
+PMC4635597:
+herein, we describe the use of diagnostic exome sequencing to uncover an activating mammalian target of rapamycin missense alteration of gonadal mosaic origin that is likely to be the causative mutation in two brothers who present multiple neurological and developmental abnormalities.
+thus, mammalian target of rapamycin p.e1799k can now be classified as a pathogenic gof mutation that causes megalencephaly and cognitive impairment in humans.
+
+PMC4642926:
+our results suggest that these mutations may directly alter inhibitory transmission, which could contribute to the developmental and cognitive deficits observed in asd.
+
+PMC4643966:
+our findings suggest that cacna1a might play a role in the etiology of autism.
+
+PMC4820035:
+the findings reveal that copy number variants in although attention-deficit hyperactivity disorder converge on biologically meaningful gene clusters, including ones now established as conferring risk of other neurodevelopmental disorders.
+we observed significant enrichment of individual genes previously found to harbour schizophrenia de novo non-synonymous single-nucleotide variants and targets of the fragile x mental retardation protein .
+although attention-deficit hyperactivity disorder is highly heritable, and large, rare copy number variants contribute to risk, little is known about its pathogenesis and it remains commonly misunderstood.
+enrichment of although attention-deficit hyperactivity disorder cnv hits for genes impacted by autism de novo snvs did not survive bonferroni correction.
+
+PMC4693501:
+it is unknown, however, whether normal variants in the fragile x gene family and in fmr2 modulate autistic features.
+thereby, the brain‐expressed mir‐181 species emerged as potential “umbrella regulator”, with several seed matches across the fragile x gene family and fmr2.
+
+PMC4655861:
+we found that in a test of social approach, nrxn1 and nrxn2 encoding α-neurexin i heterozygous mice show no social memory for familiar versus novel conspecifics.
+human genetic studies have found heterozygous deletions affecting nrxn1 and nrxn2, encoding α-neurexin i and α-neurexin ii , in individuals with autism spectrum disorders and schizophrenia.
+the observed nrxn1 and nrxn2 encoding α-neurexin i and nrxn2α genotypic effects were specific, as neither heterozygous deletion had effects on a wide range of other behavioral measures, including several measures of anxiety.
+
+PMC4759317:
+shank3 gene is a causable gene of the phelan- mcdermid syndrome , whose manifestation is global developmental delay and autistic behavior, especially shows severe speech and language deficit.
+
+PMC4668631:
+by comparing the average social communication questionnaire scores with the clinical features, we found statistically significant correlations with epilepsy, seizure onset before age one year, spasms, mutations in tuberous sclerosis complex2, cognitive level, sleep disorders, and other psychiatric problems, but not with seizure frequency, tubers localization and gender.
+risk factors for asd are epilepsy, infantile spams, and mutations in tuberous sclerosis complex2.
+
+PMC2638799:
+ mutations in mecp2, encoding methyl-cpg-binding protein 2 , cause the neurodevelopmental disorder rett syndrome .
+
+PMC2584230:
+methodology/principal findings we reviewed medical records of 25 patients with a primary diagnosis of asd by dsm-iv-tr criteria, later determined to have enzyme- or mutation-defined mitochondrial electron transport chain dysfunction.
+
+PMC4909589:
+here, using a mouse heterozygous for tbx1 , we demonstrate that a genetically-triggered neonatal phenotype in vocalization generates a negative environmental loop in pup-mother social communication.
+a number of rare copy number variants have emerged as robust genetic risk factors for asd, but not all cnv carriers exhibit asd and the severity of asd symptoms varies among cnv carriers.
+
+PMC4552377:
+performance on the eyes test is a sex-independent phenotypic characteristic of adults with autism, reflecting sex-common social difficulties, and provides support for the emb theory predictions for both males and females.
+
+PMC2644762:
+the role of common and rare 16p11.2 sequence variants in autism etiology is unknown.
+microdeletion or duplication of a ∼500–700-kb genomic rearrangement on 16p11.2 that contains 24 genes represents the second most frequent chromosomal disorder associated with autism.
+
+PMC4914424:
+dysregulated met signaling may lead to pathological changes in forebrain maturation and connectivity, and thus contribute to the emergence of neurological symptoms associated with asd.
+met encodes a receptor tyrosine kinase, met, which plays a pleiotropic role in embryogenesis and modifies a large number of neurodevelopmental events.
+
+PMC4701386:
+our results therefore indicate that loss of cbp ch1 domain function contributes to rubinstein-taybi syndrome, and possibly asd, and that this domain plays an essential role in normal motor function, cognition and social behavior.
+we show that mice with a deletion mutation in the cbp ch1 domain have an rubinstein-taybi syndrome-like phenotype that includes asd-relevant repetitive behaviors, hyperactivity, social interaction deficits, motor dysfunction, impaired recognition memory, and abnormal synaptic plasticity.
+
+PMC4705475:
+a duplication of unknown significance at 10q11.22, proposed as a modulator for phenotypic disease expression in rett syndrome, was also identified.
+
+PMC4849199:
+other novel findings include a high prevalence of feeding problems in infancy and reduced weight at birth for 3q29 deletion carriers , adjusted for gestational age and sex, p = 6.5e‐07).
+
+PMC4745388:
+as such, mutations in components of the proteasomal or translational machinery, including rna binding proteins, have been linked to the pathogenesis of neurological disorders such as fragile x syndrome , fragile x tremor ataxia syndrome , and autism spectrum disorders .
+
+PMC4740767:
+ mecp2 encodes a methyl-cpg-binding protein that plays a critical role in repressing gene expression, mutations of which lead to rett syndrome and autism.
+
+PMC4739328:
+we propose that caspr2 loss produces a syndrome involving early-onset refractory epilepsy, intellectual disability, language impairment and autistic features that can be recognized as caspr2 deficiency disorder.
+  heterozygous mutations in cntnap2 have been identified in patients with a range of complex phenotypes including intellectual disability, autism and schizophrenia.
+homozygous family members display epilepsy, facial dysmorphisms, severe intellectual disability and impaired language.
+
+PMC4749962:
+these findings suggest that the rng105 heterozygous knockout leads to a reduction in sociality, response to novelty and flexibility in learning, which are implicated in asd-like behavior.
+
+PMC4824117:
+we use vipur to interpret known mutations associated with inflammation and diabetes, demonstrating the structural diversity of disrupted functional sites and improved interpretation of mutations associated with human diseases.
+
+PMC4898763:
+disruptions of the shank3 gene in mouse models have resulted in synaptic defects and autistic-like behaviors including anxiety, social interaction deficits, and repetitive behavior10–13.
+
+PMC4846490:
+indeed, a mouse model of autism with deletions in shank3 has early cortical hyperactivity, which triggers increased spn excitatory synapse and corticostriatal hyper-connectivity.
+
+PMC4774106:
+subsequent univariate and multivariate genome-wide association studies of these repetitive behaviors behaviors previous research indicates that there are two or more factors enabled the detection of associated single nucleotide polymorphisms at 8p21.2-8p21.1.
+although these results did not replicate in an independent asd dataset, genomic features of this region and pathway analysis suggest that common variants in 8p21.2-8p21.1 may contribute to repetitive behaviors, particularly sameness.
+in an effort to identify common variants associated with repetitive behaviors, we have carried out a genome-wide association study using the autism genetic resource exchange dataset for each identified repetitive behaviors subcategory, while allowing for comparisons of associated single nucleotide polymorphisms with associated single nucleotide polymorphisms in the same set of probands analyzed using all the repetitive behaviors behaviors previous research indicates that there are two or more factors as phenotypes in a multivariate linear mixed model.
+
+PMC4799364:
+ jacobsen syndrome is a rare congenital disorder caused by a terminal deletion of the long arm of chromosome 11.
+our findings demonstrate a critical role of px-rics in cognition and suggest a causal link between px-rics deletion and asd-like behaviour in jacobsen syndrome patients.
+
+PMC4774994:
+our results identify variants in regions previously implicated in intellectual disability and suggest candidate genes that could contribute to the etiology of self-injurious behavior.
+ copy number variants were detected and analyzed in 14 probands with autism and intellectual disability with self-injurious behavior resulting in tissue damage.
+
+PMC4986048:
+this finding is evidenced through both ld score correlation and de novo variant analysis, indicating that multiple types of genetic risk for autism spectrum disorders influence a continuum of behavioral and developmental traits, the severe tail of which can result in an asd or other neuropsychiatric disorder diagnosis.
+
+PMC5014121:
+furthermore, a significant number of shank3 mutations have been identified in patients with autism spectrum disorders asd, and shank3 truncating mutations are associated with moderate to profound intellectual disability.
+
+PMC3181906:
+this is a clinically important finding, as, with the demonstration that a significant proportion of autism spectrum disorders are the result of rare, etiological genetic variants, it becomes possible to make use of genetic testing to supplement behavioral analyses for an earlier diagnosis.
+furthermore, these rare variants involve synaptic and neuronal genes that implicate specific paihvi/ays, cells, and subcellular compartments in autism spectrum disorders, which in turn will suggest novel therapeutic approaches in autism spectrum disorders, of particular recent interest are the synaptic cell adhesion and associated molecules, including neurexin 1, neuroligin 3 and 4, and shank3, which implicate glutamatergic synapse abnormalities in autism spectrum disorders, in the current review we will overview the evidence for a genetic etiology for autism spectrum disorders, and summarize recent genetic findings in these disorders.
+
+PMC4376901:
+we first demonstrate that dosage alterations of the unique drosophila orthologues of candidate genes from de novo copy number variants that harbour only a single candidate gene display neurological defects similar to those previously reported in drosophila models of asd-associated variants.
+by examining synaptic and circadian neurological phenotypes resulting from the dosage variants of unique human:fly orthologues in drosophila, we observe numerous synergistic interactions between pairs of informatically-identified candidate genes whose orthologues are jointly affected by large de novo copy number variants .
+
+PMC4550412:
+together, these results elucidate a role of the serotonin system serotonin 2c receptor in the modulation of social behavior and seizure susceptibility in the context of normal development and pten haploinsufficiency.
+sb 242084, a the serotonin system serotonin 2c receptor selective antagonist, can reverse the social behavior deficits observed in pten haploinsufficient mice.
+we hypothesized that pharmacological antagonism of the serotonin system serotonin 2c receptor activity in adult animals, which does not cause seizures, might modify social behavioral deficits in pten haploinsufficient mice.
+given that autism spectrum disorder features social behavioral deficits and is often co-morbid with epilepsy, and given that the serotonin system serotonin 2c receptor physically interacts with pten, we tested whether a second site mutation in the asd risk gene pten can modify these phenotypes.
+
+PMC2705351:
+antisocial personality disorder and substance abuse were more common in the pdd nos group.
+
+PMC3710970:
+mice with a paternal duplication display poor social interaction, behavioral inflexibility, abnormal ultrasonic vocalizations, and correlates of anxiety.
+
+PMC2772655:
+ summary although autism is a highly heritable neurodevelopmental disorder, attempts to identify specific susceptibility genes have thus far met with limited success 1.
+
+PMC2774338:
+our analysis revealed a genomic deletion containing the oxytocin receptor gene, oxytocin receptor , previously implicated in autism, was present in an autism proband and his mother who exhibits symptoms of obsessive-compulsive disorder.
+
+PMC5780507:
+we now find that inactivation of nhe9 in mice reproduces behavioral features of asd including impaired social interaction, repetitive behaviors, and altered sensory processing.
+interestingly, recent human genetic studies have implicated the endosomal na+/h+ exchanger nhe9 in both autism spectrum disorders and attention deficit hyperactivity disorder .
+
+PMC5468250:
+ gabaa receptor subunit genes gabrb3, gabra5, and gabrg3 located on chromosome 15q11-q13 have been implicated in the etiology of autistic spectrum disorders .
+besides, gabrb3 rs2081648, gabra5 rs1426217) gabra5, and gabrg3 rs1426217) gabra5 and gabrg3 polymorphisms were associated with symptom-based deficits in social interaction, sensorimotor and somatosensory coordination, visual response, imitation, activity level, language expression and adaptability.
+this study intended to investigate the possible role of single-nucleotide polymorphisms present in gabrb3 , gabra5 gabra5), and gabrg3 gabra5 and gabrg3) genes in asd susceptibility and symptom-based and developmental phenotypes of asd in chinese han children and adolescents.
+developmental abnormalities in late emergences of social interaction and fine motor were detected in gabrb3 rs2081648 polymorphism.
+
+PMC3428055:
+we report that maternal transmission of a gabrb3 signal peptide variant , previously implicated in childhood absence epilepsy, is associated with autism.
+
+PMC2847695:
+rett syndrome, the primary disorder caused by mutations in the x-linked mecp2 gene, is characterized by a period of cognitive decline and development of hand stereotypies and seizures following an apparently normal early infancy.
+in addition, mecp2 mutations and duplications are observed in a spectrum of neurodevelopmental disorders, including severe neonatal encephalopathy, x-linked mental retardation, and autism, implicating methyl cpg binding protein-2 as an essential regulator of postnatal brain development.
+
+PMC2838793:
+mice with deletion of the fragile x mental retardation 1 gene are used to model autism because loss of mental retardation 1 gene function causes fragile x syndrome and many people with fragile x syndrome exhibit autistic-like behaviors.
+this used two mouse models with disrupted regulation of glycogen synthase kinase-3, mental retardation 1 knockout mice and glycogen synthase kinase-3 knockin mice, in which inhibitory serines of the two isoforms of glycogen synthase kinase-3, glycogen synthase kinase-3α and glycogen synthase kinase-3β, are mutated to alanines, leaving glycogen synthase kinase-3 fully active.
+
+PMC3001124:
+ research has implicated mutations in the gene for neurexin-1 in a variety of conditions including autism, schizophrenia, and nicotine dependence.
+we present a medical record review of subjects with deletions involving exonic sequences of neurexin-1.
+the phenotype of individuals with neurexin-1 deletion is variable and includes autism spectrum disorders, mental retardation, language delays, and hypotonia.
+
+PMC4192590:
+these findings suggest that structural changes in the brain of neurodevelopmental disorders neuroligin-3 mice are induced by the mutation in the neurodevelopmental disorders neuroligin-3 gene.
+no significant differences in diffusion tensor imaging indices were observed, which suggests that the neurodevelopmental disorders neuroligin-3 mutation may not have a profound effect on water diffusion as detected by diffusion tensor imaging.
+
+PMC6055932:
+this method has been previously shown to boost biologically informative signal in gene expression data but to-date has not been applied to the search for cooperative mutations among putative asd genes.
+
+PMC5985537:
+the 15q13.3 microdeletion syndrome region contains up to ten genes and is associated with numerous conditions, including autism spectrum disorder , epilepsy, schizophrenia, and intellectual disability; however, the mechanisms underlying the pathogenesis of 15q13.3 microdeletion syndrome remain unknown.
+we combined whole-genome sequencing, human brain gene expression , and a mouse model with a syntenic heterozygous deletion /+ mice) and determined that the microdeletion results in abnormal development of cortical dendritic spines and dendrite outgrowth.
+
+PMC2946294:
+we describe a 17-year-old girl with autism, severe mental retardation, epilepsy, and partial 9p duplication syndrome features in whom gtg-banded chromosome analysis revealed a female karyotype with a marker chromosome in 69% of analyzed metaphases.
+
+PMC5985734:
+we measured the rate of protein synthesis in fibroblasts derived from 32 individuals with fragile x syndrome and from 17 controls as well as in fibroblasts and primary neurons of 27 fmr1 ko mice and 20 controls.
+however, this cellular phenotype displays a broad distribution and a proportion of fragile x individuals and fmr1 ko mice do not show increased levels of protein synthesis, having measures in the normal range.
+here, we show that levels of protein synthesis are increased in fibroblasts of individuals with fragile x syndrome and fmr1 ko mice.
+here, we characterized the de novo rate of protein synthesis in patients with fragile x syndrome and their relationship with clinical severity.
+
+PMC5622473:
+intellectual disability accompanied by microcephaly was recapitulated in a murine model by overexpressing dyrk1a which mimicked down syndrome phenotypes.
+mutations in this kinase-encoding gene have been reported to cause microcephaly associated with either intellectual disability or autism in humans.
+
+PMC3003876:
+in a second family, an overlapping deletion of chr16: 58 724 527–60 547 472 was transmitted to an individual with severe learning disability from his father with moderate learning disability.
+the deletion of chr16: 60 025 584–61 667 839 was transmitted to three of three boys with autism and learning disability and none of four unaffected siblings, from their unaffected mother.
+rare familial 16q21 microdeletions and expression analysis implicate cdh8 in susceptibility to autism and learning disability.
+
+PMC2965350:
+children of white uk origin, aged 5–17 years, who met diagnostic criteria for attention-deficit hyperactivity disorder or hyperkinetic disorder, but not schizophrenia and autism, were recruited from community child psychiatry and paediatric outpatient clinics.
+single nucleotide polymorphisms were genotyped in the attention-deficit hyperactivity disorder and control groups with two arrays; cnv analysis was limited to single nucleotide polymorphisms common to both arrays and included only samples with high-quality data.
+we aimed to establish whether burden of copy number variants was increased in attention-deficit hyperactivity disorder, and to investigate whether identified copy number variants were enriched for loci previously identified in autism and schizophrenia.
+locus-specific tests of association were undertaken for test regions defined for all identified copy number variants and for 20 loci implicated in autism or schizophrenia.
+we undertook a genome-wide analysis of copy number variants in 410 children with attention-deficit hyperactivity disorder and 1156 unrelated ethnically matched controls from the 1958 british birth cohort.
+copy number variants in the attention-deficit hyperactivity disorder group were validated with comparative genomic hybridisation.
+this increased rate of copy number variants was particularly high in those with intellectual disability , although there was also a significant excess in cases with no such disability .
+copy number variants identified in our attention-deficit hyperactivity disorder cohort were significantly enriched for loci previously reported in both autism and schizophrenia .
+ summary  large, rare chromosomal deletions and duplications known as copy number variants have been implicated in neurodevelopmental disorders similar to attention-deficit hyperactivity disorder .
+an excess of chromosome 16p13.11 duplications was noted in the attention-deficit hyperactivity disorder group , a finding that was replicated in the icelandic sample .
+57 large, rare copy number variants were identified in children with attention-deficit hyperactivity disorder and 78 in controls, showing a significantly increased rate of copy number variants in attention-deficit hyperactivity disorder .
+interpretation our findings provide genetic evidence of an increased rate of large copy number variants in individuals with attention-deficit hyperactivity disorder and suggest that attention-deficit hyperactivity disorder is not purely a social construct.
+
+PMC3057962:
+ summary mutations in the x-linked mecp2, which encodes the transcriptional regulator methyl-cpg-binding protein 2 cause rett syndrome and several neurodevelopmental disorders including cognitive disorders, autism, juvenile-onset schizophrenia, and encephalopathy with early lethality.
+rtt is characterized by apparently normal early development followed by regression, motor abnormalities, seizures, and features of autism, especially stereotyped behaviors.
+here we show that mice lacking mecp2 from γ-amino-butyric-acid--ergic neurons recapitulate numerous rtt and autistic features, including repetitive behaviors.
+
+PMC3116738:
+in the macaque, robust met expression was largely restricted to the posterior cingulate, inferior temporal, posterior parietal, and visual cortices, including face processing regions.
+
+PMC2805335:
+there is a current vogue for investigators to include measures of allelic variants in studies of cognition and cognitive disorders.
+
+PMC5068815:
+here, we report that patient-derived fibroblasts from three monogenic models of asd—fragile x and tuberous sclerosis tsc1 and tsc2 syndromes—display depressed ca2+ release through inositol trisphosphate receptors .
+
+PMC5181638:
+interestingly, ctnnb1 ctnnb1 conditional knockout in pv-interneurons significantly impaired object recognition and social interactions and elevated repetitive behaviors, which mimic the core symptoms of patients with asd.
+the ctnnb1 conditional knockout mice had increased anxiety, but had no overall change in motor function.
+ mutations in β-catenin have been implicated in cancer and mental disorders.
+surprisingly, deleting ctnnb1 in parvalbumin-interneurons enhanced spatial memory.
+recently, loss-of-function mutations of ctnnb1 were linked to intellectual disability , and rare mutations were identified in patients with autism spectrum disorder .
+
+PMC5382808:
+we identified a new and de novo 1q21.3 deletion that encompasses setdb1, a gene encoding methylates histone h3 on lysine-9 methyltransferase, in a case with typical asd and intellectual disability.
+
+PMC4859484:
+ duplications at 15q11.2-q13.3 overlapping the prader-willi/angelman syndrome region have been associated with developmental delay , autism spectrum disorder and schizophrenia .
+to clarify the role of maternal and paternal duplications, we conducted the largest and most detailed study to date of parental origin of 15q11.2-q13.3 interstitial duplications in developmental delay, asd and schizophrenia cohorts.
+we show, for the first time, that paternal duplications lead to an increased risk of developing developmental delay/asd/multiple congenital anomalies , but do not appear to increase risk for schizophrenia.
+interestingly, the most consistent clinical characteristics of schizophrenia patients with 15q11.2-q13.3 duplications were learning or developmental problems, found in 76% of carriers.
+
+PMC4859984:
+indications for genetic testing were significantly different for 22q112ds;22q112ds;q11.22q112ds;dups and 22q112ds;22q112ds;q11.22q112ds;ds, with the deletions more commonly tested because of birth defects or medical problems, and the duplications because of developmental delay.
+
+PMC5378808:
+among the carriers, a girl with asd and attention-deficit/hyperactivity disorder was carrying five copies of cntn5.
+
+PMC4878062:
+in summary, we identified a novel small deletion mutation in tuberous sclerosis complex2 associated with severe tuberous sclerosis complex in a korean family that enhances the activation of mammalian target of rapamycin signaling in vitro.
+we performed whole exome sequencing and identified a novel small deletion mutation in tuberous sclerosis complex2.
+tuberous sclerosis complex is inherited in an autosomal dominant pattern and is caused by mutations in either the tuberous sclerosis complex1 or tuberous sclerosis complex2 genes, which enhance activation of the mammalian target of rapamycin signaling pathway.
+
+PMC5116288:
+ purpose truncating mutations in the maternally imprinted, paternally expressed gene magel2, which is located in the prader-willi critical region 15q11-13, have recently been reported to cause schaaf-yang syndrome, a prader-willi-like disease, manifesting developmental delay/intellectual disability, hypotonia, feeding difficulties, and autism spectrum disorder.
+
+PMC4895433:
+our results suggest that rare missense mutations in the candidate psd genes may increase susceptibility to schizophrenia and/or asd.
+three variants, g344r in dlg1, g241s in dlg4, and r604c in dlgap2, were selected for association analysis in an independent sample set of 1315 schizophrenia patients, 382 asd patients, and 1793 healthy controls.
+
+PMC4948673:
+how shank3 insufficiency affects specific neural circuits and this is related to specific asd symptoms remains elusive.
+
+PMC4891671:
+moreover, disruption of cav1.3 function has been associated with several neurological disorders.
+
+PMC4929695:
+although somatic diversity is an evident feature of the brain, the extent to which somatic mutations affect the neuronal structure and function and their contribution to neurological disorders associated with disrupted brain connectivity remain largely unexplored.
+notably, recent reports indicate that brain somatic mutations can indeed play a critical role that leads to the structural and functional abnormalities of the brain observed in several neurodevelopmental disorders.
+
+PMC4943479:
+genetic factors such as mutations, insertions, deletions and copy number variations are responsible for only a small subset of cases, suggesting unknown environmental contaminants play a role in triggering neurological disorders like idiopathic autism.
+
+PMC4931610:
+expression of the inflammatory molecules interleukin , il-6, 1 l-17 and tumor necrosis factor is increased in the brain, cerebrospinal fluid and serum of some patients with asd, while nf-kb is activated in brain samples and stimulated peripheral blood immune cells of other patients; however, these molecules are not specific.
+
+PMC5658669:
+we found that deletion of atg7, which is vital for autophagy, from myeloid cell-specific lysozyme m-cre mice resulted in social behavioral defects and repetitive behaviors, characteristic features of autism spectrum disorders.
+
+PMC5132150:
+slower and more variable rts are markers of attention deficit hyperactivity disorder compared to asd and typically developing controls during slow and less rewarding conditions.
+
+PMC5545711:
+our findings strongly indicate that studies of the hemi- and homozygous 15q13.3 mouse strains will facilitate understanding of the biological mechanisms of severe mental disorders.
+the 15q13.3 microdeletion increases the risk of intellectual disability, epilepsy, autism spectrum disorder and schizophrenia, though the clinical profile varies considerably.
+
+PMC4949425:
+ the small nuclear ribonucleoprotein polypeptide n gene, encoding the rna-associated smn protein, duplications or deletions of which are strongly associated with neurodevelopmental disabilities.
+
+PMC4969621:
+ gene abnormalities in rbfox1, encoding an mrna-splicing factor, have been shown to cause autism spectrum disorder and other neurodevelopmental disorders.
+defects in these critical processes may induce structural and functional defects in cortical neurons, and consequently contribute to the pathophysiology of neurodevelopmental disorders with rbfox1 abnormalities.
+
+PMC5215415:
+compensatory changes that reset the rate of possible that these mutations result in a similar imbalance in protein homeostasis may contribute to the neurological symptoms of autism spectrum disorders and intellectual disability.
+mutations in several genes encoding regulators of mrna translation and protein degradation have been associated with an increased risk for autism spectrum disorders and intellectual disability .
+
+PMC3295800:
+all 9 patients met autism diagnostic interview-revised and autism diagnostic observation schedule diagnostic criteria for autism, displaying stereotypies and severe impairments in social interaction and communication .
+the results indicate that comorbid autism and williams-beuren syndrome is more frequent than expected and suggest that the common williams-beuren syndrome deletion can result in a continuum of social communication impairment, ranging from excessive talkativeness and overfriendliness to absence of verbal language and poor social relationships.
+
+PMC5482711:
+this case report describes a family harboring two copy number variant microdeletions, which affect regions of nrxn1 and mbd5—each well-established in association with risk of autism spectrum disorder and other neurodevelopmental disorders.
+
+PMC5684358:
+these results suggest that mef2c haploinsufficiency leads to abnormal brain development, excitatory to inhibitory imbalance, and neurobehavioral dysfunction, which may be mitigated by pharmacological intervention.
+ transcription factor mef2c regulates multiple genes linked to autism spectrum disorder , and human mef2c haploinsufficiency results in asd, intellectual disability, and epilepsy.
+
+PMC4956181:
+thus, in this study, we used shank2−/− mice to investigate the controversial pain sensitivity issue and found that shank2 ko mice showed reduced tactile perception and analgesia to chronic pain.
+
+PMC5099374:
+here, we investigated temporal, spatial, and isoform-specific expression patterns of shank3 during zebrafish development on the basis of previous researches and the differential effects of each shank3 transcript expression after exposure to valproic acid , an asd-associated drug.
+
+PMC4858912:
+group comparisons were performed between dup15q and asd participants, as well as within the dup15q group based on duplication type and epilepsy status.
+
+PMC6293525:
+  animal models for neurodevelopmental disorders generally rely on a single genetic mutation on a fixed genetic background.
+
+PMC5083203:
+foxp2 deletion de-represses mef2c, and both intrastriatal and global decrease of mef2c rescue vocalization and striatal spinogenesis defects of foxp2-deletion mutants.
+we present causal evidence that mef2c inhibition by foxp2 in neonatal mouse striatum controls synaptogenesis of corticostriatal inputs and vocalization in neonates.
+
+PMC5025785:
+ loss-of-function mutations in the gene encoding the postsynaptic scaffolding protein shank2 are a highly penetrant cause of autism spectrum disorders involving cerebellum-related motor problems.
+using pc-specific shank2 knockouts, we replicate alterations of simple spike regularity in vivo and establish cerebellar dependence of asd-like behavioural phenotypes in motor learning and social interaction.
+
+PMC6208182:
+the gene encoding nadh steroid dehydrogenase-like protein (nadh steroid dehydrogenase-like protein) is expressed in developing cortical neurons and glia, and its mutation may result in intellectual disability or congenital hemidysplasia.
+further studies and case reports are required for genetic research to demonstrate that duplication as well as mutation can cause neurodevelopmental diseases.
+
+PMC5024993:
+our results indicate a contributory role for multi-tissue mosaic mutation in some individuals with an asd diagnosis.
+
+PMC5159755:
+ chromosomal copy-number variations are a class of genetic variants highly implicated in the aetiology of neurodevelopmental disorders, including intellectual disabilities , schizophrenia and autism spectrum disorders .
+
+PMC5048213:
+we assessed 20 children with 16p11.2 deletion, a genetic variation implicated in attention deficit/hyperactivity disorder and autism, as well as 16 siblings without the deletion and 75 neurotypical age-matched children.
+here we sought to explore whether an engaging, adaptive digital cognitive platform built to look and feel like a video game would reliably measure attention-based abilities in children with and without neurodevelopmental disabilities related to a known genetic condition, 16p11.2 deletion.
+
+PMC5386887:
+together, these observations provide new insights into the neurodevelopmental role of chd8.
+
+PMC5083212:
+furthermore, mice heterozygous for tshz3 deletion show functional changes at synapses established by cerebral cortical projection neurons and exhibit core asd-like behavioral abnormalities.
+
+PMC5549436:
+conclusions: the results suggest that increasing anandamide activity at cb1 receptors improves asd-related social impairment and identify fatty acid amide hydrolase as a novel therapeutic target for asd.
+
+PMC6085410:
+we investigated whether aggressive behavior is robustly present in mice expressing the r451c mutation, following back-crossing onto a congenic background strain.
+
+PMC5125235:
+a surprising number of variants have been found in the n-methyl-d-aspartate receptor gene family, with the grin2b gene encoding the glun2b subunit being implicated in many cases of neurodevelopmental disorders, which are psychiatric conditions originating in childhood and include language, motor, and learning disorders, autism spectrum disorder , attention deficit hyperactivity disorder , developmental delay, epilepsy, and schizophrenia.
+the grin2b gene plays a crucial role in normal neuronal development and is important for learning and memory.
+here, we summarize the current reports of disease-associated variants in grin2b from patients with multiple neurodevelopmental disorders, and discuss implications, highlighting the importance of functional analysis and precision medicine therapies.
+studies that provide functional analysis of variants are still lacking, however current analysis of de novo variants that segregate with disease cases such as intellectual disability, developmental delay, asd or epileptic encephalopathies reveal altered nmdar function.
+
+PMC5412832:
+although there is evidence for the de novo mutation hypothesis and the selection into late fatherhood hypothesis, the mechanism underlying the association between advanced paternal age and psychiatric illness in offspring remains to be further clarified.
+
+PMC4401440:
+a whole-exome sequencing study identified a de novo mutation, p.a749g, in cav1.3 α1-subunits , the second main ltcc in the brain, as 1 of 62 high risk–conferring mutations in a cohort of patients with autism and intellectual disability.
+our data, together with the discovery that cav1.3 gain-of-function causes primary aldosteronism with seizures, neurologic abnormalities, and intellectual disability, suggest that cav1.3 gain-of-function mutations confer a major part of the risk for autism in the two probands and may even cause the disease.
+patients should also be explored for other symptoms likely resulting from cav1.3 hyperactivity, in particular, primary aldosteronism.
+
+PMC4512676:
+our research suggests that cacna1c might play a role in the genetic etiology of autism in chinese han population.
+many lines of evidence indicated that asd shares common genetic variants with other psychiatric disorders .
+significant association between cacna1c and schizophrenia was detected.
+furthermore, rare mutation in cacna1c is suggested to cause timothy syndrome, a multisystem disorder including autism-associated phenotype.
+
+PMC5094851:
+analysis of differential gene expression in mef2c mutant cortex identified a significant overlap with numerous synapse- and autism-linked genes, and the mef2c mutant mice displayed numerous behaviors reminiscent of autism, intellectual disability and scz, suggesting that perturbing mef2c function in neocortex can produce autistic- and intellectual disability-like behaviors in mice.
+ numerous genetic variants associated with mef2c are linked to autism, intellectual disability and schizophrenia – a heterogeneous collection of neurodevelopmental disorders with unclear pathophysiology.
+
+PMC5085253:
+taken together, our genetic findings substantiate pathogenic mitochondrial dna mutations as a potential cause for asd and synergize with recent work calling attention to their unique metabolic phenotypes for diagnosis and treatment of children with asd.
+
+PMC4823641:
+the functional study of the jmjd1c mutant rett syndrome patient demonstrated that the altered protein had abnormal subcellular localization, diminished activity to demethylate the dna damage-response protein mdc1, and reduced binding to mecp2.
+from these, two de novo jmjd1c germline mutations were identified in a case of rett syndrome and in a patient with intellectual disability.
+conclusions: our findings indicate that mutations in jmjd1c contribute to the development of rett syndrome and intellectual disability.
+methods: we performed the mutational and functional analysis of jmjd1c in 215 cases of autism spectrum disorders, intellectual disability, and rett syndrome without a known genetic defect.
+
+PMC4791854:
+high-risk infants who met criteria for asd at 24 months showed shorter epochs of visual attention, faster but less prolonged neural activation to faces, and delayed sensitization responses to faces at 6 months; these differences were less apparent at 12 months.
+
+PMC5128689:
+ copy number variants as detected by chromosomal microarray analysis significantly contribute to the etiology of neurodevelopmental disorders, such as developmental delay , intellectual disability , and autism spectrum disorder .
+this study summarizes the results of 3.5 years of chromosomal microarray analysis testing by a clia-certified clinical testing laboratory 5487 patients with neurodevelopmental conditions were clinically evaluated for rare copy number variants using a 2.8-million probe custom chromosomal microarray analysis optimized for the detection of copy number variants associated with neurodevelopmental disorders.
+
+PMC5125044:
+de novo mutations have been shown to be a major cause of severe early-onset genetic disorders such as intellectual disability, autism spectrum disorder, and other developmental diseases.
+here, we review the recent literature on de novo mutations, covering their detection, biological characterization, and medical impact.
+
+PMC5187870:
+we note discrete differences in the most common recurrent copy number variants found in individuals with or without a diagnosis of asd.
+ copy number variants detected by chromosomal microarray analysis significantly contribute to understanding the etiology of autism spectrum disorder and other related conditions.
+using a 2.8 million probe microarray optimized for the detection of copy number variants associated with neurodevelopmental disorders, we report an overall cnv detection rate of 28.1% in 10,351 consecutive patients, which rises to nearly 33% in cases without asd, with only developmental delay/intellectual disability and/or multiple congenital anomalies .
+
+PMC5157977:
+in the second study, we recorded spontaneous electrophysiological from a larger cohort of individuals with dup15q syndrome across two sites and examined age, epilepsy, and duplication type as predictors of beta power using simple linear regressions.
+
+PMC5389537:
+notably, top3β proteins bearing point mutations from schizophrenia and autism individuals are defective in association with fmrp; whereas one of the mutants is also deficient in binding mrnas, catalyzing rna topoisomerase reaction, and promoting synapse formation.
+
+PMC5339767:
+in this report, we describe two unrelated patients with complex medical histories consistent with kleefstra syndrome in whom next generation sequencing identified the same novel c.2426c>t (p.p809l) missense variant in euchromatic histone methyltransferase-1.
+however, some euchromatic histone methyltransferase-1 variants have been described in individuals presenting with autism spectrum disorder or mild intellectual disability, suggesting that the phenotypic spectrum resulting from euchromatic histone methyltransferase-1 alterations may be quite broad.
+
+PMC5545734:
+by analyzing multiple genetic variants within candidate gene sets together, we were able to find genetic associations supporting the involvement of excitatory and inhibitory neurotransmitter systems in attention-deficit/hyperactivity disorder and asd symptom severity in attention-deficit/hyperactivity disorder.
+common variants within glutamatergic and gabaergic genes were investigated using the magma software in an attention-deficit/hyperactivity disorder case-only sample , in which we assessed asd symptoms and response inhibition on a stop task.
+in this study we investigated the role of glutamate and gaba genetics in attention-deficit/hyperactivity disorder severity, autism symptom severity and inhibitory performance, based on gene set analysis, an approach to investigate multiple genetic variants simultaneously.
+
+PMC5261619:
+our integrative network analysis showed that the siblings’ shared translocation could explain their similar syndromic phenotype, including overgrowth, macrocephaly, and intellectual disability.
+therefore, to characterize the complex genotype-phenotype relationship, we performed array comparative genomic hybridization and sequenced the exomes of two affected siblings with asd symptoms, dysmorphic features, and intellectual disability, searching for de novo copy number variations, as well as for de novo and rare inherited point variations—single nucleotide variants or small insertions and deletions —with probable functional impacts.
+
+PMC5307131:
+the neuroligin-3 mouse, expressing a r451c mutation discovered in two swedish brothers with asd, exhibits impaired social interactions and heightened aggressive behavior towards male mice.
+
+PMC5374041:
+ gene-disruptive mutations contribute to the biology of neurodevelopmental disorders , but most pathogenic genes are not known.
+
+PMC5286408:
+we propose that deficits in ip3-mediated ca2+ signaling represent a convergent hub function shared across the spectrum of autistic disorders – whether caused by rare highly penetrant mutations or sporadic forms – and holds promise as a biomarker for diagnosis and novel drug discovery.
+
+PMC5496244:
+using aggregated data from 9246 families with autism spectrum disorder, intellectual disability, or developmental delay, we show ~1/3 of de novo variants are independently observed as standing variation in the exome aggregation consortium’s cohort of 60,706 adults, and these de novo variants do not contribute to neurodevelopmental risk.
+ recent research has uncovered a significant role for de novo variation in neurodevelopmental disorders.
+we further use a loss-of-function -intolerance metric, pli, to identify a subset of lof-intolerant genes that contain the observed signal of associated de novo protein truncating variants in neurodevelopmental disorders.
+
+PMC5321753:
+fragile x syndrome , caused by the loss of functional fmrp, is a leading cause of autism.
+moreover, peripheral administration of nb001, an experimental compound that preferentially suppresses adcy1 activity over other adcy subtypes, attenuates the behavioural abnormalities in fmr1 knockout mice.
+
+PMC5485472:
+results: we found that the mutant mice showed diminished interest in social odors, abnormal submissive tendencies, and increased repetitive behaviors when compared to wild type littermates.
+methods: to investigate the relationship between rai1 and social impairment, we evaluated the rai1+/− mice with a battery of tests to address social behavior in mice.
+haploinsufficiency and point mutations of rai1 are associated with smith-magenis syndrome , a genetic condition that scores within the autism spectrum range for social responsiveness and communication, and is characterized by neurobehavioral abnormalities, intellectual disability, developmental delay, sleep disturbance, and self-injurious behaviors.
+
+PMC6031367:
+besides the emission of fewer 50-khz ultrasonic vocalizations in the sender, cacna1c deletion reduced social approach behavior elicited by playback of 50-khz ultrasonic vocalizations.
+ abstract the cross-disorder risk gene cacna1c is strongly implicated in multiple neuropsychiatric disorders, including autism spectrum disorder , bipolar disorder and schizophrenia , with deficits in social functioning being common for all major neuropsychiatric disorders.
+together, these data suggest that cacna1c plays a prominent role in regulating socio-affective communication in rats with relevance for asd, bipolar disorder and scz.
+our results show that a deletion of cacna1c leads to deficits in social behavior and pro-social 50-khz ultrasonic communication in rats.
+reduced levels of 50-khz ultrasonic vocalizations emitted during rough-and-tumble play may suggest that cacna1c haploinsufficient rats derive less reward from playful social interactions.
+to this aim, we used a newly developed genetic cacna1c rat model and applied a truly reciprocal approach for studying communication through ultrasonic vocalizations, including both sender and receiver.
+
+PMC5360850:
+in addition, mutations have been induced or corrected in adult mice, providing some evidence for the plasticity and reversibility of core asd symptoms.
+
+PMC3884762:
+we identified phenotypes not comprehensively described before in this cohort including mild facial dysmorphism, sleep problems and an unusual electroencephalogram variant.
+
+PMC4931610:
+expression of the inflammatory molecules interleukin , il-6, 1 l-17 and tumor necrosis factor is increased in the brain, cerebrospinal fluid and serum of some patients with asd, while nf-kb is activated in brain samples and stimulated peripheral blood immune cells of other patients; however, these molecules are not specific.
+
+PMC5881179:
+  the recurrent ∼ 600 kb 16p11.2 microdeletion is among the most commonly known genetic etiologies of autism spectrum disorder, overweightness, and related neurodevelopmental disorders.
+
+PMC5341363:
+  tuberous sclerosis complex is an autosomal dominant condition, caused by mutations in either the tuberous sclerosis complex1 or tuberous sclerosis complex2 gene.
+
+PMC5364052:
+our results suggest a gene × seizure interaction in ventral tegmental area glutamatergic neurons that impairs sociability by downregulating cbln1, a key node in the expanding protein interaction network of autism genes.
+epileptic seizures also repress cbln1 and are found to expose sociability impairments in mice with asymptomatic increases of ube3a.
+we provide preclinical evidence that viral-vector-based chemogenetic activations of, or cbln1 restorations in ventral tegmental area glutamatergic neurons rescues sociability deficits induced by ube3a and/or seizures.
+
+PMC5454981:
+our study examined a cohort of children, adolescents, and young adults with 22q11.2ds, who were ascertained irrespective of parents’ behavioral or developmental concerns, and found that 17.9% of the participants met excellence in autism criteria for an asd diagnosis, and that a majority showed some level of social-communication impairment or the presence of repetitive behaviors.
+
+PMC5384041:
+however, the contributory role of this mutation to sleep impairments in asd remains unknown.
+
+PMC5360858:
+certain regions such as the hypothalamus, amygdala, and hippocampus are known to contain either avp neurons or terminals and may play an important role in regulating complex social behaviors.
+these results strongly suggest that changes in structure and functional connectivity in brain regions containing avp may be involved in the etiology of autism.
+
+PMC6292037:
+arterial spin labeling revealed hypoperfusion in children with asd in regions critical to social perception and cognition.
+
+PMC4849199:
+other novel findings include a high prevalence of feeding problems in infancy and reduced weight at birth for 3q29 deletion carriers , adjusted for gestational age and sex, p = 6.5e‐07).
+
+PMC5357816:
+  chd8 , which codes for a member of the chd family of atp-dependent chromatin-remodeling factors, is one of the most commonly mutated genes in autism spectrum disorders identified in exome-sequencing studies.
+a significant number of asd and schizophrenia candidate genes were among those that were differentially expressed in a comparison of heterozygous knockout lines vs isogenic controls , including the schizophrenia and bipolar disorder candidate gene tcf4, which was markedly upregulated in chd8 +/− neuronal cells.
+loss of function mutations in the gene have also been found in schizophrenia and intellectual disabilities and influence cancer cell proliferation.
+
+PMC5416665:
+in contrast, although the serotonin transporter mutant animals learned the auditory and visual tasks comparably to with wild-type littermates, they failed to show behavioral gains under multisensory conditions.
+a gain-of-function coding variant in the serotonin transporter associates with sensory aversion in humans, and when expressed in mice produces traits associated with asd, including disruptions in social and communicative function and repetitive behaviors.
+
+PMC5372175:
+the cntnap2 polymorphism identified in this population, hence, is not linked to the asd phenotype.
+
+PMC5384041:
+however, the contributory role of this mutation to sleep impairments in asd remains unknown.
+
+PMC5372175:
+the cntnap2 polymorphism identified in this population, hence, is not linked to the asd phenotype.
+
+PMC5416693:
+we find that more severe mutations in network proteins are associated with mental disorders that include lower intelligence quotient , suggesting that the level of disruption of a shared transcriptional network correlates with cognitive dysfunction.
+recently, many gene mutations associated with intellectual disability, asd or schizophrenia have been identified by high-throughput sequencing.
+
+PMC5496244:
+using aggregated data from 9246 families with autism spectrum disorder, intellectual disability, or developmental delay, we show ~1/3 of de novo variants are independently observed as standing variation in the exome aggregation consortium’s cohort of 60,706 adults, and these de novo variants do not contribute to neurodevelopmental risk.
+ recent research has uncovered a significant role for de novo variation in neurodevelopmental disorders.
+we further use a loss-of-function -intolerance metric, pli, to identify a subset of lof-intolerant genes that contain the observed signal of associated de novo protein truncating variants in neurodevelopmental disorders.
+
+PMC5828599:
+a less severe class of de novo mutation, missense, while enriched in individuals with asd, has been refractory to correlation with any asd phenotypic feature.
+
+PMC5658669:
+we found that deletion of atg7, which is vital for autophagy, from myeloid cell-specific lysozyme m-cre mice resulted in social behavioral defects and repetitive behaviors, characteristic features of autism spectrum disorders.
+
+PMC5805137:
+using this system, we find that in timothy syndrome– a neurodevelopmental disorder that is caused by mutations in the cav1.2 calcium channel, interneurons display abnormal migratory saltations.
+
+PMC3040743:
+ a causal role of mutations in multiple general transcription factors in neurodevelopmental disorders including autism suggested that alterations in global levels of gene expression regulation might also relate to disease risk in sporadic cases of autism.
+
+PMC3043074:
+fmr1 ko and their wild-type littermates on both the fvb and c57bl/6 genetic backgrounds were examined on a battery of tests modeling the clinical symptoms of asd, including the triad of core symptoms , as well as the secondary symptoms .
+
+PMC5770771:
+caused by a single copy deletion of ~27 genes, 16p11.2 microdeletion syndrome is characterized by intellectual disability, impaired language, communication and socialization skills, and asd.
+previous studies suggested the possibility of some overlap in the mechanisms of pathophysiology in 16p11.2 microdeletion syndrome and fragile x syndrome.
+ human chromosome 16p11.2 microdeletion is among the most common gene copy number variations known to confer risk for intellectual disability and autism spectrum disorder and affects an estimated 3 in 10 000 people.
+
+PMC3090611:
+here we show that mice with shank3 gene deletions exhibit self-injurious repetitive grooming and deficits in social interaction.
+
+PMC6175061:
+abstract phelan–mcdermid syndrome is a rare genetic disorder in which one copy of the shank3 gene is missing or mutated, leading to a global developmental delay, intellectual disability , and autism.
+
+PMC3083416:
+here, we report that quantitative trait analyses of asd symptoms combined with case-control association analyses using distinct asd subphenotypes identified on the basis of symptomatic profiles result in the identification of highly significant associations with 18 novel single nucleotide polymorphisms .
+
+PMC3114764:
+in vitro adenoviral gene delivery approach was used to over-express il-6 in cultured cerebellar granule cells.
+
+PMC4350523:
+although hdopaminet a559v is a rare variant, it has been found in multiple probands with neuropsychiatric disorders associated with imbalances in dopamine neurotransmission, including attention-deficit hyperactivity disorder, bipolar disorder, and now asd.
+the human dopaminet rare variant with an ala to val substitution at amino acid 559 was previously reported in individuals with bipolar disorder or attention-deficit hyperactivity disorder .
+pharmacological inhibition of protein kinase c β or serine to ala substitution in the hdopaminet a559v background restores amphetamine-induced dopamine efflux while promoting intracellular amphetamine accumulation.
+
+PMC3113723:
+in a previous study, a finnish group demonstrated that disc1 polymorphisms were associated with autism and asperger syndrome.
+
+PMC3130139:
+we propose that these cntnap2 variants increase susceptibility to specific language impairment or autism when they occur together with other risk factors.
+we tested the hypothesis that these cntnap2 variants affect communicative behavior, measured at 2 years of age in a large epidemiological sample, the western australian pregnancy cohort study.
+recent studies of disorder reported that variants of the cntnap2 gene are associated both with language deficits in specific language impairment and with language delays in autism.
+
+PMC4591364:
+twenty-five of 59 asd children and 13 of 44 neurotypical siblings met rome iii criteria for at least one functional gastrointestinal disorders.
+
+PMC3252613:
+ genetic mutations of shank3 have been reported in patients with intellectual disability, autism spectrum disorder and schizophrenia.
+
+PMC4633447:
+the patient with the most deleterious slc7a3 variant had high-functioning autism and epilepsy, and also carries a de novo 16p11.2 duplication possibly contributing to his phenotype.
+
+PMC3197027:
+ there are several lines of evidence supporting the role of de novo mutations as a mechanism for common disorders, such as autism and schizophrenia.
+a high rate of new mutations may in part explain why genetic studies have so far failed to identify many genes predisposing to complexes diseases genes, such as autism and schizophrenia, and why diseases have been identified for a mere 3% of genes in the human genome.
+the process for determining if the genetic basis of a disease may result in part from de novo mutations and the molecular approach to establish this link will be illustrated, using autism and schizophrenia as examples.
+
+PMC6018399:
+the shank2 loss-of-function mutation resulted in a notable phenotype of hyperactivity encompassing hypermotivation, increased locomotion, and repetitive behaviors.
+our results show a novel hypermotivation phenotype that is unique to the rat model of shank2 dysfunction, in addition to the traditional hyperactive and repetitive behaviors observed in mouse models.
+the hyperactive phenotype was associated with an upregulation of mglur1 expression, increased dendritic branching, and enhanced long-term depression in the striatum but opposing morphological and cellular alterations in the hippocampus .
+to investigate the phylogenetic conservation of phenotypes resultant of shank2 loss-of-function in a translationally relevant animal model, we generated and characterized a novel transgenic rat with a targeted mutation of the shank2 gene, enabling an evaluation of gene-associated phenotypes, the elucidation of complex behavioral phenotypes, and the characterization of potential translational biomarkers.
+mutant rats also expressed deficits in social behavior throughout development and in the acquisition of operant tasks.
+administration of the mglur1 antagonist jnj16259685 selectively normalized the expression of striatally mediated repetitive behaviors and physiology but had no effect on social deficits.
+
+PMC4720778:
+thus, it is feasible that in the highly representative group of kanner-type asd subjects, oxt could have a beneficial effect on social communication and social interaction.
+the aim of this pilot study is to investigate the feasibility and adverse events, such as epilepsy, of the long-term administration of intranasal oxt for adolescent and adult asd subjects with id because such patients frequently have seizures.
+in conclusion, this pilot study demonstrates that long-term administration of intranasal oxt is tolerable in a representative cohort of asd individuals with id and suggests that future multicenter trials of oxt are warranted and should include measurements of reciprocal social interactions based on daily life under closer surveillance for epilepsy.
+we also addressed the question on how to scale the oxt effects to the core symptoms of social deficits because of the relative difficulty in obtaining objective measurements.
+
+PMC3215885:
+our study extends the scope of genome-wide cnv profiling beyond de novo copy number variations in sporadic patients and may aid in uncovering missing heritability in genome-wide screening studies of complex psychiatric disorders.
+
+PMC3309504:
+in light of the evidence implicating copy number variants with schizophrenia and autism, we used a mouse model to explore the hypothesis that the offspring of older males have an increased risk of de novo copy number variants.
+our results support the hypothesis that the offspring of older fathers have an increased risk of neurodevelopmental disorders such as schizophrenia and autism by generation of de novo copy number variants in the male germline.
+one of the de novo copy number variants involved auts2 , and other copy number variants included genes linked to schizophrenia, autism and brain development.
+
+PMC3213131:
+there is a striking difference in the frequency of rare copy number variants in autism or intellectual disability compared to dyslexia with essentially no difference in large cnv burden among dyslexia patients compared to controls.
+rare copy number variants were more likely to arise de novo in intellectual disability when compared to autism or dyslexia .
+ while numerous studies have implicated copy number variants in a range of neurological phenotypes, the impact relative to disease severity has been difficult to ascertain due to small sample sizes, lack of phenotypic details, and heterogeneity in platforms used for discovery.
+using a customized microarray enriched for genomic hotspots, we assayed for large copy number variants among 1,227 individuals with various neurological deficits including dyslexia , sporadic autism , and intellectual disability , as well as 337 controls.
+
+PMC3228874:
+because both syndromes are caused by mutations in genes that regulate protein synthesis in neurons, it has been hypothesized that excessive protein synthesis is one core pathophysiological mechanism of intellectual disability and autism.
+synaptic, biochemical and cognitive defects in these mutants are corrected by treatments that modulate metabotropic glutamate receptor 5 in opposite directions, and deficits in the mutants disappear when the mice are bred to carry both mutations.
+
+PMC3270696:
+copy number evaluations and direct dna sequencing of gnb1l in 271 schizophrenia and 513 autism cases revealed dup22q11.2 in two families with autism and private gnb1l missense variants in conserved residues in three families .
+prior studies provided evidence that gnb1l may have a role in schizophrenia.
+we identified an individual with a balanced translocation 46,xy,t and a behavioral phenotype characterized by cognitive impairment, autism, and schizophrenia in the absence of congenital malformations.
+
+PMC3517299:
+timothy syndrome is caused by a missense mutation in the l-type calcium channel cav1.2 that is associated with developmental delay and autism 1.
+
+PMC4552377:
+performance on the eyes test is a sex-independent phenotypic characteristic of adults with autism, reflecting sex-common social difficulties, and provides support for the emb theory predictions for both males and females.
+
+PMC3295800:
+all 9 patients met autism diagnostic interview-revised and autism diagnostic observation schedule diagnostic criteria for autism, displaying stereotypies and severe impairments in social interaction and communication .
+the results indicate that comorbid autism and williams-beuren syndrome is more frequent than expected and suggest that the common williams-beuren syndrome deletion can result in a continuum of social communication impairment, ranging from excessive talkativeness and overfriendliness to absence of verbal language and poor social relationships.
+
+PMC5339767:
+in this report, we describe two unrelated patients with complex medical histories consistent with kleefstra syndrome in whom next generation sequencing identified the same novel c.2426c>t (p.p809l) missense variant in euchromatic histone methyltransferase-1.
+however, some euchromatic histone methyltransferase-1 variants have been described in individuals presenting with autism spectrum disorder or mild intellectual disability, suggesting that the phenotypic spectrum resulting from euchromatic histone methyltransferase-1 alterations may be quite broad.
+
+PMC3023760:
+human genes c3orf58 or deleted in autism-1 and cxorf36 or deleted in autism-1 related are implicated in asd and mental retardation.
+
+PMC4320286:
+reciprocal copy number variants at the 16p11.2 bp4-bp5 locus offer a unique opportunity to study the intermediate phenotypes in carriers at high risk for autism spectrum disorder or schizophrenia .
+
+PMC4537259:
+in addition, cntnap2 null mice performed slightly better in a cognitive procedural learning test.
+in the open field test with exposure to urine of an estrous female, however, the cntnap2 null mice showed reduced vocalizations.
+
+PMC4372342:
+these mutant mice display a reduction in social behaviors; deficits in prepulse inhibition ; reduced levels of parvalbumin-immunoreactive neurons in the medical prefrontal cortex, hippocampus, amygdala, and superior colliculus; and a deficit in of auditory phase-locked gamma oscillations.
+
+PMC4476581:
+ rett syndrome is an autism spectrum disorder mainly caused by mutations in the x-linked mecp2 gene and affecting roughly 1 out of 10.000 born girls.
+
+PMC4479087:
+to uncover the underlying mechanisms of this phenotype, genome-wide rnaseq was used to identify potential downstream genes of rbm8a in the brain, which have been implicated in autism and neurodevelopmental disorders.
+interestingly, autism and schizophrenia risk genes are highly represented in downstream transcripts of rbm8a.
+
+PMC5374041:
+ gene-disruptive mutations contribute to the biology of neurodevelopmental disorders , but most pathogenic genes are not known.
+
+PMC3941568:
+we analyzed the coding sequences and exon-intron boundaries of glialcam, encoding an igg-like cell adhesion protein, in 81 individuals with autism spectrum disorders, either with or without comorbid epilepsy, paroxysmal eeg and/or macrocephaly, and the pten gene in the subsample with macrocephaly.
+we attempted to estimate the association of gene variants with neurodevelopmental disorders in patients with autism-epilepsy phenotype and cranial overgrowth, analyzing two genes previously reported to be associated with autism and macrocephaly.
+the concurrence of epilepsy in the same patient also suggests that pten, and the downstream signaling pathway, might deserve to be investigated in autism-epilepsy comorbidity.
+whilst we detected in glialcam several single nucleotide variants without clear pathogenic effects, we found a novel pten heterozygous frameshift mutation in one case with “extreme” macrocephaly, autism, intellectual disability and seizures.
+we did not find a clear association between glialcam mutations and autism-epilepsy phenotype-macrocephaly comorbidity.
+the identification of a novel frameshift variant of pten in a patient with “extreme” macrocephaly, autism, intellectual disability and seizures, confirms this gene as a major candidate in the asd-macrocephaly endophenotype.
+
+PMC5395755:
+it is caused by an alteration of the fmr1 gene, which maps at the xq27.3 band: more than 99% of individuals have a cgg expansion in the 5′ utr of the gene, and fmr1 mutations and duplication/deletion are responsible for the remaining molecular diagnoses of fragile x syndrome.
+pharmacological treatment of fragile x syndrome is essentially symptom based, but the growing understanding of the molecular and biological mechanisms of the disease are paving the way to targeted therapy, which may reverse the effects of fmrp deficiency and be a real cure for the disease itself, not just its symptoms.
+
+PMC4702300:
+de novo mutations in pogo transposable element with zinc finger domain have been identified in six independent and diverse cohorts of individuals with neurodevelopmental disorders ranging from autism spectrum disorder to developmental delay.
+while pogz has been associated with neurodevelopmental disorders in large cohort studies, our data suggest that loss of function variants in pogz lead to an identifiable syndrome of ndd with specific phenotypic traits.
+
+PMC5886277:
+using genetic mutants, we demonstrated that doc2a+/− fam57ba+/− double heterozygotes show hyperactivity and increased seizure susceptibility relative to wild-type or single doc2a−/− or fam57ba−/− mutants.
+ abstract deletion of the 16p11.2 cnv affects 25 core genes and is associated with multiple symptoms affecting brain and body, including seizures, hyperactivity, macrocephaly, and obesity.
+
+PMC5886262:
+despite the recent discovery of two de novo missense gain-of-function mutations in cav1.3 in two individuals with autism spectrum disorder and intellectual disability cacna1d has not been considered a prominent asd-risk gene in large scale genetic analyses, since such studies primarily focus on likely-disruptive genetic variants.
+here we report the discovery and characterization of a third de novo missense mutation in cacna1d in a patient with asd and epilepsy.
+the additional presence of seizures and neurological abnormalities in our patient define a novel phenotype partially overlapping with symptoms in two individuals with pasna caused by similar cav1.3 gain-of-function mutations.
+
+PMC5515576:
+we generated arid1b heterozygous mice, which showed social behavior impairment, altered vocalization, anxiety-like behavior, neuroanatomical abnormalities, and growth impairment.
+a focus on reversible mechanisms identified insulin-like growth factor deficiency with inadequate compensation by growth hormone-releasing hormone and growth hormone , underappreciated findings in arid1b patients.
+in addition, arid1b is the most common cause of coffin-siris syndrome, a developmental delay syndrome characterized by some of the above abnormalities .
+ sequencing studies have implicated haploinsufficiency of arid1b, a swi/snf chromatin-remodeling subunit, in short stature , autism spectrum disorder , intellectual disability , and corpus callosum agenesis .
+this model functionally validates the involvement of arid1b in human disorders, and allows mechanistic dissection of neurodevelopmental diseases linked to chromatin-remodeling.
+
+PMC5431663:
+using the constantly updated guidelines to conduct the whole-exome sequencing study and to interpret the sequence variants are a necessary strategy to make the molecular diagnosis and to guide the individualized treatment of human disease.
+
+PMC5691167:
+although a clear cut pathology for asperger has not been identified yet, recent studies have largely focused on brain imaging techniques to investigate asperger syndrome.
+
+PMC5454981:
+our study examined a cohort of children, adolescents, and young adults with 22q11.2ds, who were ascertained irrespective of parents’ behavioral or developmental concerns, and found that 17.9% of the participants met excellence in autism criteria for an asd diagnosis, and that a majority showed some level of social-communication impairment or the presence of repetitive behaviors.
+
+PMC5441062:
+in addition to novel genome-wide significant loci, we have identified a significant genetic correlation with schizophrenia and association of asd with several neurodevelopmental-related genes such as ext1, astn2, macrod2, and hdac4.
+these include loci previously implicated in asd such as foxp1 at 3p13, atp2b2 at 3p25.3, and a ‘neurodevelopmental hub’ on chromosome 8p11.23.
+
+PMC5907836:
+genetic mutations in neuroligin genes have been linked with some neurodevelopmental disorders such as autism.
+
+PMC5442155:
+to investigate the role of multiple epidermal growth factor-like-domains 10 variants with putative transcription regulatory function in the etiology of autism, we performed a family-based association study in 410 chinese han trios.
+
+PMC5468250:
+ gabaa receptor subunit genes gabrb3, gabra5, and gabrg3 located on chromosome 15q11-q13 have been implicated in the etiology of autistic spectrum disorders .
+besides, gabrb3 rs2081648, gabra5 rs1426217) gabra5, and gabrg3 rs1426217) gabra5 and gabrg3 polymorphisms were associated with symptom-based deficits in social interaction, sensorimotor and somatosensory coordination, visual response, imitation, activity level, language expression and adaptability.
+this study intended to investigate the possible role of single-nucleotide polymorphisms present in gabrb3 , gabra5 gabra5), and gabrg3 gabra5 and gabrg3) genes in asd susceptibility and symptom-based and developmental phenotypes of asd in chinese han children and adolescents.
+developmental abnormalities in late emergences of social interaction and fine motor were detected in gabrb3 rs2081648 polymorphism.
+
+PMC5472790:
+here, we show that lrfn2 knockout mice exhibit autism-like behavioural abnormalities, including social withdrawal, decreased vocal communications, increased stereotyped activities and prepulse inhibition deficits, together with enhanced learning and memory.
+furthermore, we detect functionally defective lrfn2 missense mutations in autism and schizophrenia patients.
+
+PMC5206704:
+ the alpha7 nicotinic acetylcholine receptor, encoded by the chrna7 gene, has been implicated in various psychiatric and behavioral disorders, including schizophrenia, bipolar disorder, epilepsy, autism, alzheimer’s disease, and parkinson’s disease, and is considered a potential target for therapeutic intervention.
+previous behavioral studies suggested that chrna7 deficient mice had attention deficits, but were normal in baseline behavioral responses, learning, memory, and sensorimotor gating.
+
+PMC5474730:
+rare copy-number variants conferring moderate to high risk of psychiatric illness are associated with having fewer children and are under stronger negative selection pressure than common sequence variants.
+here, we investigate the selection pressures on sequence variants that predispose to schizophrenia, autism, bipolar disorder, major depression and attention deficit hyperactivity disorder using genomic data from 150,656 icelanders, excluding those diagnosed with these psychiatric diseases.
+
+PMC4192301:
+untargeted metabolomics of liver and skeletal muscle revealed increases in levels of tca cycle intermediates with triheptanoin diet, as well as normalizations of glucose and fatty acid biochemical pathways consistent with the improved metabolic phenotype in mecp2 knockout mice on triheptanoin.
+these results suggest that an approach using dietary supplementation with anaplerotic substrate is effective in improving symptoms and metabolic health in rtt.
+ rett syndrome is an autism spectrum disorder caused by mutations in the x-linked mecp2 gene that encodes methyl-cpg binding protein 2 .
+we show that dietary therapy with triheptanoin significantly increased longevity and improved motor function and social interaction in male mice hemizygous for mecp2 knockout.
+
+PMC5486135:
+this disorder is also correlated with clock components underlying behavioral circadian rhythms and, thus, a mutation of the mental retardation gene can result in disturbed sleep patterns and altered circadian rhythms.
+
+PMC5539915:
+we identified the properties of de novo missense mutations in patients with neurodevelopmental disorders and highlight 35 genes with excess missense mutations.
+
+PMC5025785:
+ loss-of-function mutations in the gene encoding the postsynaptic scaffolding protein shank2 are a highly penetrant cause of autism spectrum disorders involving cerebellum-related motor problems.
+using pc-specific shank2 knockouts, we replicate alterations of simple spike regularity in vivo and establish cerebellar dependence of asd-like behavioural phenotypes in motor learning and social interaction.
+
+PMC5886277:
+using genetic mutants, we demonstrated that doc2a+/− fam57ba+/− double heterozygotes show hyperactivity and increased seizure susceptibility relative to wild-type or single doc2a−/− or fam57ba−/− mutants.
+ abstract deletion of the 16p11.2 cnv affects 25 core genes and is associated with multiple symptoms affecting brain and body, including seizures, hyperactivity, macrocephaly, and obesity.
+
+PMC5672813:
+two genes were significantly enriched for post-zygotic mutations genome-wide, and other post-zygotic mutations involved genes known to cause asd or other neurodevelopmental disorders.
+
+PMC4863894:
+conclusions: these findings suggest that snps near oxt and and arginine vasopressin are associated with diagnosis of asd, social behaviors, restricted and repetitive behaviors, iq, plasma ot, and with whole blood serotonin.
+studies have also shown that the neuropeptide hormones ot and arginine vasopressin influence mammalian social and territorial behaviors and may have treatment potential for neurodevelopmental disorders.
+methods: in this study, tdt analysis was carried out utilizing fbat in 207 probands and a european ancestry subsample .the evolutionarily related and adjacent genes of oxt and and arginine vasopressin were studied for associations between the tagged single nucleotide polymorphisms and asd diagnosis, social abilities, restrictive and repetitive behaviors, and iq for cognitive abilities.
+
+PMC3693408:
+plasma markers of oxidative stress and measures of cognitive and language development and asd behavior were obtained from 18 children diagnosed with asd who met criteria for probable or definite mitochondrial disease per the morava et al.
+
+PMC3346055:
+ the 22q13.3 deletion, or phelan-mcdermid syndrome, is characterized by global intellectual disability, generalized hypotonia, severely delayed or absent speech associated with features of autism spectrum disorder, and minor dysmorphisms.
+it is concluded that the behavioral phenotype of the 22q13.3 deletion syndrome comprises absent or delayed speech and perseverations with associated autistic-like features, whereas its psychopathological phenotype comprises an atypical bipolar disorder.
+the present paper describes two adult brothers with an identical 2.15 mb 22qter deletion, of whom the youngest was referred for evaluation of recurrent mood changes.
+
+PMC5533198:
+to assess whether the haploinsufficiency of ankrd11-flanking genes, such as zfpm1, cdh15 and znf778, contributed to either the severity of the neurological impairment or was associated with other clinical features, we collected 12 new cases with a 16q24.2q24.3 deletion , ranging from 343 kb to 2.3 mb.
+the single patient not deleted for ankrd11, whose phenotype is characterized by milder psychomotor delay, cardiac congenital malformation, thrombocytopenia and astigmatism, confirms all this data.
+ 16q24 deletion involving the ankrd11 gene, ranging from 137 kb to 2 mb, have been associated with a microdeletion syndrome characterized by variable cognitive impairment, autism spectrum disorder, facial dysmorphisms with dental anomalies, brain abnormalities essentially affecting the corpus callosum and short stature.
+on the other hand, patients carrying either deletions encompassing solely ankrd11 or its loss-of-function variants were reported in association with the kbg syndrome, characterized by a very similar phenotype, including mild-to-moderate intellectual disability, short stature and macrodontia of upper incisors, with inter and intrafamilial variability.
+by comparing the clinical and genetic features of our patients with those previously reported, we show that the severity of the neurological phenotype and the frequency of congenital heart defects characterize the deletions that, besides ankrd11, contain zfpm1, cdh15 and znf778 as well.
+
+PMC5611740:
+to address the impacts of variants in cx3cr1 on neurodevelopmental disorders, we conducted coding exon-targeted resequencing of cx3cr1 in 370 japanese scz and 192 asd patients using next-generation sequencing technology, followed by a genetic association study in a sample comprising 7054 unrelated individuals .
+we detected a statistically significant association between the variant ala55thr in cx3cr1 with scz and asd phenotypes .
+ cx3cr1, a g protein-coupled receptor solely expressed by microglia in the brain, has been repeatedly reported to be associated with neurodevelopmental disorders including schizophrenia and autism spectrum disorders in transcriptomic and animal studies but not in genetic studies.
+
+PMC5454851:
+furthermore, single nucleotide polymorphisms in core circadian clock genes have been associated with psychiatric disorders .
+
+PMC4479043:
+in mice lacking shank2, an excitatory postsynaptic scaffolding protein, postsynaptic zinc elevation induced by clioquinol improves social interaction.
+clioquinol also improves social interaction in mice haploinsufficient for the transcription factor tbr1, which accompanies nmdar activation in the amygdala.
+
+PMC3851031:
+subsequently, we established that mice expressing the serotonin transporter ala56 variant on a 129s6/s4 genetic background display multiple biochemical, physiological and behavioral changes, including hyperserotonemia, altered 5-ht receptor sensitivity, and altered social, communication, and repetitive behavior.
+several phenotypes seen on the 129 background were reduced or absent when the mutation was placed on the b6 background, including hyperserotonemia, 5-ht receptor hypersensivity, and repetitive behavior.
+to explore the effects of genetic background, we backcrossed serotonin transporter ala56 mice on the 129 background into a c57bl/6 background to achieve congenic b6 serotonin transporter ala56 mice, and assessed autism-relevant behavior, including sociability, ultrasonic vocalizations, and repetitive behavior in the home cage, as well as serotonergic phenotypes, including whole blood serotonin levels and serotonin receptor sensitivity.
+on the b6 background, mutant pup ultrasonic vocalizations were significantly increased, in contrast to decreased vocalizations seen previously on the 129 background.
+
+PMC3994485:
+sodium channel disruptions, such as mutations in scn2a, may play an important role in psychiatric disorders.
+the participant met new dsm-5 criteria for asd, presenting with social and communication impairment, repetitive behaviors, and sensory reactivity issues.
+
+PMC5638097:
+the effect sizes of variants influencing emotion recognition are likely to be small.
+
+PMC6196530:
+ significance losing one copy of the rai1 gene causes smith–magenis syndrome , a neurodevelopmental disorder.
+using a newly generated smith–magenis syndrome mouse model, this study demonstrates that restoring the rai1 gene dose in an early postnatal window could repair gene expression and social interaction deficits in this smith–magenis syndrome model.
+
+PMC6238819:
+we searched the pubmed and web of science databases using the descriptors “autism”, “asperger”, “education”, “children” and “assistive technology” and selected articles that met the following inclusion criteria: original research; written in english; based on participants with a primary diagnosis of autism spectrum disorder; and tested an instrument designed to promote communication in children with autism spectrum disorder.
+
+PMC5886262:
+despite the recent discovery of two de novo missense gain-of-function mutations in cav1.3 in two individuals with autism spectrum disorder and intellectual disability cacna1d has not been considered a prominent asd-risk gene in large scale genetic analyses, since such studies primarily focus on likely-disruptive genetic variants.
+here we report the discovery and characterization of a third de novo missense mutation in cacna1d in a patient with asd and epilepsy.
+the additional presence of seizures and neurological abnormalities in our patient define a novel phenotype partially overlapping with symptoms in two individuals with pasna caused by similar cav1.3 gain-of-function mutations.
+
+PMC4948673:
+how shank3 insufficiency affects specific neural circuits and this is related to specific asd symptoms remains elusive.
+
+PMC4759095:
+the best variables for classification were verbal intelligence quotient for the asd/intellectual disability genes, paternal age at birth for the differentially brain expressed genes and adaptive function for de novo copy number variants.
+this work highlights the importance of examining the diverse sub-phenotypic manifestations of copy number variants in asd, including the specific features, comorbid conditions and clinical correlates of asd that comprise underlying characteristics of the disorder.
+ significant evidence exists for the association between copy number variants and autism spectrum disorder ; however, most of this work has focused solely on the diagnosis of asd.
+
+PMC6225088:
+method: a comparative study of severity and psychiatric comorbidities was carried out between a sample of participants that only met criteria for pervasive developmental disorder according to the dsm-iv-tr and a sample of participants that also met asd criteria according to dsm-5 classification.
+
+PMC5825895:
+here we report the absence of an asd- or a scz-like phenotype in cofilin1 mutants, and we conclude that cofilin1 is relevant specifically for non-social cognition.
+notably, recent studies revealed an over-activation of cofilin1 in mutant mice displaying asd- or scz-like behavioral phenotypes, suggesting that dysregulated cofilin1-dependent actin dynamics contribute to their behavioral abnormalities, such as deficits in social behavior.
+these findings let us hypothesize: that, apart from cognitive impairments, cofilin1 mutants display additional behavioral deficits with relevance to asd or scz; and that our cofilin1 mutants represent a valuable tool to study the underlying disease mechanisms.
+finally, cofilin1 mutants did not display abnormal repetitive behaviors.
+to test our hypotheses, we compared social behavior and ultrasonic communication of juvenile mutants to control littermates, and we did not obtain evidence for impaired direct reciprocal social interaction, social approach or social memory.
+
+PMC4844926:
+the rapidly improving ability to identify genetic mutations because of advances in next generation sequencing, coupled with previous epidemiological studies demonstrating high heritability of asd, have led to many recent attempts to identify causative genetic mutations underlying the asd phenotype.
+
+PMC4860203:
+albeit comparable to other psychiatric patients, levels of symptoms and psychological distress were high over the adult lifespan; 79 % met criteria for a psychiatric disorder at least once in their lives.
+however, older adults less often met criteria for any psychiatric diagnosis and, specifically, social phobia than younger adults.
+
+PMC3707861:
+the sample was characterized by high rates of autism spectrum disorder: 27 met criteria for autism spectrum disorder and 24 for autistic disorder.
+the phenotype of shank3 deficiency has been described primarily from case studies, with limited evaluation of behavioral and cognitive deficits.
+  22q13 deletion syndrome, also known as phelan-mcdermid syndrome, is a neurodevelopmental disorder characterized by intellectual disability, hypotonia, delayed or absent speech, and autistic features.
+analysis of genotype-phenotype correlations indicated that larger deletions were associated with increased levels of dysmorphic features, medical comorbidities and social communication impairments related to autism.
+analyses of individuals with small deletions or point mutations identified features related to shank3 haploinsufficiency, including asd, seizures and abnormal eeg, hypotonia, sleep disturbances, abnormal brain mri, gastroesophageal reflux, and certain dysmorphic features.
+
+PMC5366154:
+it has been shown that social behaviors are impaired in cd157 knockout mice without severe motor dysfunction and that cd157/bst1 gene single nucleotide polymorphisms are associated with autism spectrum disorder in humans.
+
+PMC5181638:
+interestingly, ctnnb1 ctnnb1 conditional knockout in pv-interneurons significantly impaired object recognition and social interactions and elevated repetitive behaviors, which mimic the core symptoms of patients with asd.
+the ctnnb1 conditional knockout mice had increased anxiety, but had no overall change in motor function.
+ mutations in β-catenin have been implicated in cancer and mental disorders.
+surprisingly, deleting ctnnb1 in parvalbumin-interneurons enhanced spatial memory.
+recently, loss-of-function mutations of ctnnb1 were linked to intellectual disability , and rare mutations were identified in patients with autism spectrum disorder .
+
+PMC5481916:
+using the fmr1 null mouse model of fragile x syndrome, we have identified brain regions, gene networks, and molecular pathways responsive to a social stimulus.
+though the genetic cause of fragile x syndrome is known to be due to the silencing of fmr1, and the fmr1 null mouse model representing this lesion has been extensively studied, the contributions of this gene and its protein product, fmrp, to social behavior are not well understood.
+
+PMC5031467:
+ medial frontal neurons and gene variants show the existence of an autism-like psychiatric disorder in monkeys.
+
+PMC5859484:
+importantly, we show that when the phenotype is complex and homozygosity levels are high, whole exome sequencing can identify a significant number of relevant variants that explain neurodevelopmental phenotypes, and these mutations may lie outside of the regions of homozygosity, suggesting that the appropriate follow up test is whole exome sequencing rather than targeted sequencing.
+
+PMC6341097:
+we found that the genes carrying variants of interests were enriched for biological processes related to cell projection organization and neuron development, which is consistent with the neurodevelopmental hypothesis of asd.
+
+PMC5113965:
+here we report, for the first time, that paternal aging has profound effects on the onset of behavioral abnormalities in mice carrying a mutation of pax6, a gene with neurodevelopmental regulatory functions.
+
+PMC4859484:
+ duplications at 15q11.2-q13.3 overlapping the prader-willi/angelman syndrome region have been associated with developmental delay , autism spectrum disorder and schizophrenia .
+to clarify the role of maternal and paternal duplications, we conducted the largest and most detailed study to date of parental origin of 15q11.2-q13.3 interstitial duplications in developmental delay, asd and schizophrenia cohorts.
+we show, for the first time, that paternal duplications lead to an increased risk of developing developmental delay/asd/multiple congenital anomalies , but do not appear to increase risk for schizophrenia.
+interestingly, the most consistent clinical characteristics of schizophrenia patients with 15q11.2-q13.3 duplications were learning or developmental problems, found in 76% of carriers.
+
+PMC4611898:
+the phenotype of cyclin-dependent kinase-like 5 syndrome includes rett syndrome variant with early onset seizures, early onset epileptic encephalopathy; and severe developmental delay.
+
+PMC4419151:
+to understand the role of foxp1 in the context of neurodevelopment leading to alterations in cognition and behaviour, we generated mice with a brain-specific foxp1 deletion .
+foxp1 ablation was also associated with various cognitive and social deficits, providing new insights into its behavioural importance.
+the mutant mice were viable and allowed for the first time the analysis of pre- and postnatal neurodevelopmental phenotypes, which included a pronounced disruption of the developing striatum and more subtle alterations in the hippocampus.
+
+PMC5416665:
+in contrast, although the serotonin transporter mutant animals learned the auditory and visual tasks comparably to with wild-type littermates, they failed to show behavioral gains under multisensory conditions.
+a gain-of-function coding variant in the serotonin transporter associates with sensory aversion in humans, and when expressed in mice produces traits associated with asd, including disruptions in social and communicative function and repetitive behaviors.
+
+PMC5599599:
+single nucleotide polymorphisms in the oxytocin receptor gene have been shown to explain some variability in social abilities in control populations.
+whether these variants similarly contribute to the severity of social deficits experienced by children with neurodevelopmental disorders is unclear.
+unexpectedly, the two most frequently studied oxytocin receptor gene single nucleotide polymorphisms in the general population were associated with an increased severity of social deficits in asd , yet fewer social deficits in adhd .
+
+PMC5571902:
+ genetic mutations contribute to the etiology of autism spectrum disorder , a common, heterogeneous neurodevelopmental disorder characterized by impairments in social interaction, communication, and repetitive and restricted patterns of behavior.
+
+PMC4655861:
+we found that in a test of social approach, nrxn1 and nrxn2 encoding α-neurexin i heterozygous mice show no social memory for familiar versus novel conspecifics.
+human genetic studies have found heterozygous deletions affecting nrxn1 and nrxn2, encoding α-neurexin i and α-neurexin ii , in individuals with autism spectrum disorders and schizophrenia.
+the observed nrxn1 and nrxn2 encoding α-neurexin i and nrxn2α genotypic effects were specific, as neither heterozygous deletion had effects on a wide range of other behavioral measures, including several measures of anxiety.
+
+PMC5655917:
+out of 1,247 communication disorders checklist‐positive children, 882 answered the social communication questionnaire, of whom 124 met the cutoff score of 15.
+
+PMC5116288:
+ purpose truncating mutations in the maternally imprinted, paternally expressed gene magel2, which is located in the prader-willi critical region 15q11-13, have recently been reported to cause schaaf-yang syndrome, a prader-willi-like disease, manifesting developmental delay/intellectual disability, hypotonia, feeding difficulties, and autism spectrum disorder.
+
+PMC3342283:
+diffuse plaques containing amyloid ß1–40/42 detected in three subjects with asd, 39 to 52 years of age, suggest that there is an age-associated risk of alterations of precursor protein processing with an intraneuronal accumulation of a short form of amyloid ß and an extracellular deposition of full-length amyloid ß in nonfibrillar plaques.
+conclusions/significance the higher prevalence of excessive amyloid ß accumulation in neurons in individuals with early onset of intractable seizures, and with a high risk of sudden unexpected death in epilepsy in autistic subjects with dup compared to subjects with idiopathic asd, supports the concept of mechanistic and functional links between autism, epilepsy and alterations of precursor protein processing leading to neuronal and astrocytic amyloid ß accumulation and diffuse plaque formation.
+
+PMC3352866:
+in this study, we used cultured cerebellar granule cells from fmr1 knockout mice, a mouse model for fragile x syndrome and syndromic autism, to examine the effects of memantine on dendritic spine development and synapse formation.
+
+PMC3410815:
+il-17a is a pro-inflammatory cytokine that has been shown to play an important role in various autoimmune neuroinflammatory diseases.
+
+PMC3448848:
+these results demonstrate a critical role for nav1.1 channels in neuropsychiatric functions and provide a potential therapeutic strategy for cognitive deficit and autism-spectrum behaviors in dravet syndrome.
+here we show that mice with scn1a haploinsufficiency display hyperactivity, stereotyped behaviors, social interaction deficits, and impaired context-dependent spatial memory.
+ haploinsufficiency of the scn1a gene encoding voltage-gated sodium channel nav1.1 causes dravet syndrome , a childhood neuropsychiatric disorder including recurrent intractable seizures, cognitive deficit, and autism-spectrum behaviors.
+gabaergic neurotransmission is specifically impaired by this mutation, and selective deletion of nav1.1 channels in forebrain interneurons is sufficient to cause these behavioral and cognitive impairments.
+
+PMC3506511:
+interestingly, they did not exhibit other clinical features commonly observed in american-european patients with mecp2 duplication, including recurrent respiratory infections and epilepsy.
+one such gene is the transcription factor mecp2, whose loss of function in females results in rett syndrome, while its duplication in males results in developmental delay and autism.
+consistently, the boys displayed clinical features in common with other patients carrying mecp2 duplications, including intellectual disability, autism, lack of speech, slight hypotonia and unsteadiness of movement.
+
+PMC3400671:
+high immobility in the forced swim test, reduced prepulse inhibition, mild motor coordination impairments and reduced grip strength were detected in engrailed 2 null mutants.
+to determine the consequences of engrailed 2 mutations on mouse behaviors, including outcomes potentially relevant to autism, we conducted comprehensive phenotyping of social, communication, repetitive, and cognitive behaviors.
+developmental milestones, general health, olfactory abilities, exploratory locomotor activity, anxiety-like behaviors and pain responses did not differ across genotypes, indicating that the behavioral abnormalities detected in engrailed 2 null mutants were not attributable to physical or procedural confounds.
+engrailed 2 null mutants exhibited robust deficits in reciprocal social interactions as juveniles and adults, and absence of sociability in adults, replicated in two independent cohorts.
+
+PMC3464360:
+phenotype–genotype comparison of the translocation patient to seven unpublished patients with various sized deletions encompassing arid1b confirms that haploinsufficiency of arid1b is associated with corpus callosum abnormalities, intellectual disability, severe speech impairment, and autism.
+by next-generation mate-pair sequencing we mapped the chromosomal breakpoints of a patient with a de novo balanced translocation, t, agenesis of corpus callosum , intellectual disability, severe speech impairment, and autism.
+
+PMC3513680:
+clinically, rtt is characterized by psychomotor regression with loss of volitional hand use and spoken language, the development of repetitive hand stereotypies, and gait impairment.
+excitingly, rtt is reversible in a mouse model, providing inspiration and hope that such a goal may be achieved for rtt and potentially for many neurodevelopmental disorders.
+the many clinical features found in rtt and the various clinical problems that result from alteration in mecp2 function have led to the belief that understanding rtt will provide insight into a number of other neurological disorders.
+
+PMC3720840:
+here, we use a tiered approach, in which clinically significant copy number variants are first identified in large clinical cohorts of neurodevelopmental disorders , after which these copy number variants are then systematically identified within well-characterized asd cohorts.
+ copy number variants have a major role in the etiology of autism spectrum disorders , and several of these have reached statistical significance in case–control analyses.
+we focused our initial analysis on 48 recurrent copy number variants from 24 loci in 31 516 published clinical cases with neurodevelopmental disorders and 13 696 published controls, which yielded a total of 19 deletion copy number variants and 11 duplication copy number variants that reached statistical significance.
+
+PMC3495055:
+isolated duplications of pafah1b1 have been associated with mild developmental delay and hypotonia, while isolated duplications of ywhae have been associated with autism.
+we have identified a family segregating a 17p13.3 duplication extending 329.5 kilobases by fish and array-cgh involving the ywhae gene, but not pafah1b1, affected by a mild dysmorphic phenotype with associated autism and mental retardation.
+the small chromosomal duplication was inherited from his mother who was affected by a bipolar and borderline disorder and was alcohol addicted.
+
+PMC3490915:
+newborn tph2−/− mutant mice show delays in the expression of key developmental milestones and their diminished preference for maternal scents over the scent of an unrelated female is a forerunner of more severe socialization deficits that emerge in weanlings and persist into adulthood.
+
+PMC3568452:
+a point mutation in cav1.2 causes timothy syndrome 4, a neurodevelopmental disorder associated with autism spectrum disorders .
+
+PMC3815575:
+here we use evolutionary conservation analysis to build a model-structure of nhe9 based on the crystal structure of bacterial nhaa and use it to screen autism-associated variants in the human population first by phenotype complementation in yeast, followed by functional analysis in primary cortical astrocytes from mouse.
+ summary nhe9 is an endosomal cation/proton antiporter with orthologs in yeast and bacteria.
+
+PMC3547868:
+ nucleotide changes in the auts2 locus, some of which affect only noncoding regions, are associated with autism and other neurological disorders, including attention deficit hyperactivity disorder, epilepsy, dyslexia, motor delay, language delay, visual impairment, microcephaly, and alcohol consumption.
+combined, our results show that auts2 is important for neurodevelopment and expose candidate enhancer sequences in which nucleotide variation could lead to neurological disease and human-specific traits.
+
+PMC3628102:
+lis1 inactivation restricted to the postnatal hippocampus resulted in similar deficits in dendritic protrusion density and social interactions.
+lis1 loss is associated with dynein protein motor dysfunction, and disrupts the actin cytoskeleton through disregulated rhogtpases.
+
+PMC3577685:
+further analysis revealed alternative splicing of methionine synthase mrna, including deletion of folate-binding domain exons and age-dependent deletion of exons from the cap domain, which protects vitamin b12 from oxidation.
+
+PMC3884762:
+we identified phenotypes not comprehensively described before in this cohort including mild facial dysmorphism, sleep problems and an unusual electroencephalogram variant.
+
+PMC5611737:
+this study strengthens the evidence for association between rare variants within reticulon 4 receptor and scz, and may shed light on the molecular mechanisms underlying the neurodevelopmental disorder.
+recently, rare variants such as copy-number variants and single-nucleotide variants have been a focus of research because of their large effect size associated with increased susceptibility to scz and asd and the possibility of elucidating the pathophysiology of mental disorder through functional analysis of the discovered rare variants.
+
+PMC3690969:
+the level of personal and social skills, measured by vineland adaptive behavior scales, negatively correlated with the duplication cnv load for the affected children; the strongest association was found for communication and socialization scores.
+
+PMC5571902:
+ genetic mutations contribute to the etiology of autism spectrum disorder , a common, heterogeneous neurodevelopmental disorder characterized by impairments in social interaction, communication, and repetitive and restricted patterns of behavior.
+
+PMC5618521:
+arid1b heterozygous knockout mice exhibited asd-like traits related to social behavior, anxiety, and perseveration, in addition to associated features reported in some cases of asd, such as reduced weight, impaired motor coordination, and hydrocephalus.
+
+PMC3631200:
+our research suggested that atp2b2 might play a role in the etiology of autism in chinese han population.
+
+PMC5578492:
+ wagr syndrome is characterized by wilm’s tumor, aniridia, genitourinary abnormalities and intellectual disabilities.
+prrg4 is proposed to contribute to the autistic symptoms of wagr syndrome, but the molecular function of prrg4 genes remains unknown.
+comm is required for axon guidance and synapse formation in the fly, so prrg4 could contribute to the autistic symptoms of wagr by disturbing either of these processes in the developing human brain.
+
+PMC5763335:
+ abstract mutations in the kinesin family member 1a gene have been associated with a wide range of phenotypes including recessive mutations causing hereditary sensory neuropathy and hereditary spastic paraplegia and de novo dominant mutations causing a more complex neurological disorder affecting both the central and peripheral nervous system.
+
+PMC5609014:
+genetic analysis revealed a 1.68 mb deletion encompassing sts in 95% of cells while biochemical analysis revealed correspondingly low steroid sulfatase activity consistent with a diagnosis of x-linked ichthyosis.
+
+PMC3696010:
+the fam69 genes, fam69a, fam69b, fam69c, c3orf58 and cxorf36 , are by large uncharacterised molecularly, yet linked to several neurological disorders in genetics studies.
+
+PMC5622473:
+intellectual disability accompanied by microcephaly was recapitulated in a murine model by overexpressing dyrk1a which mimicked down syndrome phenotypes.
+mutations in this kinase-encoding gene have been reported to cause microcephaly associated with either intellectual disability or autism in humans.
+
+PMC3690523:
+ summary chromosomal deletions at xp22.3 appear to influence vulnerability to the neurodevelopmental disorders attention deficit hyperactivity disorder and autism.
+
+PMC5682605:
+however, significance of ambra1 for autistic phenotypes in humans and, apart from behavior, for other autism-typical features, namely early brain enlargement or increased seizure propensity, has remained unexplored.
+moreover, altered pentylentetrazol-induced seizure propensity, an in vivo readout of neuronal excitation–inhibition dysbalance, becomes obvious exclusively in female mutants.
+
+PMC5675000:
+there was striking overlap between genes with damaging de novo mutations in probands with congenital heart disease and autism.
+de novo mutations accounted for 8% of cases, including ~3% of isolated congenital heart disease patients and ~28% with both neurodevelopmental and extra-cardiac congenital anomalies.
+exome sequencing of a single cohort of 2,871 congenital heart disease probands including 2,645 parent-offspring trios implicated rare inherited mutations in 1.8%, including a recessive founder mutation in gdf1 accounting for ~5% of severe congenital heart disease in ashkenazim, recessive genotypes in myh6 accounting for ~11% of shone complex, and dominant flt4 mutations accounting for 2.3% of tetralogy of fallot.
+seven genes surpassed thresholds for genome-wide significance and 12 genes not previously implicated in congenital heart disease had > 70% probability of being disease-related; de novo mutations in ~440 genes are inferred to contribute to congenital heart disease.
+
+PMC5629761:
+dyrk1a haploinsufficiency results in a common phenotypic profile including intellectual disability, speech and motor difficulties, microcephaly, feeding difficulties, and vision abnormalities.
+a growing number of case reports with dyrk1a haploinsufficiency exhibit common phenotypic features including microcephaly, intellectual disability, speech delay, and facial dysmorphisms.
+
+PMC4091761:
+although the nucleus accumbens receives oxytocin receptor-containing inputs from several brain regions, genetic deletion of these receptors specifically from dorsal raphe nucleus, which provides serotonergic innervation to the nucleus accumbens, abolishes the reinforcing properties of social interaction.
+
+PMC3767287:
+our findings suggest that chemicals and genetic mutations that impair topoisomerases could commonly contribute to asd and other neurodevelopmental disorders.
+
+PMC5655854:
+previous studies in individuals carrying forkhead-box protein p1 mutations and deletions have described the presence of autism spectrum disorder traits, intellectual disability, language impairment, and psychiatric features.
+
+PMC5658953:
+  previous studies have reported no clear critical region for medical comorbidities in children with deletions or duplications of 22q11.2.
+we observed similar rates of medical comorbidities in individuals with involvement of lcr-a to b and lcr-b to d for both duplications and deletions, consistent with prior studies.
+
+PMC5656305:
+our clinical data delineates the kmt2c phenotypic spectrum and reinforces the phenotypic overlap with kleefstra syndrome and other related intellectual disability disorders.
+
+PMC5701309:
+haploinsufficiency of ebf3 may affect brain development and function, resulting in developmental delay, intellectual disability, and behavioral differences observed in individuals with a deleterious variant in ebf3.
+ using whole-exome sequencing, we identified seven unrelated individuals with global developmental delay, hypotonia, dysmorphic facial features, and an increased frequency of short stature, ataxia, and autism with de novo heterozygous frameshift, nonsense, splice, and missense variants in the early b-cell transcription factor family member 3 gene.
+
+PMC3844687:
+the purpose of this study was to investigate the role of evolutionarily conserved cis-elements in regulating the post-transcriptional expression of the mecp2 gene and to explore their possible correlations with a mutation that is known to cause mental retardation.
+a rett syndrome mutation with decreased protein expression was found to be associated with a conserved g-quadruplex.
+mutations in this gene have been associated with rett syndrome, a form of autism.
+we discovered in the 5′-utr of mecp2 mrna a highly conserved g-quadruplex which overlapped a known deletion in rett syndrome patients with decreased levels of mecp2 protein.
+
+PMC5679329:
+their female sibling with the same mutation presented with intellectual disability and a broad autism phenotype.
+in this study, we describe a family with asd in which a predicted pathogenic nonsense mutation in the x-chromosome gene rab39b segregates with asd phenotype.
+two males with an inherited rab39b mutation both presented with macrocephaly, intellectual disability , and asd.
+
+PMC3819162:
+we report four individuals with truncating mutations on the paternal allele of magel2, a gene within the prader-willi syndrome domain.
+these findings suggest magel2 is a novel gene causing complex asds, and magel2loss of function can contribute to several aspects of the prader-willi syndrome phenotype.
+
+PMC5726525:
+arid1b heterozygous mice exhibited abnormal cognitive and social behavior, which was rescued by treatment with a positive allosteric gabaa receptor modulator.
+our results demonstrate a critical role for the arid1b gene in interneuron development and behavior, and provide insight into the pathogenesis of asd and intellectual disability.
+
+PMC5684358:
+these results suggest that mef2c haploinsufficiency leads to abnormal brain development, excitatory to inhibitory imbalance, and neurobehavioral dysfunction, which may be mitigated by pharmacological intervention.
+ transcription factor mef2c regulates multiple genes linked to autism spectrum disorder , and human mef2c haploinsufficiency results in asd, intellectual disability, and epilepsy.
+
+PMC4056431:
+in addition, rare mutations and copy-number variations of human neurexin genes have been linked to autism and schizophrenia, indicating that impairments of synaptic function sustained by neurexins and their binding partners may be relevant to the pathomechanism of these debilitating diseases.
+
+PMC5770771:
+caused by a single copy deletion of ~27 genes, 16p11.2 microdeletion syndrome is characterized by intellectual disability, impaired language, communication and socialization skills, and asd.
+previous studies suggested the possibility of some overlap in the mechanisms of pathophysiology in 16p11.2 microdeletion syndrome and fragile x syndrome.
+ human chromosome 16p11.2 microdeletion is among the most common gene copy number variations known to confer risk for intellectual disability and autism spectrum disorder and affects an estimated 3 in 10 000 people.
+
+PMC4035120:
+these observations mark the earliest known indicators of social disability in infancy, but also falsify a prior hypothesis: in the first months of life, this basic mechanism of social adaptive action—eye looking—is not immediately diminished in infants later diagnosed with asd; instead, eye looking appears to begin at normative levels prior to decline.
+
+PMC3818007:
+mutations in methyl cpg-binding protein 2 cause rett syndrome , a predominantly female neurodevelopmental disorder sharing some asd clinical symptoms.
+
+PMC5789213:
+we propose dividing syndromic autism into the following two groups: asd that occurs in the context of a clinically defined syndrome-recognizing these disorders depends on the familiarity of the clinician with the features of the syndrome, and the diagnosis is typically confirmed by targeted genetic testing ; asd that occurs as a feature of a molecularly defined syndrome-for this group of patients, asd-associated variants are identified by genome-wide testing that is not hypothesis driven .
+
+PMC3798378:
+to assess its population impact we studied 2148 common single nucleotide polymorphisms using transmission disequilibrium test across the entire ~3.3 mb cntnap2 locus in 186 multiplex and 323 simplex families with autistic spectrum disorder .
+
+PMC3827143:
+the newly identified interacting genes include auts2, mutations of which are associated with autism and intellectual disabilities.
+
+PMC5543534:
+the diagnosis of rtt was excluded in all three autism patients.
+
+PMC3215885:
+our study extends the scope of genome-wide cnv profiling beyond de novo copy number variations in sporadic patients and may aid in uncovering missing heritability in genome-wide screening studies of complex psychiatric disorders.
+
+PMC3628102:
+lis1 inactivation restricted to the postnatal hippocampus resulted in similar deficits in dendritic protrusion density and social interactions.
+lis1 loss is associated with dynein protein motor dysfunction, and disrupts the actin cytoskeleton through disregulated rhogtpases.
+
+PMC5876144:
+taken together, these findings highlight an epigenetic mechanism underlying social deficits linked to shank3 deficiency, which may suggest potential therapeutic strategies for asd patients bearing shank3 mutations.
+
+PMC3448848:
+these results demonstrate a critical role for nav1.1 channels in neuropsychiatric functions and provide a potential therapeutic strategy for cognitive deficit and autism-spectrum behaviors in dravet syndrome.
+here we show that mice with scn1a haploinsufficiency display hyperactivity, stereotyped behaviors, social interaction deficits, and impaired context-dependent spatial memory.
+ haploinsufficiency of the scn1a gene encoding voltage-gated sodium channel nav1.1 causes dravet syndrome , a childhood neuropsychiatric disorder including recurrent intractable seizures, cognitive deficit, and autism-spectrum behaviors.
+gabaergic neurotransmission is specifically impaired by this mutation, and selective deletion of nav1.1 channels in forebrain interneurons is sufficient to cause these behavioral and cognitive impairments.
+
+PMC6287693:
+while somatic mutations identified in aldosterone producing adenomas underlie treatment-resistant hypertension, germline cacna1d mutations are associated with a neurodevelopmental disorder characterized by a wide symptomatic spectrum, including autism spectrum disorder.
+
+PMC3819162:
+we report four individuals with truncating mutations on the paternal allele of magel2, a gene within the prader-willi syndrome domain.
+these findings suggest magel2 is a novel gene causing complex asds, and magel2loss of function can contribute to several aspects of the prader-willi syndrome phenotype.
+
+PMC6284419:
+also correlations were found between nrg1 expression with gender and severity of asd symptoms.
+also correlation of nrg1 mrna level with executive functions deficiencies could shed lights on executive functions mechanisms and may suggest targeted treatments to improve particular executive functions.
+
+PMC5341363:
+tuberous sclerosis complex is an autosomal dominant condition, caused by mutations in either the tuberous sclerosis complex1 or tuberous sclerosis complex2 gene.
+
+PMC4749962:
+these findings suggest that the rng105 heterozygous knockout leads to a reduction in sociality, response to novelty and flexibility in learning, which are implicated in asd-like behavior.
+
+PMC5921983:
+other common findings were consistent with reports among individuals with 22q13.3 deletions, including hypotonia, motor skill deficits, regression, seizures, brain abnormalities, mild dysmorphic features, and feeding and gastrointestinal problems.
+our findings expand the molecular and phenotypic spectrum of phelan-mcdermid syndrome caused by shank3 point mutations and suggest that, in general, speech impairment and motor deficits are more severe in the case of deletions.
+
+PMC5283828:
+ mutations in the synaptic gene shank3 lead to a neurodevelopmental disorder known as phelan-mcdermid syndrome .
+
+PMC4893072:
+evidence for the associations of cd38 with social behavior and psychiatric disorder is discussed, especially in subjects with autism spectrum disorder.
+
+PMC5726525:
+arid1b heterozygous mice exhibited abnormal cognitive and social behavior, which was rescued by treatment with a positive allosteric gabaa receptor modulator.
+our results demonstrate a critical role for the arid1b gene in interneuron development and behavior, and provide insight into the pathogenesis of asd and intellectual disability.
+
+PMC4668631:
+by comparing the average social communication questionnaire scores with the clinical features, we found statistically significant correlations with epilepsy, seizure onset before age one year, spasms, mutations in tuberous sclerosis complex2, cognitive level, sleep disorders, and other psychiatric problems, but not with seizure frequency, tubers localization and gender.
+risk factors for asd are epilepsy, infantile spams, and mutations in tuberous sclerosis complex2.
+
+PMC4618364:
+therefore, we think it is crucial to look for mutations in the gene shank3 in patients diagnosed for childhood disintegrative disorder or any developmental disorder with a regressive pattern involving social and communicative skills as well as cognitive and instinctual functions, with onset around 3 years.
+  deletions and mutations involving the shank3 gene lead to a nonspecific clinical presentation with moderate to profound intellectual disability, severely delayed or absent speech, and autism spectrum disorders .
+better knowledge of the clinical spectrum of shank3 haploinsufficiency is useful to facilitate clinical care monitoring and to guide molecular diagnosis, essential for genetic counselling.
+
+PMC5321753:
+ fragile x syndrome , caused by the loss of functional fmrp, is a leading cause of autism.
+moreover, peripheral administration of nb001, an experimental compound that preferentially suppresses adcy1 activity over other adcy subtypes, attenuates the behavioural abnormalities in fmr1 knockout mice.
+
+PMC5261619:
+our integrative network analysis showed that the siblings’ shared translocation could explain their similar syndromic phenotype, including overgrowth, macrocephaly, and intellectual disability.
+therefore, to characterize the complex genotype-phenotype relationship, we performed array comparative genomic hybridization and sequenced the exomes of two affected siblings with asd symptoms, dysmorphic features, and intellectual disability, searching for de novo copy number variations, as well as for de novo and rare inherited point variations—single nucleotide variants or small insertions and deletions —with probable functional impacts.
+
+PMC6393688:
+we found that the nested atypical duplications are a possible risk factor for neurodevelopmental phenotypes, particularly for autism spectrum disorder , speech and language delay, and behavioral abnormalities.
+
+PMC5098193:
+ we evaluated the effects of superimposing seizures on a genetic mutation with known involvement in both autism spectrum disorder and in epilepsy.
+these findings demonstrate that superimposing seizures on a genetic mutation can result in long-term alterations in activity and social behavior in mice.
+
+PMC6279786:
+we analyzed two regions known to contain oxt receptor across all primates studied to date: the nucleus basalis of meynert , which mediates visual attention, and the superior colliculus, which controls gaze direction.
+
+PMC5655854:
+previous studies in individuals carrying forkhead-box protein p1 mutations and deletions have described the presence of autism spectrum disorder traits, intellectual disability, language impairment, and psychiatric features.
+
+PMC5763335:
+ abstract mutations in the kinesin family member 1a gene have been associated with a wide range of phenotypes including recessive mutations causing hereditary sensory neuropathy and hereditary spastic paraplegia and de novo dominant mutations causing a more complex neurological disorder affecting both the central and peripheral nervous system.
+
+PMC5682605:
+however, significance of ambra1 for autistic phenotypes in humans and, apart from behavior, for other autism-typical features, namely early brain enlargement or increased seizure propensity, has remained unexplored.
+moreover, altered pentylentetrazol-induced seizure propensity, an in vivo readout of neuronal excitation–inhibition dysbalance, becomes obvious exclusively in female mutants.
+
+PMC4538199:
+as ankrd11 is a relatively common gene in which sequence variants have been identified in individuals with neurodevelopmental disorders, it seems an important contributor to the aetiology of both sporadic and familial cases.
+
+PMC3535343:
+genetic disorders frequently accompany autism spectrum disorder, such as tuberous sclerosis complex caused by haploinsufficiency of the tsc1 and tsc2 genes.
+
+PMC6258166:
+social deficits were observed in both heterozygous knockout mice and homozygous knockout mice , but increases in general anxiety were only observed in knockout mice mice.
+
+PMC5609014:
+genetic analysis revealed a 1.68 mb deletion encompassing sts in 95% of cells while biochemical analysis revealed correspondingly low steroid sulfatase activity consistent with a diagnosis of x-linked ichthyosis.
+
+PMC5816822:
+furthermore, variants in the adjacent oxytocin-vasopressin gene regions have been found to be associated with asd diagnosis and endophenotypes.
+with a specific focus on variants considered to be among the most prevalent in the development of asd, these issues will be discussed in-depth and suggestions to approach inconsistencies in the present literature will be provided.
+
+PMC4091761:
+although the nucleus accumbens receives oxytocin receptor-containing inputs from several brain regions, genetic deletion of these receptors specifically from dorsal raphe nucleus, which provides serotonergic innervation to the nucleus accumbens, abolishes the reinforcing properties of social interaction.
+
+PMC5351212:
+we co-administered the hormonally active form of vitamin d, 1α,25 dihydroxy vitamin d3 , simultaneously with poly and examined social interaction, stereotyped behavior, emotional learning and memory, and innate anxiety-like behavior in juveniles and the levels of the pro-inflammatory cytokines il-1β, il-6 and tnf-α in maternal plasma and fetal brains.
+
+PMC4986048:
+this finding is evidenced through both ld score correlation and de novo variant analysis, indicating that multiple types of genetic risk for autism spectrum disorders influence a continuum of behavioral and developmental traits, the severe tail of which can result in an asd or other neuropsychiatric disorder diagnosis.
+
+PMC5545711:
+our findings strongly indicate that studies of the hemi- and homozygous 15q13.3 mouse strains will facilitate understanding of the biological mechanisms of severe mental disorders.
+the 15q13.3 microdeletion increases the risk of intellectual disability, epilepsy, autism spectrum disorder and schizophrenia, though the clinical profile varies considerably.
+
+PMC5810773:
+a set of behavioral experiments including social, exploratory and repetitive behaviors showed that these were unaffected in cntn5 null mutant mice.
+in view of its association with neurodevelopmental disorders, particularly autism spectrum disorder , this study focused on cntn5-positive areas in the forebrain and aimed to explore the morphological and behavioral phenotypes of the cntn5 null mutant mouse in relation to these areas and asd symptomatology.
+
+PMC6156544:
+mutations and duplication events in at‐1/slc33a1 are highly pleiotropic and have been linked to diseases such as spastic paraplegia, developmental delay, autism spectrum disorder, intellectual disability, propensity to seizures, and dysmorphism.
+
+PMC4774106:
+subsequent univariate and multivariate genome-wide association studies of these repetitive behaviors behaviors previous research indicates that there are two or more factors enabled the detection of associated single nucleotide polymorphisms at 8p21.2-8p21.1.
+although these results did not replicate in an independent asd dataset, genomic features of this region and pathway analysis suggest that common variants in 8p21.2-8p21.1 may contribute to repetitive behaviors, particularly sameness.
+in an effort to identify common variants associated with repetitive behaviors, we have carried out a genome-wide association study using the autism genetic resource exchange dataset for each identified repetitive behaviors subcategory, while allowing for comparisons of associated single nucleotide polymorphisms with associated single nucleotide polymorphisms in the same set of probands analyzed using all the repetitive behaviors behaviors previous research indicates that there are two or more factors as phenotypes in a multivariate linear mixed model.
+
+PMC4717584:
+of the attention deficit/hyperactivity disorder sample, 21 % met asd cut-offs on the autism diagnostic observation schedule and 30 % met asd cut-offs on all domains of the autism diagnostic interview-revised.
+four social communication autism diagnostic observation schedule items adequately differentiated the groups while none of the items on the autism diagnostic interview-revised met the criteria for adequate discrimination.
+
+PMC5085253:
+taken together, our genetic findings substantiate pathogenic mitochondrial dna mutations as a potential cause for asd and synergize with recent work calling attention to their unique metabolic phenotypes for diagnosis and treatment of children with asd.
+
+PMC6096837:
+we examined stability of such skills in children at high familial risk for asd who either met diagnostic criteria for asd at age 7 years or did not and low-risk control children , prospectively studied from infancy.
+
+PMC3907307:
+large duplications that include many genes can lead to both neurodevelopmental phenotypes in children and gene amplifications in tumors.
+here we have combined high-resolution array cgh, custom sequence capture, next-generation sequencing, and long-range pcr to analyze the breakpoints of 50 nonrecurrent inverted duplications in patients with intellectual disability, autism, and congenital anomalies.
+
+PMC6341115:
+these behavioural alterations of sapap4-deficient mice are associated with dramatic changes in synapse morphology, function and plasticity, indicating that sapap4 is critical for the development of functional neuronal networks and that mutations in the corresponding human gene, dlgap4, may cause deficits in social and cognitive functioning relevant to asd-like neurodevelopmental disorders.
+
+PMC3941568:
+we analyzed the coding sequences and exon-intron boundaries of glialcam, encoding an igg-like cell adhesion protein, in 81 individuals with autism spectrum disorders, either with or without comorbid epilepsy, paroxysmal eeg and/or macrocephaly, and the pten gene in the subsample with macrocephaly.
+we attempted to estimate the association of gene variants with neurodevelopmental disorders in patients with autism-epilepsy phenotype and cranial overgrowth, analyzing two genes previously reported to be associated with autism and macrocephaly.
+the concurrence of epilepsy in the same patient also suggests that pten, and the downstream signaling pathway, might deserve to be investigated in autism-epilepsy comorbidity.
+whilst we detected in glialcam several single nucleotide variants without clear pathogenic effects, we found a novel pten heterozygous frameshift mutation in one case with “extreme” macrocephaly, autism, intellectual disability and seizures.
+we did not find a clear association between glialcam mutations and autism-epilepsy phenotype-macrocephaly comorbidity.
+the identification of a novel frameshift variant of pten in a patient with “extreme” macrocephaly, autism, intellectual disability and seizures, confirms this gene as a major candidate in the asd-macrocephaly endophenotype.
+
+PMC5810065:
+however, the relationship between the loss of arhgef10 and the clinical symptoms of asd is unclear.
+
+PMC3961190:
+in applications of our method to real exome sequencing data sets, we show the capability of spring in detecting causative de novo mutations for autism, epileptic encephalopathies and intellectual disability.
+
+PMC4183378:
+the aims of this study were to determine whether a composite of common molecular genetic variants, previously found to be associated with clinically diagnosed attention-deficit/hyperactivity disorder, predicts attention-deficit/hyperactivity disorder and asd-related traits in the general population.
+
+PMC4514956:
+the duplication group did not diverge from typical patterns of mu attenuation until after initial exposure.
+
+PMC3988108:
+the dramatic effect on the expression of some schizophrenia and asd genes places hs, and perhaps other cellular stressors, into a common conceptual framework with disease-causing genetic variants.
+the findings also suggest that some candidate genes that are assumed to have a relatively limited impact on schizophrenia and asd pathogenesis based on a small number of positive genetic findings, such as smarca2 and arnt2, may in fact have a much more substantial role in these disorders - as targets of common environmental stressors.
+186 genes showed significant differences in expression following hs , including known hs-inducible genes, as expected, as well as those coding for ngfr and a number of schizophrenia and asd candidates, including smarca2, dpp10, arnt2, ahi1 and znf804a.
+
+PMC5857311:
+this microdeletion is involved in developmental delays, congenital heart defects, dysmorphism, and various psychiatric disorders, including autism spectrum disorders.
+case presentation we describe the case of a 44-month-old caucasian girl with the 2q13 microdeletion and autism spectrum disorders with global development delay but no associated organ anomalies.
+
+PMC4031262:
+recent studies of de novo mutations in schizophrenia and autism have reinforced the hypothesis that rare genetic variation contributes to risk.
+genes with de novo mutationss overlapped with genes implicated in autism and intellectual disability , supporting a shared genetic etiology between these disorders.
+
+PMC5789213:
+we propose dividing syndromic autism into the following two groups: asd that occurs in the context of a clinically defined syndrome-recognizing these disorders depends on the familiarity of the clinician with the features of the syndrome, and the diagnosis is typically confirmed by targeted genetic testing ; asd that occurs as a feature of a molecularly defined syndrome-for this group of patients, asd-associated variants are identified by genome-wide testing that is not hypothesis driven .
+
+PMC4909589:
+here, using a mouse heterozygous for tbx1 , we demonstrate that a genetically-triggered neonatal phenotype in vocalization generates a negative environmental loop in pup-mother social communication.
+a number of rare copy number variants have emerged as robust genetic risk factors for asd, but not all cnv carriers exhibit asd and the severity of asd symptoms varies among cnv carriers.
+
+PMC4011843:
+to our knowledge, this is only the second study to investigate the association of genetic variants with mathematical ability, and it highlights a number of interesting markers for future study.
+
+PMC5651454:
+results: as compared to the control, the levels of ifn-γ, il-1β, il-2, and il-6 were significantly increased , and the levels of il-4, il-10, and tgf-β were significantly decreased in the offspring of asd rats; whereas those cytokines were significantly reversed after prenatal exposure to tak242 .
+
+PMC5093957:
+  deletions in the long arm of chromosome 1 have been described in patients with a phenotype consisting primarily of obesity, intellectual disability and autism-spectrum disorder.
+
+PMC5118619:
+both length variants were found to be associated with restrictive, repetitive behaviors, but not overall diagnosis.
+single nucleotide polymorphisms and microsatellites in the receptor genes of of oxytocin and and vasopressin are associated with asd diagnosis and measures of social behavior as well as restricted repetitive behaviors.
+as in other studies, oxtr rs2268493 was associated with diagnosis.
+correction for multiple comparisons was performed for single nucleotide polymorphisms tested in each gene region, only and vasopressinr1b single nucleotide polymorphisms remained significantly associated with asd diagnosis.
+results: using the additive inheritance model in family-based association testing we found associations between and vasopressinr1b single nucleotide polymorphisms and diagnosis.
+in this study, we examined associations between variants in the receptor genes of vasopressin , oxytocin , and asd diagnosis along with related subphenotypes.
+
+PMC4135348:
+based on the evidence that excessive alcohol consumption may be associated with an increased rate of de novo mutations in germ cells , we examine here whether the risks of autism and autism and attention-deficit/hyperactivity disorder are increased among individuals with a family history of alcohol use disorders .
+ recent studies suggest de novo mutations may involve the pathogenesis of autism and attention-deficit/hyperactivity disorder .
+
+PMC4537259:
+in addition, cntnap2 null mice performed slightly better in a cognitive procedural learning test.
+in the open field test with exposure to urine of an estrous female, however, the cntnap2 null mice showed reduced vocalizations.
+
+PMC4341013:
+diagnosis is facilitated by demonstration of succinylaminoimidazole carboxamide riboside and succinyladenosine in extracellular fluids such as plasma, cerebrospinal fluid and/or followed by genomic and/or cdna sequencing and characterization of mutant proteins.
+
+PMC6082846:
+deletion size was significantly correlated with expressive and receptive language disability but not with asd standardized assessment scores.
+
+PMC4701386:
+our results therefore indicate that loss of cbp ch1 domain function contributes to rubinstein-taybi syndrome, and possibly asd, and that this domain plays an essential role in normal motor function, cognition and social behavior.
+we show that mice with a deletion mutation in the cbp ch1 domain have an rubinstein-taybi syndrome-like phenotype that includes asd-relevant repetitive behaviors, hyperactivity, social interaction deficits, motor dysfunction, impaired recognition memory, and abnormal synaptic plasticity.
+
+PMC4177294:
+this includes haploinsufficiency of setbp1 associated with intellectual disability and loss of expressive language and truncations of zmynd11 in patients with autism, aggression and complex neuropsychiatric features.
+we created an expanded cnv morbidity map from 29,085 children with developmental delay versus 19,584 healthy controls, identifying 70 significant copy number variants.
+ copy number variants are associated with many neurocognitive disorders; however, these events are typically large and the underlying causative gene is unclear.
+
+PMC4419151:
+to understand the role of foxp1 in the context of neurodevelopment leading to alterations in cognition and behaviour, we generated mice with a brain-specific foxp1 deletion .
+foxp1 ablation was also associated with various cognitive and social deficits, providing new insights into its behavioural importance.
+the mutant mice were viable and allowed for the first time the analysis of pre- and postnatal neurodevelopmental phenotypes, which included a pronounced disruption of the developing striatum and more subtle alterations in the hippocampus.
+
+PMC4131154:
+however, the second autism spectrum disorder patient with a nephronophthisis 1 duplication had a below-average performance intelligence quotient.
+many studies have suggested that copy-number variants contribute to the etiology of autism spectrum disorder.
+this report is the first to describe a nephronophthisis 1 duplication in an autism spectrum disorder patient with an average verbal intelligence quotient and an average performance intelligence quotient.
+
+PMC5618521:
+arid1b heterozygous knockout mice exhibited asd-like traits related to social behavior, anxiety, and perseveration, in addition to associated features reported in some cases of asd, such as reduced weight, impaired motor coordination, and hydrocephalus.
+
+PMC5629761:
+dyrk1a haploinsufficiency results in a common phenotypic profile including intellectual disability, speech and motor difficulties, microcephaly, feeding difficulties, and vision abnormalities.
+a growing number of case reports with dyrk1a haploinsufficiency exhibit common phenotypic features including microcephaly, intellectual disability, speech delay, and facial dysmorphisms.
+
+PMC4388743:
+group differences were evaluated for pten pathway protein expression levels, global and regional structural brain volumes and cortical thickness measures, neurocognition, and adaptive behavior.
+processing speed and working memory deficits and white matter abnormalities may serve as useful features that signal clinicians that pten is etiologic and prompting referral to genetics professionals for gene testing, genetic counseling and cancer risk management; and could reveal treatment targets in trials of treatments for pten-asd.
+white matter abnormalities mediated the relationship between pten protein reductions and reduced cognitive ability.
+
+PMC4859984:
+indications for genetic testing were significantly different for 22q112ds;22q112ds;q11.22q112ds;dups and 22q112ds;22q112ds;q11.22q112ds;ds, with the deletions more commonly tested because of birth defects or medical problems, and the duplications because of developmental delay.
+
+PMC6135829:
+oxt or the that restoring serotonin1a receptor agonist 8oh-dpat treatment from postnatal day 7 to pd21 ameliorated social abnormality in the three-chamber social interaction test in adult 15q dup mice.
+
+PMC6101561:
+ abstract  common genetic variants in and around the gene encoding transcription factor 4 are associated with an increased risk of schizophrenia.
+conversely, rare damaging transcription factor 4 mutations cause pitt–hopkins syndrome and have also been found in individuals with intellectual disability and autism spectrum disorder .
+importantly, we found that genes harboring de novo mutations in schizophrenia , asd , and intellectual disability were also enriched among transcription factor 4 targets.
+
+PMC5902398:
+ abstract  genetic testing of children with autism spectrum disorder is now standard in the clinical setting, with american college of medical genetics and genomics guidelines recommending microarray for all children, fragile x testing for boys and additional gene sequencing, including pten and mecp2, in appropriate patients.
+children with kirrel3 variants more often had minor facial dysmorphism and intellectual disability.
+
+PMC6055932:
+this method has been previously shown to boost biologically informative signal in gene expression data but to-date has not been applied to the search for cooperative mutations among putative asd genes.
+
+PMC5766530:
+the patient reported here shares speech difficulties, intellectual disability and autistic features with other foxp1 syndrome patients, and thus the diagnosis for this patient should be changed.
+several different chromosome deletions and and point mutations in distinct genes have been associated with the disease in patients originally diagnosed as opitz c. by whole exome sequencing we identified a de novo splicing mutation in foxp1 in a patient, initially diagnosed as c syndrome, who suffers from syndromic intellectual disability with trigonocephaly.
+ de novo foxp1 mutations have been associated with intellectual disability , motor delay, autistic features and a wide spectrum of speech difficulties.
+
+PMC5775320:
+ speech and motor deficits are highly prevalent in individuals with the 600 kb bp4-bp5 16p11.2 deletion; however, the mechanisms that drive these deficits are unclear, limiting our ability to target interventions and advance treatment.
+
+PMC5780507:
+we now find that inactivation of nhe9 in mice reproduces behavioral features of asd including impaired social interaction, repetitive behaviors, and altered sensory processing.
+interestingly, recent human genetic studies have implicated the endosomal na+/h+ exchanger nhe9 in both autism spectrum disorders and attention deficit hyperactivity disorder .
+
+PMC5985537:
+the 15q13.3 microdeletion syndrome region contains up to ten genes and is associated with numerous conditions, including autism spectrum disorder , epilepsy, schizophrenia, and intellectual disability; however, the mechanisms underlying the pathogenesis of 15q13.3 microdeletion syndrome remain unknown.
+we combined whole-genome sequencing, human brain gene expression , and a mouse model with a syntenic heterozygous deletion /+ mice) and determined that the microdeletion results in abnormal development of cortical dendritic spines and dendrite outgrowth.
+
+PMC5828599:
+a less severe class of de novo mutation, missense, while enriched in individuals with asd, has been refractory to correlation with any asd phenotypic feature.
+
+PMC5934305:
+linking genetic variants to these underlying traits rather than to a diagnosis of ‘autism’ may be more productive in devising personalized approaches to developmental intervention, especially if autism represents an epiphenomenon of earlier-interacting susceptibilities.
+
+PMC5810065:
+however, the relationship between the loss of arhgef10 and the clinical symptoms of asd is unclear.
+
+PMC5859484:
+importantly, we show that when the phenotype is complex and homozygosity levels are high, whole exome sequencing can identify a significant number of relevant variants that explain neurodevelopmental phenotypes, and these mutations may lie outside of the regions of homozygosity, suggesting that the appropriate follow up test is whole exome sequencing rather than targeted sequencing.
+
+PMC5857311:
+this microdeletion is involved in developmental delays, congenital heart defects, dysmorphism, and various psychiatric disorders, including autism spectrum disorders.
+case presentation we describe the case of a 44-month-old caucasian girl with the 2q13 microdeletion and autism spectrum disorders with global development delay but no associated organ anomalies.
+
+PMC5985734:
+we measured the rate of protein synthesis in fibroblasts derived from 32 individuals with fragile x syndrome and from 17 controls as well as in fibroblasts and primary neurons of 27 fmr1 ko mice and 20 controls.
+however, this cellular phenotype displays a broad distribution and a proportion of fragile x individuals and fmr1 ko mice do not show increased levels of protein synthesis, having measures in the normal range.
+here, we show that levels of protein synthesis are increased in fibroblasts of individuals with fragile x syndrome and fmr1 ko mice.
+here, we characterized the de novo rate of protein synthesis in patients with fragile x syndrome and their relationship with clinical severity.
+
+PMC5881179:
+  the recurrent ∼ 600 kb 16p11.2 microdeletion is among the most commonly known genetic etiologies of autism spectrum disorder, overweightness, and related neurodevelopmental disorders.
+
+PMC4350523:
+although hdopaminet a559v is a rare variant, it has been found in multiple probands with neuropsychiatric disorders associated with imbalances in dopamine neurotransmission, including attention-deficit hyperactivity disorder, bipolar disorder, and now asd.
+the human dopaminet rare variant with an ala to val substitution at amino acid 559 was previously reported in individuals with bipolar disorder or attention-deficit hyperactivity disorder .
+pharmacological inhibition of protein kinase c β or serine to ala substitution in the hdopaminet a559v background restores amphetamine-induced dopamine efflux while promoting intracellular amphetamine accumulation.
+
+PMC4198124:
+the growth deficiency in neurobeachin +/− mice coincided with an increased percentage of fat mass and a decrease in bone mineral density.
+
+PMC4427554:
+mutations in mecp2 cause rett syndrome, revealing common pathways among asds.
+
+PMC4249945:
+we also show that mutation carriers generally have lower iqs and enrichment for seizures.
+
+PMC4538199:
+as ankrd11 is a relatively common gene in which sequence variants have been identified in individuals with neurodevelopmental disorders, it seems an important contributor to the aetiology of both sporadic and familial cases.
+
+PMC4294557:
+using postmortem brains from fragile x syndrome patients and fmr1 knockout mice , we show that phosphorylation of the mrna 5′ cap binding protein, eukaryotic initiation factor 4e , is elevated concomitant with increased expression of matrix metalloproteinase 9 protein.
+genetic or pharmacological reduction of eukaryotic initiation factor 4e phosphorylation rescued core behavioral deficits, synaptic plasticity alterations, and dendritic spine morphology defects via reducing exaggerated translation of mmp9 mrna in fmr1 −/y mice, whereas matrix metalloproteinase 9 overexpression produced several fragile x syndrome-like phenotypes.
+mutations in fmr1 engender exaggerated translation resulting in dendritic spine dysmorphogenesis, synaptic plasticity alterations, and behavioral deficits in mice, which are reminiscent of fragile x syndrome pheno-types.
+
+PMC4759095:
+the best variables for classification were verbal intelligence quotient for the asd/intellectual disability genes, paternal age at birth for the differentially brain expressed genes and adaptive function for de novo copy number variants.
+this work highlights the importance of examining the diverse sub-phenotypic manifestations of copy number variants in asd, including the specific features, comorbid conditions and clinical correlates of asd that comprise underlying characteristics of the disorder.
+ significant evidence exists for the association between copy number variants and autism spectrum disorder ; however, most of this work has focused solely on the diagnosis of asd.
+
+PMC4320286:
+reciprocal copy number variants at the 16p11.2 bp4-bp5 locus offer a unique opportunity to study the intermediate phenotypes in carriers at high risk for autism spectrum disorder or schizophrenia .
+
+PMC4263785:
+as proof of principle, we apply the proposed methods to vps13b, a gene mutated in the rare neurodevelopmental disorder called cohen syndrome, and recently reported with recessive variants in autism.
+
+PMC4323380:
+remarkably, chronic treatment with a negative allosteric modulator of mglur5 reverses the cognitive deficit.
+
+PMC4307305:
+we narrowed the variant list to 10 to 20 genes and screened for biological significance including neural development, function and known neurological disorders.
+
+PMC4316932:
+germline mutations in the phosphatase pten are associated with diverse human pathologies, including tumour susceptibility, developmental abnormalities and autism, but any genotype-phenotype relationships are poorly understood.
+
+PMC4346882:
+mutations in the synaptic adhesion protein cell adhesion molecule 1 are also associated with autism spectrum disorder, a neurodevelopmental disorder of uncertain molecular origin.
+
+PMC4306541:
+in an effort to clarify the role of rare point mutations in contactin-associated proteins and contactin-associated protein-like 2 and related gene families, we have conducted targeted next-generation sequencing and evaluated existing sequence data in cohorts totaling 2704 cases and 2747 controls.
+
+PMC4396692:
+ evidence suggests that there is shared genetic aetiology across the major psychiatric disorders conferred by additive effects of many common variants.
+
+PMC4346944:
+ patients with the 15q11.2 bp1–bp2 microdeletion can present with developmental and language delay, neurobehavioral disturbances and psychiatric problems.
+
+PMC4319152:
+to evaluate genetic variants of grin2b in autism etiology, we performed a system association study of common and rare variants of grin2b and autism in cohorts from a chinese population, involving a total sample of 1,945 subjects.
+
+PMC4446412:
+ isogenic pluripotent stem cells are critical tools for studying human neurological diseases by allowing one to study the effects of a mutation in a fixed genetic background.
+
+PMC4192590:
+these findings suggest that structural changes in the brain of neurodevelopmental disorders neuroligin-3 mice are induced by the mutation in the neurodevelopmental disorders neuroligin-3 gene.
+no significant differences in diffusion tensor imaging indices were observed, which suggests that the neurodevelopmental disorders neuroligin-3 mutation may not have a profound effect on water diffusion as detected by diffusion tensor imaging.
+
+PMC5974415:
+16p11.2 hemideletion is a copy number variation that is highly associated with neurodevelopmental disorders.
+
+PMC6082846:
+deletion size was significantly correlated with expressive and receptive language disability but not with asd standardized assessment scores.
+
+PMC6110470:
+in particular, large deletions represent a higher burden in both genetic generalized epilepsy and rolandic epilepsy syndromes as compared to controls.
+we performed a systematic survey of rare deletions affecting protein-coding genes derived from exome data of patients with common forms of genetic epilepsies.
+
+PMC6164279:
+using combined behavioral and molecular approaches, we observed that applying deep brain stimulation and 5-ht1a receptor agonist treatment with 8-hydroxy-2-tetralin (dbs and 5-ht1a receptor agonist treatment with 8-hydroxy-2-tetralin) reversed sociability deficits, anxiety and hyperactivity in the vpa-exposed offspring.
+
+PMC6258166:
+social deficits were observed in both heterozygous knockout mice and homozygous knockout mice , but increases in general anxiety were only observed in knockout mice mice.
+
+PMC6293525:
+animal models for neurodevelopmental disorders generally rely on a single genetic mutation on a fixed genetic background.
+
+PMC6324819:
+associated snps and heterozygous deletions in contactin-associated protein-like 2 were subsequently reported in autism, schizophrenia and other psychiatric or neurological disorders.
+in this study we used: i) summary statistics from the psychiatric genomics consortium gwas for seven psychiatric disorders; ii) examined all reported contactin-associated protein-like 2 structural variants in patients and controls; iii) performed cross-disorder analysis of functional or previously associated snps; and iv) conducted burden tests for pathogenic rare variants using sequencing data .
+disrupting contactin-associated protein-like 2 rare variant burden was not higher in autism or schizophrenia compared to controls.
+finally, in a cnv mircroarray study of an extended bipolar disorder family with 5 affected relatives we previously identified a 131kb deletion in contactin-associated protein-like 2 intron 1, removing a foxp2 transcription factor binding site.
+gene-based association testing did not implicate common variants in autism, schizophrenia or other psychiatric phenotypes.
+
+PMC4376901:
+we first demonstrate that dosage alterations of the unique drosophila orthologues of candidate genes from de novo copy number variants that harbour only a single candidate gene display neurological defects similar to those previously reported in drosophila models of asd-associated variants.
+by examining synaptic and circadian neurological phenotypes resulting from the dosage variants of unique human:fly orthologues in drosophila, we observe numerous synergistic interactions between pairs of informatically-identified candidate genes whose orthologues are jointly affected by large de novo copy number variants .
+
+PMC5838868:
+  euthanasia and assisted suicide have been legally possible in the netherlands since 2001, provided that statutory due care criteria are met, including: voluntary and well-considered request; unbearable suffering without prospect of improvement; informing the patient; lack of a reasonable alternative; independent second physician’s opinion.
+
+PMC4372342:
+these mutant mice display a reduction in social behaviors; deficits in prepulse inhibition ; reduced levels of parvalbumin-immunoreactive neurons in the medical prefrontal cortex, hippocampus, amygdala, and superior colliculus; and a deficit in of auditory phase-locked gamma oscillations.
+
+PMC4425039:
+next, we examined the phenotypic, molecular, and network/pathway relationships between nine neurodevelopmental disorders associated with asd: 2q23.1 deletion rett, angelman, pitt-hopkins, 2q23.1 duplication, 5q14.3 deletion, kleefstra, kabuki make-up, and smith-magenis syndromes.
+2q23.1 deletion syndrome is a recently identified genetic neurodevelopmental disorder associated with asd.
+in this study, we provide a phenotypic update on the prevalent features of 2q23.1 deletion syndrome, which include severe intellectual disability, seizures, significant speech impairment, sleep disturbance, and autistic-like behavioral problems.
+
+PMC4382850:
+however, investigations have revealed the presence of chronic oxidative stress to be an almost invariant finding in study cohorts of patients afforded each diagnosis.
+
+PMC4406691:
+we speculate kirrel3 interacting proteins are potential candidates for intellectual disability and autism spectrum disorder.
+in addition, we found a genomic deletion encompassing map1b in one patient with intellectual disability, microcephaly and seizures and deletions encompassing myo16 in two unrelated patients with intellectual disability, autism and microcephaly.
+previously, we have shown that kirrel3 interacts with the x-linked intellectual disability associated synaptic scaffolding protein cask through its cytoplasmic domain.
+recently dysfunction of kirrel3, a synaptic molecule of the immunoglobulin superfamily, has been implicated in several neurodevelopmental conditions including intellectual disability, autism spectrum disorder, and in the neurocognitive delay associated with jacobsen syndrome.
+
+PMC5441062:
+in addition to novel genome-wide significant loci, we have identified a significant genetic correlation with schizophrenia and association of asd with several neurodevelopmental-related genes such as ext1, astn2, macrod2, and hdac4.
+these include loci previously implicated in asd such as foxp1 at 3p13, atp2b2 at 3p25.3, and a ‘neurodevelopmental hub’ on chromosome 8p11.23.
+
+PMC4401440:
+a whole-exome sequencing study identified a de novo mutation, p.a749g, in cav1.3 α1-subunits , the second main ltcc in the brain, as 1 of 62 high risk–conferring mutations in a cohort of patients with autism and intellectual disability.
+our data, together with the discovery that cav1.3 gain-of-function causes primary aldosteronism with seizures, neurologic abnormalities, and intellectual disability, suggest that cav1.3 gain-of-function mutations confer a major part of the risk for autism in the two probands and may even cause the disease.
+patients should also be explored for other symptoms likely resulting from cav1.3 hyperactivity, in particular, primary aldosteronism.
+
+PMC4479043:
+in mice lacking shank2, an excitatory postsynaptic scaffolding protein, postsynaptic zinc elevation induced by clioquinol improves social interaction.
+clioquinol also improves social interaction in mice haploinsufficient for the transcription factor tbr1, which accompanies nmdar activation in the amygdala.
+
+PMC5679329:
+their female sibling with the same mutation presented with intellectual disability and a broad autism phenotype.
+in this study, we describe a family with asd in which a predicted pathogenic nonsense mutation in the x-chromosome gene rab39b segregates with asd phenotype.
+two males with an inherited rab39b mutation both presented with macrocephaly, intellectual disability , and asd.
+
+PMC5658953:
+  previous studies have reported no clear critical region for medical comorbidities in children with deletions or duplications of 22q11.2.
+we observed similar rates of medical comorbidities in individuals with involvement of lcr-a to b and lcr-b to d for both duplications and deletions, consistent with prior studies.
+
+PMC4761009:
+epigenetic diseases can either be of monogenic origin or manifest themselves as complex multifactorial diseases such as in congenital heart disease, autism spectrum disorders, or cancer in which mutations in chromatin regulators are contributing factors.
+
+PMC4823641:
+the functional study of the jmjd1c mutant rett syndrome patient demonstrated that the altered protein had abnormal subcellular localization, diminished activity to demethylate the dna damage-response protein mdc1, and reduced binding to mecp2.
+from these, two de novo jmjd1c germline mutations were identified in a case of rett syndrome and in a patient with intellectual disability.
+conclusions: our findings indicate that mutations in jmjd1c contribute to the development of rett syndrome and intellectual disability.
+methods: we performed the mutational and functional analysis of jmjd1c in 215 cases of autism spectrum disorders, intellectual disability, and rett syndrome without a known genetic defect.
+
+PMC5307131:
+the neuroligin-3 mouse exhibits impaired social interactions and heightened aggressive behavior towards male mice.
+
+PMC4504226:
+the a548t mutation in synia is strongly associated with autism and epilepsy and we show that it leads to defective synia sumoylation.
+
+PMC4511766:
+  22q11.2 deletion syndrome represents one of the greatest known genetic risk factors for the development of psychotic illness, and is also associated with high rates of autistic spectrum disorders in childhood.
+
+PMC4799364:
+ jacobsen syndrome is a rare congenital disorder caused by a terminal deletion of the long arm of chromosome 11.
+our findings demonstrate a critical role of px-rics in cognition and suggest a causal link between px-rics deletion and asd-like behaviour in jacobsen syndrome patients.
+
+PMC4543079:
+these results provide insight into the link between the 16p11.2 deletion, abnormal auditory and language pathway structures, and the specific behavioral deficits that may contribute to neurodevelopmental disorders such as asd.
+within deletion carriers, the left-hemisphere arcuate fasciculus mean and radial diffusivities were significantly negatively correlated with clinical language ability, but not non-verbal cognitive ability.
+
+PMC4633447:
+the patient with the most deleterious slc7a3 variant had high-functioning autism and epilepsy, and also carries a de novo 16p11.2 duplication possibly contributing to his phenotype.
+
+PMC4512676:
+our research suggests that cacna1c might play a role in the genetic etiology of autism in chinese han population.
+many lines of evidence indicated that asd shares common genetic variants with other psychiatric disorders .
+significant association between cacna1c and schizophrenia was detected.
+furthermore, rare mutation in cacna1c is suggested to cause timothy syndrome, a multisystem disorder including autism-associated phenotype.
+
+PMC4898763:
+disruptions of the shank3 gene in mouse models have resulted in synaptic defects and autistic-like behaviors including anxiety, social interaction deficits, and repetitive behavior10–13.
+
+PMC4549933:
+the analyses relating the phelan-mcdermid syndrome genotype to the behavioral phenotype revealed additional complex relationships with contributions of genes in both deleted and preserved shank3 regions to the asd phenotype and other neurobehavioral impairments.
+the majority of phelan-mcdermid syndrome participants in our sample displayed persistent deficits in social communication, but only half met diagnostic criteria under the restricted, repetitive patterns of behavior, interests, or activities domain.
+phelan-mcdermid syndrome is a neurodevelopmental disorder associated with a terminal deletion affecting chromosome 22 that results in the loss of function of the shank3 gene.
+there also appears to be contributions of genes in both deleted and preserved shank3 regions to the asd phenotype and other neurobehavioral impairments.

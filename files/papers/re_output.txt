@@ -1,0 +1,177 @@
+
+sentence: Haploinsufficiency of EBF3 may affect brain development and function, resulting in developmental delay, intellectual disability, and behavioral differences.
+('Haploinsufficiency of EBF3', 'may affect', 'function')
+('Haploinsufficiency of EBF3', 'may affect', 'brain development')
+('Haploinsufficiency of EBF3', 'may affect', 'intellectual disability')
+('Haploinsufficiency of EBF3', 'may affect', 'behavioral differences')
+('Haploinsufficiency of EBF3', 'may affect', 'resulting in developmental delay')
+
+sentence: Recent evidences suggest that SNAP-25 is involved in different neuropsychiatric and neurological disorders.
+('SNAP-25', 'is involved', 'neurological disorders')
+
+sentence: A significant correlation between SNAP-25 gene polymorphism and hyperactivity in ASD children was found.
+('hyperactivity in ASD children', 'correlation was', 'SNAP-25 gene polymorphism')
+('A significant correlation between SNAP-25 gene polymorphism', 'correlation was', 'hyperactivity in ASD children')
+
+sentence: Novel Causative variants in DYRK1A, KARS, and KAT6A are associated with intellectual disability.
+('KARS', 'are associated', 'intellectual disability')
+('KAT6A', 'are associated', 'intellectual disability')
+('Novel Causative variants in DYRK1A', 'are associated', 'intellectual disability')
+
+sentence: Our data show that ADHD, autism, developmental delay and obesity are highly associated with deletion involving 11p14.1 and provide additional support for a significant role of BDNF in obesity and neurobehavioral problems.
+('autism', 'are highly associated', 'deletion involving 11p14 .1')
+('developmental delay', 'are highly associated', 'deletion involving 11p14 .1')
+('obesity', 'are highly associated', 'deletion involving 11p14 .1')
+
+sentence: Our results provide initial insight into how CBD2 haploinsufficiency leads to aberrant cortical network function and impaired memory.
+('CBD2', 'how haploinsufficiency leads', 'impaired memory')
+('CBD2', 'how haploinsufficiency leads', 'aberrant cortical network function')
+
+sentence: Suggesting that inactivation of CHD2 during neurogenesiss might contribute to abnormal neurodevelopemnt.
+('Suggesting that inactivation of CHD2 during neurogenesiss', 'might contribute', 'abnormal neurodevelopemnt')
+
+sentence: CDK5R1 gene has been previously associated with intellectual disability in humans.
+('CDK5R1 gene', 'has been previously associated', 'intellectual disability in humans')
+
+sentence: The IQSEC2 variant phenotype includes developmental delay, intellectual disability, epilepsy, hypotonia, autism, microephaly, and stereoptypies by is yet to be fully described.
+
+sentence: We found that CEP41 mmissense variants affect development of the axonal tract, cranial neural crest migration and social behaviour phenotype.
+('CEP41 mmissense variants', 'affect', 'cranial neural crest migration')
+('CEP41 mmissense variants', 'affect', 'social behaviour phenotype')
+('CEP41 mmissense variants', 'affect', 'development of the axonal tract')
+
+sentence: NKX2-1 mutations have been usually associated with a non-progressive neurological disease.
+('NKX2-1 mutations', 'have been usually associated', 'a non-progressive neurological disease')
+
+sentence: SCN1A mutations cause Dravet syndrome and are risk factors for in other epilepsies.
+('SCN1A mutations', 'cause', 'Dravet syndrome')
+
+sentence: PRRG4 could contribute to the autistic symptoms of WAGR.
+('PRRG4', 'could contribute', 'the autistic symptoms of WAGR')
+
+sentence: Polymorphisms in the SNAP-25 gene have been found in patients affected by attention-deficit/hyperactivity disorder.
+('Polymorphisms in the SNAP-25 gene', 'have been found', 'patients affected by attention-deficit/hyperactivity disorder')
+
+sentence: It has been reported that a mouse expressing r451c nlgn3 as an endogenous protein exhibits social behavioural traits typical of autism.
+('mouse expressing r451c nlgn3 as an endogenous protein', 'exhibits', 'social behavioural traits typical of autism')
+
+sentence: shank3 gene is a causable gene of the phelan-mcdermid syndrome, whose manifestation is global developmental delay and autistic behavior, especially shows severe speech and language deficit.
+('gene manifestation', 'delay', 'developmental')
+
+sentence: disruptions of the shank3 gene in mouse models have resulted in synaptic defects and autistic-like behaviors including anxiety, social interaction deficits, and repetitive behavior.
+('disruptions of the shank3 gene in mouse models', 'have resulted', 'autistic-like behaviors including anxiety')
+('disruptions of the shank3 gene in mouse models', 'have resulted', 'social interaction deficits')
+('disruptions of the shank3 gene in mouse models', 'have resulted', 'repetitive behavior')
+('disruptions of the shank3 gene in mouse models', 'have resulted', 'synaptic defects')
+
+sentence: gene abnormalities in rbfox1, encoding an mrna-splicing factor, have been shown to cause autism spectrum disorder and other neurodevelopmental disorders.
+('gene abnormalities in rbfox1', 'have been shown', 'encoding an mrna-splicing factor')
+('gene abnormalities in rbfox1', 'have been shown', 'neurodevelopmental disorders')
+('gene abnormalities in rbfox1', 'have been shown', 'cause autism spectrum disorder')
+
+sentence: the cntnap2 polymorphism identified in this population is not linked to the asd phenotype.
+('cntnap2 polymorphism identified in this population', 'is not linked', 'the asd phenotype')
+
+sentence: abstract phelan–mcdermid syndrome is a rare genetic disorder in which one copy of the shank3 gene is missing or mutated, leading to a global developmental delay, intellectual disability , and autism.
+('one copy of the shank3 gene', 'is missing', 'intellectual disability')
+('one copy of the shank3 gene', 'is missing', 'autism')
+('one copy of the shank3 gene', 'is missing', 'leading to a global developmental delay')
+
+sentence: a finnish group demonstrated that disc1 polymorphisms were associated with autism and asperger syndrome.
+('disc1 polymorphisms', 'were associated', 'asperger')
+('disc1 polymorphisms', 'were associated', 'autism syndrome')
+
+sentence: rett syndrome is an autism spectrum disorder mainly caused by mutations in the x-linked mecp2 gene and affecting roughly 1 out of 10.000 born girls.
+
+sentence: Development of Autism Spectrum Disorders (ASD), including autism, is based on a combination of genetic predisposition and environmental factors.
+('Development of Autism Spectrum Disorders including autism', 'is based', 'environmental factors')
+('Development of Autism Spectrum Disorders including autism', 'is based', 'a combination of genetic predisposition')
+
+sentence: Individuals with autism have higher 8-Iso-PGF2α levels than controls, but no correlation with quantitative assay of Paraoxonase 1 serum levels.
+('quantitative assay of Paraoxonase 1', 'no correlation', 'levels')
+
+sentence: furthermore, single nucleotide polymorphisms in core circadian clock genes have been associated with psychiatric disorders .
+('single nucleotide polymorphisms in core circadian clock genes', 'furthermore have been associated', 'psychiatric disorders')
+
+sentence: foxp1 ablation was also associated with various cognitive and social deficits, providing new insights into its behavioural importance.
+('foxp1 ablation', 'was also associated', 'various cognitive deficits')
+('foxp1 ablation', 'was also associated', 'providing new insights into its behavioural importance')
+
+sentence: prrg4 is proposed to contribute to the autistic symptoms of wagr syndrome, but the molecular function of prrg4 genes remains unknown.
+
+sentence: chromosomal deletions at xp22.3 appear to influence vulnerability to the neurodevelopmental disorders; attention deficit disorder and autism.
+('chromosomal deletions at xp22 .3', 'appear', 'autism')
+('chromosomal deletions at xp22 .3', 'appear', 'influence vulnerability to the neurodevelopmental disorders attention deficit disorder')
+
+sentence: mutations of auts2 are associated with autism and intellectual disabilities.
+('mutations of auts2', 'are associated', 'autism disabilities')
+
+sentence: Motor and social difficulties are often found in children with an autism spectrum disorder (ASD) and with developmental coordination disorder.
+('social difficulties', 'are often found', 'developmental coordination disorder')
+('social difficulties', 'are often found', 'children with an autism spectrum disorder')
+
+sentence: Autism spectrum disorder is characterized by social deficits and behavioural abormalitiies.
+('Autism spectrum disorder', 'is characterized', 'behavioural abormalitiies')
+('Autism spectrum disorder', 'is characterized', 'social deficits')
+
+sentence: A tendency to avoid eye contact is an early indicator of Autism Spectrum Disorder (ASD), and difficulties with eye contact often persist throughout the lifespan.
+('difficulties with eye contact', 'often persist', 'throughout the lifespan')
+
+sentence: Immune abnormalities have been described in some individuals with autism spectrum disorders (ASDs) as well as their family members.
+('Immune abnormalities', 'have been described', 'family members')
+('Immune abnormalities', 'have been described', 'some individuals with autism spectrum disorders')
+
+sentence: intellectual disability associated with ASD might be etiologically distinct from DD without ASD.
+('intellectual disability associated with ASD', 'might etiologically distinct', 'DD')
+('intellectual disability associated with ASD', 'might etiologically distinct', 'without ASD')
+
+sentence: Maternal immune activation (MIA) during pregnancy is associated with an increased risk of behavioral disorders in the offspring.
+('Maternal immune activation during pregnancy', 'is associated', 'an increased risk of behavioral disorders in the offspring')
+
+sentence: Autism spectrum disorder is characterized by difficulty with social communication and restricted, repetitive patterns of behavior, interest, or activities.
+('Autism spectrum disorder', 'is characterized', 'restricted repetitive patterns of behavior')
+('Autism spectrum disorder', 'is characterized', 'interest')
+('Autism spectrum disorder', 'is characterized', 'activities')
+('Autism spectrum disorder', 'is characterized', 'difficulty with social communication')
+
+sentence: These findings suggest that maternal mental illness is an important determinant of the risk of ASD associated with antidepressant exposure during pregnancy.
+('maternal mental illness', 'determinant', 'the risk of ASD associated with antidepressant exposure during pregnancy')
+
+sentence: Due to brain plasticity, early interventions are essential to facilitate clinical improvement.
+('early interventions', 'essential', 'Due brain plasticity')
+('early interventions', 'essential', 'facilitate clinical improvement')
+
+sentence: The study indicates that increased ASD risk is generally associated with suboptimal breast-feeding practices.
+('increased ASD risk', 'is generally associated', 'suboptimal breast-feeding practices')
+
+sentence: there is no single medical therapy that is effective for all symptoms of autism spectrum disorder.
+
+sentence: Children with optimal outcomes receive earlier, more intensive behavioral interventions and less pharmacologic treatment.
+('Children with optimal outcomes', 'receive', 'less pharmacologic treatment')
+('Children with optimal outcomes', 'receive', 'earlier more intensive behavioral interventions')
+
+sentence: Irritability marked by tantrums, self-injury and aggression occurs frequently in youth with ASD.
+('aggression', 'occurs frequently', 'Irritability marked by tantrums')
+('aggression', 'occurs frequently', 'youth with ASD')
+
+sentence: Published research shows the benefit of drug therapy for ADHD in children
+
+sentence: Many patients with ADHD have comorbid disorders such as depression, disruptive behavior disorders, or substance abuse, which need to be addressed first in the treatment plan
+
+sentence: studies have shown that there is no link between receiving vaccines and developing ASD.
+
+sentence: we found no correlation between asd and the measles vaccine
+('asd', 'no correlation', 'measles vaccine')
+
+sentence: Antidepressant exposure during pregnancy is associated with an increased risk of ASD in the offspring.
+('Antidepressant exposure during pregnancy', 'is associated', 'an increased risk of ASD in the offspring')
+
+sentence: We propose that age of onset could be an important marker for the subtyping of OCD.
+('age of onset', 'could marker', 'the subtyping of OCD')
+
+sentence: There is currently no credible mechanism for suggesting that autism might cause epilepsy.
+('autism', 'might cause', 'epilepsy')
+
+sentence: increased exposure to acetaminophen, exacerbated by inflammation and oxidative stress, is neurotoxic in babies and small children.
+('increased exposure to acetaminophen exacerbated by inflammation stress', 'neurotoxic', 'small children')
+('increased exposure to acetaminophen exacerbated by inflammation stress', 'neurotoxic', 'babies')

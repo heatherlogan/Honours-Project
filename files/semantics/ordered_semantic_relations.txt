@@ -1,0 +1,1828 @@
+/Users/heatherlogan/PycharmProjects/Honours_Proj/venv/bin/python /Users/heatherlogan/PycharmProjects/Honours_Proj/relation_extraction.py
+Acquired Abnormality:  acab
+	 affects
+		 ['Animal', 'Archaeon', 'Bacterium', 'Bird', 'Cell Function', 'Eukaryote', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Finding', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Laboratory or Test Result', 'Molecular Biology Research Technique', 'Occupational Activity', 'Organism Attribute', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Congenital Abnormality']
+	 isa
+		 ['Anatomical Abnormality', 'Anatomical Structure', 'Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Bacterium', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Virus']
+	 manifestation_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Family Group', 'Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+Activity:  acty
+	 isa
+		 ['Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Age Group:  aggp
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Group']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Age Group', 'Patient or Disabled Group']
+	 performs
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 uses
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+Amino Acid Sequence:  amas
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Molecular Sequence', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+	 property_of
+		 ['Amino Acid, Peptide, or Protein', 'Gene or Genome']
+Amino Acid, Peptide, or Protein:  aapp
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate Sequence', 'Chemical Viewed Functionally', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 consists_of
+		 ['Amino Acid, Peptide, or Protein']
+	 ingredient_of
+		 ['Clinical Drug']
+Amphibian:  amph
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Organism', 'Physical Object', 'Vertebrate']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Amphibian', 'Archaeon', 'Bird', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile']
+Anatomical Abnormality:  anab
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Cell Function', 'Eukaryote', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Clinical Attribute']
+	 co-occurs_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Congenital Abnormality']
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Bacterium', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Virus']
+	 manifestation_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Family Group', 'Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Therapeutic or Preventive Procedure']
+Anatomical Structure:  anst
+	 isa
+		 ['Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Bacterium', 'Fungus', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+Animal:  anim
+	 isa
+		 ['Entity', 'Eukaryote', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bird', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile', 'Vertebrate']
+Antibiotic:  antb
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Functionally', 'Chemical', 'Entity', 'Pharmacologic Substance', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Inorganic Chemical']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 diagnoses
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+	 prevents
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 treats
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Sign or Symptom']
+Archaeon:  arch
+	 isa
+		 ['Entity', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Archaeon', 'Eukaryote']
+Bacterium:  bact
+	 isa
+		 ['Entity', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Biologically Active Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 interacts_with
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile', 'Vertebrate']
+	 causes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Behavior:  bhvr
+	 affects
+		 ['Behavior', 'Individual Behavior', 'Mental Process', 'Social Behavior']
+	 associated_with
+		 ['Age Group', 'Biomedical Occupation or Discipline', 'Clinical Attribute', 'Family Group', 'Geographic Area', 'Group Attribute', 'Group', 'Occupation or Discipline', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 isa
+		 ['Activity', 'Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Mental Process', 'Mental or Behavioral Dysfunction']
+	 result_of
+		 ['Mental Process']
+Biologic Function:  biof
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 isa
+		 ['Event', 'Natural Phenomenon or Process', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+Biologically Active Substance:  bacs
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Biologically Active Substance', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Biomedical Occupation or Discipline:  bmod
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Occupation or Discipline']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Biomedical or Dental Material:  bodm
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Bird:  bird
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Organism', 'Physical Object', 'Vertebrate']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Archaeon', 'Bird', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile']
+Body Location or Region:  blor
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Body Location or Region', 'Body Part, Organ, or Organ Component', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Therapeutic or Preventive Procedure', 'Tissue']
+	 result_of
+		 ['Mental Process']
+	 adjacent_to
+		 ['Body Location or Region', 'Body Space or Junction']
+	 conceptual_part_of
+		 ['Body Location or Region', 'Body System', 'Fully Formed Anatomical Structure']
+	 connected_to
+		 ['Body Location or Region']
+	 traverses
+		 ['Body Location or Region']
+Body Part, Organ, or Organ Component:  bpoc
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Fully Formed Anatomical Structure', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Bacterium', 'Biologic Function', 'Body Location or Region', 'Body Space or Junction', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Therapeutic or Preventive Procedure', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Body Part, Organ, or Organ Component', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 produces
+		 ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance', 'Body Substance', 'Carbohydrate', 'Eicosanoid', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Receptor', 'Steroid', 'Vitamin']
+	 consists_of
+		 ['Body Part, Organ, or Organ Component', 'Body Substance']
+	 adjacent_to
+		 ['Body Location or Region', 'Body Part, Organ, or Organ Component', 'Body Space or Junction', 'Cell', 'Tissue']
+	 conceptual_part_of
+		 ['Body System']
+	 connected_to
+		 ['Body Part, Organ, or Organ Component', 'Body Space or Junction', 'Body Substance', 'Tissue']
+	 traverses
+		 ['Body Part, Organ, or Organ Component']
+	 branch_of
+		 ['Body Part, Organ, or Organ Component']
+	 contains
+		 ['Body Substance']
+	 developmental_form_of
+		 ['Body Part, Organ, or Organ Component']
+	 interconnects
+		 ['Body Space or Junction']
+	 surrounds
+		 ['Body Part, Organ, or Organ Component', 'Tissue']
+	 tributary_of
+		 ['Body Part, Organ, or Organ Component']
+Body Space or Junction:  bsoj
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Body Space or Junction', 'Body Substance', 'Cell Component', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Therapeutic or Preventive Procedure']
+	 part_of
+		 ['Body Part, Organ, or Organ Component']
+	 result_of
+		 ['Mental Process']
+	 adjacent_to
+		 ['Body Space or Junction']
+	 conceptual_part_of
+		 ['Body System', 'Fully Formed Anatomical Structure']
+	 contains
+		 ['Body Part, Organ, or Organ Component', 'Body Substance', 'Tissue']
+	 interconnects
+		 ['Cell']
+	 surrounds
+		 ['Body Space or Junction', 'Cell']
+Body Substance:  bdsu
+	 isa
+		 ['Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 part_of
+		 ['Body Part, Organ, or Organ Component', 'Body Substance']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 consists_of
+		 ['Amino Acid, Peptide, or Protein', 'Body Substance', 'Carbohydrate Sequence', 'Eicosanoid', 'Lipid', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Steroid']
+	 ingredient_of
+		 ['Clinical Drug']
+	 conceptual_part_of
+		 ['Body System']
+	 surrounds
+		 ['Embryonic Structure']
+	 derivative_of
+		 ['Tissue']
+Body System:  bdsy
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Functional Concept', 'Idea or Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+	 conceptual_part_of
+		 ['Body System', 'Fully Formed Anatomical Structure']
+Carbohydrate Sequence:  crbs
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Molecular Sequence', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+Carbohydrate:  carb
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Cell Component:  celc
+	 affects
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Fully Formed Anatomical Structure', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Bacterium', 'Biologic Function', 'Body Space or Junction', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Therapeutic or Preventive Procedure', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Body Part, Organ, or Organ Component', 'Cell Component', 'Cell', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Tissue', 'Vertebrate', 'Virus']
+	 produces
+		 ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance', 'Body Substance', 'Carbohydrate', 'Eicosanoid', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Receptor', 'Steroid', 'Vitamin']
+	 adjacent_to
+		 ['Body Space or Junction', 'Cell Component']
+	 conceptual_part_of
+		 ['Body System']
+	 contains
+		 ['Body Substance']
+	 surrounds
+		 ['Cell Component']
+Cell Function:  celf
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Cell Function', 'Genetic Function', 'Molecular Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Phenomenon or Process', 'Physiologic Function']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+Cell or Molecular Dysfunction:  comd
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Cell or Molecular Dysfunction', 'Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Experimental Model of Disease', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Neoplastic Process', 'Occupational Activity', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Experimental Model of Disease', 'Neoplastic Process']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Pathologic Function', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Disease or Syndrome', 'Family Group', 'Group', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Cell:  cell
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Fully Formed Anatomical Structure', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Bacterium', 'Biologic Function', 'Body Space or Junction', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Therapeutic or Preventive Procedure', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Body Part, Organ, or Organ Component', 'Cell', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Tissue', 'Vertebrate', 'Virus']
+	 produces
+		 ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance', 'Body Substance', 'Carbohydrate', 'Eicosanoid', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Receptor', 'Steroid', 'Vitamin']
+	 consists_of
+		 ['Cell']
+	 adjacent_to
+		 ['Cell']
+	 conceptual_part_of
+		 ['Body System']
+	 contains
+		 ['Body Substance']
+	 developmental_form_of
+		 ['Cell']
+Chemical Viewed Functionally:  chvf
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Chemical Viewed Functionally', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Neuroreactive Substance or Biogenic Amine', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Chemical Viewed Structurally:  chvs
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Chemical:  chem
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Classification:  clas
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Intellectual Product']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Clinical Attribute:  clna
+	 associated_with
+		 ['Clinical Attribute']
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Organism Attribute']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 result_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 property_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 degree_of
+		 ['Clinical Attribute', 'Organism Attribute']
+	 measurement_of
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+Clinical Drug:  clnd
+	 isa
+		 ['Entity', 'Manufactured Object', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Conceptual Entity:  cnce
+	 isa
+		 ['Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Congenital Abnormality:  cgab
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Cell Function', 'Eukaryote', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Finding', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Laboratory or Test Result', 'Molecular Biology Research Technique', 'Occupational Activity', 'Organism Attribute', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Congenital Abnormality']
+	 isa
+		 ['Anatomical Abnormality', 'Anatomical Structure', 'Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Bacterium', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Virus']
+	 manifestation_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Family Group', 'Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Therapeutic or Preventive Procedure']
+Daily or Recreational Activity:  dora
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Diagnostic Procedure:  diap
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Patient or Disabled Group', 'Physiologic Function']
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Health Care Activity', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 uses
+		 ['Antibiotic', 'Clinical Drug', 'Drug Delivery Device', 'Manufactured Object', 'Medical Device', 'Pharmacologic Substance', 'Research Device']
+	 diagnoses
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 precedes
+		 ['Therapeutic or Preventive Procedure']
+	 analyzes
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 assesses_effect_of
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 measures
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologic Function', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Cell Function', 'Cell or Molecular Dysfunction', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Clinical Attribute', 'Disease or Syndrome', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Experimental Model of Disease', 'Genetic Function', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organ or Tissue Function', 'Organic Chemical', 'Organism Attribute', 'Organism Function', 'Organophosphorus Compound', 'Pathologic Function', 'Pharmacologic Substance', 'Physiologic Function', 'Quantitative Concept', 'Receptor', 'Steroid', 'Temporal Concept', 'Vitamin']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Diagnostic Procedure', 'Occupation or Discipline']
+Disease or Syndrome:  dsyn
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Cell or Molecular Dysfunction', 'Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Disease or Syndrome', 'Educational Activity', 'Experimental Model of Disease', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Mental or Behavioral Dysfunction', 'Molecular Biology Research Technique', 'Neoplastic Process', 'Occupational Activity', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Pathologic Function', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Disease or Syndrome', 'Family Group', 'Group', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality' , 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Tissue', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 conceptually_related_to
+		 ['Experimental Model of Disease']
+Drug Delivery Device:  drdd
+	 isa
+		 ['Entity', 'Manufactured Object', 'Medical Device', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 prevents
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 treats
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Sign or Symptom']
+	 contains
+		 ['Clinical Drug']
+Educational Activity:  edac
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Eicosanoid:  eico
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Lipid', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Element, Ion, or Isotope:  elii
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Element, Ion, or Isotope', 'Inorganic Chemical']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Embryonic Structure:  emst
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Bacterium', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Cell', 'Embryonic Structure', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 contains
+		 ['Body Substance']
+	 developmental_form_of
+		 ['Body Part, Organ, or Organ Component', 'Cell', 'Embryonic Structure', 'Tissue']
+	 interconnects
+		 ['Embryonic Structure']
+	 surrounds
+		 ['Cell', 'Embryonic Structure']
+Entity:  enty
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Environmental Effect of Humans:  eehu
+	 isa
+		 ['Event', 'Human-caused Phenomenon or Process', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+Enzyme:  enzy
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Biologically Active Substance', 'Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Eukaryote:  euka
+	 isa
+		 ['Entity', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Eukaryote']
+Event:  evnt
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Experimental Model of Disease:  emod
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Experimental Model of Disease', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Neoplastic Process', 'Occupational Activity', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Anatomical Abnormality', 'Experimental Model of Disease', 'Neoplastic Process']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Pathologic Function', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Disease or Syndrome', 'Family Group', 'Group', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Family Group:  famg
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Group']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Age Group', 'Family Group', 'Patient or Disabled Group']
+	 performs
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 uses
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+Finding:  fndg
+	 associated_with
+		 ['Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 co-occurs_with
+		 ['Finding', 'Laboratory or Test Result', 'Sign or Symptom']
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 evaluation_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+Fish:  fish
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Organism', 'Physical Object', 'Vertebrate']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Archaeon', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile']
+Food:  food
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Fully Formed Anatomical Structure:  ffas
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Bacterium', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 produces
+		 ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance', 'Body Substance', 'Carbohydrate', 'Eicosanoid', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Receptor', 'Steroid', 'Vitamin']
+	 contains
+		 ['Body Substance']
+Functional Concept:  ftcn
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+Fungus:  fngs
+	 isa
+		 ['Entity', 'Eukaryote', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Biologically Active Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 interacts_with
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Reptile', 'Vertebrate', 'Virus']
+	 causes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Gene or Genome:  gngm
+	 affects
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Fully Formed Anatomical Structure', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Bacterium', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Body Part, Organ, or Organ Component', 'Cell Component', 'Cell', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Tissue', 'Vertebrate', 'Virus']
+	 produces
+		 ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance', 'Body Substance', 'Carbohydrate', 'Eicosanoid', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Receptor', 'Steroid', 'Vitamin']
+	 consists_of
+		 ['Gene or Genome']
+	 contains
+		 ['Body Substance']
+	 carries_out
+		 ['Genetic Function', 'Molecular Function']
+Genetic Function:  genf
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Genetic Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Molecular Function', 'Natural Phenomenon or Process', 'Phenomenon or Process', 'Physiologic Function']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Cell Component', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+Geographic Area:  geoa
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+Governmental or Regulatory Activity:  gora
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Group Attribute:  grpa
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 property_of
+		 ['Age Group', 'Family Group', 'Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+Group:  grup
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Age Group', 'Family Group', 'Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 performs
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 uses
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+Hazardous or Poisonous Substance:  hops
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Hazardous or Poisonous Substance', 'Inorganic Chemical', 'Receptor']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Health Care Activity:  hlca
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Health Care Related Organization:  hcro
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Organization']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Intellectual Product', 'Regulation or Law']
+	 carries_out
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+	 manages
+		 ['Patient or Disabled Group']
+Hormone:  horm
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Biologically Active Substance', 'Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Human-caused Phenomenon or Process:  hcpp
+	 isa
+		 ['Event', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+Human:  humn
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Mammal', 'Organism', 'Physical Object', 'Vertebrate']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Archaeon', 'Eukaryote', 'Human']
+Idea or Concept:  idcn
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+	 conceptual_part_of
+		 ['Behavior']
+Immunologic Factor:  imft
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Biologically Active Substance', 'Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Hazardous or Poisonous Substance', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Receptor']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+	 indicates
+		 ['Bacterium', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Virus']
+Indicator, Reagent, or Diagnostic Aid:  irda
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Hazardous or Poisonous Substance', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Receptor']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Individual Behavior:  inbe
+	 affects
+		 ['Behavior', 'Individual Behavior', 'Mental Process', 'Social Behavior']
+	 associated_with
+		 ['Age Group', 'Anatomical Abnormality', 'Biomedical Occupation or Discipline', 'Clinical Attribute', 'Family Group', 'Geographic Area', 'Group Attribute', 'Group', 'Neoplastic Process', 'Occupation or Discipline', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 isa
+		 ['Activity', 'Behavior', 'Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Mental Process', 'Mental or Behavioral Dysfunction']
+	 result_of
+		 ['Mental Process']
+	 process_of
+		 ['Social Behavior']
+	 conceptually_related_to
+		 ['Idea or Concept']
+Injury or Poisoning:  inpo
+	 associated_with
+		 ['Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Event', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Age Group', 'Family Group', 'Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Inorganic Chemical:  inch
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Inorganic Chemical']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Intellectual Product:  inpr
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 conceptual_part_of
+		 ['Diagnostic Procedure', 'Intellectual Product']
+Laboratory Procedure:  lbpr
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Health Care Activity', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 diagnoses
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 analyzes
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 assesses_effect_of
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologic Function', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Cell Function', 'Cell or Molecular Dysfunction', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Disease or Syndrome', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Experimental Model of Disease', 'Genetic Function', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organ or Tissue Function', 'Organic Chemical', 'Organism Function', 'Organophosphorus Compound', 'Pathologic Function', 'Pharmacologic Substance', 'Physiologic Function', 'Receptor', 'Steroid', 'Vitamin']
+	 measures
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologic Function', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Cell Function', 'Cell or Molecular Dysfunction', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Clinical Attribute', 'Disease or Syndrome', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Experimental Model of Disease', 'Genetic Function', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organ or Tissue Function', 'Organic Chemical', 'Organism Attribute', 'Organism Function', 'Organophosphorus Compound', 'Pathologic Function', 'Pharmacologic Substance', 'Physiologic Function', 'Quantitative Concept', 'Receptor', 'Steroid', 'Temporal Concept', 'Vitamin']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Diagnostic Procedure', 'Laboratory Procedure', 'Occupation or Discipline', 'Therapeutic or Preventive Procedure']
+Laboratory or Test Result:  lbtr
+	 associated_with
+		 ['Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 co-occurs_with
+		 ['Laboratory or Test Result', 'Sign or Symptom']
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Finding']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 result_of
+		 ['Diagnostic Procedure', 'Laboratory Procedure']
+	 conceptual_part_of
+		 ['Laboratory or Test Result']
+	 measurement_of
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Cell Function', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Food', 'Genetic Function', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Mental Process', 'Molecular Function', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organ or Tissue Function', 'Organic Chemical', 'Organism Function', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Physiologic Function', 'Receptor', 'Steroid', 'Substance', 'Vitamin']
+	 evaluation_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 indicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+Language:  lang
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Lipid:  lipd
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Chemical Viewed Functionally', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Machine Activity:  mcha
+	 isa
+		 ['Activity', 'Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 method_of
+		 ['Diagnostic Procedure', 'Laboratory Procedure', 'Therapeutic or Preventive Procedure']
+Mammal:  mamm
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Organism', 'Physical Object', 'Vertebrate']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Archaeon', 'Eukaryote', 'Human', 'Mammal']
+Manufactured Object:  mnob
+	 isa
+		 ['Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Medical Device:  medd
+	 isa
+		 ['Entity', 'Manufactured Object', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 prevents
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 treats
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Sign or Symptom']
+Mental Process:  menp
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Behavior', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Individual Behavior', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Social Behavior', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Organism Function', 'Phenomenon or Process', 'Physiologic Function']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior']
+	 produces
+		 ['Age Group', 'Biologically Active Substance', 'Body Substance', 'Enzyme', 'Family Group', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Reptile', 'Vertebrate']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 degree_of
+		 ['Mental Process', 'Organism Function']
+Mental or Behavioral Dysfunction:  mobd
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Behavior', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Individual Behavior', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Social Behavior', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Cell or Molecular Dysfunction', 'Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Experimental Model of Disease', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Mental or Behavioral Dysfunction', 'Molecular Biology Research Technique', 'Neoplastic Process', 'Occupational Activity', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Biologic Function', 'Disease or Syndrome', 'Event', 'Natural Phenomenon or Process', 'Pathologic Function', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Disease or Syndrome', 'Family Group', 'Group', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Tissue', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Reptile', 'Vertebrate']
+	 precedes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Molecular Biology Research Technique:  mbrt
+	 affects
+		 ['Mental Process']
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Occupational Activity', 'Research Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 uses
+		 ['Research Device']
+	 measures
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologic Function', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Cell Function', 'Cell or Molecular Dysfunction', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Clinical Attribute', 'Disease or Syndrome', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Experimental Model of Disease', 'Genetic Function', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organ or Tissue Function', 'Organic Chemical', 'Organism Attribute', 'Organism Function', 'Organophosphorus Compound', 'Pathologic Function', 'Pharmacologic Substance', 'Physiologic Function', 'Quantitative Concept', 'Receptor', 'Steroid', 'Temporal Concept', 'Vitamin']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Diagnostic Procedure', 'Occupation or Discipline', 'Therapeutic or Preventive Procedure']
+Molecular Function:  moft
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Genetic Function', 'Molecular Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Phenomenon or Process', 'Physiologic Function']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+Molecular Sequence:  mosq
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+Natural Phenomenon or Process:  npop
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Event', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 process_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+Neoplastic Process:  neop
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Clinical Attribute', 'Neoplastic Process']
+	 co-occurs_with
+		 ['Neoplastic Process']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Biologic Function', 'Disease or Syndrome', 'Event', 'Natural Phenomenon or Process', 'Pathologic Function', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Disease or Syndrome', 'Family Group', 'Group', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Tissue', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Neuroreactive Substance or Biogenic Amine:  nsba
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Biologically Active Substance', 'Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Nucleic Acid, Nucleoside, or Nucleotide:  nnon
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Nucleotide Sequence:  nusq
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept', 'Molecular Sequence', 'Spatial Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 part_of
+		 ['Nucleotide Sequence']
+	 result_of
+		 ['Mental Process']
+	 property_of
+		 ['Gene or Genome', 'Nucleic Acid, Nucleoside, or Nucleotide']
+Occupation or Discipline:  ocdi
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 conceptual_part_of
+		 ['Occupation or Discipline']
+Occupational Activity:  ocac
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Organ or Tissue Function:  ortf
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Cell Function', 'Genetic Function', 'Molecular Function', 'Organ or Tissue Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Phenomenon or Process', 'Physiologic Function']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Mental Process', 'Organism Function', 'Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 conceptual_part_of
+		 ['Temporal Concept']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 degree_of
+		 ['Organ or Tissue Function']
+Organic Chemical:  orch
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Organism Attribute:  orga
+	 associated_with
+		 ['Anatomical Abnormality', 'Behavior', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Experimental Model of Disease', 'Individual Behavior', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Organism Attribute', 'Pathologic Function', 'Social Behavior']
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 result_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 property_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 degree_of
+		 ['Clinical Attribute', 'Organism Attribute']
+	 measurement_of
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+Organism Function:  orgf
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Phenomenon or Process', 'Physiologic Function']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Age Group', 'Biologically Active Substance', 'Body Substance', 'Enzyme', 'Family Group', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 conceptual_part_of
+		 ['Temporal Concept']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 degree_of
+		 ['Mental Process', 'Organism Function']
+Organism:  orgm
+	 isa
+		 ['Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+Organization:  orgt
+	 isa
+		 ['Conceptual Entity', 'Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Intellectual Product', 'Regulation or Law']
+	 carries_out
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+Organophosphorus Compound:  orgc
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Pathologic Function:  patf
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 associated_with
+		 ['Cell or Molecular Dysfunction', 'Clinical Attribute', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Disease or Syndrome', 'Educational Activity', 'Experimental Model of Disease', 'Geographic Area', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Mental or Behavioral Dysfunction', 'Molecular Biology Research Technique', 'Neoplastic Process', 'Occupational Activity', 'Pathologic Function', 'Population Group', 'Research Activity', 'Sign or Symptom', 'Therapeutic or Preventive Procedure']
+	 co-occurs_with
+		 ['Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 occurs_in
+		 ['Age Group', 'Disease or Syndrome', 'Family Group', 'Group', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Behavior', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Health Care Activity', 'Human-caused Phenomenon or Process', 'Individual Behavior', 'Injury or Poisoning', 'Laboratory Procedure', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Patient or Disabled Group:  podg
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Group']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Patient or Disabled Group']
+	 performs
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 uses
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+Pharmacologic Substance:  phsu
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Neuroreactive Substance or Biogenic Amine', 'Pharmacologic Substance', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 diagnoses
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+	 prevents
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 treats
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Sign or Symptom']
+Phenomenon or Process:  phpr
+	 isa
+		 ['Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+Physical Object:  phob
+	 isa
+		 ['Entity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Physiologic Function:  phsf
+	 affects
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 co-occurs_with
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+	 isa
+		 ['Biologic Function', 'Event', 'Natural Phenomenon or Process', 'Phenomenon or Process']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 occurs_in
+		 ['Temporal Concept']
+	 result_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Environmental Effect of Humans', 'Experimental Model of Disease', 'Genetic Function', 'Human-caused Phenomenon or Process', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Phenomenon or Process', 'Physiologic Function']
+	 produces
+		 ['Biologically Active Substance', 'Body Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 process_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Biologic Function', 'Bird', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Eukaryote', 'Experimental Model of Disease', 'Fish', 'Fungus', 'Genetic Function', 'Human', 'Mammal', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Organism', 'Pathologic Function', 'Physiologic Function', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+	 precedes
+		 ['Cell Function', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function']
+Plant:  plnt
+	 isa
+		 ['Entity', 'Eukaryote', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Biologically Active Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 interacts_with
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Plant', 'Reptile', 'Vertebrate', 'Virus']
+Population Group:  popg
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Group']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Age Group', 'Family Group', 'Patient or Disabled Group', 'Population Group']
+	 performs
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 uses
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+Professional Society:  pros
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Organization']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Intellectual Product', 'Regulation or Law']
+	 carries_out
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+Professional or Occupational Group:  prog
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Group']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Age Group', 'Family Group', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 performs
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 uses
+		 ['Classification', 'Clinical Drug', 'Drug Delivery Device', 'Intellectual Product', 'Manufactured Object', 'Medical Device', 'Regulation or Law', 'Research Device']
+	 diagnoses
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 treats
+		 ['Patient or Disabled Group']
+	 manages
+		 ['Health Care Related Organization', 'Organization', 'Professional Society', 'Self-help or Relief Organization']
+	 practices
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Qualitative Concept:  qlco
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+	 evaluation_of
+		 ['Activity', 'Behavior', 'Daily or Recreational Activity', 'Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Individual Behavior', 'Laboratory Procedure', 'Machine Activity', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Social Behavior', 'Therapeutic or Preventive Procedure']
+Quantitative Concept:  qnco
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+	 conceptual_part_of
+		 ['Therapeutic or Preventive Procedure']
+	 measurement_of
+		 ['Amino Acid Sequence', 'Body Location or Region', 'Body Space or Junction', 'Carbohydrate Sequence', 'Cell Function', 'Genetic Function', 'Geographic Area', 'Mental Process', 'Molecular Function', 'Molecular Sequence', 'Nucleotide Sequence', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Spatial Concept']
+Receptor:  rcpt
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Biologically Active Substance', 'Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Inorganic Chemical', 'Receptor']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+Regulation or Law:  rnlw
+	 affects
+		 ['Age Group', 'Family Group', 'Group', 'Health Care Related Organization', 'Organization', 'Patient or Disabled Group', 'Population Group', 'Professional Society', 'Professional or Occupational Group', 'Self-help or Relief Organization']
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Intellectual Product']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Reptile:  rept
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Organism', 'Physical Object', 'Vertebrate']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Archaeon', 'Eukaryote', 'Human', 'Mammal', 'Reptile']
+Research Activity:  resa
+	 affects
+		 ['Mental Process']
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 isa
+		 ['Activity', 'Event', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 uses
+		 ['Research Device']
+	 measures
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologic Function', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Body Substance', 'Carbohydrate', 'Cell Function', 'Cell or Molecular Dysfunction', 'Chemical Viewed Functionally', 'Chemical Viewed Structurally', 'Chemical', 'Clinical Attribute', 'Disease or Syndrome', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Experimental Model of Disease', 'Genetic Function', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organ or Tissue Function', 'Organic Chemical', 'Organism Attribute', 'Organism Function', 'Organophosphorus Compound', 'Pathologic Function', 'Pharmacologic Substance', 'Physiologic Function', 'Quantitative Concept', 'Receptor', 'Steroid', 'Temporal Concept', 'Vitamin']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+Research Device:  resd
+	 isa
+		 ['Entity', 'Manufactured Object', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Self-help or Relief Organization:  shro
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Organization']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+	 produces
+		 ['Classification', 'Intellectual Product', 'Regulation or Law']
+	 carries_out
+		 ['Diagnostic Procedure', 'Educational Activity', 'Governmental or Regulatory Activity', 'Health Care Activity', 'Laboratory Procedure', 'Molecular Biology Research Technique', 'Occupational Activity', 'Research Activity', 'Therapeutic or Preventive Procedure']
+	 manages
+		 ['Patient or Disabled Group']
+Sign or Symptom:  sosy
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 co-occurs_with
+		 ['Sign or Symptom']
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Finding']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 diagnoses
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 degree_of
+		 ['Sign or Symptom']
+	 evaluation_of
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Clinical Attribute', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Attribute', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+Social Behavior:  socb
+	 affects
+		 ['Behavior', 'Individual Behavior', 'Mental Process', 'Social Behavior']
+	 associated_with
+		 ['Age Group', 'Biomedical Occupation or Discipline', 'Clinical Attribute', 'Family Group', 'Geographic Area', 'Group Attribute', 'Group', 'Occupation or Discipline', 'Patient or Disabled Group', 'Population Group', 'Professional or Occupational Group']
+	 isa
+		 ['Activity', 'Behavior', 'Event']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 manifestation_of
+		 ['Mental Process', 'Mental or Behavioral Dysfunction']
+	 result_of
+		 ['Mental Process']
+	 conceptual_part_of
+		 ['Social Behavior']
+Spatial Concept:  spco
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+Steroid:  strd
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Chemical Viewed Structurally', 'Chemical', 'Entity', 'Lipid', 'Organic Chemical', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Amino Acid, Peptide, or Protein', 'Antibiotic', 'Biologically Active Substance', 'Biomedical or Dental Material', 'Carbohydrate', 'Chemical Viewed Functionally', 'Eicosanoid', 'Element, Ion, or Isotope', 'Enzyme', 'Hazardous or Poisonous Substance', 'Hormone', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organophosphorus Compound', 'Pharmacologic Substance', 'Receptor', 'Steroid', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Substance:  sbst
+	 isa
+		 ['Entity', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+Temporal Concept:  tmco
+	 isa
+		 ['Conceptual Entity', 'Entity', 'Idea or Concept']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 result_of
+		 ['Mental Process']
+	 conceptual_part_of
+		 ['Cell Function', 'Organ or Tissue Function', 'Organism Function', 'Temporal Concept']
+Therapeutic or Preventive Procedure:  topp
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Patient or Disabled Group', 'Physiologic Function']
+	 associated_with
+		 ['Anatomical Abnormality', 'Neoplastic Process']
+	 complicates
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Activity', 'Event', 'Health Care Activity', 'Occupational Activity']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 uses
+		 ['Antibiotic', 'Clinical Drug', 'Drug Delivery Device', 'Food', 'Manufactured Object', 'Medical Device', 'Pharmacologic Substance', 'Research Device']
+	 prevents
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 treats
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function', 'Sign or Symptom']
+	 method_of
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline', 'Therapeutic or Preventive Procedure']
+Tissue:  tisu
+	 isa
+		 ['Anatomical Structure', 'Entity', 'Fully Formed Anatomical Structure', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Bacterium', 'Biologic Function', 'Body Space or Junction', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Diagnostic Procedure', 'Disease or Syndrome', 'Experimental Model of Disease', 'Fungus', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function', 'Therapeutic or Preventive Procedure', 'Virus']
+	 part_of
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Body Part, Organ, or Organ Component', 'Eukaryote', 'Fish', 'Fungus', 'Human', 'Mammal', 'Organism', 'Plant', 'Reptile', 'Tissue', 'Vertebrate', 'Virus']
+	 produces
+		 ['Amino Acid, Peptide, or Protein', 'Biologically Active Substance', 'Body Substance', 'Carbohydrate', 'Eicosanoid', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Lipid', 'Neuroreactive Substance or Biogenic Amine', 'Nucleic Acid, Nucleoside, or Nucleotide', 'Organic Chemical', 'Organophosphorus Compound', 'Receptor', 'Steroid', 'Vitamin']
+	 consists_of
+		 ['Tissue']
+	 adjacent_to
+		 ['Body Space or Junction', 'Tissue']
+	 conceptual_part_of
+		 ['Body System']
+	 connected_to
+		 ['Body Space or Junction']
+	 contains
+		 ['Body Substance']
+	 developmental_form_of
+		 ['Body Part, Organ, or Organ Component', 'Tissue']
+	 surrounds
+		 ['Body Space or Junction', 'Body Substance', 'Cell Component', 'Cell', 'Tissue']
+Vertebrate:  vtbt
+	 isa
+		 ['Animal', 'Entity', 'Eukaryote', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 exhibits
+		 ['Behavior', 'Individual Behavior', 'Social Behavior']
+	 interacts_with
+		 ['Amphibian', 'Archaeon', 'Bird', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile', 'Vertebrate']
+Virus:  virs
+	 associated_with
+		 ['Biologically Active Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 isa
+		 ['Entity', 'Organism', 'Physical Object']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 location_of
+		 ['Biologically Active Substance', 'Enzyme', 'Hormone', 'Immunologic Factor', 'Neuroreactive Substance or Biogenic Amine', 'Receptor', 'Vitamin']
+	 interacts_with
+		 ['Amphibian', 'Animal', 'Archaeon', 'Bacterium', 'Bird', 'Eukaryote', 'Fish', 'Human', 'Mammal', 'Reptile', 'Vertebrate', 'Virus']
+	 causes
+		 ['Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+Vitamin:  vita
+	 affects
+		 ['Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Natural Phenomenon or Process', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 complicates
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Biologic Function', 'Cell Function', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Genetic Function', 'Injury or Poisoning', 'Mental Process', 'Mental or Behavioral Dysfunction', 'Molecular Function', 'Neoplastic Process', 'Organ or Tissue Function', 'Organism Function', 'Pathologic Function', 'Physiologic Function']
+	 isa
+		 ['Biologically Active Substance', 'Chemical Viewed Functionally', 'Chemical', 'Entity', 'Physical Object', 'Substance']
+	 issue_in
+		 ['Biomedical Occupation or Discipline', 'Occupation or Discipline']
+	 interacts_with
+		 ['Antibiotic', 'Element, Ion, or Isotope', 'Hazardous or Poisonous Substance', 'Immunologic Factor', 'Indicator, Reagent, or Diagnostic Aid', 'Inorganic Chemical', 'Receptor', 'Vitamin']
+	 causes
+		 ['Acquired Abnormality', 'Anatomical Abnormality', 'Cell or Molecular Dysfunction', 'Congenital Abnormality', 'Disease or Syndrome', 'Experimental Model of Disease', 'Injury or Poisoning', 'Mental or Behavioral Dysfunction', 'Neoplastic Process', 'Pathologic Function']
+	 ingredient_of
+		 ['Clinical Drug']
+	 disrupts
+		 ['Body Part, Organ, or Organ Component', 'Cell Component', 'Cell Function', 'Cell', 'Embryonic Structure', 'Fully Formed Anatomical Structure', 'Gene or Genome', 'Genetic Function', 'Mental Process', 'Molecular Function', 'Organ or Tissue Function', 'Organism Function', 'Physiologic Function', 'Tissue']
+
+Process finished with exit code 0
