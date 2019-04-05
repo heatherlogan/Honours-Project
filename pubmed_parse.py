@@ -144,49 +144,9 @@ def get_synonyms():
     return all_synonyms
 
 
-def stuff():
-    writer = open("files/sfari_q_results.txt", 'w')
-    writer.write("Gene, Gene + ASD, Gene Synonyms + ASD, Gene + ASD Majr, Gene Synonyms + ASD Majr")
-
-    non_majr_results = open('files/autism_non_majr_papers1.txt', 'w')
-    majr_results = open("files/autism_majr_papers1.txt", 'w')
-
-    sfari_syns = get_synonyms()
-
-    for gene in list(sfari_syns.keys())[291:]:
-
-        syns = sfari_syns.get(gene)
-
-        query1 = "{} AND (Autism Spectrum Disorder) AND open access[filter]".format(gene)
-        syn_str = "{}".format(gene)
-        for syn in syns[1:]:
-            syn_str += " OR ({})".format(syn)
-        query2 = syn_str + " AND Autism Spectrum Disorder AND open access[filter]"
-        query3 = "{} AND (Autism Spectrum Disorder[MAJR]) AND open access[filter]".format(gene)
-        query4 = syn_str + " AND (Autism Spectrum Disorder[MAJR]) AND open access[filter]"
-
-        # q1_r = search_pmc(query1)['Count']
-        q2_r = search_pmc(query2)
-        # q3_r = search_pmc(query3)['Count']
-        q4_r = search_pmc(query4)
-
-
-        print(gene)
-        # print("\t", query1, q1_r)
-        print("\t", query2, q2_r['Count'])
-        # print("\t", query3, q3_r)
-        print("\t", query4, q4_r['Count'])
-
-        writer.write("{},{},{},{},{}\n".format(gene, "", q2_r['Count'], "", q4_r['Count']))
-        non_majr_results.write(gene + ":" + ','.join(q2_r['IdList']) + "\n")
-        majr_results.write(gene + ":" + ','.join(q4_r['IdList']) + "\n")
-
-    writer.close()
-    non_majr_results.close()
-    majr_results.close()
-
-
 def get_PMC_from_pubmed(query):
+
+    # for years
 
     results = search_pub(query)
     pubmed_ids = []
@@ -207,7 +167,6 @@ def get_PMC_from_pubmed(query):
                     print(str(p2), '\t', year)
 
     return pubmed_ids
-
 
 
 def makeurls(ids):

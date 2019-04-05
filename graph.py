@@ -42,10 +42,15 @@ def get_obj(classno):
     return next((x for x in onto_objects if x.classnum == classno), None)
 
 def get_descendants(obj):
+
+    # phenotype descendents
+
     return [get_obj(str(x).replace('asdpto.', '')).label for x in obj.descendants()]
 
 
 def get_group(tag):
+
+    # groups ents to higher level class
 
     out = ""
 
@@ -77,6 +82,8 @@ def format_relations():
 
     relations = []
     syns = get_synonyms()
+
+    # maps relations to gene/asd terms
 
     relation_file = open('files/system_output/final_re.txt', 'r').readlines()
 
@@ -128,5 +135,5 @@ if __name__ == "__main__":
     graph_relations(full_relations)
     syns = get_synonyms()
     sfari_genes = [x.upper() for x in list(itertools.chain.from_iterable((syns.values())))]
-    # graph_relations(relations)
+    graph_relations(relations)
 

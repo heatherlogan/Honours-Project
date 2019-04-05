@@ -294,6 +294,8 @@ def similar_gold(term):
 
 def annotate(text):
 
+    # checks if in list else metamaps
+    found = False
     found_genes = [g.lower() for g in get_genes(text)]
     mutations = {}
     for mutation in mutation_search(text):
@@ -306,11 +308,16 @@ def annotate(text):
     else:
         for i, k in gold_annotations.items():
             if i in text:
+                found = True
                 id_entity[text] = k
                 break
-        semtypes = meta_ner(text)
-        if len(semtypes) > 0:
-            filtered_semtypes = []
+        if not found:
+            semtypes = meta_ner(text)
+            if len(semtypes) > 0:
+                filtered_semtypes = []
+
+            # removes irrelevant semtypes, then takes first as label
+
             for sem in semtypes:
                 if sem not in ignore_semtypes:
                     filtered_semtypes.append(sem)
@@ -327,13 +334,13 @@ def annotate(text):
 hgnc = load_hgnc()
 sfari = get_synonyms()
 non_sfari = [x for x in list(hgnc.keys()) if x not in list(itertools.chain.from_iterable(sfari.values()))]
-
 gold_annotations = load_gold_annotations()
 
 def annotate_abs(text):
     result = []
     ents = entity_extract(text, 'default')
     for ent in ents:
+        ent = ent.strip()
         label = annotate(ent)
         if label != None and label not in ignore_semtypes and label != '[]':
             result.append((ent, label))
@@ -341,6 +348,6 @@ def annotate_abs(text):
 
 if __name__ == "__main__":
 
-    practice = "GABA3 has social difficulties and anxiety."
+    practice = "ALDH1A3, FMR1, social difficulties, asd, anxiety, autism, fragile-x"
 
     print(annotate_abs(practice))

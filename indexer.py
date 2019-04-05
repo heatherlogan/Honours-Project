@@ -205,6 +205,8 @@ def clean_corpus(): #removes failed articles with no text
 
 def temp_corpus():
 
+    # corpus for annotated versions
+
     items = []
     results = format_results(file)
 
