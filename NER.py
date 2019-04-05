@@ -20,7 +20,6 @@ ignore_semtypes = ["[drdd]", "[medd]", "[resd]", "[geoa]", "[enty]", "[food]", "
                    "[?]", "[inpr]"]
 
 
-
 def acronym_search(text):
     # returns an acronym : term dictionary detected in text assuming acronyms are stated as Full Word (acronym)
     # looks at first letter of every word in preceeding areas or if a word begins with a portion of the acronym

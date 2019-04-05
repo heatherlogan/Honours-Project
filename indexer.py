@@ -220,6 +220,5 @@ def temp_corpus():
 if __name__=="__main__":
 
     file = open('files/system_output/full_corpus_output.txt', 'r').readlines()
-
     file2 = open('files/indexer/annotated_index.txt', 'r').readlines()
 

@@ -13,25 +13,18 @@ import nltk
 
 if __name__=="__main__":
 
-    syns =get_synonyms()
-    sfari_genes = [x.upper() for x in list(itertools.chain.from_iterable((syns.values())))]
+    file = open('files/NER_outputs/output_latest_2.txt', 'r').readlines()
+    writefile = open('files/NER_outputs/output_latest.txt', 'w')
 
-    file = open("files/re_output.txt", 'r').readlines()
 
-    gene_mentions = defaultdict(list)
-
+    remove = ["[drdd]", "[medd]", "[resd]", "[geoa]", "[enty]", "[food]", "[mnob]", "[phob]",
+                   "[bmod]", "[ocac]", "[ocdi]", "[prog]", "[clas]", "[cnce]",
+                   "[ftcn]", "[idcn]", "[ipro]", "[qlco]", "[gora]", "[rnlw]", "[spco]", "[tmco]",
+                   "[qnco]", "[inpr]","[popg]"]
 
     for line in file:
-        line2 = line.strip().replace(')', '').replace('(', '').replace("'", '')
-        arg1, rel, arg2 = line2.split(', ')
-        arg_list = arg1.split() + arg2.split()
-        for gene, synonyms in syns.items():
-            for arg in arg_list:
-                if arg.upper() in synonyms:
-                    gene_mentions[gene].append(line.strip())
-
-
-    for gene, mentions in gene_mentions.items():
-        print("\n", gene)
-        for t in mentions:
-            print('\t', t)
+        for type in remove:
+            if type in line:
+                line = ""
+                break
+        if line != "": writefile.write(line)

@@ -80,7 +80,15 @@ def map_main(relations):
     semtype_maps = {
         '[gngm]': 'Genes',
         '[diap]': 'Diagnosis',
-        '[cgab]': 'Congenital Abnormalities'
+        '[cgab]': 'Congenital Abnormalities',
+        '[gngm]': 'Genes',
+        '[bhvr]': 'Personal Traits',
+        '[clnd]': 'Medications',
+        '[dosy]': 'Complaints and Indications',
+        '[mobd]': 'Mental Disorders',
+        '[phsy]': 'Medications',
+        '[socb]': 'Social Competence',
+        '[sosy]': 'Complaints and Indications',
     }
 
     for subj, rel, effectee in relations:
@@ -194,5 +202,3 @@ if __name__=='__main__':
 
     relations = list(set(relations))
 
-    for relation in map_main(relations):
-        print(map, ", ")

@@ -1,0 +1,243 @@
+Label,Group,Count,RelevantCount
+Disobedience,Recognition of Social Norms,1,1
+Engaging In Social Conversation,Interpersonal Interactions,68,27
+Facial Expressions,Language Ability,8,8
+Expressive Syntax,Language Ability,14,14
+Diagnosis,Diagnosis,742,535
+Endocrine System Diseases,Comorbidities,7,7
+Attention Deficit Disorder With Hyperactivity,Comorbidities,234,75
+IQ,Cognitive Abilties,150,48
+Reasoning,Cognitive Abilties,16,3
+Skill In Understanding Humor,Recognition of Social Norms,32,32
+Executive Function,Executive Function,165,40
+Sorting Ability,Executive Function,3,3
+Skill In Understanding Non Literal Meaning,Recognition of Social Norms,4,4
+Emotional Outbursts,Executive Function,51,10
+Rubella,Comorbidities,5,4
+Smoking,Exposures,24,9
+Initiating Social Interaction,Interpersonal Interactions,23,23
+Overactivity,Complaints and indications,257,122
+Obsessive Compulsive Disorder,Comorbidities,158,59
+Lethargy,Complaints and indications,11,11
+Onset Of Symptoms,Diagnosis,469,210
+Interpersonal Interactions,Interpersonal Interactions,18,18
+Adherence To Rules In The Home,Adaptive Life Skills,1,1
+Metabolic Indications,Complaints and indications,39,15
+Mental Flexibility,Executive Function,9,9
+Receptive Morphology,Language Ability,1,1
+Job Performance,Adaptive Life Skills,87,35
+Gross Motor Skills,Motor Skills,51,51
+Social Anxiety,Interpersonal Interactions,8,8
+Suspicious Of Others,Complaints and indications,23,23
+Substance Abuse,Exposures,34,8
+Ability To Converse In Social Settings,Recognition of Social Norms,491,152
+Use Of Free Time,Executive Function,42,8
+Managing Internal Emotions,Executive Function,8,8
+Unusual Sensory Interests,Stereotyped Restricted and Repetitive Behaviours,30,30
+Emotional Regulation And Control,Executive Function,46,17
+Learning Disorders,Comorbidities,510,212
+Anxiety,Emotional Traits,9,9
+Reaction To Sensory Stimuli,Stereotyped Restricted and Repetitive Behaviours,126,57
+Restricted Range Of Interests,Stereotyped Restricted and Repetitive Behaviours,119,17
+Initiating And Responding To Social Overtures,Interpersonal Interactions,1,1
+Abnormal Activity Or Energy Level,Complaints and indications,83,24
+Self Care,Adaptive Life Skills,16,16
+Hearing Loss,Comorbidities,27,27
+Complaints And Indications,Complaints and indications,516,282
+Migraine Disorders,Comorbidities,26,26
+Phenylketonurias,Comorbidities,5,5
+Mental Retardation,Comorbidities,227,88
+Prosody,Language Ability,88,21
+Receptive Syntax,Language Ability,3,3
+Color Perception,Cognitive Abilties,2,2
+Immoderate Behavior,Executive Function,37,37
+Repetitive Actions,Stereotyped Restricted and Repetitive Behaviours,9,9
+Skin Indications,Complaints and indications,14,14
+Poor Eating Behavior,Adaptive Life Skills,1,1
+Pattern Recognition And Rendering,Cognitive Abilties,18,18
+Expressive Morphology,Language Ability,2,2
+Body Temperature Changes,Complaints and indications,17,17
+Compulsive Behavior,Stereotyped Restricted and Repetitive Behaviours,4,4
+Bipolar Disorder,Comorbidities,109,26
+Eye Contact,Interpersonal Interactions,151,53
+Receptive Semantics,Language Ability,3,3
+Task Initiation,Executive Function,1,1
+Virus Diseases,Comorbidities,33,13
+Cranial Nerve Diseases,Comorbidities,6,6
+Receptive Language,Language Ability,62,62
+Mental Disorders,Comorbidities,435,172
+Eating Ability,Adaptive Life Skills,2,2
+Social Interest,Interpersonal Interactions,89,29
+Attention And Focus,Executive Function,99,99
+Mood,Emotional Traits,131,39
+Reciprocal Social Interaction,Interpersonal Interactions,848,677
+Inflammatory Bowel Diseases,Comorbidities,15,15
+Neurodegenerative Diseases,Comorbidities,30,30
+Rett Syndrome,Diagnosis,86,86
+Cognitive Ability,Cognitive Abilties,798,512
+Using Language Appropriately,Recognition of Social Norms,27,27
+Decision Making Ability,Executive Function,38,38
+Psychiatric Hospitalization,Complaints and indications,25,25
+Interactions With Friends And Family,Interpersonal Interactions,18,18
+Asperger Syndrome,Diagnosis,239,53
+Functional Laterality,Motor Skills,19,5
+Stereotyped Restricted And Repetitive Behavior,Stereotyped Restricted and Repetitive Behaviours,551,273
+Drug Abuse,Exposures,17,17
+Regression Of General Skills,Adaptive Life Skills,11,11
+Dietary Supplements,Exposures,137,32
+Form Perception,Cognitive Abilties,6,6
+Sharing,Interpersonal Interactions,8,8
+Interpersonal Awareness,Interpersonal Interactions,9,9
+Relating To Others,Interpersonal Interactions,29,29
+Sleeping Problems,Complaints and indications,68,31
+Integrated Verbal And Nonverbal Communication,Language Ability,256,87
+Awareness Of Social Cues,Recognition of Social Norms,104,104
+Joint Attention,Interpersonal Interactions,105,23
+Language Ability,Language Ability,200,48
+Prader Willi Syndrome,Comorbidities,24,10
+Pregnancy Complications,Perinatal History,4,4
+Central Nervous System Diseases,Comorbidities,54,54
+Dietary Restrictions,Exposures,49,19
+Keeps To Self,Interpersonal Interactions,1,1
+Respiratory Indications,Complaints and indications,14,14
+Ability To Convey Information,Recognition of Social Norms,148,148
+Down Syndrome,Comorbidities,48,16
+Pain,Complaints and indications,112,30
+Schizophrenia And Disorders With Psychotic Features,Comorbidities,247,105
+Autistic Disorder,Diagnosis,173,35
+Hygiene,Adaptive Life Skills,13,13
+Response Inhibition,Executive Function,31,31
+Impatience,Executive Function,1,1
+Adherence To Rules In The Community,Adaptive Life Skills,1,1
+Gastroesophageal Reflux,Comorbidities,9,9
+Task Performance,Executive Function,88,88
+Social Awkwardness,Interpersonal Interactions,16,3
+Psychologic Indications,Complaints and indications,11,11
+Obstetric Delivery Procedures,Perinatal History,6,2
+Problem Solving Ability,Cognitive Abilties,50,50
+Childhood Disintegrative Disorder,Comorbidities,5,5
+Head Injury,Exposures,30,30
+Emotional Swings,Emotional Traits,8,8
+Systemic Lupus Erythematosus,Comorbidities,8,8
+Depressive Disorder,Comorbidities,276,83
+Poor Treatment By Others In Social Settings,Interpersonal Interactions,29,16
+Understanding Affect of Ones Actions,Interpersonal Interactions,4,4
+Smith Lemli Opitz Syndrome,Comorbidities,2,2
+Celiac Disease,Comorbidities,6,6
+Tuberous Sclerosis,Comorbidities,64,12
+Understanding Others Expectations,Interpersonal Interactions,1,1
+Ability To Engage In Casual Conversation,Recognition of Social Norms,16,16
+Preparation Of Food,Adaptive Life Skills,13,13
+Irritable Bowel Syndrome,Comorbidities,6,6
+Anxiety Disorders,Comorbidities,416,103
+Toileting,Adaptive Life Skills,5,5
+Task Completion,Executive Function,6,6
+Non Verbal Communication,Language Ability,85,85
+Control Of Emotional Reactions,Executive Function,20,20
+Participation In Play Activities,Adaptive Life Skills,10,10
+Vocalizations,Language Ability,143,67
+Hospitalizations,Exposures,236,99
+Idiosyncratic And Routinized Speech,Language Ability,7,7
+Hydrocephalus,Comorbidities,91,61
+Aggressive Behavior,Recognition of Social Norms,179,43
+Nervous System Diseases,Comorbidities,16,16
+Responsiveness To Social Advances,Interpersonal Interactions,4,4
+Working Memory,Executive Function,317,102
+Ability To Convey Appropriate Level Of Detail,Recognition of Social Norms,13,13
+Congenital Heart Defects,Comorbidities,7,7
+Engaging In Social Play,Interpersonal Interactions,35,35
+Crohn Disease,Comorbidities,6,6
+Involuntary Behaviors,Stereotyped Restricted and Repetitive Behaviours,23,23
+Performance Of Household Tasks,Adaptive Life Skills,2,2
+Sexual Issues,Complaints and indications,6,6
+Money Management,Adaptive Life Skills,4,4
+Autoimmune Diseases,Comorbidities,16,16
+Social Dependence On Others,Interpersonal Interactions,7,7
+Preparing For Tasks,Executive Function,2,2
+Language Development,Language Ability,83,25
+Anger Control,Executive Function,3,3
+Obstetric Delivery Complications,Perinatal History,12,12
+Empathy,Interpersonal Interactions,235,93
+Post Traumatic Stress Disorders,Comorbidities,70,20
+Sensitivity To Conversant,Recognition of Social Norms,4,4
+Lack Of Appropriate Guilt,Recognition of Social Norms,1,1
+Fine Motor Skills,Motor Skills,57,57
+Mood Disorders,Comorbidities,23,23
+Restricted And Unusual Interests,Stereotyped Restricted and Repetitive Behaviours,42,42
+Visual Thinking,Cognitive Abilties,461,182
+Planning,Executive Function,182,68
+Pregnancy Outcome,Perinatal History,2,2
+Transitioning Ability,Executive Function,21,21
+Affect,Emotional Traits,24,24
+Visual Perception,Cognitive Abilties,27,27
+Alcohol Drinking,Exposures,59,6
+Flexibility In Problem Solving,Executive Function,1,1
+Imitation,Interpersonal Interactions,14,14
+Medications,Exposures,480,306
+Impulse Control And Regulation,Executive Function,15,15
+Recognition Of Social Norms,Recognition of Social Norms,34,34
+Adaptive Life Skills,Adaptive Life Skills,22,22
+Otitis,Comorbidities,6,6
+Recognition And Responsiveness To Voice,Interpersonal Interactions,1,1
+Ability To Convey Correct Information,Recognition of Social Norms,46,46
+Conversational Skills,Recognition of Social Norms,66,21
+Perinatal History,Perinatal History,269,115
+Showing Emotion,Emotional Traits,19,5
+Tourette Syndrome,Comorbidities,44,4
+Ulcerative Colitis,Comorbidities,14,14
+Understanding Logical Progression,Cognitive Abilties,5,5
+Complications In Infancy,Perinatal History,1,1
+Engagement In Social Activities,Adaptive Life Skills,81,81
+Expressive Language,Language Ability,91,91
+Numeracy,Cognitive Abilties,31,5
+Vaccination,Exposures,8,8
+Exposures,Exposures,237,82
+Awareness Of Social And Personal Space,Recognition of Social Norms,8,3
+Performance Of Chores,Adaptive Life Skills,40,40
+Performance In School,Adaptive Life Skills,53,53
+Asthma,Comorbidities,13,13
+Medical History,Medical History,121,62
+Thyroid Diseases,Comorbidities,4,4
+Allergies,Comorbidities,40,17
+Emotional Traits,Emotional Traits,8,8
+Fragile X Syndrome,Comorbidities,126,11
+Participation In Athletic Activities,Adaptive Life Skills,2,2
+Social Competence,Social Competence,644,352
+Ability To Convey Feelings,Recognition of Social Norms,8,8
+Diabetes Mellitus Type 1,Comorbidities,33,33
+Motor Skills,Motor Skills,154,77
+Urogenital Diseases,Comorbidities,10,10
+Substance Abuse During Pregnancy,Perinatal History,1,1
+Neurologic Indications,Complaints and indications,296,125
+Epilepsy,Comorbidities,230,40
+Gastrointestinal Diseases,Comorbidities,27,9
+Expressive Semantics,Language Ability,4,4
+Cardiovascular Diseases,Comorbidities,43,43
+Intentional Bad Behavior,Recognition of Social Norms,2,2
+Siezures,Comorbidities,147,62
+Destructive Behavior,Recognition of Social Norms,2,2
+Depression,Emotional Traits,55,50
+Distant Or Preoccupied Affect,Emotional Traits,7,7
+Perinatal Exposures,Perinatal History,51,51
+Muscle Weakness,Complaints and indications,8,8
+Abstract Thinking,Cognitive Abilties,2,2
+Congenital Abnormalities,Comorbidities,35,35
+Space Perception,Cognitive Abilties,2,2
+Mumps,Comorbidities,1,1
+Strange Or Illogical Ideas,Complaints and indications,1,1
+Pervasive Child Development Disorders,Diagnosis,3,3
+Self Injurious Behavior,Executive Function,73,10
+Sharing In Interests Of Others,Interpersonal Interactions,38,38
+Lead Exposure,Exposures,2,2
+Development Or Regression Of Language Skills,Language Ability,171,91
+Awareness And Avoidance Of Danger,Executive Function,4,4
+Pica,Complaints and indications,228,228
+Imagination,Cognitive Abilties,86,30
+Isolated Cognitive Skills,Cognitive Abilties,7,3
+Bacterial Infections,Comorbidities,32,17
+Clothing Self,Adaptive Life Skills,28,28
+Neurofibromatoses,Comorbidities,3,3
+Restricted And Repetitive Behavior,Stereotyped Restricted and Repetitive Behaviours,223,74
+Intense Interests,Stereotyped Restricted and Repetitive Behaviours,17,17
+Home Life Skills,Adaptive Life Skills,12,12
+Apgar Score,Perinatal History,14,14

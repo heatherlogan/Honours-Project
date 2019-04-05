@@ -176,9 +176,6 @@ if __name__=="__main__":
     skills_syns = [stemmer.stem(x) for x in ['skills', 'proficiency', 'abilities', 'ability', 'capability', 'development',
                                              'understanding', 'talent', 'comprehension', 'function', 'control']]
 
-    pheno_terms = main_main("GABA3 has social difficulties and anxiety.")
-
-
     abstracts = open('files/papers/full_corpus.txt', 'r').readlines()
 
     write_file = open('files/full_metamapped_corpus_2.txt', 'w')

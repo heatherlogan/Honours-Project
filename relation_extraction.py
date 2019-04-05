@@ -388,8 +388,8 @@ def re_main(text):
 
 if __name__=="__main__":
 
-    sentence_file = open('files/evaluation_files/relations_gene_onto.txt', 'r').readlines()
-    write_file = open('files/evaluation_files/re_output.txt', 'w')
+    sentence_file = open('files/papers/relations_gene_onto.txt', 'r').readlines()
+    write_file = open('files/papers/re_output.txt', 'w')
 
     results = {}
 
@@ -398,46 +398,13 @@ if __name__=="__main__":
             sentence = line.strip()
             relations = re_main(sentence)
             write_file.write("\nsentence: {}\n".format(sentence))
+            print("\n", sentence)
             for relation in relations:
 
                 write_file.write("{}\n".format(relation))
                 print(relation)
-
-
     write_file.close()
 
 
-    # gene_corpus_file = open('files/papers/asd_gene_corpus.txt', 'r').readlines()
-    # gene_corpus = reload_corpus(gene_corpus_file)
-    #
-    # pheno_corpus_file = open('files/papers/asd_pheno_corpus.txt', 'r').readlines()
-    # pheno_corpus = reload_corpus(pheno_corpus_file)
-    #
-    # corpus = list(set(gene_corpus + pheno_corpus))
-    #
-    # write_file = open('files/papers/sentences_for_relation_gene.txt', 'w')
-    #
-    #
-    # for i, paper in enumerate(gene_corpus):
-    #     sentence_list = []
-    #     if paper.abstract:
-    #         text = process_text(paper.abstract+ paper.text)
-    #         for sentence in nltk.sent_tokenize(text):
-    #             sentence = sentence.lower()
-    #             if len(sentence.split())<40:
-    #                 sfari = [k for k, v in get_sfari(sentence).items()]
-    #                 if len(sfari)>0:
-    #                     maps = main_main(sentence)
-    #                     if maps:
-    #                         print(sentence)
-    #                         sentence_list.append(sentence)
-    #
-    #     if len(sentence_list)>0:
-    #         sentence_list = list(set(sentence_list))
-    #         write_file.write("\nPMC{}:\n".format(paper.id))
-    #         for sentence in sentence_list:
-    #             write_file.write("{}\n".format(sentence))
-    #
-    # write_file.close()
 
 

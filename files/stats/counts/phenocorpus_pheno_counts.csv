@@ -1,0 +1,361 @@
+asd_term,document_count,total_count
+'Hospitalizations',254,254
+'Medications',486,486
+'Depressive Disorder',256,256
+'Pica',89,89
+'Medical History',140,140
+'Working Memory',311,311
+'Mental Disorders',452,452
+'Cognitive Ability',632,632
+'Reciprocal Social Interaction',627,627
+'Abnormal Activity or Energy Level',84,84
+'Diagnosis',644,644
+'Neurologic Indications',400,400
+'Stereotyped Restricted and Repetitive Behavior',514,514
+'Medical History',,5,5
+'Learning Disorders',897,897
+'Onset of Symptoms',437,437
+'Epilepsy',401,401
+'Medications',,55,55
+'Perinatal History',309,309
+'Virus Diseases',80,80
+'Comorbidities',270,270
+'Mental Retardation',288,288
+'Development or Regression of Language Skills',89,89
+'Ability to Converse in Social Settings',211,211
+'Exposures',328,328
+'Allergies',98,98
+'Asthma',37,37
+'Learning Disorders',,95,95
+'Vocalizations',97,97
+'Fragile X Syndrome',252,252
+'Perinatal Exposures',90,90
+'Schizophrenia and Disorders with Psychotic Features',362,362
+'Personal Traits',109,109
+'Bipolar Disorder',175,175
+'Tuberous Sclerosis',130,130
+'Bacterial Infections',89,89
+'Prosody',51,51
+'Autism Phenotype',207,207
+'Attention Deficit Disorder with Hyperactivity',222,222
+'Central Nervous System Diseases',79,79
+'Imagination',41,41
+'Executive Function',118,118
+'Autistic Disorder',192,192
+'Pica',,9,9
+'Complaints and Indications',377,377
+'Ability to Convey Correct Information',27,27
+'Epilepsy',,28,28
+'Metabolic Indications',96,96
+'Diabetes Mellitus Type 1',70,70
+'Exposures',,54,54
+'Ability to Convey Information',73,73
+'Problem Solving Ability',22,22
+'Smoking',56,56
+'Restricted and Repetitive Behavior',137,137
+'Alcohol Drinking',62,62
+'Down Syndrome',66,66
+'Asperger Syndrome',184,184
+'Neurodegenerative Diseases',68,68
+'Planning',88,88
+'Non-Verbal Communication',47,47
+'Cognitive Ability',,69,69
+'Performance of Chores',75,75
+'Sharing',3,3
+'Overactivity',249,249
+'Fragile X Syndrome',,12,12
+'Fine Motor Skills',35,35
+'Reaction to Sensory Stimuli',68,68
+'Post-Traumatic Stress Disorders',55,55
+'Rett Syndrome',167,167
+'Comorbidities',,19,19
+'Dietary Supplements',212,212
+'Anxiety Disorders',267,267
+'Social Competence',368,368
+'Dietary Restrictions',107,107
+'Systemic Lupus Erythematosus',27,27
+'Congenital Abnormalities',56,56
+'Visual Perception',8,8
+'Inflammatory Bowel Diseases',26,26
+'Dietary Supplements',,43,43
+'Visual Thinking',316,316
+'Involuntary Behaviors',20,20
+'Mood',73,73
+'Hearing Loss',32,32
+'Vaccination',20,20
+'Hydrocephalus',122,122
+'Use of Free Time',7,7
+'Cardiovascular Diseases',61,61
+'Empathy',86,86
+'Autoimmune Diseases',48,48
+'Restricted Range of Interests',79,79
+'Expressive Language',54,54
+'Skin Indications',12,12
+'Eye Contact',60,60
+'Imitation',18,18
+'Nervous System Diseases',27,27
+'Reciprocal Social Interaction',,35,35
+'Language Development',83,83
+'Language Ability',175,175
+'Obsessive-Compulsive Disorder',114,114
+'Integrated Verbal and NonVerbal Communication',75,75
+'Diagnosis',,67,67
+'Autism Phenotype',,12,12
+'Performance in School',13,13
+'Asperger Syndrome',,9,9
+'Adaptive Life Skills',9,9
+'Language Ability',,12,12
+'Smoking',,2,2
+'Psychiatric Hospitalization',51,51
+'Phenylketonurias',12,12
+'Self-Injurious Behavior',42,42
+'Conversational Skills',47,47
+'Engagement in Social Activities',19,19
+'Task Performance',36,36
+'Restricted and Unusual Interests',16,16
+'Decision Making Ability',17,17
+'Social Competence',,22,22
+'IQ',70,70
+'Hospitalizations',,13,13
+'Regression of General Skills',15,15
+'Job Performance',62,62
+'Childhood Disintegrative Disorder',9,9
+'Psychiatric Hospitalization',,6,6
+'Endocrine System Diseases',18,18
+'Analytic Capability',1,1
+'Pain',74,74
+'Overactivity',,39,39
+'Obstetric Delivery Complications',23,23
+'Aggressive Behavior',129,129
+'Schizophrenia and Disorders with Psychotic Features',,22,22
+'Pregnancy Complications',21,21
+'Pregnancy Outcome',10,10
+'Motor Skills',133,133
+'Transitioning Ability',11,11
+'Showing Emotion',2,2
+'Mental Disorders',,14,14
+'Sleeping Problems',73,73
+'Relating to Others',19,19
+'Visual Thinking',,29,29
+'Substance Abuse',25,25
+'Central Nervous System Diseases',,8,8
+'Sharing in Interests of Others',15,15
+'Working Memory',,13,13
+'Social Interest',31,31
+'Hydrocephalus',,6,6
+'Impulse Control and Regulation',8,8
+'Tourette Syndrome',58,58
+'IQ',,4,4
+'Executive Function',,3,3
+'Mood Disorders',40,40
+'Rubella',10,10
+'Dietary Restrictions',,8,8
+'Attention and Focus',49,49
+'Receptive Language',31,31
+'Migraine Disorders',10,10
+'Onset of Symptoms',,17,17
+'Gastrointestinal Diseases',50,50
+'Awareness of Social Cues',27,27
+'Body Temperature Changes',20,20
+'Planning',,5,5
+'Gross Motor Skills',19,19
+'Functional Laterality',16,16
+'Integrated Verbal and NonVerbal Communication',,3,3
+'Congenital Heart Defects',9,9
+'Social Anxiety',4,4
+'Vocalizations',,7,7
+'Head Injury',35,35
+'Interactions with Friends and Family',,2,2
+'Obsessive-Compulsive Disorder',,4,4
+'Systemic Lupus Erythematosus',,2,2
+'Apgar Score',22,22
+'Ulcerative Colitis',23,23
+'Crohn Disease',18,18
+'Celiac Disease',11,11
+'Performance of Chores',,8,8
+'Suspicious of Others',19,19
+'Isolated Cognitive Skills',7,7
+'Neurodegenerative Diseases',,3,3
+'Personal Traits',,8,8
+'Understanding Context',1,1
+'Joint Attention',22,22
+'Awareness and Avoidance of Danger',,1,1
+'Smith-Lemli-Opitz Syndrome',7,7
+'Social Awkwardness',3,3
+'Emotional Outbursts',21,21
+'Post-Traumatic Stress Disorders',,1,1
+'Respiratory Indications',24,24
+'Complaints and Indications',,34,34
+'Immoderate Behavior',9,9
+'Neurologic Indications',,27,27
+'Psychologic Indications',5,5
+'Engaging in Social Conversation',16,16
+'Ability to Convey Information',,6,6
+'Substance Abuse During Pregnancy',4,4
+'Obstetric Delivery Procedures',13,13
+'Recognition of Social Norms',6,6
+'Drug Abuse',22,22
+'Irritable Bowel Syndrome',15,15
+'Bacterial Infections',,15,15
+'Allergies',,5,5
+'Tuberous Sclerosis',,9,9
+'Prader-Willi Syndrome',37,37
+'Self-Care',4,4
+'Skill in Understanding Humor',3,3
+'Muscle Weakness',4,4
+'Preparation of Food',8,8
+'Hygiene',12,12
+'Job Performance',,6,6
+'Depression',11,11
+'Depressive Disorder',,12,12
+'Prosody',,2,2
+'Money Management',10,10
+'Using Language Appropriately',6,6
+'Attention Deficit Disorder with Hyperactivity',,15,15
+'Anxiety Disorders',,10,10
+'Numeracy',25,25
+'Ability to Engage in Casual Conversation',6,6
+'Interactions with Friends and Family',14,14
+'Initiating Social Interaction',8,8
+'Engaging in Social Play',9,9
+'Conversational Skills',,1,1
+'Bipolar Disorder',,9,9
+'Pervasive Child Development Disorders',3,3
+'Motor Skills',,4,4
+'Stereotyped Restricted and Repetitive Behavior',,14,14
+'Performance in School',,1,1
+'Anxiety',4,4
+'Alcohol Drinking',,3,3
+'Down Syndrome',,2,2
+'Development or Regression of Language Skills',,4,4
+'Expressive Syntax',6,6
+'Expressive Morphology',2,2
+'Restricted and Repetitive Behavior',,6,6
+'Sharing in Interests of Others',,2,2
+'Reasoning',4,4
+'Perinatal History',,12,12
+'Irritable Bowel Syndrome',,1,1
+'Sexual Issues',5,5
+'Thyroid Diseases',4,4
+'Non-Verbal Communication',,2,2
+'Herpesviridae Infections',4,4
+'Vaccination',,1,1
+'Urogenital Diseases',20,20
+'Interpersonal Awareness',4,4
+'Diabetes Mellitus Type 1',,5,5
+'Response Inhibition',21,21
+'Rett Syndrome',,9,9
+'Autistic Disorder',,11,11
+'Intense Interests',10,10
+'Mental Retardation',,16,16
+'Unusual Sensory Interests',9,9
+'Otitis',3,3
+'Metabolic Indications',,2,2
+'Ability to Convey Appropriate Level of Detail',,3,3
+'Ability to Convey Appropriate Level of Detail',7,7
+'Hygiene',,1,1
+'Emotional Regulation and Control',21,21
+'Gastroesophageal Reflux',14,14
+'Imitation',,1,1
+'Awareness and Avoidance of Danger',2,2
+'Control of Emotional Reactions',9,9
+'Cri-du-Chat Syndrome',2,2
+'Virus Diseases',,9,9
+'Emotional Swings',3,3
+'Mental Flexibility',4,4
+'Poor Treatment by Others in Social Settings',2,2
+'Skill in Understanding Non-Literal Meaning',,1,1
+'Ability to Convey Feelings',1,1
+'Pattern Recognition and Rendering',10,10
+'Repetitive Actions',,2,2
+'Tourette Syndrome',,2,2
+'Perinatal Exposures',,5,5
+'Clothing Self',6,6
+'Emotional Regulation and Control',,1,1
+'Joint Attention',,1,1
+'Awareness of Social and Personal Space',,1,1
+'Lethargy',8,8
+'Affect',3,3
+'Interpersonal Interactions',6,6
+'Empathy',,5,5
+'Use of Everyday Household Items',1,1
+'Congenital Abnormalities',,5,5
+'Repetitive Actions',2,2
+'Task Completion',2,2
+'Idiosyncratic and Routinized Speech',5,5
+'Body Temperature Changes',,1,1
+'Decision Making Ability',,1,1
+'Participation in Play Activities',1,1
+'Reaction to Sensory Stimuli',,3,3
+'Strange or Illogical Ideas',2,2
+'Task Performance',,1,1
+'Distant or Preoccupied Affect',5,5
+'Adherence to Rituals and Routines',1,1
+'Insistence on Order',2,2
+'Form Perception',1,1
+'Complications in Infancy',4,4
+'Toileting',3,3
+'Respiratory Indications',,1,1
+'Eating Ability',2,2
+'Space Perception',3,3
+'Awareness of Social and Personal Space',2,2
+'Prader-Willi Syndrome',,4,4
+'Childhood Disintegrative Disorder',,1,1
+'Inflammatory Bowel Diseases',,2,2
+'Sleeping Problems',,3,3
+'Immoderate Behavior',,1,1
+'Attention and Focus',,1,1
+'Compulsive Behavior',3,3
+'Compulsive Behavior',,1,1
+'Pain',,1,1
+'Emotional Traits',2,2
+'Mumps',4,4
+'Eye Contact',,1,1
+'Aggressive Behavior',,1,1
+'Awareness of Social Cues',,1,1
+'Home Life Skills',2,2
+'Skin Indications',,1,1
+'Preparing for Tasks',1,1
+'Impulse Control and Regulation',,1,1
+'Cardiovascular Diseases',,2,2
+'Mood Disorders',,1,1
+'Abnormal Activity or Energy Level',,1,1
+'Keeps to Self',1,1
+'Understanding Logical Progression',,1,1
+'Receptive Morphology',1,1
+'Autoimmune Diseases',,2,2
+'Cranial Nerve Diseases',3,3
+'Suspicious of Others',,1,1
+'Gastrointestinal Diseases',,2,2
+'Relating to Others',,1,1
+'Pattern Recognition and Rendering',,1,1
+'Congenital Heart Defects',,1,1
+'Lead Exposure',4,4
+'Maintenance and Organization of Possessions',1,1
+'Obstetric Delivery Complications',,3,3
+'Sharing',,1,1
+'Understanding Logical Progression',2,2
+'Engaging in Social Conversation',,1,1
+'Facial Expressions',1,1
+'Lack of Appropriate Guilt',1,1
+'Receptive Semantics',1,1
+'Visual Perception',,1,1
+'Understanding the Effect of One's Actions',1,1
+'Ability to Converse in Social Settings',,1,1
+'Engagement in Social Activities',,2,2
+'Problem Solving Ability',,1,1
+'Rubella',,1,1
+'Imagination',,1,1
+'Ulcerative Colitis',,1,1
+'Initiating Social Interaction',,1,1
+'Urogenital Diseases',,1,1
+'Endocrine System Diseases',,2,2
+'Numeracy',,2,2
+'Clothing Self',,1,1
+'Self Concept',1,1
+'Participation in Athletic Activities',1,1
+'Isolated Cognitive Skills',,1,1
+'Skill in Understanding Non-Literal Meaning',1,1
+'Obstetric Delivery Procedures',,1,1
+'Head Injury',,1,1
+'Insistence on Routine',1,1
