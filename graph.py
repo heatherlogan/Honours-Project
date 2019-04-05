@@ -8,7 +8,7 @@ from analyse import *
 
 def graph_relations(relations):
 
-    graph = Graph("http://localhost:7474/db/data/", user="neo4j", password="piggybank13")
+    graph = Graph("http://localhost:7474/db/data/", user="neo4j", password="neo4j")
 
     matcher = NodeMatcher(graph)
 
