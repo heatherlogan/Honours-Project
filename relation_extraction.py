@@ -9,7 +9,7 @@ from main import *
 from relation_mapping import get_synonyms
 
 class_path = "/Users/heatherlogan/Desktop/stanford-parser-full-2018-10-17/stanford-parser.jar"
-models_path = "/Users/heatherlogan/Desktop/stanford-english-corenlp-2018-10-05-models.jar"
+models_path = "/Users/heatherlogan/Desktop/stanford-parser-full-2018-10-17/stanford-parser-3.9.2-models.jar"
 
 
 def format(combination, full_tree, node_lookup):
@@ -381,29 +381,32 @@ def re_main(text):
     filtered = filteroutput(output)
     cleaned = cleanoutput(filtered)
 
-    # dep.tree().draw()
 
     return cleaned
 
 
 if __name__=="__main__":
 
-    sentence_file = open('files/papers/relations_gene_onto.txt', 'r').readlines()
-    write_file = open('files/papers/re_output.txt', 'w')
+    sentence = "De novo FOXP1 mutations have been associated with intellectual disability,  motor delay, autistic features and a wide spectrum of speech difficulties."
+    relations = re_main(sentence)
+    print(relations)
 
-    results = {}
-
-    for line in sentence_file:
-        if not line.startswith('PMC') and line != '\n':
-            sentence = line.strip()
-            relations = re_main(sentence)
-            write_file.write("\nsentence: {}\n".format(sentence))
-            print("\n", sentence)
-            for relation in relations:
-
-                write_file.write("{}\n".format(relation))
-                print(relation)
-    write_file.close()
+    # sentence_file = open('files/papers/relations_gene_onto.txt', 'r').readlines()
+    # write_file = open('files/papers/re_output.txt', 'w')
+    #
+    # results = {}
+    #
+    # for line in sentence_file:
+    #     if not line.startswith('PMC') and line != '\n':
+    #         sentence = line.strip()
+    #         relations = re_main(sentence)
+    #         write_file.write("\nsentence: {}\n".format(sentence))
+    #         print("\n", sentence)
+    #         for relation in relations:
+    #
+    #             write_file.write("{}\n".format(relation))
+    #             print(relation)
+    # write_file.close()
 
 
 
